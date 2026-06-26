@@ -1,0 +1,22 @@
+<svg width="520" height="160" viewBox="0 0 520 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Solverto logo</title>
+  <rect width="520" height="160" rx="28" fill="#07080D"/>
+  <g transform="translate(20 20)">
+    <path d="M60 0L112 30V93L60 124L8 93V30L60 0Z" stroke="#D7A84F" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M34 82C41 94 54 101 69 98C83 95 92 86 92 73C92 58 80 52 63 48C48 45 39 42 39 32C39 23 47 17 59 17C71 17 81 23 88 34" stroke="#F5F5F0" stroke-width="10" stroke-linecap="round"/>
+    <path d="M30 90C38 104 53 112 71 108C89 104 101 91 101 73C101 54 87 44 66 40" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" opacity="0.88"/>
+    <circle cx="60" cy="0" r="6" fill="#38BDF8"/>
+    <circle cx="112" cy="30" r="5" fill="#D7A84F"/>
+    <circle cx="8" cy="93" r="5" fill="#F59E0B"/>
+  </g>
+  <text x="170" y="75" fill="#F5F5F0" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800">Solverto</text>
+  <text x="173" y="105" fill="#A7ADB8" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="600">Games · 3D · Realtime production</text>
+  <path d="M173 122H430" stroke="url(#accent)" stroke-width="2" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="accent" x1="173" y1="122" x2="430" y2="122" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D7A84F"/>
+      <stop offset="0.58" stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+</svg>

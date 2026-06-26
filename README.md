@@ -1,26 +1,40 @@
-# Sage & Hearth Bistro
+# Solverto / Solverto Group
 
-A modern one-page portfolio website for a fictional local bistro.
+Nowoczesna, responsywna strona dla marki Solverto, zbudowana w Next.js,
+TypeScript i Tailwind CSS. Projekt jest przygotowany pod statyczny eksport i
+GitHub Pages.
 
-## Tech
+## Uruchomienie lokalne
 
-- Plain HTML, CSS, and JavaScript
-- No backend
-- GitHub Pages compatible
-- Local image assets in `images/`
+```bash
+npm install
+npm run dev
+```
 
-## Features
+Build produkcyjny:
 
-- Sticky navigation with scroll transition
-- Mobile-first layout
-- Hero CTA
-- Story, menu highlights, gallery, contact, and reservation CTA sections
-- Mailto and WhatsApp reservation links with placeholder contact details
-- CSS/JS hero parallax effect
-- Menu hover effects
-- Scroll reveal animations
-- `prefers-reduced-motion` support
+```bash
+npm run build
+```
 
-## Run
+Przy konfiguracji `output: "export"` statyczny wynik trafia do katalogu `out/`.
 
-Open `index.html` in a browser, or publish the folder with GitHub Pages.
+## Gdzie edytować
+
+- Teksty i języki: `src/lib/translations.ts`
+- Projekty portfolio: `src/data/projects.ts`
+- Logo: `public/brand/solverto-logo.svg`, `public/brand/solverto-mark.svg`
+- Favicon: `public/brand/favicon.svg`
+- Grafiki zastępcze: `public/graphics/`
+- Komponenty UI: `src/components/`
+
+## Funkcje
+
+- PL / EN / DE / ES z zapisem wyboru w `localStorage`
+- Portfolio z filtrami i wyszukiwarką
+- Featured projects i largest real estate references
+- Formularz kontaktowy jako mock submit gotowy do podpięcia API
+- Responsywne menu mobilne
+- Autorskie SVG dla logo, ikon i grafik
+- SEO i Open Graph metadata
+- Subtelne animacje z obsługą `prefers-reduced-motion`

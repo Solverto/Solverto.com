@@ -1,0 +1,10 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Solverto mark</title>
+  <rect width="160" height="160" rx="34" fill="#07080D"/>
+  <path d="M80 18L132 48V111L80 142L28 111V48L80 18Z" stroke="#D7A84F" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M54 100C61 112 74 119 89 116C103 113 112 104 112 91C112 76 100 70 83 66C68 63 59 60 59 50C59 41 67 35 79 35C91 35 101 41 108 52" stroke="#F5F5F0" stroke-width="10" stroke-linecap="round"/>
+  <path d="M50 108C58 122 73 130 91 126C109 122 121 109 121 91C121 72 107 62 86 58" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" opacity="0.88"/>
+  <circle cx="80" cy="18" r="6" fill="#38BDF8"/>
+  <circle cx="132" cy="48" r="5" fill="#D7A84F"/>
+  <circle cx="28" cy="111" r="5" fill="#F59E0B"/>
+</svg>

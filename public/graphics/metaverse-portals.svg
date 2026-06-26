@@ -1,0 +1,14 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Metaverse portals and event rooms</title>
+  <rect width="900" height="620" rx="34" fill="#07080D"/>
+  <ellipse cx="450" cy="490" rx="305" ry="74" fill="#111827" stroke="#38BDF8" stroke-opacity="0.45"/>
+  <path d="M330 452C330 300 382 188 450 188C518 188 570 300 570 452" stroke="#D7A84F" stroke-width="10" stroke-linecap="round"/>
+  <path d="M230 462C230 346 270 260 322 260C374 260 414 346 414 462" stroke="#38BDF8" stroke-width="6" stroke-linecap="round" opacity="0.72"/>
+  <path d="M486 462C486 346 526 260 578 260C630 260 670 346 670 462" stroke="#F59E0B" stroke-width="6" stroke-linecap="round" opacity="0.78"/>
+  <g fill="#F5F5F0">
+    <circle cx="450" cy="188" r="8"/>
+    <circle cx="322" cy="260" r="6"/>
+    <circle cx="578" cy="260" r="6"/>
+  </g>
+  <path d="M160 180C265 116 366 116 468 180C566 241 665 240 760 184" stroke="#38BDF8" stroke-opacity="0.28" stroke-width="3"/>
+</svg>

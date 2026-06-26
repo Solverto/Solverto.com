@@ -1,0 +1,20 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Urban model grid</title>
+  <rect width="900" height="620" rx="34" fill="#0B0F19"/>
+  <path d="M72 460L438 260L820 460L438 580L72 460Z" fill="#111827" stroke="#D7A84F" stroke-width="3"/>
+  <g stroke="#38BDF8" stroke-opacity="0.24">
+    <path d="M145 436L438 284L748 437"/>
+    <path d="M222 478L512 318"/>
+    <path d="M330 512L617 373"/>
+    <path d="M188 498L535 567"/>
+    <path d="M280 398L660 512"/>
+  </g>
+  <g fill="#182338" stroke="#F59E0B" stroke-opacity="0.62">
+    <rect x="368" y="180" width="72" height="168"/>
+    <rect x="456" y="222" width="56" height="126"/>
+    <rect x="548" y="276" width="64" height="116"/>
+    <rect x="286" y="254" width="54" height="110"/>
+  </g>
+  <circle cx="402" cy="172" r="7" fill="#38BDF8"/>
+  <circle cx="612" cy="276" r="6" fill="#D7A84F"/>
+</svg>
