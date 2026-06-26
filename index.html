@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Solverto tworzy gry, assety 3D, modele inwestycji, levele, środowiska realtime, metaverse i interaktywne doświadczenia dla biznesu oraz gamedevu."
+    />
+    <meta property="og:title" content="Solverto — Gry, 3D i interaktywne światy realtime" />
+    <meta
+      property="og:description"
+      content="Game development, 3D production, realtime architecture, VR/AR, metaverse and interactive B2B experiences."
+    />
+    <meta property="og:type" content="website" />
+    <title>Solverto — Gry, 3D i interaktywne światy realtime</title>
+    <link rel="icon" href="public/brand/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="public/graphics/hero-world.svg" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+
+    <header class="site-header" data-header>
+      <nav class="nav" aria-label="Główna nawigacja">
+        <a class="brand" href="#home" aria-label="Solverto home">
+          <img src="public/brand/solverto-mark.svg" width="44" height="44" alt="" />
+          <span>
+            <strong>Solverto</strong>
+            <small>Games · 3D · Realtime</small>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Otwórz menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          data-nav-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu" id="nav-menu" data-nav-menu>
+          <a href="#services" data-i18n="nav.services">Usługi</a>
+          <a href="#architecture" data-i18n="nav.architecture">Architektura</a>
+          <a href="#games" data-i18n="nav.games">Gry</a>
+          <a href="#metaverse" data-i18n="nav.metaverse">Metaverse</a>
+          <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+          <a href="#investors" data-i18n="nav.investors">Inwestorzy</a>
+          <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+          <div class="language-switcher" aria-label="Wybór języka">
+            <button type="button" data-lang="pl">PL</button>
+            <button type="button" data-lang="en">EN</button>
+            <button type="button" data-lang="de">DE</button>
+            <button type="button" data-lang="es">ES</button>
+          </div>
+          <a class="nav-cta" href="#contact" data-i18n="nav.cta">Rozpocznij współpracę</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="section-shell hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow" data-i18n="hero.eyebrow">Solverto Group · games · 3D · realtime</p>
+            <h1 data-i18n="hero.title">Gry, 3D i interaktywne światy realtime</h1>
+            <p class="hero-lead" data-i18n="hero.subtitle">
+              Solverto tworzy produkcyjne assety 3D, levele, modele inwestycji, środowiska
+              realtime, prototypy gier i interaktywne doświadczenia dla gamedevu,
+              architektury i biznesu.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact" data-i18n="hero.primary">Rozpocznij współpracę</a>
+              <a class="button button-secondary" href="#portfolio" data-i18n="hero.secondary">Zobacz portfolio</a>
+            </div>
+            <p class="trust-line" data-i18n="hero.trust">
+              Doświadczenie w grach, architekturze realtime, metaverse, Unity, Unreal i
+              produkcji 3D.
+            </p>
+          </div>
+          <figure class="hero-visual reveal">
+            <img
+              src="public/graphics/hero-world.svg"
+              alt="Abstrakcyjny świat realtime 3D z siatką, node'ami i bryłami architektury"
+              width="1400"
+              height="900"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="stats section-shell reveal" aria-label="Doświadczenie">
+        <span>30+ real estate / architecture references</span>
+        <span>Multiple game levels delivered</span>
+        <span>Metaverse spaces, mazes and interactive levels</span>
+        <span>Unity / Unreal / 3D / realtime production</span>
+        <span>Poland · Austria · Canada · Italy · UAE</span>
+      </section>
+
+      <section class="section section-shell" id="services">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="services.eyebrow">Usługi</p>
+          <h2 data-i18n="services.title">Od assetu do gotowego świata realtime.</h2>
+          <p data-i18n="services.intro">
+            Łączymy artystyczną jakość, techniczne podejście i praktyczne doświadczenie
+            produkcyjne. Pomagamy klientom przechodzić od koncepcji do gotowego modelu,
+            poziomu, prototypu albo interaktywnej prezentacji.
+          </p>
+        </div>
+        <div class="service-grid" data-services></div>
+      </section>
+
+      <section class="section band" id="architecture">
+        <div class="section-shell split">
+          <div class="reveal">
+            <p class="eyebrow" data-i18n="architecture.eyebrow">Architecture & Real Estate 3D</p>
+            <h2 data-i18n="architecture.title">Modelowanie inwestycji, PZT/PTT i duże założenia urbanistyczne.</h2>
+            <p data-i18n="architecture.intro">
+              W obszarze architektury i inwestycji mieszkaniowych Solverto ma doświadczenie
+              w modelowaniu projektów, przygotowaniu PZT/PTT, poprawkach produkcyjnych,
+              analizie modeli i pracy z dużymi założeniami urbanistycznymi.
+            </p>
+            <div class="tag-row" aria-label="Referencje tekstowe">
+              <span>Vinci</span>
+              <span>Atal</span>
+              <span>Dom Development</span>
+              <span>Echo</span>
+              <span>Murapol</span>
+              <span>SQUAREBYTES GmbH</span>
+            </div>
+          </div>
+          <figure class="image-card reveal">
+            <img src="public/graphics/architecture-grid.svg" alt="Model urbanistyczny inwestycji" loading="lazy" />
+            <figcaption>PZT / PTT · urban model</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section-shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="largest.eyebrow">Największe inwestycje</p>
+          <h2 data-i18n="largest.title">Largest real estate references</h2>
+        </div>
+        <div class="largest-grid" data-largest></div>
+        <p class="notice reveal" data-i18n="largest.disclaimer">
+          Skale projektów są opisem orientacyjnym na podstawie zakresu referencyjnego i
+          powinny być traktowane jako prezentacja doświadczenia produkcyjnego.
+        </p>
+      </section>
+
+      <section class="section section-shell" id="games">
+        <div class="split reverse">
+          <figure class="image-card reveal">
+            <img src="public/graphics/game-greybox.svg" alt="Greybox level design i scena gry" loading="lazy" />
+            <figcaption>Selected game production work</figcaption>
+          </figure>
+          <div class="reveal">
+            <p class="eyebrow" data-i18n="games.eyebrow">Solverto Games</p>
+            <h2 data-i18n="games.title">Levele, środowiska, prototypy i własne IP.</h2>
+            <p data-i18n="games.intro">
+              W gamedevie pracowaliśmy przy levelach, środowiskach, prototypach, elementach
+              gameplayu i modelach 3D dla gier oraz projektów interaktywnych.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band" id="metaverse">
+        <div class="section-shell split">
+          <div class="reveal">
+            <p class="eyebrow" data-i18n="metaverse.eyebrow">Metaverse</p>
+            <h2 data-i18n="metaverse.title">Cyfrowe światy, event roomy, avatary i interaktywne levele.</h2>
+            <p data-i18n="metaverse.intro">
+              Solverto współtworzyło wiele przestrzeni metaverse, maze’ów, leveli, event
+              roomów, avatarów, animacji i modeli 3D dla cyfrowych światów.
+            </p>
+            <p class="notice" data-i18n="metaverse.note">
+              Modele 3D były tworzone lub współtworzone dla wielu wymienionych projektów
+              metaverse, leveli i doświadczeń interaktywnych.
+            </p>
+          </div>
+          <figure class="image-card reveal">
+            <img src="public/graphics/metaverse-portals.svg" alt="Portale metaverse i event roomy" loading="lazy" />
+            <figcaption>Rooms · mazes · avatars</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section-shell" id="portfolio">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="portfolio.eyebrow">Portfolio</p>
+          <h2 data-i18n="portfolio.title">Referencje projektowe z filtrowaniem.</h2>
+          <p data-i18n="portfolio.intro">
+            Przegląd projektów architektonicznych, gamedevowych, metaverse, analiz i
+            wsparcia produkcyjnego.
+          </p>
+        </div>
+        <div class="portfolio-controls reveal">
+          <label>
+            <span data-i18n="portfolio.searchLabel">Szukaj projektu</span>
+            <input type="search" data-search placeholder="Szukaj po projekcie, kliencie, kraju lub tagu" />
+          </label>
+          <div class="filter-row" data-filters></div>
+        </div>
+        <div class="project-count" data-count></div>
+        <div class="project-grid" data-projects></div>
+        <p class="notice legal" data-i18n="portfolio.legal">
+          Wybrane referencje projektowe obejmują prace realizowane bezpośrednio lub we
+          współpracy z partnerami produkcyjnymi i zespołami branżowymi.
+        </p>
+      </section>
+
+      <section class="section band" id="investors">
+        <div class="section-shell split">
+          <figure class="image-card reveal">
+            <img src="public/graphics/investor-orbits.svg" alt="Ekosystem Solverto Group" loading="lazy" />
+            <figcaption>Solverto Group ecosystem</figcaption>
+          </figure>
+          <div class="reveal">
+            <p class="eyebrow" data-i18n="investors.eyebrow">Investors / Partners</p>
+            <h2 data-i18n="investors.title">Partnerstwo, publishing i inwestycje</h2>
+            <p data-i18n="investors.text">
+              Solverto Group buduje ekosystem oparty na sprawdzonym zapleczu produkcyjnym:
+              usługach 3D, doświadczeniu gamedevowym, projektach realtime, metaverse oraz
+              własnych grach.
+            </p>
+            <ul class="pillar-list" data-investor-points></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-shell" id="cooperation">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Cooperation</p>
+          <h2 data-i18n="cooperation.title">Jak wygląda współpraca</h2>
+          <p data-i18n="cooperation.text">
+            Zaczynamy od briefu i zrozumienia celu projektu. Następnie przygotowujemy
+            zakres, estymację i plan produkcji.
+          </p>
+        </div>
+        <div class="steps-grid" data-steps></div>
+      </section>
+
+      <section class="section section-shell" id="contact">
+        <div class="contact-layout">
+          <div class="reveal">
+            <p class="eyebrow" data-i18n="contact.eyebrow">Kontakt</p>
+            <h2 data-i18n="contact.title">
+              Masz projekt, inwestycję, grę lub interaktywną prezentację do zrealizowania?
+              Napisz do nas.
+            </h2>
+            <p data-i18n="contact.intro">
+              Formularz działa jako mock submit. Kod można łatwo podłączyć do API.
+            </p>
+          </div>
+          <form class="contact-form reveal" data-contact-form>
+            <label><span data-i18n="form.name">Imię i nazwisko</span><input name="name" required /></label>
+            <label><span data-i18n="form.company">Firma</span><input name="company" /></label>
+            <label><span>Email</span><input name="email" type="email" required /></label>
+            <label>
+              <span data-i18n="form.projectType">Typ zapytania</span>
+              <select name="projectType" data-project-type></select>
+            </label>
+            <label><span data-i18n="form.budget">Budżet opcjonalnie</span><input name="budgetRange" /></label>
+            <label><span data-i18n="form.deadline">Deadline opcjonalnie</span><input name="deadline" /></label>
+            <label class="full">
+              <span data-i18n="form.message">Wiadomość</span>
+              <textarea name="message" required></textarea>
+            </label>
+            <button class="button button-primary full" type="submit" data-i18n="form.submit">Wyślij zapytanie</button>
+            <p class="form-status full" data-form-status role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-grid">
+        <div>
+          <img src="public/brand/solverto-logo.svg" width="260" height="80" alt="Solverto" />
+          <p data-i18n="footer.description">
+            Solverto Group łączy gry, 3D, realtime, architekturę, metaverse i interaktywne
+            technologie produkcyjne.
+          </p>
+        </div>
+        <div>
+          <h2>Menu</h2>
+          <a href="#services">Services</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div>
+          <h2>Solverto Group ecosystem</h2>
+          <p>Solverto Studio · Solverto Games · realtime 3D · IP development</p>
+          <p class="legal-note">
+            Selected project references may include work delivered in cooperation with partner
+            studios, production teams or external clients.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

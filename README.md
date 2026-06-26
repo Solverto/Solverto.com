@@ -1,28 +1,21 @@
 # Solverto / Solverto Group
 
-Nowoczesna, responsywna strona dla marki Solverto, zbudowana w Next.js,
-TypeScript i Tailwind CSS. Projekt jest przygotowany pod statyczny eksport i
-GitHub Pages.
+Nowoczesna, responsywna strona dla marki Solverto. Publiczna wersja strony jest
+statyczna i działa bez builda: `index.html`, `styles.css`, `script.js` oraz
+lokalne assety SVG w `public/`.
 
 ## Uruchomienie lokalne
 
-```bash
-npm install
-npm run dev
-```
-
-Build produkcyjny:
+Otwórz `index.html` w przeglądarce albo uruchom prosty serwer statyczny:
 
 ```bash
-npm run build
+python -m http.server 4173
 ```
-
-Przy konfiguracji `output: "export"` statyczny wynik trafia do katalogu `out/`.
 
 ## Publikacja na GitHub Pages
 
-Workflow `.github/workflows/pages.yml` buduje stronę po każdym pushu do `main`
-i publikuje statyczny katalog `out/` przez GitHub Pages.
+Workflow `.github/workflows/pages.yml` publikuje statyczne pliki po każdym pushu
+do `main`: `index.html`, `styles.css`, `script.js` i katalog `public/`.
 
 W GitHub ustaw:
 
@@ -40,7 +33,7 @@ pod podpiętą domeną niestandardową.
 - Logo: `public/brand/solverto-logo.svg`, `public/brand/solverto-mark.svg`
 - Favicon: `public/brand/favicon.svg`
 - Grafiki zastępcze: `public/graphics/`
-- Komponenty UI: `src/components/`
+- Widoczna statyczna strona: `index.html`, `styles.css`, `script.js`
 
 ## Funkcje
 
