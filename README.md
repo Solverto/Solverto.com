@@ -19,6 +19,20 @@ npm run build
 
 Przy konfiguracji `output: "export"` statyczny wynik trafia do katalogu `out/`.
 
+## Publikacja na GitHub Pages
+
+Workflow `.github/workflows/pages.yml` buduje stronę po każdym pushu do `main`
+i publikuje statyczny katalog `out/` przez GitHub Pages.
+
+W GitHub ustaw:
+
+1. Repository Settings -> Pages.
+2. Source: `GitHub Actions`.
+3. Wypchnij zmiany na branch `main`.
+
+Po udanym workflow strona będzie dostępna pod adresem Pages repozytorium albo
+pod podpiętą domeną niestandardową.
+
 ## Gdzie edytować
 
 - Teksty i języki: `src/lib/translations.ts`
