@@ -459,6 +459,10 @@ textarea {
   margin-top: 22px;
 }
 
+.architecture-section-actions {
+  margin-top: 22px;
+}
+
 .tag-row span,
 .filter-row button,
 .badge {
@@ -647,6 +651,337 @@ textarea:focus {
   font-size: 0.82rem;
 }
 
+.nav-menu a.is-current {
+  color: var(--bone);
+  background: rgba(215, 168, 79, 0.12);
+  box-shadow: inset 0 -2px 0 var(--gold);
+}
+
+.architecture-hero {
+  position: relative;
+  min-height: 680px;
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.architecture-hero-bg,
+.architecture-hero-shade {
+  position: absolute;
+  inset: -8%;
+  z-index: -2;
+}
+
+.architecture-hero-bg {
+  background: url("public/graphics/architecture-grid.svg") center 42% / cover no-repeat;
+  filter: saturate(0.82) contrast(1.08);
+  transform: scale(1.08);
+  will-change: transform;
+}
+
+.architecture-hero-shade {
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(7, 8, 13, 0.96) 0%, rgba(7, 8, 13, 0.76) 52%, rgba(7, 8, 13, 0.3) 100%),
+    linear-gradient(180deg, rgba(7, 8, 13, 0.12), var(--obsidian) 100%);
+}
+
+.architecture-hero-content {
+  display: grid;
+  gap: 22px;
+  padding-top: 76px;
+  padding-bottom: 44px;
+}
+
+.architecture-hero-content h1 {
+  width: min(900px, 100%);
+  font-size: clamp(3rem, 8vw, 6.8rem);
+}
+
+.back-link {
+  width: fit-content;
+  color: rgba(245, 245, 240, 0.76);
+  font-size: 0.88rem;
+  font-weight: 850;
+}
+
+.back-link:hover {
+  color: var(--gold);
+}
+
+.architecture-hero-facts {
+  display: grid;
+  gap: 1px;
+  margin-top: 10px;
+  border-block: 1px solid var(--line);
+  background: var(--line);
+}
+
+.architecture-hero-facts span {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+  padding: 16px 0;
+  background: rgba(7, 8, 13, 0.84);
+}
+
+.architecture-hero-facts strong {
+  color: var(--bone);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.architecture-hero-facts small {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.architecture-intro {
+  display: grid;
+  gap: 18px;
+  padding-top: 66px;
+  padding-bottom: 66px;
+}
+
+.architecture-intro h2 {
+  width: min(900px, 100%);
+}
+
+.architecture-intro > p:last-child {
+  max-width: 830px;
+  font-size: 1.08rem;
+}
+
+.architecture-scope-grid,
+.architecture-largest,
+.architecture-project-grid {
+  display: grid;
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.architecture-scope-card,
+.architecture-large-card,
+.architecture-project-card {
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: 22px;
+  background: var(--graphite);
+}
+
+.architecture-scope-card,
+.architecture-project-card {
+  transition: background 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.architecture-scope-card:hover,
+.architecture-project-card:hover {
+  z-index: 1;
+  background: #121927;
+  box-shadow: inset 0 0 0 1px rgba(215, 168, 79, 0.46);
+  transform: translateY(-2px);
+}
+
+.architecture-scope-code,
+.architecture-index {
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 950;
+}
+
+.architecture-large-card {
+  position: relative;
+  min-height: 230px;
+  padding-top: 58px;
+}
+
+.architecture-index {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  color: rgba(56, 189, 248, 0.72);
+  font-size: 1rem;
+}
+
+.architecture-visual-band {
+  border-block: 1px solid var(--line);
+  background: #090c13;
+}
+
+.architecture-visual-layout {
+  display: grid;
+}
+
+.architecture-blueprint {
+  min-height: 330px;
+  overflow: hidden;
+}
+
+.architecture-blueprint img {
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  object-fit: cover;
+}
+
+.architecture-visual-copy {
+  display: grid;
+  align-content: center;
+  gap: 18px;
+  padding: 42px 0;
+}
+
+.architecture-checklist {
+  display: grid;
+  gap: 1px;
+  margin: 8px 0 0;
+  padding: 0;
+  background: var(--line);
+  list-style: none;
+}
+
+.architecture-checklist li {
+  position: relative;
+  padding: 14px 14px 14px 42px;
+  color: var(--bone);
+  background: var(--graphite);
+  font-weight: 780;
+}
+
+.architecture-checklist li::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 20px;
+  width: 12px;
+  height: 6px;
+  border-left: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  transform: rotate(-45deg);
+}
+
+.architecture-project-tools {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.architecture-project-tools label {
+  display: grid;
+  gap: 8px;
+  color: var(--bone);
+  font-size: 0.9rem;
+  font-weight: 850;
+}
+
+.architecture-project-tools .filter-row {
+  margin-top: 0;
+}
+
+.architecture-project-card h3 {
+  line-height: 1.08;
+}
+
+.architecture-client {
+  color: var(--bone);
+  font-weight: 850;
+}
+
+.architecture-project-card > p:last-child {
+  font-size: 0.9rem;
+}
+
+.architecture-process {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.architecture-process-step {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 18px;
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+}
+
+.architecture-process-step:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.architecture-process-step > span {
+  color: var(--gold);
+  font-size: 0.86rem;
+  font-weight: 950;
+}
+
+.architecture-process-step div {
+  display: grid;
+  gap: 9px;
+}
+
+.architecture-partners {
+  display: grid;
+  gap: 28px;
+}
+
+.architecture-partners > div:first-child {
+  display: grid;
+  gap: 16px;
+}
+
+.architecture-name-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-block: 1px solid var(--line);
+}
+
+.architecture-name-grid span {
+  min-width: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 15px 10px 15px 0;
+  color: var(--bone);
+  font-size: 0.88rem;
+  font-weight: 850;
+  overflow-wrap: break-word;
+}
+
+.architecture-cta {
+  border-top: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, rgba(215, 168, 79, 0.1), transparent 45%),
+    #0b0f19;
+}
+
+.architecture-cta-inner {
+  display: grid;
+  gap: 20px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.architecture-cta-inner h2,
+.architecture-cta-inner > p {
+  max-width: 850px;
+}
+
+.architecture-placeholder-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  font-size: 0.82rem;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -676,6 +1011,29 @@ textarea:focus {
 
   .full {
     grid-column: 1 / -1;
+  }
+
+  .architecture-hero-facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .architecture-hero-facts span {
+    padding: 18px;
+  }
+
+  .architecture-scope-grid,
+  .architecture-largest,
+  .architecture-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .architecture-project-tools {
+    grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
+    align-items: end;
+  }
+
+  .architecture-name-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -728,6 +1086,39 @@ textarea:focus {
   .steps-grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
+
+  .architecture-visual-layout {
+    grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+    gap: 54px;
+    align-items: stretch;
+  }
+
+  .architecture-scope-grid,
+  .architecture-largest,
+  .architecture-project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .architecture-process {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .architecture-process-step:nth-child(odd) {
+    border-right: 1px solid var(--line);
+    padding-right: 28px;
+  }
+
+  .architecture-process-step:nth-child(even) {
+    padding-left: 28px;
+  }
+
+  .architecture-process-step:nth-last-child(2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .architecture-name-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 390px) {
@@ -738,6 +1129,10 @@ textarea:focus {
 
   h1 {
     font-size: 2.75rem;
+  }
+
+  .architecture-hero-content h1 {
+    font-size: 2.65rem;
   }
 }
 
@@ -757,5 +1152,9 @@ textarea:focus {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+
+  .architecture-hero-bg {
+    transform: scale(1.08) !important;
   }
 }

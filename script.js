@@ -51,7 +51,8 @@ const translations = {
       eyebrow: "Architecture & Real Estate 3D",
       title: "Modelowanie inwestycji, PZT/PTT i duże założenia urbanistyczne.",
       intro:
-        "W obszarze architektury i inwestycji mieszkaniowych Solverto ma doświadczenie w modelowaniu projektów, przygotowaniu PZT/PTT, poprawkach produkcyjnych, analizie modeli i pracy z dużymi założeniami urbanistycznymi."
+        "W obszarze architektury i inwestycji mieszkaniowych Solverto ma doświadczenie w modelowaniu projektów, przygotowaniu PZT/PTT, poprawkach produkcyjnych, analizie modeli i pracy z dużymi założeniami urbanistycznymi.",
+      more: "Poznaj ofertę architektoniczną"
     },
     largest: {
       eyebrow: "Największe inwestycje",
@@ -191,7 +192,8 @@ const translations = {
       eyebrow: "Architecture & Real Estate 3D",
       title: "Investment modeling, PZT/PTT and large-scale production.",
       intro:
-        "In architecture and real estate, Solverto has experience in investment modeling, PZT/PTT preparation, production fixes, model analysis and large-scale residential development work."
+        "In architecture and real estate, Solverto has experience in investment modeling, PZT/PTT preparation, production fixes, model analysis and large-scale residential development work.",
+      more: "Explore architecture services"
     },
     largest: {
       eyebrow: "Architecture",
@@ -330,7 +332,8 @@ const translations = {
       eyebrow: "Architektur & Immobilien 3D",
       title: "Investitionsmodellierung, PZT/PTT und große städtebauliche Projekte.",
       intro:
-        "Im Bereich Architektur und Immobilien verfügt Solverto über Erfahrung in der Modellierung von Investitionsprojekten, PZT/PTT-Vorbereitung, Produktionskorrekturen, Modellanalyse und großen Wohnbauprojekten."
+        "Im Bereich Architektur und Immobilien verfügt Solverto über Erfahrung in der Modellierung von Investitionsprojekten, PZT/PTT-Vorbereitung, Produktionskorrekturen, Modellanalyse und großen Wohnbauprojekten.",
+      more: "Architekturleistungen entdecken"
     },
     largest: {
       eyebrow: "Größte Investitionsprojekte",
@@ -470,7 +473,8 @@ const translations = {
       eyebrow: "Arquitectura e inmobiliaria 3D",
       title: "Modelado de inversiones, PZT/PTT y grandes proyectos urbanísticos.",
       intro:
-        "En arquitectura e inmobiliaria, Solverto tiene experiencia en modelado de inversiones, preparación PZT/PTT, correcciones de producción, análisis de modelos y grandes proyectos residenciales."
+        "En arquitectura e inmobiliaria, Solverto tiene experiencia en modelado de inversiones, preparación PZT/PTT, correcciones de producción, análisis de modelos y grandes proyectos residenciales.",
+      more: "Descubrir servicios de arquitectura"
     },
     largest: {
       eyebrow: "Mayores inversiones",

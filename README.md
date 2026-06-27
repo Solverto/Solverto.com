@@ -15,7 +15,7 @@ python -m http.server 4173
 ## Publikacja na GitHub Pages
 
 Workflow `.github/workflows/pages.yml` publikuje statyczne pliki po każdym pushu
-do `main`: `index.html`, `styles.css`, `script.js` i katalog `public/`.
+do `main`: `index.html`, `styles.css`, `script.js`, podstronę `architecture/` i katalog `public/`.
 
 W GitHub ustaw:
 
@@ -36,6 +36,7 @@ pod podpiętą domeną niestandardową.
 - Favicon: `public/brand/favicon.svg`
 - Grafiki zastępcze: `public/graphics/`
 - Widoczna statyczna strona: `index.html`, `styles.css`, `script.js`
+- Podstrona architektury: `architecture/index.html`, `architecture/script.js`
 
 ## Funkcje
 
