@@ -1,53 +1,43 @@
-# Solverto / Solverto Group
+# Solverto static website
 
-Nowoczesna, responsywna strona dla marki Solverto. Publiczna wersja strony jest
-statyczna i działa bez builda: `index.html`, `styles.css`, `script.js` oraz
-lokalne assety SVG w `public/`.
+Static, GitHub Pages compatible website for Solverto. It uses plain HTML, CSS
+and JavaScript with no framework, backend, package manager or build step.
 
-## Uruchomienie lokalne
+## Run locally
 
-Otwórz `index.html` w przeglądarce albo uruchom prosty serwer statyczny:
+Open `index.html` directly or start a static server:
 
 ```bash
 python -m http.server 4173
 ```
 
-## Publikacja na GitHub Pages
+Then open `http://localhost:4173/`.
 
-Workflow `.github/workflows/pages.yml` publikuje statyczne pliki po każdym pushu
-do `main`: stronę główną, podstrony `architecture/`, `games/`, `metaverse/` i katalog `public/`.
+## Pages
 
-W GitHub ustaw:
+- `index.html` - homepage
+- `games.html` - Game Production
+- `realtime-3d.html` - Realtime 3D for Business
+- `xr-digital-twin.html` - XR and Digital Twin
+- `ai-pipeline.html` - AI and Production Pipeline
+- `portfolio.html` - filterable portfolio
+- `project-architecture.html` - architecture case study
+- `project-game-demo.html` - game production case study
+- `project-xr-training.html` - XR case study
+- `project-template.html` - reusable project detail template
+- `contact.html` - contact details and static form
 
-1. Repository Settings -> Pages.
-2. Source: `GitHub Actions`.
-3. Wypchnij zmiany na branch `main`.
+## Editing
 
-Po udanym workflow strona będzie dostępna pod adresem Pages repozytorium albo
-pod podpiętą domeną niestandardową.
+- Replace the logo in `assets/logo.svg`.
+- Change brand colors in the `:root` variables at the top of `styles.css`.
+- Replace every visible bracketed placeholder in the HTML files with the final
+  image, screenshot, render or embed.
+- Replace Sketchfab placeholder URLs in the project detail pages.
+- Update contact details directly in the HTML files.
+- Shared interactions are in `script.js`.
 
-## Gdzie edytować
+## GitHub Pages
 
-- Teksty i języki wersji statycznej: `script.js`
-- Teksty i języki wersji Next.js: `src/lib/translations.ts`
-- Projekty portfolio: `src/data/projects.ts`
-- Logo używane na stronie: `public/graphics/SolvertoLogo.gif`
-- Warianty SVG: `public/brand/solverto-logo.svg`, `public/brand/solverto-mark.svg`
-- Favicon: `public/brand/favicon.svg`
-- Grafiki zastępcze: `public/graphics/`
-- Widoczna statyczna strona: `index.html`, `styles.css`, `script.js`
-- Podstrona architektury: `architecture/index.html`, `architecture/script.js`
-- Podstrona gier: `games/index.html`, `games/data.js`
-- Podstrona metaverse: `metaverse/index.html`, `metaverse/data.js`
-- Wspólna logika podstron Games i Metaverse: `vertical-page.js`
-
-## Funkcje
-
-- PL / EN / DE / ES z zapisem wyboru w `localStorage`
-- Portfolio z filtrami i wyszukiwarką
-- Featured projects i largest real estate references
-- Formularz kontaktowy jako mock submit gotowy do podpięcia API
-- Responsywne menu mobilne
-- Autorskie SVG dla logo, ikon i grafik
-- SEO i Open Graph metadata
-- Subtelne animacje z obsługą `prefers-reduced-motion`
+`.github/workflows/pages.yml` publishes all root HTML files, `styles.css`,
+`script.js` and the `assets/` directory after a push to `main`.

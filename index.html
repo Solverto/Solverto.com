@@ -1,309 +1,189 @@
 <!doctype html>
-<html lang="pl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Solverto tworzy gry, assety 3D, modele inwestycji, levele, środowiska realtime, metaverse i interaktywne doświadczenia dla biznesu oraz gamedevu."
-    />
-    <meta property="og:title" content="Solverto — Gry, 3D i interaktywne światy realtime" />
-    <meta
-      property="og:description"
-      content="Game development, 3D production, realtime architecture, VR/AR, metaverse and interactive B2B experiences."
-    />
+    <meta name="description" content="Solverto creates realtime 3D, games, XR simulations, digital twins and interactive product experiences for business and game studios." />
+    <meta property="og:title" content="Solverto — Realtime 3D, Games and XR" />
+    <meta property="og:description" content="Creative technology and production support for interactive 3D products, games, XR and digital twins." />
     <meta property="og:type" content="website" />
-    <title>Solverto — Gry, 3D i interaktywne światy realtime</title>
-    <link rel="icon" href="public/brand/favicon.svg" type="image/svg+xml" />
-    <link rel="preload" href="public/graphics/hero-world.svg" as="image" />
+    <title>Solverto — Realtime 3D, Games and XR</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Przejdź do treści</a>
-
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header" data-header>
-      <nav class="nav" aria-label="Główna nawigacja">
-        <a class="brand" href="#home" aria-label="Solverto home">
-          <img
-            src="public/graphics/SolvertoLogo.gif"
-            width="96"
-            height="96"
-            alt="Solverto"
-          />
-        </a>
-
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-label="Otwórz menu"
-          data-i18n-aria-label="nav.open"
-          aria-expanded="false"
-          aria-controls="nav-menu"
-          data-nav-toggle
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <div class="nav-menu" id="nav-menu" data-nav-menu>
-          <a href="#services" data-i18n="nav.services">Usługi</a>
-          <a href="architecture/" data-i18n="nav.architecture">Architektura</a>
-          <a href="games/" data-i18n="nav.games">Gry</a>
-          <a href="metaverse/" data-i18n="nav.metaverse">Metaverse</a>
-          <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
-          <a href="#contact" data-i18n="nav.contact">Kontakt</a>
-          <div class="language-switcher" aria-label="Wybór języka" data-i18n-aria-label="nav.language">
-            <button type="button" data-lang="pl">PL</button>
-            <button type="button" data-lang="en">EN</button>
-            <button type="button" data-lang="de">DE</button>
-            <button type="button" data-lang="es">ES</button>
-          </div>
-          <a class="nav-cta" href="#contact" data-i18n="nav.cta">Rozpocznij współpracę</a>
+      <nav class="container nav-shell" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Solverto home"><img src="assets/logo.svg" alt="Solverto" width="520" height="160" /></a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu" data-nav-toggle><span></span><span></span><span></span></button>
+        <div class="nav-menu" id="main-menu" data-nav-menu>
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="games.html">Game Production</a>
+          <a href="realtime-3d.html">Realtime 3D</a>
+          <a href="xr-digital-twin.html">XR &amp; Digital Twin</a>
+          <a href="ai-pipeline.html">AI &amp; Pipeline</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+          <a class="nav-cta" href="contact.html">Start a project</a>
         </div>
       </nav>
     </header>
 
     <main id="main">
-      <section class="hero" id="home">
-        <div class="hero-bg" aria-hidden="true"></div>
-        <div class="section-shell hero-grid">
+      <section class="hero">
+        <div class="hero-gridlines" data-parallax aria-hidden="true"></div>
+        <div class="container hero-layout">
           <div class="hero-copy reveal">
-            <p class="eyebrow" data-i18n="hero.eyebrow">Solverto Group · games · 3D · realtime</p>
-            <h1 data-i18n="hero.title">Gry, 3D i interaktywne światy realtime</h1>
-            <p class="hero-lead" data-i18n="hero.subtitle">
-              Solverto tworzy produkcyjne assety 3D, levele, modele inwestycji, środowiska
-              realtime, prototypy gier i interaktywne doświadczenia dla gamedevu,
-              architektury i biznesu.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#contact" data-i18n="hero.primary">Rozpocznij współpracę</a>
-              <a class="button button-secondary" href="#portfolio" data-i18n="hero.secondary">Zobacz portfolio</a>
-            </div>
-            <p class="trust-line" data-i18n="hero.trust">
-              Doświadczenie w grach, architekturze realtime, metaverse, Unity, Unreal i
-              produkcji 3D.
-            </p>
-          </div>
-          <figure class="hero-visual reveal">
-            <img
-              src="public/graphics/hero-world.svg"
-              alt="Abstrakcyjny świat realtime 3D z siatką, node'ami i bryłami architektury"
-              width="1400"
-              height="900"
-            />
-          </figure>
-        </div>
-      </section>
-
-      <section class="stats section-shell reveal" data-i18n-aria-label="stats.label" aria-label="Doświadczenie">
-        <span data-i18n="stats.references">30+ real estate / architecture references</span>
-        <span data-i18n="stats.levels">Multiple game levels delivered</span>
-        <span data-i18n="stats.metaverse">Metaverse spaces, mazes and interactive levels</span>
-        <span data-i18n="stats.production">Unity / Unreal / 3D / realtime production</span>
-        <span data-i18n="stats.countries">Poland · Austria · Canada · Italy · UAE</span>
-      </section>
-
-      <section class="section section-shell" id="services">
-        <div class="section-heading reveal">
-          <p class="eyebrow" data-i18n="services.eyebrow">Usługi</p>
-          <h2 data-i18n="services.title">Od assetu do gotowego świata realtime.</h2>
-          <p data-i18n="services.intro">
-            Łączymy artystyczną jakość, techniczne podejście i praktyczne doświadczenie
-            produkcyjne. Pomagamy klientom przechodzić od koncepcji do gotowego modelu,
-            poziomu, prototypu albo interaktywnej prezentacji.
-          </p>
-        </div>
-        <div class="service-grid" data-services></div>
-      </section>
-
-      <section class="section band" id="architecture">
-        <div class="section-shell split">
-          <div class="reveal">
-            <p class="eyebrow" data-i18n="architecture.eyebrow">Architecture & Real Estate 3D</p>
-            <h2 data-i18n="architecture.title">Modelowanie inwestycji, PZT/PTT i duże założenia urbanistyczne.</h2>
-            <p data-i18n="architecture.intro">
-              W obszarze architektury i inwestycji mieszkaniowych Solverto ma doświadczenie
-              w modelowaniu projektów, przygotowaniu PZT/PTT, poprawkach produkcyjnych,
-              analizie modeli i pracy z dużymi założeniami urbanistycznymi.
-            </p>
-            <div class="tag-row" aria-label="Referencje tekstowe">
-              <span>Vinci</span>
-              <span>Atal</span>
-              <span>Dom Development</span>
-              <span>Echo</span>
-              <span>Murapol</span>
-              <span>SQUAREBYTES GmbH</span>
-            </div>
-            <div class="architecture-section-actions">
-              <a class="button button-secondary" href="architecture/" data-i18n="architecture.more">Poznaj ofertę architektoniczną</a>
+            <p class="eyebrow">Creative technology for business and game studios</p>
+            <h1>Realtime 3D, games, XR simulations and interactive product experiences for business.</h1>
+            <p class="hero-lead">Solverto helps companies and game studios turn ideas, products and technical data into interactive 3D experiences, playable prototypes, digital twins, XR training and production-ready visual content.</p>
+            <div class="actions">
+              <a class="button button-primary" href="contact.html">Start a project</a>
+              <a class="button button-secondary" href="portfolio.html">View portfolio</a>
             </div>
           </div>
-          <figure class="image-card reveal">
-            <img src="public/graphics/architecture-grid.svg" alt="Model urbanistyczny inwestycji" loading="lazy" />
-            <figcaption data-i18n="figures.architecture">PZT / PTT · urban model</figcaption>
-          </figure>
+          <div class="media-placeholder is-wide reveal" role="img" aria-label="Hero visual placeholder">[Hero visual: Solverto realtime 3D / games / XR showcase]</div>
         </div>
       </section>
 
-      <section class="section section-shell">
-        <div class="section-heading reveal">
-          <p class="eyebrow" data-i18n="largest.eyebrow">Największe inwestycje</p>
-          <h2 data-i18n="largest.title">Largest real estate references</h2>
-        </div>
-        <div class="largest-grid" data-largest></div>
-        <p class="notice reveal" data-i18n="largest.disclaimer">
-          Skale projektów są opisem orientacyjnym na podstawie zakresu referencyjnego i
-          powinny być traktowane jako prezentacja doświadczenia produkcyjnego.
-        </p>
-      </section>
-
-      <section class="section section-shell" id="games">
-        <div class="split reverse">
-          <figure class="image-card reveal">
-            <img src="public/graphics/game-greybox.svg" alt="Greybox level design i scena gry" loading="lazy" />
-            <figcaption data-i18n="figures.games">Selected game production work</figcaption>
-          </figure>
-          <div class="reveal">
-            <p class="eyebrow" data-i18n="games.eyebrow">Solverto Games</p>
-            <h2 data-i18n="games.title">Levele, środowiska, prototypy i własne IP.</h2>
-            <p data-i18n="games.intro">
-              W gamedevie pracowaliśmy przy levelach, środowiskach, prototypach, elementach
-              gameplayu i modelach 3D dla gier oraz projektów interaktywnych.
-            </p>
-            <div class="architecture-section-actions">
-              <a class="button button-secondary" href="games/" data-i18n="games.more">Poznaj produkcję gier</a>
-            </div>
+      <section class="section section-band" id="about">
+        <div class="container split-layout">
+          <div class="section-heading reveal">
+            <p class="eyebrow">About Solverto</p>
+            <h2>One production partner for visual quality and technical delivery.</h2>
+          </div>
+          <div class="story-copy reveal">
+            <p>Solverto combines game development, 3D production, realtime technology, animation, XR and AI-assisted workflows. We connect creative direction with practical production so projects can move from early concept to a clear, testable and reusable result.</p>
+            <p>Our work is business-focused: product understanding, training, sales, marketing, simulation and game production support. The goal is not technology for its own sake, but a useful experience that helps people see, learn, decide or play.</p>
           </div>
         </div>
       </section>
 
-      <section class="section band" id="metaverse">
-        <div class="section-shell split">
-          <div class="reveal">
-            <p class="eyebrow" data-i18n="metaverse.eyebrow">Metaverse</p>
-            <h2 data-i18n="metaverse.title">Cyfrowe światy, event roomy, avatary i interaktywne levele.</h2>
-            <p data-i18n="metaverse.intro">
-              Solverto współtworzyło wiele przestrzeni metaverse, maze’ów, leveli, event
-              roomów, avatarów, animacji i modeli 3D dla cyfrowych światów.
-            </p>
-            <p class="notice" data-i18n="metaverse.note">
-              Modele 3D były tworzone lub współtworzone dla wielu wymienionych projektów
-              metaverse, leveli i doświadczeń interaktywnych.
-            </p>
-            <div class="architecture-section-actions">
-              <a class="button button-secondary" href="metaverse/" data-i18n="metaverse.more">Poznaj realizacje metaverse</a>
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-heading reveal"><p class="eyebrow">Service pillars</p><h2>Four ways to move an interactive project forward.</h2><p>Choose a focused service or combine several areas into one production pipeline.</p></div>
+          <div class="service-grid">
+            <article class="card reveal">
+              <div class="media-placeholder" role="img">[Service visual: game environment and playable demo]</div>
+              <h3>Game Production</h3><p>Demo polish, vertical slices, environments, trailers, technical art and optimization.</p>
+              <ul><li>Demo rescue</li><li>Environment art</li><li>Trailer capture</li><li>PC optimization</li></ul>
+              <div class="card-footer"><a class="button button-secondary button-small" href="games.html">Explore Game Production</a></div>
+            </article>
+            <article class="card reveal">
+              <div class="media-placeholder" role="img">[Service visual: interactive product configurator]</div>
+              <h3>Realtime 3D for Business</h3><p>Interactive product, building and marketing experiences built from real source data.</p>
+              <ul><li>Product configurators</li><li>Realtime showrooms</li><li>AR product viewers</li><li>CAD conversion</li></ul>
+              <div class="card-footer"><a class="button button-secondary button-small" href="realtime-3d.html">Explore Realtime 3D</a></div>
+            </article>
+            <article class="card reveal">
+              <div class="media-placeholder" role="img">[Service visual: XR training and digital twin]</div>
+              <h3>XR &amp; Digital Twin</h3><p>Training, safety, onboarding and process simulations for real business scenarios.</p>
+              <ul><li>XR prototypes</li><li>VR training</li><li>Digital Twin Lite</li><li>Process simulation</li></ul>
+              <div class="card-footer"><a class="button button-secondary button-small" href="xr-digital-twin.html">Explore XR Solutions</a></div>
+            </article>
+            <article class="card reveal">
+              <div class="media-placeholder" role="img">[Service visual: AI-assisted production pipeline]</div>
+              <h3>AI &amp; Production Pipeline</h3><p>Safer AI use, reusable assets, workflow audits and practical realtime consulting.</p>
+              <ul><li>Pipeline audits</li><li>Asset optimization</li><li>Workshops</li><li>Reusable systems</li></ul>
+              <div class="card-footer"><a class="button button-secondary button-small" href="ai-pipeline.html">Explore AI &amp; Pipeline</a></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-band" id="featured-services">
+        <div class="container">
+          <div class="section-heading reveal"><p class="eyebrow">Featured services</p><h2>Clear starting points for common production needs.</h2></div>
+          <div class="highlight-grid">
+            <article class="card highlight-card reveal"><span class="highlight-number">01</span><h3>Game Demo Rescue</h3><p>Focused production support to make an existing demo clearer, more stable and presentation-ready.</p></article>
+            <article class="card highlight-card reveal"><span class="highlight-number">02</span><h3>Interactive Product Configurator</h3><p>A realtime product experience that helps customers understand options, features and value.</p></article>
+            <article class="card highlight-card reveal"><span class="highlight-number">03</span><h3>Digital Twin Lite</h3><p>A simplified interactive facility or process model without the cost of a full enterprise twin.</p></article>
+            <article class="card highlight-card reveal"><span class="highlight-number">04</span><h3>XR Training Prototype</h3><p>A testable VR, AR or MR scenario used to validate training value before a larger rollout.</p></article>
+            <article class="card highlight-card reveal"><span class="highlight-number">05</span><h3>Steam Deck / PC Optimization</h3><p>A practical pass focused on performance, scalability, scene cost and stable gameplay.</p></article>
+            <article class="card highlight-card reveal"><span class="highlight-number">06</span><h3>3D Marketing Content Engine</h3><p>A reusable 3D source that supports stills, animation, realtime presentations and campaign content.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="portfolio-preview">
+        <div class="container">
+          <div class="section-heading reveal"><p class="eyebrow">Selected work</p><h2>Project examples built around concrete outcomes.</h2><p>These sample cases show how a project page can explain the challenge, delivery and business value.</p></div>
+          <div class="portfolio-grid">
+            <article class="project-card reveal">
+              <div class="media-placeholder" role="img">[Project thumbnail: realtime architectural visualization]</div>
+              <div class="project-card-body"><p class="eyebrow">Realtime 3D / Architecture</p><h3>Realtime Architectural Visualization</h3><p>An optimized interactive environment for presenting a property before construction.</p><div class="tag-row"><span class="tag">Unreal Engine</span><span class="tag">Interactive UI</span></div><a class="button button-secondary button-small" href="project-architecture.html">More</a></div>
+            </article>
+            <article class="project-card reveal">
+              <div class="media-placeholder" role="img">[Project thumbnail: Unreal Engine environment art]</div>
+              <div class="project-card-body"><p class="eyebrow">Game Production</p><h3>Game Demo Environment</h3><p>A polished environment and lighting pass for a stronger playable game demo.</p><div class="tag-row"><span class="tag">Unreal Engine</span><span class="tag">Environment Art</span></div><a class="button button-secondary button-small" href="project-game-demo.html">More</a></div>
+            </article>
+            <article class="project-card reveal">
+              <div class="media-placeholder" role="img">[Project thumbnail: VR safety training simulation]</div>
+              <div class="project-card-body"><p class="eyebrow">XR Training</p><h3>VR Safety Training Demo</h3><p>A short interactive scenario for validating immersive safety instruction.</p><div class="tag-row"><span class="tag">VR</span><span class="tag">Interaction Design</span></div><a class="button button-secondary button-small" href="project-xr-training.html">More</a></div>
+            </article>
+          </div>
+          <div class="actions section-actions"><a class="button button-primary" href="portfolio.html">View full portfolio</a></div>
+        </div>
+      </section>
+
+      <section class="section section-band" id="gallery">
+        <div class="container">
+          <div class="section-heading reveal"><p class="eyebrow">Gallery</p><h2>Space reserved for real production material.</h2></div>
+          <div class="gallery-grid">
+            <div class="media-placeholder reveal" role="img">[Gallery: game environment screenshot]</div>
+            <div class="media-placeholder reveal" role="img">[Gallery: product configurator UI]</div>
+            <div class="media-placeholder reveal" role="img">[Gallery: XR training simulation]</div>
+            <div class="media-placeholder reveal" role="img">[Gallery: digital twin dashboard]</div>
+            <div class="media-placeholder reveal" role="img">[Gallery: realtime showroom walkthrough]</div>
+            <div class="media-placeholder reveal" role="img">[Gallery: 3D marketing animation frame]</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container contact-layout">
+          <div>
+            <div class="section-heading reveal"><p class="eyebrow">Contact</p><h2>Tell us what you want to build.</h2><p>Share the goal, current materials, expected platform and deadline. We will suggest a practical next step.</p></div>
+            <div class="contact-cards">
+              <div class="contact-card reveal"><h3>Email</h3><a href="mailto:contact@solverto.com">contact@solverto.com</a></div>
+              <div class="contact-card reveal"><h3>Phone</h3><a href="tel:+48000000000">+48 000 000 000</a></div>
+              <div class="contact-card reveal"><h3>Studio</h3><p>Solverto Studio, Poland</p></div>
             </div>
           </div>
-          <figure class="image-card reveal">
-            <img src="public/graphics/metaverse-portals.svg" alt="Portale metaverse i event roomy" loading="lazy" />
-            <figcaption data-i18n="figures.metaverse">Rooms · mazes · avatars</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="section section-shell" id="portfolio">
-        <div class="section-heading reveal">
-          <p class="eyebrow" data-i18n="portfolio.eyebrow">Portfolio</p>
-          <h2 data-i18n="portfolio.title">Referencje projektowe z filtrowaniem.</h2>
-          <p data-i18n="portfolio.intro">
-            Przegląd projektów architektonicznych, gamedevowych, metaverse, analiz i
-            wsparcia produkcyjnego.
-          </p>
-        </div>
-        <div class="portfolio-controls reveal">
-          <label>
-            <span data-i18n="portfolio.searchLabel">Szukaj projektu</span>
-            <input type="search" data-search placeholder="Szukaj po projekcie, kliencie, kraju lub tagu" />
-          </label>
-          <div class="filter-row" data-filters></div>
-        </div>
-        <div class="project-count" data-count></div>
-        <div class="project-grid" data-projects></div>
-        <p class="notice legal" data-i18n="portfolio.legal">
-          Wybrane referencje projektowe obejmują prace realizowane bezpośrednio lub we
-          współpracy z partnerami produkcyjnymi i zespołami branżowymi.
-        </p>
-      </section>
-
-      <section class="section section-shell" id="cooperation">
-        <div class="section-heading reveal">
-          <p class="eyebrow" data-i18n="cooperation.eyebrow">Cooperation</p>
-          <h2 data-i18n="cooperation.title">Jak wygląda współpraca</h2>
-          <p data-i18n="cooperation.text">
-            Zaczynamy od briefu i zrozumienia celu projektu. Następnie przygotowujemy
-            zakres, estymację i plan produkcji.
-          </p>
-        </div>
-        <div class="steps-grid" data-steps></div>
-      </section>
-
-      <section class="section section-shell" id="contact">
-        <div class="contact-layout">
-          <div class="reveal">
-            <p class="eyebrow" data-i18n="contact.eyebrow">Kontakt</p>
-            <h2 data-i18n="contact.title">
-              Masz projekt, inwestycję, grę lub interaktywną prezentację do zrealizowania?
-              Napisz do nas.
-            </h2>
-            <p data-i18n="contact.intro">
-              Formularz działa jako mock submit. Kod można łatwo podłączyć do API.
-            </p>
-          </div>
-          <form class="contact-form reveal" data-contact-form>
-            <label><span data-i18n="form.name">Imię i nazwisko</span><input name="name" required /></label>
-            <label><span data-i18n="form.company">Firma</span><input name="company" /></label>
-            <label><span>Email</span><input name="email" type="email" required /></label>
-            <label>
-              <span data-i18n="form.projectType">Typ zapytania</span>
-              <select name="projectType" data-project-type></select>
-            </label>
-            <label><span data-i18n="form.budget">Budżet opcjonalnie</span><input name="budgetRange" /></label>
-            <label><span data-i18n="form.deadline">Deadline opcjonalnie</span><input name="deadline" /></label>
-            <label class="full">
-              <span data-i18n="form.message">Wiadomość</span>
-              <textarea name="message" required></textarea>
-            </label>
-            <button class="button button-primary full" type="submit" data-i18n="form.submit">Wyślij zapytanie</button>
-            <p class="form-status full" data-form-status role="status"></p>
+          <form class="form-panel reveal" data-static-form>
+            <div class="form-grid">
+              <label class="form-field">Name<input name="name" required /></label>
+              <label class="form-field">Email<input name="email" type="email" required /></label>
+              <label class="form-field">Company<input name="company" /></label>
+              <label class="form-field">Project type<select name="projectType"><option>Game Production</option><option>Realtime 3D</option><option>XR &amp; Digital Twin</option><option>AI &amp; Pipeline</option><option>Other</option></select></label>
+              <label class="form-field is-full">Message<textarea name="message" required></textarea></label>
+            </div>
+            <button class="button button-primary" type="submit">Send inquiry</button>
+            <p class="form-status" data-form-status role="status"></p>
           </form>
+        </div>
+      </section>
+
+      <section class="consultation">
+        <div class="container consultation-inner reveal">
+          <p class="eyebrow">Project consultation</p>
+          <h2>Book a project consultation</h2>
+          <p>Tell us what you want to build and we will help you choose the right realtime 3D, game, XR or digital product solution.</p>
+          <div class="actions"><a class="button button-primary" href="mailto:contact@solverto.com?subject=Project%20consultation">Email us</a><a class="button button-secondary" href="https://wa.me/48000000000">WhatsApp</a></div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="section-shell footer-grid">
-        <div>
-          <img
-            class="footer-logo"
-            src="public/graphics/SolvertoLogo.gif"
-            width="160"
-            height="160"
-            alt="Solverto"
-          />
-          <p data-i18n="footer.description">
-            Solverto Group łączy gry, 3D, realtime, architekturę, metaverse i interaktywne
-            technologie produkcyjne.
-          </p>
-        </div>
-        <div>
-          <h2 data-i18n="footer.menu">Menu</h2>
-          <a href="#services" data-i18n="nav.services">Usługi</a>
-          <a href="architecture/" data-i18n="nav.architecture">Architektura</a>
-          <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
-          <a href="#contact" data-i18n="nav.contact">Kontakt</a>
-        </div>
-        <div>
-          <h2 data-i18n="footer.ecosystem">Solverto Group ecosystem</h2>
-          <p data-i18n="footer.ecosystemLine">Solverto Studio · Solverto Games · realtime 3D · IP development</p>
-          <p class="legal-note" data-i18n="footer.legal">
-            Selected project references may include work delivered in cooperation with partner
-            studios, production teams or external clients.
-          </p>
-        </div>
+      <div class="container footer-grid">
+        <div><img class="footer-brand" src="assets/logo.svg" alt="Solverto" width="520" height="160" /><p>Realtime 3D, games, XR and practical creative technology for business.</p></div>
+        <div class="footer-column"><h2>Services</h2><a href="games.html">Game Production</a><a href="realtime-3d.html">Realtime 3D</a><a href="xr-digital-twin.html">XR &amp; Digital Twin</a><a href="ai-pipeline.html">AI &amp; Pipeline</a></div>
+        <div class="footer-column"><h2>Explore</h2><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a><a href="#about">About</a></div>
+        <div class="footer-column"><h2>Contact</h2><a href="mailto:contact@solverto.com">contact@solverto.com</a><a href="tel:+48000000000">+48 000 000 000</a><p>Solverto Studio, Poland</p></div>
       </div>
+      <div class="container copyright">© <span data-year></span> Solverto. Static website.</div>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>

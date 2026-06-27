@@ -28,11 +28,8 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir _site
-          cp index.html styles.css script.js vertical-page.js _site/
-          cp -R architecture _site/architecture
-          cp -R games _site/games
-          cp -R metaverse _site/metaverse
-          cp -R public _site/public
+          cp *.html styles.css script.js _site/
+          cp -R assets _site/assets
           touch _site/.nojekyll
 
       - name: Upload Pages artifact
