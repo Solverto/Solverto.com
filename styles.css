@@ -123,6 +123,16 @@ textarea {
   transform: translateY(0);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .container {
   width: min(1180px, calc(100% - 32px));
   margin-inline: auto;
@@ -227,6 +237,20 @@ textarea {
 .nav-menu a[aria-current="page"] {
   color: var(--brand-light);
   background: var(--brand-surface-2);
+}
+
+.language-control {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.language-control select {
+  min-height: 42px;
+  padding: 0 34px 0 12px;
+  color: var(--brand-light);
+  background-color: var(--brand-surface);
+  cursor: pointer;
 }
 
 .nav-menu .nav-cta {
@@ -967,6 +991,19 @@ textarea:focus {
   .nav-menu .nav-cta {
     margin-left: 4px;
     padding-inline: 14px;
+  }
+
+  .language-control {
+    width: 112px;
+    flex: 0 0 112px;
+    margin-top: 0;
+    margin-left: 8px;
+  }
+
+  .language-control select {
+    min-height: 40px;
+    padding-inline: 9px 28px;
+    font-size: 0.78rem;
   }
 
   .hero {

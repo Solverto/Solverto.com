@@ -4,6 +4,127 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const navMenu = document.querySelector("[data-nav-menu]");
 const portfolioData = window.SOLVERTO_PORTFOLIO;
 
+const languageOptions = [
+  ["en", "English"],
+  ["pl", "Polski"],
+  ["de", "Deutsch"],
+  ["es", "Español"],
+  ["pt", "Português"],
+  ["it", "Italiano"]
+];
+
+const translations = {
+  pl: {
+    "Home": "Strona główna", "Game Production": "Produkcja gier", "Realtime 3D": "3D czasu rzeczywistego", "XR & Digital Twin": "XR i cyfrowy bliźniak", "AI & Pipeline": "AI i proces produkcyjny", "Contact": "Kontakt", "Start a project": "Rozpocznij projekt",
+    "View portfolio": "Zobacz portfolio", "Explore projects": "Zobacz projekty", "View full portfolio": "Pełne portfolio", "More": "Więcej", "View examples": "Zobacz przykłady", "Email us": "Napisz e-mail", "Start a conversation": "Rozpocznij rozmowę", "Back to portfolio": "Powrót do portfolio", "View model on Sketchfab": "Zobacz model w Sketchfab",
+    "All": "Wszystkie", "Architecture / Realtime Real Estate": "Architektura / nieruchomości realtime", "Game Development": "Tworzenie gier", "Animations / Support / Analysis": "Animacje / wsparcie / analiza", "Search portfolio": "Przeszukaj portfolio",
+    "Project facts": "Informacje o projekcie", "Client / Partner": "Klient / Partner", "Role": "Rola", "Scope": "Zakres", "Industry": "Branża", "Technologies": "Technologie", "Year": "Rok", "Challenge": "Wyzwanie", "Solverto contribution": "Wkład Solverto", "Gallery": "Galeria", "Interactive model": "Model interaktywny",
+    "Realtime 3D, games, XR simulations and interactive product experiences for business.": "3D czasu rzeczywistego, gry, symulacje XR i interaktywne doświadczenia produktowe dla biznesu.",
+    "Game Production & Demo Support": "Produkcja gier i wsparcie wersji demo", "Realtime 3D for Business": "3D czasu rzeczywistego dla biznesu", "XR Training, Simulations & Digital Twin": "Szkolenia XR, symulacje i cyfrowy bliźniak", "AI-Assisted Creative Pipeline & Realtime Production": "Proces kreatywny wspierany przez AI i produkcja realtime", "Portfolio of realtime 3D, architecture, games and metaverse production": "Portfolio produkcji 3D realtime, architektury, gier i metaverse", "Tell us what you want to build.": "Opowiedz nam, co chcesz stworzyć."
+  },
+  de: {
+    "Home": "Startseite", "Game Production": "Spieleproduktion", "Realtime 3D": "Echtzeit-3D", "XR & Digital Twin": "XR & Digitaler Zwilling", "AI & Pipeline": "KI & Produktionsprozess", "Portfolio": "Portfolio", "Contact": "Kontakt", "Start a project": "Projekt starten",
+    "View portfolio": "Portfolio ansehen", "Explore projects": "Projekte entdecken", "View full portfolio": "Gesamtes Portfolio", "More": "Mehr", "View examples": "Beispiele ansehen", "Email us": "E-Mail senden", "Start a conversation": "Gespräch beginnen", "Back to portfolio": "Zurück zum Portfolio", "View model on Sketchfab": "Modell auf Sketchfab ansehen",
+    "All": "Alle", "Architecture / Realtime Real Estate": "Architektur / Echtzeit-Immobilien", "Game Development": "Spieleentwicklung", "Metaverse": "Metaverse", "Solverto Games": "Solverto Games", "Animations / Support / Analysis": "Animation / Support / Analyse", "Search portfolio": "Portfolio durchsuchen",
+    "Project facts": "Projektdaten", "Client / Partner": "Kunde / Partner", "Role": "Rolle", "Scope": "Umfang", "Industry": "Branche", "Technologies": "Technologien", "Year": "Jahr", "Challenge": "Herausforderung", "Solverto contribution": "Beitrag von Solverto", "Gallery": "Galerie", "Interactive model": "Interaktives Modell",
+    "Realtime 3D, games, XR simulations and interactive product experiences for business.": "Echtzeit-3D, Spiele, XR-Simulationen und interaktive Produkterlebnisse für Unternehmen.",
+    "Game Production & Demo Support": "Spieleproduktion & Demo-Support", "Realtime 3D for Business": "Echtzeit-3D für Unternehmen", "XR Training, Simulations & Digital Twin": "XR-Training, Simulationen & Digitaler Zwilling", "AI-Assisted Creative Pipeline & Realtime Production": "KI-gestützter Kreativprozess & Echtzeitproduktion", "Portfolio of realtime 3D, architecture, games and metaverse production": "Portfolio für Echtzeit-3D, Architektur, Spiele und Metaverse-Produktion", "Tell us what you want to build.": "Erzählen Sie uns, was Sie entwickeln möchten."
+  },
+  es: {
+    "Home": "Inicio", "Game Production": "Producción de juegos", "Realtime 3D": "3D en tiempo real", "XR & Digital Twin": "XR y gemelo digital", "AI & Pipeline": "IA y proceso de producción", "Portfolio": "Portafolio", "Contact": "Contacto", "Start a project": "Iniciar un proyecto",
+    "View portfolio": "Ver portafolio", "Explore projects": "Explorar proyectos", "View full portfolio": "Ver portafolio completo", "More": "Más", "View examples": "Ver ejemplos", "Email us": "Enviar correo", "Start a conversation": "Iniciar una conversación", "Back to portfolio": "Volver al portafolio", "View model on Sketchfab": "Ver modelo en Sketchfab",
+    "All": "Todos", "Architecture / Realtime Real Estate": "Arquitectura / inmobiliario en tiempo real", "Game Development": "Desarrollo de juegos", "Metaverse": "Metaverso", "Solverto Games": "Solverto Games", "Animations / Support / Analysis": "Animación / soporte / análisis", "Search portfolio": "Buscar en el portafolio",
+    "Project facts": "Datos del proyecto", "Client / Partner": "Cliente / socio", "Role": "Función", "Scope": "Alcance", "Industry": "Sector", "Technologies": "Tecnologías", "Year": "Año", "Challenge": "Desafío", "Solverto contribution": "Contribución de Solverto", "Gallery": "Galería", "Interactive model": "Modelo interactivo",
+    "Realtime 3D, games, XR simulations and interactive product experiences for business.": "3D en tiempo real, juegos, simulaciones XR y experiencias interactivas de producto para empresas.",
+    "Game Production & Demo Support": "Producción de juegos y soporte de demos", "Realtime 3D for Business": "3D en tiempo real para empresas", "XR Training, Simulations & Digital Twin": "Formación XR, simulaciones y gemelo digital", "AI-Assisted Creative Pipeline & Realtime Production": "Proceso creativo asistido por IA y producción en tiempo real", "Portfolio of realtime 3D, architecture, games and metaverse production": "Portafolio de 3D en tiempo real, arquitectura, juegos y producción metaverso", "Tell us what you want to build.": "Cuéntenos qué quiere crear."
+  },
+  pt: {
+    "Home": "Início", "Game Production": "Produção de jogos", "Realtime 3D": "3D em tempo real", "XR & Digital Twin": "XR e gémeo digital", "AI & Pipeline": "IA e processo de produção", "Portfolio": "Portfólio", "Contact": "Contacto", "Start a project": "Iniciar um projeto",
+    "View portfolio": "Ver portfólio", "Explore projects": "Explorar projetos", "View full portfolio": "Ver portfólio completo", "More": "Mais", "View examples": "Ver exemplos", "Email us": "Enviar e-mail", "Start a conversation": "Iniciar conversa", "Back to portfolio": "Voltar ao portfólio", "View model on Sketchfab": "Ver modelo no Sketchfab",
+    "All": "Todos", "Architecture / Realtime Real Estate": "Arquitetura / imobiliário em tempo real", "Game Development": "Desenvolvimento de jogos", "Metaverse": "Metaverso", "Solverto Games": "Solverto Games", "Animations / Support / Analysis": "Animação / suporte / análise", "Search portfolio": "Pesquisar no portfólio",
+    "Project facts": "Dados do projeto", "Client / Partner": "Cliente / parceiro", "Role": "Função", "Scope": "Âmbito", "Industry": "Setor", "Technologies": "Tecnologias", "Year": "Ano", "Challenge": "Desafio", "Solverto contribution": "Contribuição da Solverto", "Gallery": "Galeria", "Interactive model": "Modelo interativo",
+    "Realtime 3D, games, XR simulations and interactive product experiences for business.": "3D em tempo real, jogos, simulações XR e experiências interativas de produto para empresas.",
+    "Game Production & Demo Support": "Produção de jogos e suporte de demos", "Realtime 3D for Business": "3D em tempo real para empresas", "XR Training, Simulations & Digital Twin": "Formação XR, simulações e gémeo digital", "AI-Assisted Creative Pipeline & Realtime Production": "Processo criativo assistido por IA e produção em tempo real", "Portfolio of realtime 3D, architecture, games and metaverse production": "Portfólio de 3D em tempo real, arquitetura, jogos e produção metaverso", "Tell us what you want to build.": "Conte-nos o que pretende criar."
+  },
+  it: {
+    "Home": "Home", "Game Production": "Produzione videogiochi", "Realtime 3D": "3D in tempo reale", "XR & Digital Twin": "XR e gemello digitale", "AI & Pipeline": "IA e processo produttivo", "Portfolio": "Portfolio", "Contact": "Contatti", "Start a project": "Avvia un progetto",
+    "View portfolio": "Vedi portfolio", "Explore projects": "Esplora i progetti", "View full portfolio": "Portfolio completo", "More": "Altro", "View examples": "Vedi esempi", "Email us": "Invia un'e-mail", "Start a conversation": "Inizia una conversazione", "Back to portfolio": "Torna al portfolio", "View model on Sketchfab": "Vedi il modello su Sketchfab",
+    "All": "Tutti", "Architecture / Realtime Real Estate": "Architettura / immobiliare in tempo reale", "Game Development": "Sviluppo videogiochi", "Metaverse": "Metaverso", "Solverto Games": "Solverto Games", "Animations / Support / Analysis": "Animazione / supporto / analisi", "Search portfolio": "Cerca nel portfolio",
+    "Project facts": "Dati del progetto", "Client / Partner": "Cliente / partner", "Role": "Ruolo", "Scope": "Ambito", "Industry": "Settore", "Technologies": "Tecnologie", "Year": "Anno", "Challenge": "Sfida", "Solverto contribution": "Contributo di Solverto", "Gallery": "Galleria", "Interactive model": "Modello interattivo",
+    "Realtime 3D, games, XR simulations and interactive product experiences for business.": "3D in tempo reale, videogiochi, simulazioni XR ed esperienze interattive di prodotto per le aziende.",
+    "Game Production & Demo Support": "Produzione videogiochi e supporto demo", "Realtime 3D for Business": "3D in tempo reale per le aziende", "XR Training, Simulations & Digital Twin": "Formazione XR, simulazioni e gemello digitale", "AI-Assisted Creative Pipeline & Realtime Production": "Processo creativo assistito dall'IA e produzione in tempo reale", "Portfolio of realtime 3D, architecture, games and metaverse production": "Portfolio di 3D in tempo reale, architettura, videogiochi e produzione metaverso", "Tell us what you want to build.": "Raccontaci cosa vuoi realizzare."
+  }
+};
+
+function storedLanguage() {
+  try {
+    const value = localStorage.getItem("solverto-language");
+    return languageOptions.some(([code]) => code === value) ? value : "en";
+  } catch {
+    return "en";
+  }
+}
+
+let selectedLanguage = storedLanguage();
+
+function translatedText(source, language = selectedLanguage) {
+  return language === "en" ? source : translations[language]?.[source] || source;
+}
+
+function projectCountLabel(count) {
+  const labels = {
+    en: count === 1 ? "project" : "projects",
+    pl: count === 1 ? "projekt" : "projektów",
+    de: count === 1 ? "Projekt" : "Projekte",
+    es: count === 1 ? "proyecto" : "proyectos",
+    pt: count === 1 ? "projeto" : "projetos",
+    it: count === 1 ? "progetto" : "progetti"
+  };
+  return `${count} ${labels[selectedLanguage]}`;
+}
+
+function addLanguageSelector() {
+  const projectButton = navMenu?.querySelector(".nav-cta");
+  if (!projectButton || navMenu.querySelector("[data-language-select]")) return;
+
+  const control = document.createElement("label");
+  control.className = "language-control";
+  control.innerHTML = `<span class="visually-hidden">Language</span><select data-language-select aria-label="Language">${languageOptions.map(([code, label]) => `<option value="${code}">${label}</option>`).join("")}</select>`;
+  projectButton.insertAdjacentElement("afterend", control);
+
+  const select = control.querySelector("select");
+  select.value = selectedLanguage;
+  select.addEventListener("change", () => {
+    selectedLanguage = select.value;
+    try { localStorage.setItem("solverto-language", selectedLanguage); } catch { /* Storage may be unavailable in private contexts. */ }
+    applyLanguage();
+  });
+}
+
+function applyLanguage() {
+  document.documentElement.lang = selectedLanguage;
+  document.querySelectorAll("a, button, h1, h2, h3, h4, p, span").forEach((element) => {
+    if (element.children.length > 0) return;
+    const source = element.dataset.languageSource || element.textContent.trim();
+    if (!source) return;
+    element.dataset.languageSource = source;
+    element.textContent = translatedText(source);
+  });
+
+  document.querySelectorAll("label.portfolio-search").forEach((label) => {
+    const textNode = [...label.childNodes].find((node) => node.nodeType === Node.TEXT_NODE && node.nodeValue.trim());
+    if (!textNode) return;
+    const source = label.dataset.languageSource || textNode.nodeValue.trim();
+    label.dataset.languageSource = source;
+    textNode.nodeValue = `${translatedText(source)} `;
+  });
+
+  const search = document.querySelector("[data-portfolio-search]");
+  if (search) search.placeholder = translatedText("Search portfolio");
+  const count = document.querySelector("[data-portfolio-count]");
+  if (count?.dataset.projectCount) count.textContent = projectCountLabel(Number(count.dataset.projectCount));
+}
+
 function escapeHtml(value = "") {
   return String(value)
     .replaceAll("&", "&amp;")
@@ -92,7 +213,10 @@ function renderPortfolio() {
       group.hidden = !group.querySelector("[data-project-card]:not([hidden])");
     });
 
-    if (countOutput) countOutput.textContent = `${visibleCount} ${visibleCount === 1 ? "project" : "projects"}`;
+    if (countOutput) {
+      countOutput.dataset.projectCount = String(visibleCount);
+      countOutput.textContent = projectCountLabel(visibleCount);
+    }
   }
 
   filterButtons.forEach((button) => {
@@ -207,6 +331,8 @@ renderStats();
 renderFeaturedProjects();
 renderPortfolio();
 renderProjectDetail();
+addLanguageSelector();
+applyLanguage();
 
 function closeNavigation() {
   document.body.classList.remove("nav-open");
