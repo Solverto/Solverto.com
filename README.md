@@ -20,11 +20,11 @@ Then open `http://localhost:4173/`.
 - `realtime-3d.html` - Realtime 3D for Business
 - `xr-digital-twin.html` - XR and Digital Twin
 - `ai-pipeline.html` - AI and Production Pipeline
-- `portfolio.html` - filterable portfolio
+- `portfolio.html` - complete filterable and searchable portfolio
 - `project-architecture.html` - architecture case study
 - `project-game-demo.html` - game production case study
 - `project-xr-training.html` - XR case study
-- `project-template.html` - reusable project detail template
+- `project-template.html` - reusable data-driven project detail template
 - `contact.html` - contact details and static form
 
 ## Editing
@@ -36,8 +36,10 @@ Then open `http://localhost:4173/`.
 - Replace Sketchfab placeholder URLs in the project detail pages.
 - Update contact details directly in the HTML files.
 - Shared interactions are in `script.js`.
+- Portfolio projects, roles, partners, descriptions and counters are maintained
+  in `portfolio-data.js`.
 
 ## GitHub Pages
 
-`.github/workflows/pages.yml` publishes all root HTML files, `styles.css`,
-`script.js` and the `assets/` directory after a push to `main`.
+`.github/workflows/pages.yml` publishes all root HTML files, CSS and JavaScript
+files, and the `assets/` directory after a push to `main`.

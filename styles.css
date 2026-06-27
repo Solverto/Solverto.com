@@ -56,7 +56,8 @@ p {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   max-width: 100%;
   margin: 0;
   color: var(--brand-light);
@@ -75,6 +76,10 @@ h2 {
 
 h3 {
   font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.15rem;
 }
 
 button,
@@ -417,9 +422,23 @@ textarea {
 .gallery-grid,
 .deliverable-grid,
 .value-grid,
-.contact-cards {
+.contact-cards,
+.stats-grid {
   display: grid;
   gap: 16px;
+}
+
+.stat-item {
+  min-width: 0;
+  border-top: 2px solid var(--brand-primary);
+  padding: 18px 0 8px;
+}
+
+.stat-value {
+  margin-bottom: 8px;
+  color: var(--brand-light);
+  font-size: clamp(1.55rem, 5vw, 2.4rem);
+  line-height: 1;
 }
 
 .card,
@@ -518,6 +537,36 @@ textarea {
   display: grid;
   gap: 12px;
   padding: 20px;
+}
+
+.project-card-body .button {
+  justify-self: start;
+  margin-top: auto;
+}
+
+.project-badge {
+  width: fit-content;
+  border-left: 3px solid var(--brand-primary);
+  padding-left: 9px;
+  color: var(--brand-light);
+  font-size: 0.76rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.project-meta {
+  color: var(--brand-muted);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.project-meta span,
+.project-fact span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--brand-secondary);
+  font-size: 0.7rem;
+  text-transform: uppercase;
 }
 
 .meta-row,
@@ -664,6 +713,61 @@ textarea:focus {
   margin-bottom: 22px;
 }
 
+.portfolio-controls {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.portfolio-search {
+  display: grid;
+  gap: 7px;
+  max-width: 560px;
+  color: var(--brand-light);
+  font-size: 0.86rem;
+}
+
+.portfolio-count {
+  align-self: end;
+  color: var(--brand-secondary);
+  font-size: 0.9rem;
+}
+
+.portfolio-groups {
+  display: grid;
+  gap: 68px;
+}
+
+.portfolio-group {
+  min-width: 0;
+  scroll-margin-top: calc(var(--header-height) + 20px);
+}
+
+.portfolio-group-heading {
+  display: grid;
+  gap: 10px;
+  max-width: 850px;
+  margin-bottom: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--brand-line);
+}
+
+.portfolio-group-heading h3 {
+  font-size: clamp(1.65rem, 5vw, 2.8rem);
+}
+
+.portfolio-note {
+  max-width: 900px;
+  margin-top: 24px;
+  border-left: 3px solid var(--brand-secondary);
+  padding: 10px 0 10px 14px;
+  font-size: 0.86rem;
+}
+
+.portfolio-legal {
+  margin-top: 54px;
+}
+
 .filter-button {
   min-height: 40px;
   border: 1px solid var(--brand-line);
@@ -689,6 +793,33 @@ textarea:focus {
 .project-detail-grid {
   display: grid;
   gap: 18px;
+}
+
+.project-facts-grid,
+.project-story-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.project-fact {
+  min-width: 0;
+  border-top: 1px solid var(--brand-line);
+  padding-top: 14px;
+}
+
+.project-extra-facts {
+  margin-top: 16px;
+}
+
+.project-story-grid .detail-block {
+  padding: 24px;
+  border: 1px solid var(--brand-line);
+  background: var(--brand-surface);
+}
+
+.project-story-grid .detail-block h2 {
+  margin: 9px 0 14px;
+  font-size: clamp(1.65rem, 5vw, 2.5rem);
 }
 
 .detail-block {
@@ -778,8 +909,18 @@ textarea:focus {
   .gallery-grid,
   .deliverable-grid,
   .value-grid,
-  .contact-cards {
+  .contact-cards,
+  .project-facts-grid,
+  .project-story-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio-controls {
+    grid-template-columns: minmax(0, 560px) auto;
   }
 
   .form-grid {
@@ -860,6 +1001,10 @@ textarea:focus {
   .portfolio-grid,
   .gallery-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .service-detail-grid {
