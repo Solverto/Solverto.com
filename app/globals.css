@@ -4,13 +4,14 @@
 
 :root {
   color-scheme: dark;
-  --font-display: "Inter Tight";
-  --font-body: Inter;
+  --font-display: Arial;
+  --font-body: Arial;
 }
 
 * {
   box-sizing: border-box;
   letter-spacing: 0;
+  font-weight: 400 !important;
 }
 
 html {
@@ -26,7 +27,7 @@ body {
     radial-gradient(circle at 15% 0%, rgba(215, 168, 79, 0.18), transparent 28rem),
     radial-gradient(circle at 85% 10%, rgba(56, 189, 248, 0.12), transparent 24rem),
     #07080d;
-  font-family: var(--font-body), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-body), Helvetica, sans-serif;
 }
 
 a {
