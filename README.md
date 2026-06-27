@@ -28,7 +28,8 @@ pod podpiętą domeną niestandardową.
 
 ## Gdzie edytować
 
-- Teksty i języki: `src/lib/translations.ts`
+- Teksty i języki wersji statycznej: `script.js`
+- Teksty i języki wersji Next.js: `src/lib/translations.ts`
 - Projekty portfolio: `src/data/projects.ts`
 - Logo używane na stronie: `public/graphics/SolvertoLogo.gif`
 - Warianty SVG: `public/brand/solverto-logo.svg`, `public/brand/solverto-mark.svg`

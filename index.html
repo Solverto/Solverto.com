@@ -36,6 +36,7 @@
           class="nav-toggle"
           type="button"
           aria-label="Otwórz menu"
+          data-i18n-aria-label="nav.open"
           aria-expanded="false"
           aria-controls="nav-menu"
           data-nav-toggle
@@ -53,7 +54,7 @@
           <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
           <a href="#investors" data-i18n="nav.investors">Inwestorzy</a>
           <a href="#contact" data-i18n="nav.contact">Kontakt</a>
-          <div class="language-switcher" aria-label="Wybór języka">
+          <div class="language-switcher" aria-label="Wybór języka" data-i18n-aria-label="nav.language">
             <button type="button" data-lang="pl">PL</button>
             <button type="button" data-lang="en">EN</button>
             <button type="button" data-lang="de">DE</button>
@@ -96,12 +97,12 @@
         </div>
       </section>
 
-      <section class="stats section-shell reveal" aria-label="Doświadczenie">
-        <span>30+ real estate / architecture references</span>
-        <span>Multiple game levels delivered</span>
-        <span>Metaverse spaces, mazes and interactive levels</span>
-        <span>Unity / Unreal / 3D / realtime production</span>
-        <span>Poland · Austria · Canada · Italy · UAE</span>
+      <section class="stats section-shell reveal" data-i18n-aria-label="stats.label" aria-label="Doświadczenie">
+        <span data-i18n="stats.references">30+ real estate / architecture references</span>
+        <span data-i18n="stats.levels">Multiple game levels delivered</span>
+        <span data-i18n="stats.metaverse">Metaverse spaces, mazes and interactive levels</span>
+        <span data-i18n="stats.production">Unity / Unreal / 3D / realtime production</span>
+        <span data-i18n="stats.countries">Poland · Austria · Canada · Italy · UAE</span>
       </section>
 
       <section class="section section-shell" id="services">
@@ -138,7 +139,7 @@
           </div>
           <figure class="image-card reveal">
             <img src="public/graphics/architecture-grid.svg" alt="Model urbanistyczny inwestycji" loading="lazy" />
-            <figcaption>PZT / PTT · urban model</figcaption>
+            <figcaption data-i18n="figures.architecture">PZT / PTT · urban model</figcaption>
           </figure>
         </div>
       </section>
@@ -159,7 +160,7 @@
         <div class="split reverse">
           <figure class="image-card reveal">
             <img src="public/graphics/game-greybox.svg" alt="Greybox level design i scena gry" loading="lazy" />
-            <figcaption>Selected game production work</figcaption>
+            <figcaption data-i18n="figures.games">Selected game production work</figcaption>
           </figure>
           <div class="reveal">
             <p class="eyebrow" data-i18n="games.eyebrow">Solverto Games</p>
@@ -188,7 +189,7 @@
           </div>
           <figure class="image-card reveal">
             <img src="public/graphics/metaverse-portals.svg" alt="Portale metaverse i event roomy" loading="lazy" />
-            <figcaption>Rooms · mazes · avatars</figcaption>
+            <figcaption data-i18n="figures.metaverse">Rooms · mazes · avatars</figcaption>
           </figure>
         </div>
       </section>
@@ -221,7 +222,7 @@
         <div class="section-shell split">
           <figure class="image-card reveal">
             <img src="public/graphics/investor-orbits.svg" alt="Ekosystem Solverto Group" loading="lazy" />
-            <figcaption>Solverto Group ecosystem</figcaption>
+            <figcaption data-i18n="figures.ecosystem">Solverto Group ecosystem</figcaption>
           </figure>
           <div class="reveal">
             <p class="eyebrow" data-i18n="investors.eyebrow">Investors / Partners</p>
@@ -238,7 +239,7 @@
 
       <section class="section section-shell" id="cooperation">
         <div class="section-heading reveal">
-          <p class="eyebrow">Cooperation</p>
+          <p class="eyebrow" data-i18n="cooperation.eyebrow">Cooperation</p>
           <h2 data-i18n="cooperation.title">Jak wygląda współpraca</h2>
           <p data-i18n="cooperation.text">
             Zaczynamy od briefu i zrozumienia celu projektu. Następnie przygotowujemy
@@ -297,16 +298,16 @@
           </p>
         </div>
         <div>
-          <h2>Menu</h2>
-          <a href="#services">Services</a>
-          <a href="#architecture">Architecture</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#contact">Contact</a>
+          <h2 data-i18n="footer.menu">Menu</h2>
+          <a href="#services" data-i18n="nav.services">Usługi</a>
+          <a href="#architecture" data-i18n="nav.architecture">Architektura</a>
+          <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+          <a href="#contact" data-i18n="nav.contact">Kontakt</a>
         </div>
         <div>
-          <h2>Solverto Group ecosystem</h2>
-          <p>Solverto Studio · Solverto Games · realtime 3D · IP development</p>
-          <p class="legal-note">
+          <h2 data-i18n="footer.ecosystem">Solverto Group ecosystem</h2>
+          <p data-i18n="footer.ecosystemLine">Solverto Studio · Solverto Games · realtime 3D · IP development</p>
+          <p class="legal-note" data-i18n="footer.legal">
             Selected project references may include work delivered in cooperation with partner
             studios, production teams or external clients.
           </p>
