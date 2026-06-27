@@ -30,7 +30,8 @@ pod podpiętą domeną niestandardową.
 
 - Teksty i języki: `src/lib/translations.ts`
 - Projekty portfolio: `src/data/projects.ts`
-- Logo: `public/brand/solverto-logo.svg`, `public/brand/solverto-mark.svg`
+- Logo używane na stronie: `public/graphics/SolvertoLogo.gif`
+- Warianty SVG: `public/brand/solverto-logo.svg`, `public/brand/solverto-mark.svg`
 - Favicon: `public/brand/favicon.svg`
 - Grafiki zastępcze: `public/graphics/`
 - Widoczna statyczna strona: `index.html`, `styles.css`, `script.js`
