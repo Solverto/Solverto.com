@@ -680,6 +680,50 @@ textarea:focus {
   will-change: transform;
 }
 
+.games-page .architecture-hero-bg {
+  background-image: url("public/graphics/game-greybox.svg");
+  background-position: center 54%;
+}
+
+.metaverse-page .architecture-hero-bg {
+  background-image: url("public/graphics/metaverse-portals.svg");
+  background-position: center 48%;
+}
+
+.games-page .architecture-hero-shade {
+  background:
+    linear-gradient(90deg, rgba(7, 8, 13, 0.97) 0%, rgba(7, 8, 13, 0.75) 54%, rgba(7, 8, 13, 0.24) 100%),
+    linear-gradient(180deg, rgba(7, 8, 13, 0.08), var(--obsidian) 100%);
+}
+
+.metaverse-page .architecture-hero-shade {
+  background:
+    linear-gradient(90deg, rgba(7, 8, 13, 0.96) 0%, rgba(7, 8, 13, 0.7) 52%, rgba(7, 8, 13, 0.18) 100%),
+    linear-gradient(180deg, rgba(7, 8, 13, 0.06), var(--obsidian) 100%);
+}
+
+.games-page .architecture-scope-code,
+.games-page .architecture-index {
+  color: var(--cyan);
+}
+
+.metaverse-page .architecture-scope-code {
+  color: var(--cyan);
+}
+
+.games-page .architecture-cta {
+  background:
+    linear-gradient(90deg, rgba(56, 189, 248, 0.09), transparent 45%),
+    #0b0f19;
+}
+
+.metaverse-page .architecture-cta {
+  background:
+    linear-gradient(90deg, rgba(215, 168, 79, 0.1), transparent 34%),
+    linear-gradient(270deg, rgba(56, 189, 248, 0.06), transparent 42%),
+    #0b0f19;
+}
+
 .architecture-hero-shade {
   inset: 0;
   z-index: -1;

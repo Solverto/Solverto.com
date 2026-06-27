@@ -64,7 +64,8 @@ const translations = {
       eyebrow: "Solverto Games",
       title: "Levele, środowiska, prototypy i własne IP.",
       intro:
-        "W gamedevie pracowaliśmy przy levelach, środowiskach, prototypach, elementach gameplayu i modelach 3D dla gier oraz projektów interaktywnych."
+        "W gamedevie pracowaliśmy przy levelach, środowiskach, prototypach, elementach gameplayu i modelach 3D dla gier oraz projektów interaktywnych.",
+      more: "Poznaj produkcję gier"
     },
     metaverse: {
       eyebrow: "Metaverse",
@@ -72,7 +73,8 @@ const translations = {
       intro:
         "Solverto współtworzyło wiele przestrzeni metaverse, maze’ów, leveli, event roomów, avatarów, animacji i modeli 3D dla cyfrowych światów.",
       note:
-        "Modele 3D były tworzone lub współtworzone dla wielu wymienionych projektów metaverse, leveli i doświadczeń interaktywnych."
+        "Modele 3D były tworzone lub współtworzone dla wielu wymienionych projektów metaverse, leveli i doświadczeń interaktywnych.",
+      more: "Poznaj realizacje metaverse"
     },
     portfolio: {
       eyebrow: "Portfolio",
@@ -205,7 +207,8 @@ const translations = {
       eyebrow: "Solverto Games",
       title: "Levels, environments, prototypes and original IP.",
       intro:
-        "In game development, we have worked on levels, environments, prototypes, gameplay elements and 3D models for games and interactive projects."
+        "In game development, we have worked on levels, environments, prototypes, gameplay elements and 3D models for games and interactive projects.",
+      more: "Explore game production"
     },
     metaverse: {
       eyebrow: "Metaverse",
@@ -213,7 +216,8 @@ const translations = {
       intro:
         "Solverto has contributed to metaverse spaces, mazes, levels, event rooms, avatars, animations and 3D models for digital worlds.",
       note:
-        "3D models were created or co-created for many of the listed metaverse projects, levels and interactive experiences."
+        "3D models were created or co-created for many of the listed metaverse projects, levels and interactive experiences.",
+      more: "Explore metaverse work"
     },
     portfolio: {
       eyebrow: "Portfolio",
@@ -345,7 +349,8 @@ const translations = {
       eyebrow: "Solverto Games",
       title: "Levels, Umgebungen, Prototypen und eigene IP.",
       intro:
-        "Im Game Development haben wir an Levels, Umgebungen, Prototypen, Gameplay-Elementen und 3D-Modellen für Spiele und interaktive Projekte gearbeitet."
+        "Im Game Development haben wir an Levels, Umgebungen, Prototypen, Gameplay-Elementen und 3D-Modellen für Spiele und interaktive Projekte gearbeitet.",
+      more: "Spieleproduktion entdecken"
     },
     metaverse: {
       eyebrow: "Metaverse",
@@ -353,7 +358,8 @@ const translations = {
       intro:
         "Solverto hat an Metaverse-Räumen, Labyrinthen, Levels, Event-Räumen, Avataren, Animationen und 3D-Modellen für digitale Welten mitgewirkt.",
       note:
-        "3D-Modelle wurden für viele der genannten Metaverse-Projekte, Levels und interaktiven Erlebnisse erstellt oder mitentwickelt."
+        "3D-Modelle wurden für viele der genannten Metaverse-Projekte, Levels und interaktiven Erlebnisse erstellt oder mitentwickelt.",
+      more: "Metaverse-Projekte entdecken"
     },
     portfolio: {
       eyebrow: "Portfolio",
@@ -486,7 +492,8 @@ const translations = {
       eyebrow: "Solverto Games",
       title: "Niveles, entornos, prototipos e IP propia.",
       intro:
-        "En game development hemos trabajado en niveles, entornos, prototipos, elementos de gameplay y modelos 3D para juegos y proyectos interactivos."
+        "En game development hemos trabajado en niveles, entornos, prototipos, elementos de gameplay y modelos 3D para juegos y proyectos interactivos.",
+      more: "Descubrir producción de juegos"
     },
     metaverse: {
       eyebrow: "Metaverse",
@@ -494,7 +501,8 @@ const translations = {
       intro:
         "Solverto ha contribuido a espacios metaverse, laberintos, niveles, salas de eventos, avatares, animaciones y modelos 3D para mundos digitales.",
       note:
-        "Los modelos 3D fueron creados o co-creados para muchos de los proyectos metaverse, niveles y experiencias interactivas listados."
+        "Los modelos 3D fueron creados o co-creados para muchos de los proyectos metaverse, niveles y experiencias interactivas listados.",
+      more: "Descubrir proyectos metaverse"
     },
     portfolio: {
       eyebrow: "Portfolio",

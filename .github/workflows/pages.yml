@@ -28,8 +28,10 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir _site
-          cp index.html styles.css script.js _site/
+          cp index.html styles.css script.js vertical-page.js _site/
           cp -R architecture _site/architecture
+          cp -R games _site/games
+          cp -R metaverse _site/metaverse
           cp -R public _site/public
           touch _site/.nojekyll
 
