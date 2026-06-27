@@ -27,11 +27,6 @@ const sectionMeta = {
     description:
       "Filtered portfolio of Solverto architecture, gamedev, metaverse, analysis and production support references."
   },
-  investors: {
-    title: "Solverto Investors / Partners — publishing, investment and strategic cooperation",
-    description:
-      "Solverto Group partnership, publishing and investment overview across 3D services, own games, realtime technology and IP development."
-  },
   about: {
     title: "About Solverto — Solverto Studio, Solverto Games and Solverto Group",
     description:

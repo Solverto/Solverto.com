@@ -798,12 +798,6 @@ function renderProjects() {
     : `<p class="notice">${getText("portfolio.empty")}</p>`;
 }
 
-function renderInvestorPoints() {
-  document.querySelector("[data-investor-points]").innerHTML = translations[language].investors.points
-    .map((point) => `<li>${point}</li>`)
-    .join("");
-}
-
 function renderSteps() {
   document.querySelector("[data-steps]").innerHTML = cooperationSteps
     .map(([title, text], index) => `
@@ -828,7 +822,6 @@ function renderAll() {
   renderLargest();
   renderFilters();
   renderProjects();
-  renderInvestorPoints();
   renderSteps();
   renderProjectTypes();
   observeReveals();

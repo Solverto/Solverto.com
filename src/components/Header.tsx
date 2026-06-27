@@ -12,7 +12,6 @@ const navItems = [
   ["games", "#games"],
   ["metaverse", "#metaverse"],
   ["portfolio", "#portfolio"],
-  ["investors", "#investors"],
   ["about", "#about"],
   ["contact", "#contact"]
 ] as const;

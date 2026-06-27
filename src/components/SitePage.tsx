@@ -17,7 +17,6 @@ import { FeaturedProjects } from "./FeaturedProjects";
 import { LargestProjects } from "./LargestProjects";
 import { PortfolioFilters, type PortfolioFilter } from "./PortfolioFilters";
 import { ProjectCard } from "./ProjectCard";
-import { InvestorSection } from "./InvestorSection";
 import { CooperationSteps } from "./CooperationSteps";
 import { ContactForm } from "./ContactForm";
 import { Footer } from "./Footer";
@@ -262,15 +261,6 @@ function SiteContent({ initialSection }: { initialSection?: string }) {
             <p className="mt-6 rounded-2xl border border-gold/25 bg-gold/10 p-5 text-sm leading-7 text-bone/82">
               {t.portfolio.legal}
             </p>
-          </div>
-        </section>
-
-        <section className="border-y border-white/10 bg-white/[0.02] py-16 sm:py-24" id="investors">
-          <div className="section-shell">
-            <p className="reveal mb-4 text-xs font-black uppercase tracking-[0.18em] text-gold">
-              {t.sections.investorsEyebrow}
-            </p>
-            <InvestorSection />
           </div>
         </section>
 
