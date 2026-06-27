@@ -445,6 +445,10 @@ textarea {
   font-weight: 950;
 }
 
+.step-card .icon-box {
+  margin-bottom: 18px;
+}
+
 .service-card {
   display: grid;
   gap: 18px;
