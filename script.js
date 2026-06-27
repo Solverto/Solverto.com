@@ -384,7 +384,25 @@ document.querySelectorAll("[data-static-form]").forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const status = form.querySelector("[data-form-status]");
-    if (status) status.textContent = "This is a static demo form. Please contact us by email or WhatsApp.";
+    const recipient = form.dataset.contactEmail || "contact@solverto.com";
+    const formData = new FormData(form);
+    const name = String(formData.get("name") || "");
+    const email = String(formData.get("email") || "");
+    const company = String(formData.get("company") || "");
+    const projectType = String(formData.get("projectType") || "General inquiry");
+    const message = String(formData.get("message") || "");
+    const subject = `Solverto project inquiry: ${projectType}`;
+    const body = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Company: ${company || "Not provided"}`,
+      `Project type: ${projectType}`,
+      "",
+      message
+    ].join("\n");
+
+    if (status) status.textContent = `Opening your email application. Recipient: ${recipient}`;
+    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 });
 
