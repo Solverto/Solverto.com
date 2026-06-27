@@ -23,7 +23,7 @@ export function ImageCard({
             className="h-full w-full object-cover opacity-90 transition duration-500 hover:scale-[1.03]"
           />
         ) : (
-          <div className="grid h-full place-items-center bg-[radial-gradient(circle_at_30%_20%,rgba(215,168,79,0.3),transparent_32%),linear-gradient(135deg,#111827,#07080d)]">
+          <div className="grid h-full place-items-center bg-[radial-gradient(circle_at_30%_20%,rgba(246,157,9,0.3),transparent_32%),linear-gradient(135deg,#1b2129,#090909)]">
             <Icon name={icon} className="h-16 w-16 text-gold" />
           </div>
         )}

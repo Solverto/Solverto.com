@@ -29,8 +29,8 @@ export function ProjectCard({
 }) {
   return (
     <article className="glass-panel reveal group overflow-hidden rounded-2xl transition duration-300 hover:-translate-y-1 hover:border-cyan/35 hover:shadow-cyan">
-      <div className="relative grid aspect-[16/10] place-items-center overflow-hidden bg-[radial-gradient(circle_at_28%_18%,rgba(215,168,79,0.28),transparent_30%),linear-gradient(135deg,#111827,#07080d)]">
-        <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(56,189,248,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(56,189,248,0.15)_1px,transparent_1px)] [background-size:34px_34px]" />
+      <div className="relative grid aspect-[16/10] place-items-center overflow-hidden bg-[radial-gradient(circle_at_28%_18%,rgba(246,157,9,0.28),transparent_30%),linear-gradient(135deg,#1b2129,#090909)]">
+        <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(45,191,232,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(45,191,232,0.15)_1px,transparent_1px)] [background-size:34px_34px]" />
         <Icon
           name={categoryIcon[project.category]}
           className="relative h-16 w-16 text-gold transition duration-300 group-hover:scale-110"

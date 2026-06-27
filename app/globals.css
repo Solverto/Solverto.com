@@ -22,11 +22,11 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  color: #f5f5f0;
+  color: #e2e2e2;
   background:
-    radial-gradient(circle at 15% 0%, rgba(215, 168, 79, 0.18), transparent 28rem),
-    radial-gradient(circle at 85% 10%, rgba(56, 189, 248, 0.12), transparent 24rem),
-    #07080d;
+    radial-gradient(circle at 15% 0%, rgba(246, 157, 9, 0.18), transparent 28rem),
+    radial-gradient(circle at 85% 10%, rgba(45, 191, 232, 0.12), transparent 24rem),
+    #090909;
   font-family: var(--font-body), Helvetica, sans-serif;
 }
 
@@ -43,8 +43,8 @@ textarea {
 }
 
 ::selection {
-  color: #07080d;
-  background: #d7a84f;
+  color: #090909;
+  background: #f69d09;
 }
 
 .noise {
@@ -66,14 +66,14 @@ textarea {
 }
 
 .glass-panel {
-  border: 1px solid rgba(245, 245, 240, 0.1);
-  background: linear-gradient(145deg, rgba(17, 24, 39, 0.86), rgba(11, 15, 25, 0.72));
+  border: 1px solid rgba(226, 226, 226, 0.1);
+  background: linear-gradient(145deg, rgba(27, 33, 41, 0.86), rgba(7, 12, 19, 0.72));
   box-shadow: 0 20px 70px rgba(0, 0, 0, 0.32);
   backdrop-filter: blur(18px);
 }
 
 .gold-text {
-  background: linear-gradient(135deg, #f5f5f0 0%, #d7a84f 56%, #f59e0b 100%);
+  background: linear-gradient(135deg, #e2e2e2 0%, #f69d09 56%, #ffb20c 100%);
   background-clip: text;
   color: transparent;
 }
