@@ -166,7 +166,7 @@ textarea {
 }
 
 .brand {
-  width: 148px;
+  width: 64px;
   flex: 0 0 auto;
 }
 
@@ -1071,7 +1071,7 @@ textarea:focus {
 }
 
 .footer-brand {
-  width: 165px;
+  width: 140px;
   margin-bottom: 14px;
 }
 
