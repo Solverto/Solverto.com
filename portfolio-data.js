@@ -70,7 +70,7 @@
     name,
     "Architecture / Realtime Real Estate",
     role,
-    `${client} / YSLAB / RESIMO cooperation`,
+    `${client} / YSLAB/RESIMO cooperation`,
     {
       country,
       description: "Residential investment modelling support prepared for realtime real estate presentation workflows.",
@@ -94,7 +94,7 @@
     ["Nowy Reden (Przemysłowa)", "Częstobud", "Project support"],
     ["Zielony Żurawiniec (Poznań)", "Murapol", "Project support"],
     ["Dolnych Młynów 10", "Noho Investment", "Project support"],
-    ["Animation work for investment projects", "Partner studio cooperation", "Work on new animated people / character assets"],
+    ["Animation work for investment projects", "", "Work on new animated people / character assets"],
     ["Panorama III", "Budlex", "Project analysis"],
     ["Sady nad Zieloną II (B)", "Archicom", "Project analysis"],
     ["Na Opoczyńskiej (Wrocław)", "Atal", "Project analysis"],
@@ -103,7 +103,7 @@
     name,
     "Animations / Support / Analysis",
     role,
-    `${client} / partner cooperation`,
+    `${client ? `${client} / ` : ""}YSLAB/RESIMO cooperation`,
     {
       country,
       description: "Focused production support, corrections or analysis within an architecture visualization workflow.",
@@ -235,7 +235,7 @@
       id: "architecture",
       filter: "architecture",
       title: "Architecture / Realtime Real Estate",
-      subtitle: "YSLAB / RESIMO cooperation",
+      subtitle: "YSLAB/RESIMO cooperation",
       intro: "Solverto has contributed to a wide range of architecture and realtime real estate projects, including residential investments, large estates, technical 3D modelling, PZT/PTT preparation support, optimization tasks and project corrections for partner studios and real estate clients.",
       projects: architectureProjects
     },
@@ -290,13 +290,13 @@
   });
 
   const featured = [
-    makeProject("Zenit Residential Estate", "Architecture / Realtime Real Estate", "Large-scale residential estate modelling support", "Echo / partner cooperation", {
+    makeProject("Zenit Residential Estate", "Architecture / Realtime Real Estate", "Large-scale residential estate modelling support", "Echo / YSLAB/RESIMO cooperation", {
       description: "Large-scale residential estate modelling support with multiple buildings and realtime presentation requirements.",
       placeholder: "[Project thumbnail: Zenit residential estate realtime 3D model]",
       tags: ["3D Modelling", "Realtime Architecture", "Residential"],
       industry: "Residential real estate"
     }),
-    makeProject("Jeziorna Residential Masterplan", "Architecture / Realtime Real Estate", "Large residential masterplan modelling support", "Murapol / partner cooperation", {
+    makeProject("Jeziorna Residential Masterplan", "Architecture / Realtime Real Estate", "Large residential masterplan modelling support", "Murapol / YSLAB/RESIMO cooperation", {
       description: "Large residential masterplan modelling support for a multi-building development.",
       placeholder: "[Project thumbnail: Jeziorna large residential masterplan]",
       tags: ["Masterplan", "3D Modelling", "Realtime Architecture"],
@@ -333,7 +333,7 @@
     ["Anny German / Sady Żoliborz", "Matexi", "2 buildings, around 150 apartments each", "[Featured project visual: Sady Żoliborz architecture model]"],
     ["Nadgórników", "Noho Investment", "Large residential towers and large estate", "[Featured project visual: Nadgórników residential towers]"]
   ].map(([name, partner, scale, placeholder], index) => ({
-    ...makeProject(name, "Architecture / Realtime Real Estate", "Large-scale architecture modelling support", `${partner} / YSLAB / RESIMO cooperation`, {
+    ...makeProject(name, "Architecture / Realtime Real Estate", "Large-scale architecture modelling support", `${partner} / YSLAB/RESIMO cooperation`, {
       description: scale,
       placeholder,
       tags: ["Large Scale", "Residential", "Realtime Architecture"],
