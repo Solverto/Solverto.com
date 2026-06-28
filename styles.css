@@ -258,7 +258,9 @@ textarea {
 }
 
 .nav-menu .nav-cta {
+  align-items: center;
   justify-content: center;
+  text-align: center;
   color: var(--brand-dark);
   background: var(--brand-primary);
 }
@@ -345,6 +347,8 @@ textarea {
   border: 1px solid transparent;
   border-radius: var(--radius);
   padding: 0 17px;
+  text-align: center;
+  line-height: 1.25;
   cursor: pointer;
   transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
 }
@@ -983,9 +987,14 @@ textarea:focus {
 
 .filter-button {
   min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--brand-line);
   border-radius: var(--radius);
   padding: 0 12px;
+  text-align: center;
+  line-height: 1.25;
   color: var(--brand-muted);
   background: var(--brand-surface);
   cursor: pointer;
