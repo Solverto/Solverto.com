@@ -333,7 +333,7 @@
     ["Anny German / Sady Żoliborz", "Matexi", "2 buildings, around 150 apartments each", "[Featured project visual: Sady Żoliborz architecture model]"],
     ["Nadgórników", "Noho Investment", "Large residential towers and large estate", "[Featured project visual: Nadgórników residential towers]"]
   ].map(([name, partner, scale, placeholder], index) => ({
-    ...makeProject(name, "Architecture / Realtime Real Estate", "Large-scale architecture modelling support", `${partner} / partner cooperation`, {
+    ...makeProject(name, "Architecture / Realtime Real Estate", "Large-scale architecture modelling support", `${partner} / YSLAB / RESIMO cooperation`, {
       description: scale,
       placeholder,
       tags: ["Large Scale", "Residential", "Realtime Architecture"],
