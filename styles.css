@@ -232,8 +232,11 @@ textarea {
   min-height: 42px;
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: var(--radius);
   padding: 0 12px;
+  text-align: center;
+  line-height: 1.25;
   color: var(--brand-muted);
 }
 
