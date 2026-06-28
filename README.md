@@ -36,8 +36,8 @@ Then open `http://localhost:4173/`.
 - Replace Sketchfab placeholder URLs in the project detail pages.
 - Update contact details directly in the HTML files.
 - Shared interactions are in `script.js`.
-- The language selector, interface translations and saved language preference are
-  maintained in `script.js`.
+- The language selector and saved language preference are maintained in
+  `script.js`; the complete language dictionaries are in `translations.js`.
 - Portfolio projects, roles, partners, descriptions and counters are maintained
   in `portfolio-data.js`.
 

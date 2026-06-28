@@ -3,6 +3,9 @@ const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const navMenu = document.querySelector("[data-nav-menu]");
 const portfolioData = window.SOLVERTO_PORTFOLIO;
+const supplementalTranslations = window.SOLVERTO_TRANSLATIONS || {};
+const textLanguageSources = new WeakMap();
+const attributeLanguageSources = new WeakMap();
 
 const languageOptions = [
   ["en", "English"],
@@ -56,6 +59,33 @@ const translations = {
   }
 };
 
+const translationCorrections = {
+  pl: {
+    "About": "O nas",
+    "Creative technology for business and game studios": "Technologie kreatywne dla biznesu i studiów gier",
+    "Demo rescue": "Wsparcie wersji demo",
+    "Explore": "Poznaj",
+    "Solverto home": "Strona główna Solverto"
+  },
+  es: {
+    "Creative technology for business and game studios": "Tecnología creativa para empresas y estudios de videojuegos",
+    "Demo rescue": "Recuperación de demos"
+  },
+  pt: {
+    "Creative technology for business and game studios": "Tecnologia criativa para empresas e estúdios de jogos",
+    "Demo rescue": "Recuperação de demos"
+  },
+  it: {
+    "Creative technology for business and game studios": "Tecnologia creativa per aziende e studi di videogiochi",
+    "Demo rescue": "Recupero demo"
+  }
+};
+
+Object.entries(translationCorrections).forEach(([language, entries]) => {
+  supplementalTranslations[language] ||= {};
+  Object.assign(supplementalTranslations[language], entries);
+});
+
 function storedLanguage() {
   try {
     const value = localStorage.getItem("solverto-language");
@@ -68,7 +98,72 @@ function storedLanguage() {
 let selectedLanguage = storedLanguage();
 
 function translatedText(source, language = selectedLanguage) {
-  return language === "en" ? source : translations[language]?.[source] || source;
+  return language === "en"
+    ? source
+    : translations[language]?.[source] || supplementalTranslations[language]?.[source] || translateDynamicText(source, language);
+}
+
+function translateDynamicText(source, language) {
+  const phraseReplacements = {
+    pl: {
+      " / YSLAB / RESIMO cooperation": " / współpraca z YSLAB / RESIMO", " / partner cooperation": " / współpraca partnerska", " / project involvement": " / udział w projekcie", "Partner studio cooperation": "Współpraca ze studiem partnerskim", "Project involvement": "Udział w projekcie",
+      "metaverse maze environment for ": "środowisko labiryntu metaverse: ", "metaverse game area for ": "obszar gry metaverse: ", "metaverse environment for ": "środowisko metaverse: ", "Pulse Guys level for ": "poziom Pulse Guys: ", " level for ": " — poziom dla ", " mini-game collection": " — kolekcja minigier", " mini-game": " — minigra", " game": " — gra",
+      " avatars and animations": " — awatary i animacje", " sci-fi horror environment": " — środowisko horroru science fiction", " sci-fi horror scene": " — scena horroru science fiction", " residential estate realtime 3D model": " — model 3D osiedla w czasie rzeczywistym", " large residential masterplan": " — rozległy plan osiedla", " level environment": " — środowisko poziomu", "metaverse music room environment": "środowisko pokoju muzycznego metaverse", " arcade mini-game collection": " — kolekcja minigier zręcznościowych", " residential masterplan": " — plan osiedla", " estate model": " — model osiedla", " residential buildings": " — budynki mieszkalne", " architecture model": " — model architektoniczny", " residential towers": " — wieże mieszkalne"
+    },
+    de: {
+      " / YSLAB / RESIMO cooperation": " / Zusammenarbeit mit YSLAB / RESIMO", " / partner cooperation": " / Partnerkooperation", " / project involvement": " / Projektbeteiligung", "Partner studio cooperation": "Zusammenarbeit mit Partnerstudio", "Project involvement": "Projektbeteiligung",
+      "metaverse maze environment for ": "Metaverse-Labyrinthumgebung: ", "metaverse game area for ": "Metaverse-Spielbereich: ", "metaverse environment for ": "Metaverse-Umgebung: ", "Pulse Guys level for ": "Pulse-Guys-Level: ", " level for ": " – Level für ", " mini-game collection": " – Minispielsammlung", " mini-game": " – Minispiel", " game": " – Spiel",
+      " avatars and animations": " – Avatare und Animationen", " sci-fi horror environment": " – Sci-Fi-Horror-Umgebung", " sci-fi horror scene": " – Sci-Fi-Horror-Szene", " residential estate realtime 3D model": " – Echtzeit-3D-Modell der Wohnanlage", " large residential masterplan": " – großer Wohn-Masterplan", " level environment": " – Level-Umgebung", "metaverse music room environment": "Metaverse-Musikraumumgebung", " arcade mini-game collection": " – Arcade-Minispielsammlung", " residential masterplan": " – Wohn-Masterplan", " estate model": " – Wohnanlagenmodell", " residential buildings": " – Wohngebäude", " architecture model": " – Architekturmodell", " residential towers": " – Wohntürme"
+    },
+    es: {
+      " / YSLAB / RESIMO cooperation": " / colaboración con YSLAB / RESIMO", " / partner cooperation": " / colaboración con socios", " / project involvement": " / participación en el proyecto", "Partner studio cooperation": "Colaboración con un estudio asociado", "Project involvement": "Participación en el proyecto",
+      "metaverse maze environment for ": "entorno de laberinto del metaverso: ", "metaverse game area for ": "zona de juego del metaverso: ", "metaverse environment for ": "entorno del metaverso: ", "Pulse Guys level for ": "nivel de Pulse Guys: ", " level for ": " — nivel para ", " mini-game collection": " — colección de minijuegos", " mini-game": " — minijuego", " game": " — juego",
+      " avatars and animations": " — avatares y animaciones", " sci-fi horror environment": " — entorno de terror y ciencia ficción", " sci-fi horror scene": " — escena de terror y ciencia ficción", " residential estate realtime 3D model": " — modelo 3D en tiempo real del complejo residencial", " large residential masterplan": " — gran plan maestro residencial", " level environment": " — entorno de nivel", "metaverse music room environment": "entorno de sala musical del metaverso", " arcade mini-game collection": " — colección de minijuegos arcade", " residential masterplan": " — plan maestro residencial", " estate model": " — modelo del complejo", " residential buildings": " — edificios residenciales", " architecture model": " — modelo arquitectónico", " residential towers": " — torres residenciales"
+    },
+    pt: {
+      " / YSLAB / RESIMO cooperation": " / colaboração com YSLAB / RESIMO", " / partner cooperation": " / colaboração com parceiros", " / project involvement": " / participação no projeto", "Partner studio cooperation": "Colaboração com estúdio parceiro", "Project involvement": "Participação no projeto",
+      "metaverse maze environment for ": "ambiente de labirinto do metaverso: ", "metaverse game area for ": "área de jogo do metaverso: ", "metaverse environment for ": "ambiente do metaverso: ", "Pulse Guys level for ": "nível Pulse Guys: ", " level for ": " — nível para ", " mini-game collection": " — coleção de minijogos", " mini-game": " — minijogo", " game": " — jogo",
+      " avatars and animations": " — avatares e animações", " sci-fi horror environment": " — ambiente de terror e ficção científica", " sci-fi horror scene": " — cena de terror e ficção científica", " residential estate realtime 3D model": " — modelo 3D em tempo real do empreendimento residencial", " large residential masterplan": " — grande plano diretor residencial", " level environment": " — ambiente de nível", "metaverse music room environment": "ambiente de sala de música do metaverso", " arcade mini-game collection": " — coleção de minijogos arcade", " residential masterplan": " — plano diretor residencial", " estate model": " — modelo do empreendimento", " residential buildings": " — edifícios residenciais", " architecture model": " — modelo arquitetónico", " residential towers": " — torres residenciais"
+    },
+    it: {
+      " / YSLAB / RESIMO cooperation": " / collaborazione con YSLAB / RESIMO", " / partner cooperation": " / collaborazione con partner", " / project involvement": " / partecipazione al progetto", "Partner studio cooperation": "Collaborazione con studio partner", "Project involvement": "Partecipazione al progetto",
+      "metaverse maze environment for ": "ambiente labirinto metaverso: ", "metaverse game area for ": "area di gioco metaverso: ", "metaverse environment for ": "ambiente metaverso: ", "Pulse Guys level for ": "livello Pulse Guys: ", " level for ": " — livello per ", " mini-game collection": " — raccolta di minigiochi", " mini-game": " — minigioco", " game": " — gioco",
+      " avatars and animations": " — avatar e animazioni", " sci-fi horror environment": " — ambiente horror fantascientifico", " sci-fi horror scene": " — scena horror fantascientifica", " residential estate realtime 3D model": " — modello 3D in tempo reale del complesso residenziale", " large residential masterplan": " — grande masterplan residenziale", " level environment": " — ambiente del livello", "metaverse music room environment": "ambiente della sala musicale del metaverso", " arcade mini-game collection": " — raccolta di minigiochi arcade", " residential masterplan": " — masterplan residenziale", " estate model": " — modello del complesso", " residential buildings": " — edifici residenziali", " architecture model": " — modello architettonico", " residential towers": " — torri residenziali"
+    }
+  };
+  const replacePhrases = (value) => Object.entries(phraseReplacements[language] || {})
+    .sort(([left], [right]) => right.length - left.length)
+    .reduce((result, [english, localized]) => result.replaceAll(english, localized), value);
+  const placeholderPrefixes = {
+    pl: { "Project thumbnail": "Miniatura projektu", "Featured project visual": "Wizualizacja wyróżnionego projektu", "Project hero": "Główna wizualizacja projektu", "Project hero image": "Główna wizualizacja projektu", "Hero image": "Grafika główna", "Hero visual": "Grafika główna", "Service visual": "Wizualizacja usługi", "Gallery image": "Zdjęcie w galerii", "Gallery": "Galeria", "Process image": "Grafika procesu", "Sketchfab embed": "Osadzony model Sketchfab" },
+    de: { "Project thumbnail": "Projektvorschaubild", "Featured project visual": "Visual des hervorgehobenen Projekts", "Project hero": "Projekt-Hauptvisual", "Project hero image": "Projekt-Hauptbild", "Hero image": "Titelbild", "Hero visual": "Titelvisual", "Service visual": "Service-Visual", "Gallery image": "Galeriebild", "Gallery": "Galerie", "Process image": "Prozessbild", "Sketchfab embed": "Eingebettetes Sketchfab-Modell" },
+    es: { "Project thumbnail": "Miniatura del proyecto", "Featured project visual": "Imagen del proyecto destacado", "Project hero": "Imagen principal del proyecto", "Project hero image": "Imagen principal del proyecto", "Hero image": "Imagen principal", "Hero visual": "Imagen principal", "Service visual": "Imagen del servicio", "Gallery image": "Imagen de la galería", "Gallery": "Galería", "Process image": "Imagen del proceso", "Sketchfab embed": "Modelo de Sketchfab integrado" },
+    pt: { "Project thumbnail": "Miniatura do projeto", "Featured project visual": "Imagem do projeto em destaque", "Project hero": "Imagem principal do projeto", "Project hero image": "Imagem principal do projeto", "Hero image": "Imagem principal", "Hero visual": "Imagem principal", "Service visual": "Imagem do serviço", "Gallery image": "Imagem da galeria", "Gallery": "Galeria", "Process image": "Imagem do processo", "Sketchfab embed": "Modelo Sketchfab incorporado" },
+    it: { "Project thumbnail": "Miniatura del progetto", "Featured project visual": "Visual del progetto in evidenza", "Project hero": "Visual principale del progetto", "Project hero image": "Immagine principale del progetto", "Hero image": "Immagine principale", "Hero visual": "Visual principale", "Service visual": "Visual del servizio", "Gallery image": "Immagine della galleria", "Gallery": "Galleria", "Process image": "Immagine del processo", "Sketchfab embed": "Modello Sketchfab incorporato" }
+  };
+  const placeholder = source.match(/^\[([^:]+):\s*(.+)]$/);
+  if (placeholder) {
+    const prefix = placeholderPrefixes[language]?.[placeholder[1]];
+    if (prefix) return `[${prefix}: ${replacePhrases(translatedText(placeholder[2], language))}]`;
+  }
+  const portfolioTitle = source.match(/^(.+) — Solverto Portfolio$/);
+  if (portfolioTitle) {
+    const suffixes = { pl: "Portfolio Solverto", de: "Solverto-Portfolio", es: "Portafolio de Solverto", pt: "Portfólio da Solverto", it: "Portfolio Solverto" };
+    return `${portfolioTitle[1]} — ${suffixes[language] || "Solverto Portfolio"}`;
+  }
+  const describedProject = source.match(/^([^:]+): (.+)$/);
+  if (describedProject) return `${describedProject[1]}: ${translatedText(describedProject[2], language)}`;
+  return replacePhrases(source);
+}
+
+function translatedTemplate(source, values) {
+  let result = translatedText(source);
+  Object.entries(values).forEach(([key, value]) => {
+    const exactToken = `{${key}}`;
+    if (result.includes(exactToken)) result = result.replaceAll(exactToken, value);
+    else result = result.replace(/\{[^}]+\}/, value);
+  });
+  return result;
 }
 
 function projectCountLabel(count) {
@@ -103,24 +198,51 @@ function addLanguageSelector() {
 
 function applyLanguage() {
   document.documentElement.lang = selectedLanguage;
-  document.querySelectorAll("a, button, h1, h2, h3, h4, p, span").forEach((element) => {
-    if (element.children.length > 0) return;
-    const source = element.dataset.languageSource || element.textContent.trim();
-    if (!source) return;
-    element.dataset.languageSource = source;
-    element.textContent = translatedText(source);
+  const root = document.body;
+  if (root) {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        const parent = node.parentElement;
+        if (!parent || parent.closest("script, style, noscript, [data-no-translate]")) return NodeFilter.FILTER_REJECT;
+        return node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach((node) => {
+      const current = node.nodeValue;
+      const leading = current.match(/^\s*/)?.[0] || "";
+      const trailing = current.match(/\s*$/)?.[0] || "";
+      const source = textLanguageSources.get(node) || current.trim();
+      textLanguageSources.set(node, source);
+      node.nodeValue = `${leading}${translatedText(source)}${trailing}`;
+    });
+  }
+
+  document.querySelectorAll("[placeholder], [aria-label], [title], [alt]").forEach((element) => {
+    const sources = attributeLanguageSources.get(element) || {};
+    ["placeholder", "aria-label", "title", "alt"].forEach((attribute) => {
+      if (!element.hasAttribute(attribute)) return;
+      sources[attribute] ||= element.getAttribute(attribute);
+      element.setAttribute(attribute, translatedText(sources[attribute]));
+    });
+    attributeLanguageSources.set(element, sources);
   });
 
-  document.querySelectorAll("label.portfolio-search").forEach((label) => {
-    const textNode = [...label.childNodes].find((node) => node.nodeType === Node.TEXT_NODE && node.nodeValue.trim());
-    if (!textNode) return;
-    const source = label.dataset.languageSource || textNode.nodeValue.trim();
-    label.dataset.languageSource = source;
-    textNode.nodeValue = `${translatedText(source)} `;
+  const title = document.querySelector("title");
+  if (title) {
+    const source = title.dataset.languageSource || title.textContent.trim();
+    title.dataset.languageSource = source;
+    title.textContent = translatedText(source);
+  }
+  document.querySelectorAll('meta[name="description"], meta[property="og:title"], meta[property="og:description"]').forEach((meta) => {
+    const source = meta.dataset.languageSource || meta.getAttribute("content");
+    meta.dataset.languageSource = source;
+    meta.setAttribute("content", translatedText(source));
   });
 
   const search = document.querySelector("[data-portfolio-search]");
-  if (search) search.placeholder = translatedText("Search portfolio");
+  if (search) search.placeholder = translatedText(search.dataset.searchPlaceholder || "Project, client or category");
   const count = document.querySelector("[data-portfolio-count]");
   if (count?.dataset.projectCount) count.textContent = projectCountLabel(Number(count.dataset.projectCount));
 }
@@ -391,17 +513,18 @@ document.querySelectorAll("[data-static-form]").forEach((form) => {
     const company = String(formData.get("company") || "");
     const projectType = String(formData.get("projectType") || "General inquiry");
     const message = String(formData.get("message") || "");
-    const subject = `Solverto project inquiry: ${projectType}`;
+    const subjectLabels = { en: "Solverto project inquiry", pl: "Zapytanie projektowe Solverto", de: "Solverto-Projektanfrage", es: "Consulta de proyecto de Solverto", pt: "Consulta de projeto da Solverto", it: "Richiesta di progetto Solverto" };
+    const subject = `${subjectLabels[selectedLanguage]}: ${projectType}`;
     const body = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      `Company: ${company || "Not provided"}`,
-      `Project type: ${projectType}`,
+      `${translatedText("Name")}: ${name}`,
+      `${translatedText("Email")}: ${email}`,
+      `${translatedText("Company")}: ${company || translatedText("Not provided")}`,
+      `${translatedText("Project type")}: ${projectType}`,
       "",
       message
     ].join("\n");
 
-    if (status) status.textContent = `Opening your email application. Recipient: ${recipient}`;
+    if (status) status.textContent = translatedTemplate("Opening your email application. Recipient: {recipient}", { recipient });
     window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 });
