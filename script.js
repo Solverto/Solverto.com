@@ -16,6 +16,15 @@ const languageOptions = [
   ["it", "Italiano"]
 ];
 
+const lightboxLabels = {
+  en: { close: "Close", previous: "Previous image", next: "Next image", preview: "Image preview", image: "Image" },
+  pl: { close: "Zamknij", previous: "Poprzedni obraz", next: "Następny obraz", preview: "Podgląd obrazu", image: "Obraz" },
+  de: { close: "Schließen", previous: "Vorheriges Bild", next: "Nächstes Bild", preview: "Bildvorschau", image: "Bild" },
+  es: { close: "Cerrar", previous: "Imagen anterior", next: "Imagen siguiente", preview: "Vista previa de imagen", image: "Imagen" },
+  pt: { close: "Fechar", previous: "Imagem anterior", next: "Imagem seguinte", preview: "Pré-visualização da imagem", image: "Imagem" },
+  it: { close: "Chiudi", previous: "Immagine precedente", next: "Immagine successiva", preview: "Anteprima immagine", image: "Immagine" }
+};
+
 const translations = {
   pl: {
     "Home": "Strona główna", "Game Production": "Produkcja gier", "Realtime 3D": "3D czasu rzeczywistego", "XR & Digital Twin": "XR i cyfrowy bliźniak", "AI & Pipeline": "AI i proces produkcyjny", "Contact": "Kontakt", "Start a project": "Rozpocznij projekt",
@@ -455,6 +464,145 @@ renderPortfolio();
 renderProjectDetail();
 addLanguageSelector();
 applyLanguage();
+
+function initializeLightbox() {
+  const main = document.querySelector("main");
+  if (!main) return;
+
+  const selector = ".media-placeholder, img:not([data-no-lightbox])";
+  const modal = document.createElement("div");
+  modal.className = "lightbox";
+  modal.hidden = true;
+  modal.dataset.lightbox = "";
+  modal.innerHTML = `
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
+      <button class="lightbox-close" type="button" data-lightbox-close></button>
+      <button class="lightbox-arrow lightbox-arrow-previous" type="button" data-lightbox-previous aria-label=""></button>
+      <div class="lightbox-stage" data-lightbox-stage></div>
+      <button class="lightbox-arrow lightbox-arrow-next" type="button" data-lightbox-next aria-label=""></button>
+      <div class="lightbox-footer">
+        <p class="lightbox-caption" id="lightbox-caption" data-lightbox-caption></p>
+        <p class="lightbox-count" data-lightbox-count></p>
+      </div>
+    </div>`;
+  document.body.append(modal);
+
+  const closeButton = modal.querySelector(".lightbox-close");
+  const previousButton = modal.querySelector("[data-lightbox-previous]");
+  const nextButton = modal.querySelector("[data-lightbox-next]");
+  const stage = modal.querySelector("[data-lightbox-stage]");
+  const caption = modal.querySelector("[data-lightbox-caption]");
+  const count = modal.querySelector("[data-lightbox-count]");
+  let items = [];
+  let currentIndex = 0;
+  let previousFocus = null;
+
+  const labels = () => lightboxLabels[selectedLanguage] || lightboxLabels.en;
+  const itemCaption = (item) => {
+    const text = item.classList.contains("media-placeholder")
+      ? item.dataset.lightboxCaption || item.textContent.trim() || item.getAttribute("aria-label")
+      : item.dataset.lightboxCaption || item.getAttribute("alt") || item.getAttribute("aria-label") || item.textContent.trim();
+    return (text || labels().image).replace(/^\[|\]$/g, "");
+  };
+
+  const groupItems = (item) => {
+    const projectPage = main.hasAttribute("data-project-detail") || document.body.querySelector(".project-hero-layout");
+    if (projectPage) return [...main.querySelectorAll(selector)];
+    const group = item.closest("[data-lightbox-group], .gallery-grid, .project-card, .card") || item.parentElement;
+    return [...group.querySelectorAll(selector)];
+  };
+
+  const renderItem = () => {
+    const item = items[currentIndex];
+    if (!item) return;
+    const copy = itemCaption(item);
+    stage.replaceChildren();
+
+    if (item.tagName === "IMG") {
+      const image = document.createElement("img");
+      image.src = item.currentSrc || item.src;
+      image.alt = copy;
+      stage.append(image);
+    } else {
+      const placeholder = document.createElement("div");
+      placeholder.className = "lightbox-placeholder";
+      placeholder.textContent = item.textContent.trim();
+      stage.append(placeholder);
+    }
+
+    caption.textContent = copy;
+    count.textContent = `${currentIndex + 1} / ${items.length}`;
+    const hasMultiple = items.length > 1;
+    previousButton.hidden = !hasMultiple;
+    nextButton.hidden = !hasMultiple;
+  };
+
+  const open = (item) => {
+    items = groupItems(item).filter((candidate) => !candidate.closest("[data-lightbox]"));
+    currentIndex = Math.max(0, items.indexOf(item));
+    previousFocus = document.activeElement;
+    const copy = labels();
+    closeButton.innerHTML = `<span aria-hidden="true">×</span> ${copy.close}`;
+    closeButton.setAttribute("aria-label", copy.close);
+    previousButton.textContent = "‹";
+    previousButton.setAttribute("aria-label", copy.previous);
+    nextButton.textContent = "›";
+    nextButton.setAttribute("aria-label", copy.next);
+    modal.querySelector("[role='dialog']").setAttribute("aria-label", copy.preview);
+    renderItem();
+    modal.hidden = false;
+    document.body.classList.add("lightbox-open");
+    closeButton.focus();
+  };
+
+  const close = () => {
+    modal.hidden = true;
+    document.body.classList.remove("lightbox-open");
+    stage.replaceChildren();
+    if (previousFocus instanceof HTMLElement) previousFocus.focus();
+  };
+
+  const move = (direction) => {
+    if (items.length < 2) return;
+    currentIndex = (currentIndex + direction + items.length) % items.length;
+    renderItem();
+  };
+
+  main.querySelectorAll(selector).forEach((item) => {
+    item.classList.add("is-lightbox-trigger");
+    if (!item.hasAttribute("tabindex")) item.tabIndex = 0;
+    if (!item.hasAttribute("role") || item.tagName === "IMG") item.setAttribute("role", "button");
+  });
+
+  main.addEventListener("click", (event) => {
+    const item = event.target.closest(selector);
+    if (item && main.contains(item)) open(item);
+  });
+
+  main.addEventListener("keydown", (event) => {
+    const item = event.target.closest(selector);
+    if (item && (event.key === "Enter" || event.key === " ")) {
+      event.preventDefault();
+      open(item);
+    }
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target.closest("[data-lightbox-close]")) close();
+    else if (event.target.closest("[data-lightbox-previous]")) move(-1);
+    else if (event.target.closest("[data-lightbox-next]")) move(1);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (modal.hidden) return;
+    if (event.key === "Escape") close();
+    else if (event.key === "ArrowLeft") move(-1);
+    else if (event.key === "ArrowRight") move(1);
+  });
+}
+
+initializeLightbox();
 
 function closeNavigation() {
   document.body.classList.remove("nav-open");
