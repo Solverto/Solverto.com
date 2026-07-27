@@ -71,24 +71,31 @@ const translations = {
 const translationCorrections = {
   pl: {
     "About": "O nas",
+    "Privacy policy": "Polityka prywatności",
     "Creative technology for business and game studios": "Technologie kreatywne dla biznesu i studiów gier",
     "Demo rescue": "Wsparcie wersji demo",
     "Explore": "Poznaj",
     "Solverto home": "Strona główna Solverto"
   },
   es: {
+    "Privacy policy": "Política de privacidad",
     "Creative technology for business and game studios": "Tecnología creativa para empresas y estudios de videojuegos",
     "Demo rescue": "Recuperación de demos"
   },
   pt: {
+    "Privacy policy": "Política de privacidade",
     "Creative technology for business and game studios": "Tecnologia criativa para empresas e estúdios de jogos",
     "Demo rescue": "Recuperação de demos"
   },
   it: {
+    "Privacy policy": "Informativa sulla privacy",
     "Creative technology for business and game studios": "Tecnologia creativa per aziende e studi di videogiochi",
     "Demo rescue": "Recupero demo"
   }
 };
+
+translationCorrections.de ||= {};
+translationCorrections.de["Privacy policy"] = "Datenschutzerklärung";
 
 Object.entries(translationCorrections).forEach(([language, entries]) => {
   supplementalTranslations[language] ||= {};
@@ -188,13 +195,28 @@ function projectCountLabel(count) {
 }
 
 function addLanguageSelector() {
-  const projectButton = navMenu?.querySelector(".nav-cta");
-  if (!projectButton || navMenu.querySelector("[data-language-select]")) return;
+  if (!navMenu) return;
+
+  navMenu.querySelectorAll(".nav-cta").forEach((button) => button.remove());
+  let companyLink = navMenu.querySelector("[data-company-link]");
+  if (!companyLink) {
+    companyLink = document.createElement("a");
+    companyLink.dataset.companyLink = "";
+    companyLink.textContent = "Company";
+  }
+  companyLink.href = "company.html";
+  const homeLink = navMenu.querySelector('a[href="index.html"]');
+  if (homeLink && homeLink.nextElementSibling !== companyLink) homeLink.after(companyLink);
+  const portfolioLink = navMenu.querySelector('a[href="portfolio.html"]');
+  if (!companyLink.isConnected && portfolioLink) portfolioLink.before(companyLink);
+  else if (!companyLink.isConnected) navMenu.prepend(companyLink);
+  if (portfolioLink) portfolioLink.textContent = "Realizacje";
+  if (navMenu.querySelector("[data-language-select]")) return;
 
   const control = document.createElement("label");
   control.className = "language-control";
   control.innerHTML = `<span class="visually-hidden">Language</span><select data-language-select aria-label="Language">${languageOptions.map(([code, label]) => `<option value="${code}">${label}</option>`).join("")}</select>`;
-  projectButton.insertAdjacentElement("afterend", control);
+  navMenu.append(control);
 
   const select = control.querySelector("select");
   select.value = selectedLanguage;
@@ -206,7 +228,7 @@ function addLanguageSelector() {
 }
 
 function applyLanguage() {
-  document.documentElement.lang = selectedLanguage;
+  document.documentElement.lang = document.documentElement.dataset.pageLanguage || selectedLanguage;
   const root = document.body;
   if (root) {
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
@@ -254,6 +276,7 @@ function applyLanguage() {
   if (search) search.placeholder = translatedText(search.dataset.searchPlaceholder || "Project, client or category");
   const count = document.querySelector("[data-portfolio-count]");
   if (count?.dataset.projectCount) count.textContent = projectCountLabel(Number(count.dataset.projectCount));
+  document.documentElement.dataset.languageReady = "";
 }
 
 function escapeHtml(value = "") {
