@@ -1,4 +1,55 @@
 (() => {
+  const metaverseAssetFolders = {
+    OmegaPro: "metaverse/digital-twin/omega-pro",
+    HotelFive: "metaverse/digital-twin/hotel-five",
+    Casino: "metaverse/digital-twin/casino",
+    Passionpreneur: "metaverse/digital-twin/passionpreneur",
+    "Cove Beach": "metaverse/digital-twin/cove-beach",
+    "Metaverse Music Rooms": "metaverse/music-rooms/main-stage-room",
+    Rock: "metaverse/music-rooms/rock-room",
+    HipHop: "metaverse/music-rooms/hip-hop-room",
+    EDM: "metaverse/music-rooms/edm-room",
+    RnB: "metaverse/music-rooms/rnb-room",
+    Metal: "metaverse/music-rooms/metal-room",
+    Classic: "metaverse/music-rooms/classical-room",
+    PulsePop: "metaverse/music-rooms/pulse-pop-room",
+    Zouglou: "metaverse/music-rooms/zouglou-room",
+    Country: "metaverse/music-rooms/country-room",
+    Latino: "metaverse/music-rooms/latino-room",
+    Kpop: "metaverse/music-rooms/kpop-room",
+    MainStage: "metaverse/music-rooms/main-stage-room",
+    Tunisia: "metaverse/music-rooms/tunisia-room",
+    India: "metaverse/music-rooms/india-room",
+    Entoto: "metaverse/music-rooms/entoto-room",
+    CardsMaze: "metaverse/maze/cards-maze",
+    GrassMaze: "metaverse/maze/garden-maze",
+    CheeseMaze: "metaverse/maze/cheese-maze",
+    CandyMaze: "metaverse/maze/sugar-city-maze",
+    OrangeMaze: "metaverse/maze/orange-maze",
+    BackToSchoolMaze: "metaverse/maze/back-to-school-maze",
+    OoredooMaze: "metaverse/maze/ooredoo-maze",
+    AmusementPark: "metaverse/treasure-hunter/amusment-park",
+    TunisiaRamadan: "metaverse/treasure-hunter/tunisia-ramadan",
+    Fantasy: "metaverse/treasure-hunter/fantasy-islands",
+    PirateIsland: "metaverse/treasure-hunter/pirate-island",
+    MafEventDeira: "metaverse/treasure-hunter/deira-city-center",
+    DesertCityOasis: "metaverse/treasure-hunter/desert-city",
+    BouncingCastle: "metaverse/pulse-guys/bouncing-castle",
+    ChocolateFactory: "metaverse/pulse-guys/chocolate-factory",
+    DeathRun: "metaverse/pulse-guys/death-run",
+    TheUnderworld: "metaverse/pulse-guys/the-underworld",
+    TuttiFruity: "metaverse/pulse-guys/tutti-frutti",
+    Heaven: "metaverse/pulse-guys/heaven",
+    Candy: "metaverse/pulse-guys/candy",
+    Temple: "metaverse/pulse-guys/temple",
+    Halloween: "metaverse/pulse-guys/halloween",
+    Space: "metaverse/pulse-guys/space",
+    Underwater: "metaverse/pulse-guys/unterwater",
+    Neon: "metaverse/pulse-guys/neon",
+    Winter: "metaverse/pulse-guys/winter",
+    Dynamite: "metaverse/pulse-guys/dynamite"
+  };
+
   const makeProject = (name, category, role, partner = "", extra = {}) => ({
     name,
     category,
@@ -12,6 +63,7 @@
     description: extra.description || "",
     placeholder: extra.placeholder || `[Project thumbnail: ${name}]`,
     tags: extra.tags || [],
+    assetFolder: extra.assetFolder || "",
     scope: extra.scope || role,
     industry: extra.industry || category,
     technology: extra.technology || "Technology details available on request",
@@ -101,7 +153,7 @@
     ["Lindego", "Megapolis", "Project analysis"]
   ].map(([name, client, role, country]) => makeProject(
     name,
-    "Animations / Support / Analysis",
+    "Animations / Cinematic / Wideo Editing",
     role,
     `${client ? `${client} / ` : ""}YSLAB/RESIMO cooperation`,
     {
@@ -157,15 +209,24 @@
     }
   ));
 
-  const metaverseLocations = ["OmegaPro", "HotelFive", "Casino", "Metaverse Music Rooms", "Rock", "HipHop", "EDM", "RnB", "Metal", "Classic", "PulsePop", "Zouglou", "Country", "Latino", "Kpop", "MainStage", "Tunisia", "India", "PulseGuys", "Entoto"]
-    .map((name) => makeProject(name, "Metaverse", "3D environment / metaverse production support", "Partner studio cooperation", {
-      description: "3D environment and location production support for a themed metaverse space.",
+  const metaverseDigitalTwin = ["OmegaPro", "HotelFive", "Casino", "Passionpreneur", "Cove Beach"]
+    .map((name) => makeProject(name, "Digital Twin", "Digital Twin environment production support", "Partner studio cooperation", {
+      description: "Digital Twin environment and realtime 3D location production support.",
       placeholder: `[Project thumbnail: metaverse environment for ${name}]`,
-      tags: ["Metaverse", "3D Environment", "Production Support"],
+      tags: ["Digital Twin", "3D Environment", "Production Support"],
+      industry: "Digital Twin and realtime 3D",
       technology: "Realtime engine / technology placeholder"
     }));
 
-  const metaverseMazes = ["CardsMaze", "HorrorMaze", "IncaMaze", "RunnerMaze", "GrassMaze", "CastleMaze", "CheeseMaze", "ShipMaze", "CandyMaze", "OrangeMaze", "BackToSchoolMaze", "OoredooMaze"]
+  const metaverseMusicRooms = ["Metaverse Music Rooms", "Rock", "HipHop", "EDM", "RnB", "Metal", "Classic", "PulsePop", "Zouglou", "Country", "Latino", "Kpop", "MainStage", "Tunisia", "India", "Entoto"]
+    .map((name) => makeProject(name, "Music Room / Metaverse", "Music room environment production support", "Partner studio cooperation", {
+      description: "3D environment and location production support for a themed metaverse music room.",
+      placeholder: `[Project thumbnail: metaverse music room for ${name}]`,
+      tags: ["Music Rooms", "Metaverse", "3D Environment", "Production Support"],
+      technology: "Realtime engine / technology placeholder"
+    }));
+
+  const metaverseMazes = ["CardsMaze", "GrassMaze", "CheeseMaze", "CandyMaze", "OrangeMaze", "BackToSchoolMaze", "OoredooMaze"]
     .map((name) => makeProject(name, "Metaverse Maze", "Maze environment and 3D production support", "Partner studio cooperation", {
       description: "Maze environment and realtime 3D production support for a metaverse experience.",
       placeholder: `[Project thumbnail: metaverse maze environment for ${name}]`,
@@ -173,7 +234,7 @@
       technology: "Realtime engine / technology placeholder"
     }));
 
-  const metaverseAreas = ["Treasure Hunter Levels", "AmusementPark", "TunisiaRamadan", "Fantasy", "PirateIsland", "MafEventDeira", "DesertCityOasis"]
+  const treasureHunterLevels = ["AmusementPark", "TunisiaRamadan", "Fantasy", "PirateIsland", "MafEventDeira", "DesertCityOasis"]
     .map((name) => makeProject(name, "Metaverse Game Area", "3D level / game area production support", "Partner studio cooperation", {
       description: "Realtime 3D level and game area production support for a metaverse project.",
       placeholder: `[Project thumbnail: metaverse game area for ${name}]`,
@@ -181,7 +242,7 @@
       technology: "Realtime engine / technology placeholder"
     }));
 
-  const pulseGuysLevels = ["LastOnes", "BouncingCastle", "ChocolateFactory", "DeathRun", "TheUnderworld", "TuttiFruity", "Lobby", "Playground", "Heaven", "Podium", "Candy", "Temple", "Halloween", "Space", "Underwater", "Neon", "Winter", "Dynamite"]
+  const pulseGuysLevels = ["BouncingCastle", "ChocolateFactory", "DeathRun", "TheUnderworld", "TuttiFruity", "Heaven", "Candy", "Temple", "Halloween", "Space", "Underwater", "Neon", "Winter", "Dynamite"]
     .map((name) => makeProject(name, "Pulse Guys / Metaverse Game Level", "Level and 3D production support", "Partner studio cooperation", {
       description: "Level and 3D production support for a Pulse Guys metaverse game experience.",
       placeholder: `[Project thumbnail: Pulse Guys level for ${name}]`,
@@ -189,12 +250,14 @@
       technology: "Realtime engine / technology placeholder"
     }));
 
-  const wildRush = [makeProject("Wild Rush", "Metaverse / Game Production", "Avatars and animations", "Partner studio cooperation", {
+  const wildRush = [makeProject("Wild Rush", "Game Development", "Avatars and animations", "Partner studio cooperation", {
     description: "Avatar and animation production support for a metaverse game project.",
     placeholder: "[Project thumbnail: Wild Rush avatars and animations]",
     tags: ["Avatars", "Animation", "Metaverse", "Game Production"],
     technology: "Character and animation workflow / technology placeholder"
   })];
+
+  gameProjects.push(...wildRush);
 
   const solvertoGames = [
     makeProject("Kroc and Roll", "Game / Released or previous title", "Game production / original project", "Solverto Games", {
@@ -240,9 +303,9 @@
       projects: architectureProjects
     },
     {
-      id: "architecture-support",
+      id: "support",
       filter: "support",
-      title: "Architecture support, corrections and analysis",
+      title: "Animations / Cinematic / Wideo Editing",
       intro: "Focused production support, model corrections, animation work and project analysis completed within partner-led architecture workflows.",
       projects: supportProjects
     },
@@ -261,17 +324,17 @@
       projects: gameProjects
     },
     {
-      id: "metaverse-locations",
+      id: "digital-twin",
       filter: "metaverse",
-      title: "Metaverse environments and games",
-      subtitle: "Metaverse locations and music rooms",
-      intro: "Solverto contributed to a wide range of metaverse environments, music rooms, maze experiences, game areas and avatar/animation content.",
-      projects: metaverseLocations
+      title: "Digital Twin",
+      subtitle: "Digital Twin environments",
+      intro: "Digital Twin and realtime 3D environment production support for interactive locations.",
+      projects: metaverseDigitalTwin
     },
-    { id: "metaverse-mazes", filter: "metaverse", title: "Metaverse mazes", projects: metaverseMazes },
-    { id: "metaverse-areas", filter: "metaverse", title: "Metaverse game areas", projects: metaverseAreas },
-    { id: "pulse-guys", filter: "metaverse", title: "Pulse Guys levels", projects: pulseGuysLevels },
-    { id: "wild-rush", filter: "metaverse", title: "Wild Rush", projects: wildRush },
+    { id: "metaverse-mazes", filter: "metaverse", title: "Maze", projects: metaverseMazes },
+    { id: "music-rooms", filter: "metaverse", title: "Music Room", projects: metaverseMusicRooms },
+    { id: "pulse-guys", filter: "metaverse", title: "Pulse Guys", projects: pulseGuysLevels },
+    { id: "treasure-hunter", filter: "metaverse", title: "Treasure Hunter", projects: treasureHunterLevels },
     {
       id: "solverto-games",
       filter: "solverto",
@@ -286,6 +349,7 @@
       project.id = `${group.id}-${index + 1}`;
       project.filter = group.filter;
       project.group = group.title;
+      project.assetFolder ||= metaverseAssetFolders[project.name] || "";
     });
   });
 
@@ -323,9 +387,12 @@
       tags: ["Original IP", "Sci-Fi Horror", "Work in Progress"]
     })
   ];
-  featured.forEach((project, index) => { project.id = `featured-${index + 1}`; });
+  featured.forEach((project, index) => {
+    project.id = `featured-${index + 1}`;
+    project.assetFolder ||= metaverseAssetFolders[project.name] || "";
+  });
 
-  const largeScale = [
+  const legacyLargeScale = [
     ["Zenit", "Echo / Zenit", "10 residential buildings, approximately 150 apartments each, large estate", "[Featured project visual: large Zenit residential estate model]"],
     ["Jeziorna", "Murapol", "Approximately 30 buildings, around 20 apartments each, large residential masterplan", "[Featured project visual: Jeziorna residential masterplan]"],
     ["Fama Jeżyce", "Monday", "6 buildings, around 12 apartments each, large estate", "[Featured project visual: Fama Jeżyce estate model]"],
@@ -343,6 +410,102 @@
     id: `large-scale-${index + 1}`
   }));
 
+  const selectedProjectSources = new Map([
+    ...groups.flatMap((group) => group.projects),
+    ...featured
+  ].map((project) => [project.name, project]));
+  const selectedProject = (sourceName, overrides = {}) => {
+    const source = selectedProjectSources.get(sourceName);
+    return source ? { ...source, ...overrides } : null;
+  };
+
+  const selectedWork = [
+    selectedProject("Jeziorna Residential Masterplan", {
+      id: "selected-work-1",
+      name: "Jeziorna",
+      category: "Architecture / Realtime Real Estate",
+      filter: "architecture",
+      departmentId: "architecture",
+      departmentTitle: "Architecture / Realtime Real Estate",
+      group: "Selected work"
+    }),
+    selectedProject("Japanese Garden", {
+      id: "selected-work-2",
+      category: "Game Development",
+      filter: "games",
+      departmentId: "game-development",
+      departmentTitle: "Game Development",
+      group: "Selected work"
+    }),
+    selectedProject("HotelFive", {
+      id: "selected-work-3",
+      name: "Hotel Five",
+      category: "Digital Twin",
+      filter: "metaverse",
+      departmentId: "digital-twin",
+      departmentTitle: "Digital Twin",
+      group: "Selected work"
+    }),
+    selectedProject("OrangeMaze", {
+      id: "selected-work-4",
+      name: "Orange Maze",
+      category: "Metaverse Maze",
+      filter: "metaverse",
+      departmentId: "metaverse-mazes",
+      departmentTitle: "Maze",
+      group: "Selected work"
+    }),
+    selectedProject("India", {
+      id: "selected-work-5",
+      name: "India Music Room",
+      category: "Music Room / Metaverse",
+      filter: "metaverse",
+      departmentId: "music-rooms",
+      departmentTitle: "Music Room",
+      group: "Selected work"
+    }),
+    selectedProject("ChocolateFactory", {
+      id: "selected-work-6",
+      name: "Chocolate Factory",
+      category: "Pulse Guys / Metaverse Game Level",
+      filter: "metaverse",
+      departmentId: "pulse-guys",
+      departmentTitle: "Pulse Guys",
+      group: "Selected work"
+    }),
+    selectedProject("MafEventDeira", {
+      id: "selected-work-7",
+      name: "Maf Event Deira",
+      category: "Treasure Hunter / Metaverse Game Area",
+      filter: "metaverse",
+      departmentId: "treasure-hunter",
+      departmentTitle: "Treasure Hunter",
+      group: "Selected work"
+    }),
+    selectedProject("Medieval Machines Builder", {
+      id: "selected-work-8",
+      category: "Solverto Games / Commercial Game",
+      filter: "solverto",
+      departmentId: "solverto-games",
+      departmentTitle: "Solverto Games",
+      group: "Selected work"
+    }),
+    {
+      ...makeProject("Avatars - Optimization", "Animations / Cinematic / Wideo Editing", "Avatar optimization and production support", "Solverto production support", {
+        description: "Avatar asset optimization and animation support for interactive production workflows.",
+        placeholder: "[Project thumbnail: Avatars - Optimization]",
+        tags: ["Avatars", "Optimization", "Animation", "Production Support"],
+        industry: "Interactive content production",
+        technology: "Realtime asset optimization workflow / technology placeholder"
+      }),
+      id: "selected-work-9",
+      filter: "support",
+      departmentId: "support",
+      departmentTitle: "Animations / Cinematic / Wideo Editing",
+      group: "Selected work"
+    }
+  ].filter(Boolean);
+
   const stats = [
     { value: "70+", label: "architecture / realtime real estate projects and support tasks" },
     { value: "30+", label: "metaverse locations, mazes and game areas" },
@@ -351,5 +514,5 @@
     { value: "Own + co-developed", label: "game titles including Painter Simulator, Medieval Machines Builder and Tarvos Desolation" }
   ];
 
-  window.SOLVERTO_PORTFOLIO = { stats, featured, largeScale, groups };
+  window.SOLVERTO_PORTFOLIO = { stats, featured, largeScale: selectedWork, groups };
 })();
