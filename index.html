@@ -9,23 +9,18 @@
     <meta property="og:type" content="website" />
     <title>Solverto — Realtime 3D, Games and XR</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=solverto-refresh-20260727" />
+    <link rel="stylesheet" href="styles.css?v=sliding-panels-20260728" />
   </head>
-  <body>
+  <body class="home-page">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header" data-header>
       <nav class="container nav-shell" aria-label="Main navigation">
         <a class="brand" href="index.html" aria-label="Solverto home"><img src="images/SolvertoLogo.gif" alt="Solverto" width="256" height="256" /></a>
         <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu" data-nav-toggle><span></span><span></span><span></span></button>
         <div class="nav-menu" id="main-menu" data-nav-menu>
-          <a href="index.html" aria-current="page">Home</a>
-          <a data-company-link href="company.html">Company</a>
-          <a href="realtime-3d.html">Realtime 3D</a>
-          <a href="xr-digital-twin.html">XR &amp; Digital Twin</a>
-          <a href="games.html">Game Production</a>
-          <a href="ai-pipeline.html">AI &amp; Pipeline</a>
-          <a href="portfolio.html">Realizacje</a>
-          <a href="contact.html">Contact</a>
+          <a data-company-link data-home-panel-trigger="company" href="#about">Company</a>
+          <a data-home-panel-trigger="portfolio" href="#portfolio-preview">Realizacje</a>
+          <a data-home-panel-trigger="contact" href="#contact">Contact</a>
         </div>
       </nav>
     </header>
@@ -39,8 +34,8 @@
             <h1>Realtime 3D that is built to work.</h1>
             <p class="hero-lead">Solverto turns products, technical data and game ideas into interactive experiences, playable prototypes, XR training, digital twins and production-ready 3D content.</p>
             <div class="actions">
-              <a class="button button-primary" href="contact.html">Start a project</a>
-              <a class="button button-secondary" href="portfolio.html">View selected work</a>
+              <a class="button button-primary" data-home-panel-trigger="contact" href="#contact">Start a project</a>
+              <a class="button button-secondary" data-home-panel-trigger="portfolio" href="#portfolio-preview">View selected work</a>
             </div>
           </div>
           <figure class="hero-visual reveal">
@@ -49,33 +44,7 @@
         </div>
       </section>
 
-      <section class="credibility-strip" aria-label="Solverto experience">
-        <div class="container credibility-grid">
-          <div class="credibility-item"><strong>15+ years</strong><span>in 3D and interactive production</span></div>
-          <div class="credibility-item"><strong>30+ projects</strong><span>in realtime architecture and visualization</span></div>
-          <div class="credibility-item"><strong>Cross-industry</strong><span>game, XR, AR and business simulation experience</span></div>
-          <div class="credibility-item"><strong>Realtime pipelines</strong><span>Unreal Engine and Unity expertise</span></div>
-          <div class="credibility-item"><strong>Poland → worldwide</strong><span>based locally, working internationally</span></div>
-        </div>
-      </section>
-
-      <section class="section section-band" id="services">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Core services</p>
-            <h2>One technical and creative pipeline, four ways in.</h2>
-            <p>Choose a focused service or connect several disciplines around one production goal.</p>
-          </div>
-          <div class="service-grid">
-            <article class="card service-card reveal"><span class="service-index">01</span><h3>Realtime 3D for Business</h3><p>Interactive product, building and marketing experiences built from real source data.</p><ul><li>Product configurators</li><li>Realtime showrooms</li><li>CAD and BIM conversion</li></ul><div class="card-footer"><a class="button button-secondary button-small" href="realtime-3d.html">Explore Realtime 3D</a></div></article>
-            <article class="card service-card reveal"><span class="service-index">02</span><h3>XR &amp; Digital Twin</h3><p>Training, safety, onboarding and process simulations for real business scenarios.</p><ul><li>XR prototypes</li><li>VR/AR training</li><li>Digital Twin Lite</li></ul><div class="card-footer"><a class="button button-secondary button-small" href="xr-digital-twin.html">Explore XR solutions</a></div></article>
-            <article class="card service-card reveal"><span class="service-index">03</span><h3>Game Production</h3><p>Demo polish, vertical slices, environments, technical art and optimization.</p><ul><li>Demo rescue</li><li>Environment production</li><li>PC optimization</li></ul><div class="card-footer"><a class="button button-secondary button-small" href="games.html">Explore Game Production</a></div></article>
-            <article class="card service-card reveal"><span class="service-index">04</span><h3>AI &amp; Production Pipeline</h3><p>Practical workflow audits, reusable systems and safer AI-assisted production.</p><ul><li>Pipeline audits</li><li>Asset optimization</li><li>Workflow consulting</li></ul><div class="card-footer"><a class="button button-secondary button-small" href="ai-pipeline.html">Explore AI &amp; Pipeline</a></div></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="about">
+      <section class="section" id="about" data-home-panel-source="company">
         <div class="container company-section">
           <div class="company-layout">
             <div class="company-copy reveal">
@@ -95,44 +64,28 @@
 
           <div class="company-cta reveal">
             <div><p class="eyebrow">Work with Solverto</p><h2>Start with a focused production goal.</h2></div>
-            <div class="actions"><a class="button button-primary" href="portfolio.html">View selected work</a><a class="button button-secondary" href="contact.html">Contact Solverto</a></div>
+            <div class="actions"><a class="button button-primary" data-home-panel-trigger="portfolio" href="#portfolio-preview">View selected work</a><a class="button button-secondary" data-home-panel-trigger="contact" href="#contact">Contact Solverto</a></div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="portfolio-preview">
+      <section class="section" id="portfolio-preview" data-home-panel-source="portfolio">
         <div class="container">
           <div class="section-heading reveal"><p class="eyebrow">Selected work</p><h2>Production across architecture, games and immersive training.</h2><p>Examples of direct work and production support, from large-scale environments to playable builds and interactive scenarios.</p></div>
-          <div class="work-grid">
-            <article class="card work-card reveal"><span class="work-type">Architecture / Realtime</span><h3>Large-scale residential environments</h3><p>Realtime-ready modelling and visualization support for complex estates, buildings and presentation requirements.</p><a class="text-link" href="project-architecture.html">View architecture work <span aria-hidden="true">→</span></a></article>
-            <article class="card work-card reveal"><span class="work-type">Games / Production</span><h3>Playable demo and game support</h3><p>Environment production, demo polish, technical art and optimization for original and supported game projects.</p><a class="text-link" href="project-game-demo.html">View game production work <span aria-hidden="true">→</span></a></article>
-            <article class="card work-card reveal"><span class="work-type">XR / Training</span><h3>Interactive training scenarios</h3><p>Prototype flows and realtime environments used to explore training, safety and operational learning.</p><a class="text-link" href="project-xr-training.html">View XR work <span aria-hidden="true">→</span></a></article>
-          </div>
-          <div class="actions section-actions"><a class="button button-secondary" href="portfolio.html">Explore the full portfolio</a></div>
+          <div class="portfolio-grid" data-large-scale-projects></div>
         </div>
       </section>
 
-      <section class="section contact-section" id="contact">
-        <div class="container contact-layout">
-          <div>
-            <div class="section-heading reveal"><p class="eyebrow">Start a conversation</p><h2>Tell us what needs to work next.</h2><p>Share the goal, available materials, target platform and deadline. We will suggest a practical first step.</p></div>
-            <div class="contact-cards">
-              <div class="contact-card reveal"><h3>Email</h3><a href="mailto:contact@solverto.com">contact@solverto.com</a></div>
-              <div class="contact-card reveal"><h3>Studio</h3><p>Based in Poland<br />Working internationally</p></div>
-              <div class="contact-card reveal"><h3>Project brief</h3><a href="contact.html">Open the contact page <span aria-hidden="true">→</span></a></div>
-            </div>
+      <section class="section contact-section" id="contact" data-home-panel-source="contact">
+        <div class="container minimal-contact reveal">
+          <p class="eyebrow">Start a conversation</p>
+          <h2>Tell us what needs to work next.</h2>
+          <p>Share the goal, available materials, target platform and deadline. We will suggest a practical first step.</p>
+          <div class="actions">
+            <a class="button button-primary" href="mailto:contact@solverto.com">contact@solverto.com</a>
+            <button class="button button-secondary" type="button" data-copy-email="contact@solverto.com">Copy email address</button>
           </div>
-          <form class="form-panel reveal" data-static-form data-contact-email="contact@solverto.com">
-            <div class="form-grid">
-              <label class="form-field">Name<input name="name" required /></label>
-              <label class="form-field">Email<input name="email" type="email" required /></label>
-              <label class="form-field">Company<input name="company" /></label>
-              <label class="form-field">Project type<select name="projectType"><option>Realtime 3D</option><option>XR &amp; Digital Twin</option><option>Game Production</option><option>AI &amp; Pipeline</option><option>Other</option></select></label>
-              <label class="form-field is-full">Message<textarea name="message" required></textarea></label>
-            </div>
-            <button class="button button-primary" type="submit">Prepare email inquiry</button>
-            <p class="form-status" data-form-status role="status"></p>
-          </form>
+          <p class="form-status" data-copy-email-status role="status"></p>
         </div>
       </section>
     </main>
@@ -148,6 +101,6 @@
     </footer>
     <script src="portfolio-data.js"></script>
     <script src="translations.js?v=solverto-refresh-20260727"></script>
-    <script src="script.js?v=solverto-refresh-20260727"></script>
+    <script src="script.js?v=sliding-panels-20260728"></script>
   </body>
 </html>

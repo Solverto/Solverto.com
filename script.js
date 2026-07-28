@@ -101,27 +101,37 @@ const translationCorrections = {
     "India Music Room": "India — pokój muzyczny",
     "Maf Event Deira": "Maf Event Deira",
     "Avatars - Optimization": "Avatary - Optymalizacja",
-    "Solverto home": "Strona główna Solverto"
+    "Solverto home": "Strona główna Solverto",
+    "Copy email address": "Skopiuj adres e-mail",
+    "Email address copied.": "Adres e-mail został skopiowany."
   },
   es: {
     "Privacy policy": "Política de privacidad",
     "Creative technology for business and game studios": "Tecnología creativa para empresas y estudios de videojuegos",
-    "Demo rescue": "Recuperación de demos"
+    "Demo rescue": "Recuperación de demos",
+    "Copy email address": "Copiar dirección de correo",
+    "Email address copied.": "Dirección de correo copiada."
   },
   pt: {
     "Privacy policy": "Política de privacidade",
     "Creative technology for business and game studios": "Tecnologia criativa para empresas e estúdios de jogos",
-    "Demo rescue": "Recuperação de demos"
+    "Demo rescue": "Recuperação de demos",
+    "Copy email address": "Copiar endereço de e-mail",
+    "Email address copied.": "Endereço de e-mail copiado."
   },
   it: {
     "Privacy policy": "Informativa sulla privacy",
     "Creative technology for business and game studios": "Tecnologia creativa per aziende e studi di videogiochi",
-    "Demo rescue": "Recupero demo"
+    "Demo rescue": "Recupero demo",
+    "Copy email address": "Copia indirizzo e-mail",
+    "Email address copied.": "Indirizzo e-mail copiato."
   }
 };
 
 translationCorrections.de ||= {};
 translationCorrections.de["Privacy policy"] = "Datenschutzerklärung";
+translationCorrections.de["Copy email address"] = "E-Mail-Adresse kopieren";
+translationCorrections.de["Email address copied."] = "E-Mail-Adresse kopiert.";
 
 Object.entries(translationCorrections).forEach(([language, entries]) => {
   supplementalTranslations[language] ||= {};
@@ -234,13 +244,17 @@ function addLanguageSelector() {
     companyLink.dataset.companyLink = "";
     companyLink.textContent = "Company";
   }
-  companyLink.href = "company.html";
+  const isHomePage = document.body?.classList.contains("home-page");
+  companyLink.href = isHomePage ? "#about" : "index.html?v=site-nav-20260728#about";
   const homeLink = navMenu.querySelector('a[href="index.html"]');
   if (homeLink && homeLink.nextElementSibling !== companyLink) homeLink.after(companyLink);
-  const portfolioLink = navMenu.querySelector('a[href="portfolio.html"]');
+  const portfolioLink = navMenu.querySelector('a[href="portfolio.html"], [data-home-panel-trigger="portfolio"]');
   if (!companyLink.isConnected && portfolioLink) portfolioLink.before(companyLink);
   else if (!companyLink.isConnected) navMenu.prepend(companyLink);
-  if (portfolioLink) portfolioLink.textContent = "Realizacje";
+  if (portfolioLink) {
+    portfolioLink.textContent = "Realizacje";
+    portfolioLink.href = isHomePage ? "#portfolio-preview" : "index.html?v=site-nav-20260728#portfolio-preview";
+  }
   if (navMenu.querySelector("[data-language-select]")) return;
 
   const control = document.createElement("label");
@@ -399,7 +413,13 @@ function renderPortfolio() {
   const groupsContainer = document.querySelector("[data-portfolio-groups]");
   if (!groupsContainer) return;
 
-  groupsContainer.innerHTML = portfolioData.groups.map((group) => `
+  const queryParams = new URLSearchParams(window.location.search);
+  let activeFilter = queryParams.get("category") || "all";
+  let activeDepartment = queryParams.get("department") || "";
+  const activeDepartmentGroup = portfolioData.groups.find((group) => group.id === activeDepartment);
+  const groupsToRender = activeDepartmentGroup ? [activeDepartmentGroup] : portfolioData.groups;
+
+  groupsContainer.innerHTML = groupsToRender.map((group) => `
     <section class="portfolio-group" id="${escapeHtml(group.id)}" data-portfolio-group data-group-category="${escapeHtml(group.filter)}">
       <div class="portfolio-group-heading reveal">
         <p class="eyebrow">${escapeHtml(group.subtitle || group.title)}</p>
@@ -416,20 +436,16 @@ function renderPortfolio() {
   const pagination = document.querySelector("[data-portfolio-pagination]");
   const moreButton = document.querySelector("[data-portfolio-more]");
   const allButton = document.querySelector("[data-portfolio-all]");
-  const queryParams = new URLSearchParams(window.location.search);
-  let activeFilter = queryParams.get("category") || "all";
-  let activeDepartment = queryParams.get("department") || "";
   let projectLimit = 6;
 
   const initialFilterButton = filterButtons.find((button) => button.dataset.filter === activeFilter);
   if (!initialFilterButton) activeFilter = "all";
   if (activeDepartment) {
-    const department = portfolioData.groups.find((group) => group.id === activeDepartment);
     const pageTitle = document.querySelector("[data-project-page-title]");
     const pageIntro = document.querySelector("[data-project-page-intro]");
-    if (department) {
-      if (pageTitle) pageTitle.textContent = department.title;
-      if (pageIntro) pageIntro.textContent = department.intro || `Project data from the ${department.title} production area.`;
+    if (activeDepartmentGroup) {
+      if (pageTitle) pageTitle.textContent = activeDepartmentGroup.title;
+      if (pageIntro) pageIntro.textContent = activeDepartmentGroup.intro || `Project data from the ${activeDepartmentGroup.title} production area.`;
     }
   }
   filterButtons.forEach((button) => {
@@ -623,11 +639,175 @@ function renderProjectDetail() {
   }
 }
 
+function normalizeContactLinks() {
+  document.querySelectorAll('a[href="contact.html"]').forEach((link) => {
+    link.href = "index.html?v=contact-visible-20260728#contact";
+  });
+}
+
+function initializeHomePanels() {
+  const sourceElements = [...document.querySelectorAll("[data-home-panel-source]")];
+  if (!sourceElements.length) return;
+
+  const sources = new Map(sourceElements.map((source) => [source.dataset.homePanelSource, source]));
+  const panel = document.createElement("div");
+  panel.className = "home-panel";
+  panel.hidden = true;
+  panel.setAttribute("aria-hidden", "true");
+  panel.innerHTML = `
+    <div class="home-panel-backdrop" data-home-panel-close></div>
+    <section class="home-panel-dialog" role="dialog" aria-modal="true">
+      <button class="home-panel-close" type="button" data-home-panel-close><span aria-hidden="true">×</span></button>
+      <div class="home-panel-content" data-home-panel-content></div>
+    </section>`;
+  document.body.append(panel);
+
+  const dialog = panel.querySelector(".home-panel-dialog");
+  const content = panel.querySelector("[data-home-panel-content]");
+  const closeButton = panel.querySelector(".home-panel-close");
+  let previousFocus = null;
+  let closeTimer = null;
+
+  const finishClose = () => {
+    panel.hidden = true;
+    panel.classList.remove("is-open", "is-closing");
+    panel.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("home-panel-open");
+    content.replaceChildren();
+    if (previousFocus instanceof HTMLElement) previousFocus.focus();
+  };
+
+  const closePanel = () => {
+    if (panel.hidden || panel.classList.contains("is-closing")) return;
+    panel.classList.remove("is-open");
+    panel.classList.add("is-closing");
+    closeTimer = window.setTimeout(finishClose, reducedMotion.matches ? 0 : 430);
+  };
+
+  const openPanel = (name, trigger) => {
+    const source = sources.get(name);
+    if (!source) return;
+
+    if (closeTimer) window.clearTimeout(closeTimer);
+
+    const sourceContent = source.querySelector(":scope > .container") || source;
+    const clone = sourceContent.cloneNode(true);
+    clone.querySelectorAll("[id]").forEach((element) => element.removeAttribute("id"));
+    if (clone.classList.contains("reveal")) {
+      clone.classList.remove("reveal");
+      clone.classList.add("is-visible");
+    }
+    clone.querySelectorAll(".reveal").forEach((element) => {
+      element.classList.remove("reveal");
+      element.classList.add("is-visible");
+    });
+
+    const heading = clone.querySelector("h1, h2, h3");
+    if (heading) {
+      heading.id = "home-panel-title";
+      dialog.setAttribute("aria-labelledby", heading.id);
+    } else {
+      dialog.removeAttribute("aria-labelledby");
+      dialog.setAttribute("aria-label", name);
+    }
+
+    previousFocus = trigger || document.activeElement;
+    content.replaceChildren(clone);
+    panel.hidden = false;
+    panel.classList.remove("is-closing");
+    panel.setAttribute("aria-hidden", "false");
+    dialog.scrollTop = 0;
+    document.body.classList.add("home-panel-open");
+    closeButton.setAttribute("aria-label", (lightboxLabels[selectedLanguage] || lightboxLabels.en).close);
+    window.requestAnimationFrame(() => {
+      panel.classList.add("is-open");
+      closeButton.focus();
+    });
+  };
+
+  document.addEventListener("click", (event) => {
+    const trigger = event.target.closest("[data-home-panel-trigger]");
+    if (!trigger) return;
+    event.preventDefault();
+    openPanel(trigger.dataset.homePanelTrigger, trigger);
+  });
+
+  panel.addEventListener("click", (event) => {
+    if (event.target.closest("[data-home-panel-close]")) closePanel();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (panel.hidden || panel.classList.contains("is-closing")) return;
+    if (event.key === "Escape") {
+      closePanel();
+      return;
+    }
+    if (event.key !== "Tab") return;
+
+    const focusable = [...panel.querySelectorAll('a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])')]
+      .filter((element) => !element.hidden);
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+
+  const panelByHash = {
+    about: "company",
+    company: "company",
+    portfolio: "portfolio",
+    "portfolio-preview": "portfolio",
+    contact: "contact"
+  };
+  const initialPanelName = panelByHash[decodeURIComponent(window.location.hash.slice(1))];
+  if (initialPanelName) {
+    const trigger = document.querySelector(`[data-home-panel-trigger="${initialPanelName}"]`);
+    openPanel(initialPanelName, trigger);
+  }
+}
+
+function initializeContactHelpers() {
+  document.addEventListener("click", async (event) => {
+    const button = event.target.closest("[data-copy-email]");
+    if (!button) return;
+
+    const email = button.dataset.copyEmail;
+    const status = button.closest(".minimal-contact")?.querySelector("[data-copy-email-status]");
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        const input = document.createElement("textarea");
+        input.value = email;
+        input.setAttribute("readonly", "");
+        input.style.position = "fixed";
+        input.style.opacity = "0";
+        document.body.append(input);
+        input.select();
+        document.execCommand("copy");
+        input.remove();
+      }
+      if (status) status.textContent = translatedText("Email address copied.");
+    } catch {
+      if (status) status.textContent = email;
+    }
+  });
+}
+
 renderFeaturedProjects();
 renderPortfolio();
 renderProjectDetail();
+normalizeContactLinks();
 addLanguageSelector();
 applyLanguage();
+initializeHomePanels();
+initializeContactHelpers();
 
 function initializeLightbox() {
   const main = document.querySelector("main");
