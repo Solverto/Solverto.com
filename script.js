@@ -389,13 +389,15 @@ function renderFeaturedProjects() {
 }
 
 function renderPortfolio() {
-  const groupsContainer = document.querySelector("[data-portfolio-groups]");
-  if (!groupsContainer || !portfolioData) return;
+  if (!portfolioData) return;
 
   const largeScaleContainer = document.querySelector("[data-large-scale-projects]");
   if (largeScaleContainer) {
     largeScaleContainer.innerHTML = portfolioData.largeScale.map((project) => departmentCardMarkup(project)).join("");
   }
+
+  const groupsContainer = document.querySelector("[data-portfolio-groups]");
+  if (!groupsContainer) return;
 
   groupsContainer.innerHTML = portfolioData.groups.map((group) => `
     <section class="portfolio-group" id="${escapeHtml(group.id)}" data-portfolio-group data-group-category="${escapeHtml(group.filter)}">
@@ -462,9 +464,16 @@ function renderPortfolio() {
     }
 
     if (pagination) {
-      const hasMore = matchingCards.length > shownCards.length;
+      const remainingProjects = Math.max(0, matchingCards.length - shownCards.length);
+      const hasMore = remainingProjects > 0;
       pagination.hidden = !hasMore;
-      if (moreButton) moreButton.hidden = !hasMore || projectLimit === Infinity;
+      if (moreButton) {
+        moreButton.hidden = !hasMore || projectLimit === Infinity;
+        if (!moreButton.hidden) {
+          const nextCount = Math.min(6, remainingProjects);
+          moreButton.textContent = translatedText("Show next 6").replace(/\b6\b/, String(nextCount));
+        }
+      }
       if (allButton) allButton.hidden = !hasMore || projectLimit === Infinity;
     }
   }

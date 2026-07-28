@@ -1373,14 +1373,7 @@ html:not([data-language-ready]) .nav-menu {
 
 .gallery-grid .media-placeholder {
   min-height: 180px;
-}
-
-.gallery-grid .media-placeholder:nth-child(3n + 1) {
   aspect-ratio: 4 / 3;
-}
-
-.gallery-grid .media-placeholder:nth-child(3n + 2) {
-  aspect-ratio: 16 / 10;
 }
 
 .consultation {
