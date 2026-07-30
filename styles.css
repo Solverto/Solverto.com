@@ -416,10 +416,6 @@ html:not([data-language-ready]) .nav-menu {
   margin-top: 22px;
 }
 
-.embed-actions {
-  margin-top: 18px;
-}
-
 .media-placeholder {
   width: 100%;
   min-width: 0;
@@ -1460,6 +1456,8 @@ html:not([data-language-ready]) .nav-menu {
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
 }
@@ -1470,7 +1468,9 @@ html:not([data-language-ready]) .nav-menu {
 }
 
 .project-card-body {
-  display: grid;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   gap: 12px;
   padding: 20px;
 }
@@ -1514,25 +1514,10 @@ html:not([data-language-ready]) .nav-menu {
   text-transform: uppercase;
 }
 
-.meta-row,
-.tag-row {
+.meta-row {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
-}
-
-.tag {
-  border: 1px solid var(--brand-line);
-  border-radius: 2px;
-  padding: 5px 8px;
-  color: var(--brand-muted);
-  background: rgba(226, 226, 226, 0.035);
-  font-size: 0.76rem;
-}
-
-.tag.is-accent {
-  border-color: rgba(246, 157, 9, 0.54);
-  color: var(--brand-primary);
 }
 
 .gallery-grid .media-placeholder {
@@ -1782,11 +1767,6 @@ textarea:focus {
   color: var(--brand-primary);
 }
 
-.sketchfab-placeholder {
-  min-height: 0;
-  aspect-ratio: 16 / 9;
-}
-
 .site-footer {
   border-top: 1px solid var(--brand-line);
   padding: 44px 0;
@@ -1866,10 +1846,6 @@ textarea:focus {
 
   .media-placeholder.is-wide {
     aspect-ratio: 21 / 9;
-  }
-
-  .sketchfab-placeholder {
-    min-height: 360px;
   }
 
   .service-grid,
@@ -2403,11 +2379,6 @@ h2 {
 .project-fact span {
   color: var(--brand-primary);
   letter-spacing: 0.1em;
-}
-
-.tag {
-  border-radius: 999px;
-  background: transparent;
 }
 
 .company-facts {

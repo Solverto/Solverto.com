@@ -98,7 +98,6 @@
     note: extra.note || "",
     description: extra.description || "",
     placeholder: extra.placeholder || `[Project thumbnail: ${name}]`,
-    tags: extra.tags || [],
     assetFolder: extra.assetFolder || "",
     assetExtension: extra.assetExtension || "webp",
     scope: extra.scope || role,
@@ -166,7 +165,6 @@
     {
       country,
       description: "Residential investment modelling support prepared for realtime real estate presentation workflows.",
-      tags: ["3D Modelling", role.includes("PTT") ? "PTT" : "PZT", "Realtime Architecture", "Residential"],
       industry: "Residential real estate",
       technology: "Realtime 3D workflow / technology placeholder"
     }
@@ -199,7 +197,6 @@
     {
       country,
       description: "Focused production support, corrections or analysis within an architecture visualization workflow.",
-      tags: role.includes("Animation") || name.includes("Animation") ? ["Animation", "Character Assets", "Production Support"] : ["3D Support", "Corrections", "Analysis"],
       industry: "Architecture and realtime real estate",
       technology: "3D production workflow / technology placeholder"
     }
@@ -218,7 +215,6 @@
     "SQUAREBYTES GmbH / partner cooperation",
     {
       description: "Realtime architecture support completed in cooperation with SQUAREBYTES GmbH.",
-      tags: ["3D Modelling", "Realtime Architecture", "Production Support", "Austria"],
       industry: "Architecture and real estate",
       technology: "Realtime 3D workflow / technology placeholder"
     }
@@ -244,7 +240,6 @@
       game,
       description: `${role} support for ${game}.`,
       placeholder: `[Project thumbnail: ${name} level for ${game}]`,
-      tags: ["Level Design", "3D Environment", game, role.includes("programming") ? "Programming Support" : "Production Support"],
       assetExtension: "jpg",
       industry: "Commercial game development",
       technology: "Game engine / technology placeholder"
@@ -255,7 +250,6 @@
     .map((name) => makeProject(name, "Digital Twin", "Digital Twin environment production support", "Partner studio cooperation", {
       description: "Digital Twin environment and realtime 3D location production support.",
       placeholder: `[Project thumbnail: metaverse environment for ${name}]`,
-      tags: ["Digital Twin", "3D Environment", "Production Support"],
       industry: "Digital Twin and realtime 3D",
       technology: "Realtime engine / technology placeholder"
     }));
@@ -264,7 +258,6 @@
     .map((name) => makeProject(name, "Music Room / Metaverse", "Music room environment production support", "Partner studio cooperation", {
       description: "3D environment and location production support for a themed metaverse music room.",
       placeholder: `[Project thumbnail: metaverse music room for ${name}]`,
-      tags: ["Music Rooms", "Metaverse", "3D Environment", "Production Support"],
       technology: "Realtime engine / technology placeholder"
     }));
 
@@ -272,7 +265,6 @@
     .map((name) => makeProject(name, "Metaverse Maze", "Maze environment and 3D production support", "Partner studio cooperation", {
       description: "Maze environment and realtime 3D production support for a metaverse experience.",
       placeholder: `[Project thumbnail: metaverse maze environment for ${name}]`,
-      tags: ["Metaverse", "Maze", "Environment Art", "Production Support"],
       technology: "Realtime engine / technology placeholder"
     }));
 
@@ -280,7 +272,6 @@
     .map((name) => makeProject(name, "Metaverse Game Area", "3D level / game area production support", "Partner studio cooperation", {
       description: "Realtime 3D level and game area production support for a metaverse project.",
       placeholder: `[Project thumbnail: metaverse game area for ${name}]`,
-      tags: ["Metaverse", "Game Area", "3D Level", "Production Support"],
       technology: "Realtime engine / technology placeholder"
     }));
 
@@ -288,14 +279,12 @@
     .map((name) => makeProject(name, "Pulse Guys / Metaverse Game Level", "Level and 3D production support", "Partner studio cooperation", {
       description: "Level and 3D production support for a Pulse Guys metaverse game experience.",
       placeholder: `[Project thumbnail: Pulse Guys level for ${name}]`,
-      tags: ["Pulse Guys", "Metaverse", "Level Production", "3D Environment"],
       technology: "Realtime engine / technology placeholder"
     }));
 
   const wildRush = [makeProject("Wild Rush", "Game Development", "Avatars and animations", "Partner studio cooperation", {
     description: "Avatar and animation production support for a metaverse game project.",
     placeholder: "[Project thumbnail: Wild Rush avatars and animations]",
-    tags: ["Avatars", "Animation", "Metaverse", "Game Production"],
     technology: "Character and animation workflow / technology placeholder"
   })];
 
@@ -308,7 +297,6 @@
       note: "Wishlist reached approximately 1.5k and has been stagnant since September 2023.",
       description: "Tarvos Desolation is a work-in-progress single-player isometric sci-fi horror and exploration project. The project is being evaluated and developed toward a demo while Solverto continues to balance internal game development with service-based work.",
       placeholder: "[Project thumbnail: Tarvos Desolation sci-fi horror environment]",
-      tags: ["Original IP", "Sci-Fi Horror", "Isometric", "Work in Progress"],
       scope: "Original game development toward a playable demo",
       industry: "Original game development",
       technology: "Game engine / technology placeholder"
@@ -316,22 +304,18 @@
     makeProject("Medieval Machines Builder", "Commercial Game", "Game development / production involvement", "Project involvement", {
       description: "Commercial game development and production involvement.",
       placeholder: "[Project thumbnail: Medieval Machines Builder game]",
-      tags: ["Commercial Game", "Game Development", "Production"]
     }),
     makeProject("Painter Simulator", "Commercial Game", "Game development / production involvement", "Project involvement", {
       description: "Commercial game development and production involvement.",
       placeholder: "[Project thumbnail: Painter Simulator game]",
-      tags: ["Commercial Game", "Game Development", "Production"]
     }),
     ...["Arca Plane", "Arca Cross", "Arca Dance", "Arca Crowd", "Arca Archer", "Arca Ball Jam"].map((name) => makeProject(`OP Games - ${name}`, "Web3 Mini-Game", "Mini-game production", "OP Games", {
       description: "Web3 mini-game production for OP Games.",
       placeholder: `[Project thumbnail: OP Games ${name} mini-game]`,
-      tags: ["Web3", "Mini-Game", "Game Production", "OP Games"]
     })),
     makeProject("Kroc and Roll", "Game / Released or previous title", "Game production / original project", "Solverto Games", {
       description: "A released or previous original Solverto Games project.",
       placeholder: "[Project thumbnail: Kroc and Roll game]",
-      tags: ["Original IP", "Game Production", "Released Title"]
     })
   ];
 
@@ -413,34 +397,28 @@
     makeProject("Zenit Residential Estate", "Architecture / Realtime Real Estate", "Large-scale residential estate modelling support", "Echo / YSLAB/RESIMO cooperation", {
       description: "Large-scale residential estate modelling support with multiple buildings and realtime presentation requirements.",
       placeholder: "[Project thumbnail: Zenit residential estate realtime 3D model]",
-      tags: ["3D Modelling", "Realtime Architecture", "Residential"],
       industry: "Residential real estate"
     }),
     makeProject("Jeziorna Residential Masterplan", "Architecture / Realtime Real Estate", "Large residential masterplan modelling support", "Murapol / YSLAB/RESIMO cooperation", {
       description: "Large residential masterplan modelling support for a multi-building development.",
       placeholder: "[Project thumbnail: Jeziorna large residential masterplan]",
-      tags: ["Masterplan", "3D Modelling", "Realtime Architecture"],
       industry: "Residential real estate"
     }),
     makeProject("House Builder Levels", "Game Development", "Environment and level production support", "Freemind / project involvement", {
       description: "Environment and level production support for multiple House Builder locations.",
       placeholder: "[Project thumbnail: House Builder level environment]",
-      tags: ["House Builder", "Level Production", "3D Environment"]
     }),
     makeProject("Metaverse Music Rooms", "Metaverse", "3D environment and location production support", "Partner studio cooperation", {
       description: "3D environment and location production support for multiple themed metaverse music rooms.",
       placeholder: "[Project thumbnail: metaverse music room environment]",
-      tags: ["Metaverse", "Music Rooms", "3D Environment"]
     }),
     makeProject("OP Games Mini-Games", "Solverto Games", "Production of six web3 mini-games", "OP Games", {
       description: "Production of multiple web3 mini-games for OP Games.",
       placeholder: "[Project thumbnail: OP Games arcade mini-game collection]",
-      tags: ["Web3", "Mini-Games", "Game Production"]
     }),
     makeProject("Tarvos Desolation", "Solverto Games / Work in Progress", "Current Solverto Games project", "Solverto Games", {
       description: "Single-player isometric sci-fi horror and extraction-inspired survival project currently in development.",
       placeholder: "[Project thumbnail: Tarvos Desolation sci-fi horror scene]",
-      tags: ["Original IP", "Sci-Fi Horror", "Work in Progress"]
     })
   ];
   featured.forEach((project, index) => {
@@ -460,7 +438,6 @@
     ...makeProject(name, "Architecture / Realtime Real Estate", "Large-scale architecture modelling support", `${partner} / YSLAB/RESIMO cooperation`, {
       description: scale,
       placeholder,
-      tags: ["Large Scale", "Residential", "Realtime Architecture"],
       scope: scale,
       industry: "Residential real estate"
     }),
@@ -552,7 +529,6 @@
       ...makeProject("Avatars - Optimization", "Animations / Cinematic / Wideo Editing", "Avatar optimization and production support", "Solverto production support", {
         description: "Avatar asset optimization and animation support for interactive production workflows.",
         placeholder: "[Project thumbnail: Avatars - Optimization]",
-        tags: ["Avatars", "Optimization", "Animation", "Production Support"],
         industry: "Interactive content production",
         technology: "Realtime asset optimization workflow / technology placeholder"
       }),

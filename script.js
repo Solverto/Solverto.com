@@ -36,7 +36,7 @@ const translations = {
     "Explore the projects.": "Poznaj projekty.",
     "Search by project, partner, category or production area.": "Szukaj według projektu, partnera, kategorii lub działu produkcji.",
     "Home": "Strona główna", "Game Production": "Produkcja gier", "Realtime 3D": "3D czasu rzeczywistego", "XR & Digital Twin": "XR i cyfrowy bliźniak", "AI & Pipeline": "AI i proces produkcyjny", "Contact": "Kontakt", "Start a project": "Rozpocznij projekt",
-    "View portfolio": "Zobacz portfolio", "Explore projects": "Zobacz projekty", "View full portfolio": "Pełne portfolio", "More": "Więcej", "More projects": "Więcej projektów", "Show next 6": "Rozwiń kolejne 6", "Show all projects": "Rozwiń wszystkie", "View examples": "Zobacz przykłady", "Email us": "Napisz e-mail", "Start a conversation": "Rozpocznij rozmowę", "Back to portfolio": "Powrót do portfolio", "View model on Sketchfab": "Zobacz model w Sketchfab",
+    "View portfolio": "Zobacz portfolio", "Explore projects": "Zobacz projekty", "View full portfolio": "Pełne portfolio", "More": "Więcej", "More projects": "Więcej projektów", "Show next 6": "Rozwiń kolejne 6", "Show all projects": "Rozwiń wszystkie", "View examples": "Zobacz przykłady", "Email us": "Napisz e-mail", "Start a conversation": "Rozpocznij rozmowę", "Back to portfolio": "Powrót do portfolio",
     "All": "Wszystkie", "Architecture / Realtime Real Estate": "Architektura Realtime", "Game Development": "Poziomy i Elementy do gier", "Animations / Cinematic / Wideo Editing": "Animacje, Filmy i Trailery", "Search portfolio": "Przeszukaj portfolio",
     "Project facts": "Informacje o projekcie", "Client / Partner": "Klient / Partner", "Role": "Rola", "Scope": "Zakres", "Industry": "Branża", "Technologies": "Technologie", "Year": "Rok", "Challenge": "Wyzwanie", "Solverto contribution": "Wkład Solverto", "Gallery": "Galeria", "Interactive model": "Model interaktywny",
     "Realtime 3D, games, XR simulations and interactive product experiences for business.": "3D czasu rzeczywistego, gry, symulacje XR i interaktywne doświadczenia produktowe dla biznesu.",
@@ -45,7 +45,7 @@ const translations = {
   de: {
     "See more": "Weitere anzeigen",
     "Home": "Startseite", "Game Production": "Spieleproduktion", "Realtime 3D": "Echtzeit-3D", "XR & Digital Twin": "XR & Digitaler Zwilling", "AI & Pipeline": "KI & Produktionsprozess", "Portfolio": "Portfolio", "Contact": "Kontakt", "Start a project": "Projekt starten",
-    "View portfolio": "Portfolio ansehen", "Explore projects": "Projekte entdecken", "View full portfolio": "Gesamtes Portfolio", "More": "Mehr", "More projects": "Weitere Projekte", "Show next 6": "Weitere 6 anzeigen", "Show all projects": "Alle Projekte anzeigen", "View examples": "Beispiele ansehen", "Email us": "E-Mail senden", "Start a conversation": "Gespräch beginnen", "Back to portfolio": "Zurück zum Portfolio", "View model on Sketchfab": "Modell auf Sketchfab ansehen",
+    "View portfolio": "Portfolio ansehen", "Explore projects": "Projekte entdecken", "View full portfolio": "Gesamtes Portfolio", "More": "Mehr", "More projects": "Weitere Projekte", "Show next 6": "Weitere 6 anzeigen", "Show all projects": "Alle Projekte anzeigen", "View examples": "Beispiele ansehen", "Email us": "E-Mail senden", "Start a conversation": "Gespräch beginnen", "Back to portfolio": "Zurück zum Portfolio",
     "All": "Alle", "Architecture / Realtime Real Estate": "Architektur / Echtzeit-Immobilien", "Game Development": "Spieleentwicklung", "Metaverse": "Metaverse", "Solverto Games": "Solverto Games", "Animations / Cinematic / Wideo Editing": "Animation / Cinematic / Videoschnitt", "Search portfolio": "Portfolio durchsuchen",
     "Project facts": "Projektdaten", "Client / Partner": "Kunde / Partner", "Role": "Rolle", "Scope": "Umfang", "Industry": "Branche", "Technologies": "Technologien", "Year": "Jahr", "Challenge": "Herausforderung", "Solverto contribution": "Beitrag von Solverto", "Gallery": "Galerie", "Interactive model": "Interaktives Modell",
     "Realtime 3D, games, XR simulations and interactive product experiences for business.": "Echtzeit-3D, Spiele, XR-Simulationen und interaktive Produkterlebnisse für Unternehmen.",
@@ -54,7 +54,7 @@ const translations = {
   es: {
     "See more": "Ver más",
     "Home": "Inicio", "Game Production": "Producción de juegos", "Realtime 3D": "3D en tiempo real", "XR & Digital Twin": "XR y gemelo digital", "AI & Pipeline": "IA y proceso de producción", "Portfolio": "Portafolio", "Contact": "Contacto", "Start a project": "Iniciar un proyecto",
-    "View portfolio": "Ver portafolio", "Explore projects": "Explorar proyectos", "View full portfolio": "Ver portafolio completo", "More": "Más", "More projects": "Más proyectos", "Show next 6": "Mostrar 6 más", "Show all projects": "Mostrar todos los proyectos", "View examples": "Ver ejemplos", "Email us": "Enviar correo", "Start a conversation": "Iniciar una conversación", "Back to portfolio": "Volver al portafolio", "View model on Sketchfab": "Ver modelo en Sketchfab",
+    "View portfolio": "Ver portafolio", "Explore projects": "Explorar proyectos", "View full portfolio": "Ver portafolio completo", "More": "Más", "More projects": "Más proyectos", "Show next 6": "Mostrar 6 más", "Show all projects": "Mostrar todos los proyectos", "View examples": "Ver ejemplos", "Email us": "Enviar correo", "Start a conversation": "Iniciar una conversación", "Back to portfolio": "Volver al portafolio",
     "All": "Todos", "Architecture / Realtime Real Estate": "Arquitectura / inmobiliario en tiempo real", "Game Development": "Desarrollo de juegos", "Metaverse": "Metaverso", "Solverto Games": "Solverto Games", "Animations / Cinematic / Wideo Editing": "Animación / Cinematic / Edición de vídeo", "Search portfolio": "Buscar en el portafolio",
     "Project facts": "Datos del proyecto", "Client / Partner": "Cliente / socio", "Role": "Función", "Scope": "Alcance", "Industry": "Sector", "Technologies": "Tecnologías", "Year": "Año", "Challenge": "Desafío", "Solverto contribution": "Contribución de Solverto", "Gallery": "Galería", "Interactive model": "Modelo interactivo",
     "Realtime 3D, games, XR simulations and interactive product experiences for business.": "3D en tiempo real, juegos, simulaciones XR y experiencias interactivas de producto para empresas.",
@@ -63,7 +63,7 @@ const translations = {
   pt: {
     "See more": "Ver mais",
     "Home": "Início", "Game Production": "Produção de jogos", "Realtime 3D": "3D em tempo real", "XR & Digital Twin": "XR e gémeo digital", "AI & Pipeline": "IA e processo de produção", "Portfolio": "Portfólio", "Contact": "Contacto", "Start a project": "Iniciar um projeto",
-    "View portfolio": "Ver portfólio", "Explore projects": "Explorar projetos", "View full portfolio": "Ver portfólio completo", "More": "Mais", "More projects": "Mais projetos", "Show next 6": "Mostrar mais 6", "Show all projects": "Mostrar todos os projetos", "View examples": "Ver exemplos", "Email us": "Enviar e-mail", "Start a conversation": "Iniciar conversa", "Back to portfolio": "Voltar ao portfólio", "View model on Sketchfab": "Ver modelo no Sketchfab",
+    "View portfolio": "Ver portfólio", "Explore projects": "Explorar projetos", "View full portfolio": "Ver portfólio completo", "More": "Mais", "More projects": "Mais projetos", "Show next 6": "Mostrar mais 6", "Show all projects": "Mostrar todos os projetos", "View examples": "Ver exemplos", "Email us": "Enviar e-mail", "Start a conversation": "Iniciar conversa", "Back to portfolio": "Voltar ao portfólio",
     "All": "Todos", "Architecture / Realtime Real Estate": "Arquitetura / imobiliário em tempo real", "Game Development": "Desenvolvimento de jogos", "Metaverse": "Metaverso", "Solverto Games": "Solverto Games", "Animations / Cinematic / Wideo Editing": "Animação / Cinematic / Edição de vídeo", "Search portfolio": "Pesquisar no portfólio",
     "Project facts": "Dados do projeto", "Client / Partner": "Cliente / parceiro", "Role": "Função", "Scope": "Âmbito", "Industry": "Setor", "Technologies": "Tecnologias", "Year": "Ano", "Challenge": "Desafio", "Solverto contribution": "Contribuição da Solverto", "Gallery": "Galeria", "Interactive model": "Modelo interativo",
     "Realtime 3D, games, XR simulations and interactive product experiences for business.": "3D em tempo real, jogos, simulações XR e experiências interativas de produto para empresas.",
@@ -72,7 +72,7 @@ const translations = {
   it: {
     "See more": "Vedi altro",
     "Home": "Home", "Game Production": "Produzione videogiochi", "Realtime 3D": "3D in tempo reale", "XR & Digital Twin": "XR e gemello digitale", "AI & Pipeline": "IA e processo produttivo", "Portfolio": "Portfolio", "Contact": "Contatti", "Start a project": "Avvia un progetto",
-    "View portfolio": "Vedi portfolio", "Explore projects": "Esplora i progetti", "View full portfolio": "Portfolio completo", "More": "Altro", "More projects": "Altri progetti", "Show next 6": "Mostra altri 6", "Show all projects": "Mostra tutti i progetti", "View examples": "Vedi esempi", "Email us": "Invia un'e-mail", "Start a conversation": "Inizia una conversazione", "Back to portfolio": "Torna al portfolio", "View model on Sketchfab": "Vedi il modello su Sketchfab",
+    "View portfolio": "Vedi portfolio", "Explore projects": "Esplora i progetti", "View full portfolio": "Portfolio completo", "More": "Altro", "More projects": "Altri progetti", "Show next 6": "Mostra altri 6", "Show all projects": "Mostra tutti i progetti", "View examples": "Vedi esempi", "Email us": "Invia un'e-mail", "Start a conversation": "Inizia una conversazione", "Back to portfolio": "Torna al portfolio",
     "All": "Tutti", "Architecture / Realtime Real Estate": "Architettura / immobiliare in tempo reale", "Game Development": "Sviluppo videogiochi", "Metaverse": "Metaverso", "Solverto Games": "Solverto Games", "Animations / Cinematic / Wideo Editing": "Animazione / Cinematic / Montaggio video", "Search portfolio": "Cerca nel portfolio",
     "Project facts": "Dati del progetto", "Client / Partner": "Cliente / partner", "Role": "Ruolo", "Scope": "Ambito", "Industry": "Settore", "Technologies": "Tecnologie", "Year": "Anno", "Challenge": "Sfida", "Solverto contribution": "Contributo di Solverto", "Gallery": "Galleria", "Interactive model": "Modello interattivo",
     "Realtime 3D, games, XR simulations and interactive product experiences for business.": "3D in tempo reale, videogiochi, simulazioni XR ed esperienze interattive di prodotto per le aziende.",
@@ -207,11 +207,11 @@ function translateDynamicText(source, language) {
     .sort(([left], [right]) => right.length - left.length)
     .reduce((result, [english, localized]) => result.replaceAll(english, localized), value);
   const placeholderPrefixes = {
-    pl: { "Project thumbnail": "Miniatura projektu", "Featured project visual": "Wizualizacja wyróżnionego projektu", "Project hero": "Główna wizualizacja projektu", "Project hero image": "Główna wizualizacja projektu", "Hero image": "Grafika główna", "Hero visual": "Grafika główna", "Service visual": "Wizualizacja usługi", "Gallery image": "Zdjęcie w galerii", "Gallery": "Galeria", "Process image": "Grafika procesu", "Sketchfab embed": "Osadzony model Sketchfab" },
-    de: { "Project thumbnail": "Projektvorschaubild", "Featured project visual": "Visual des hervorgehobenen Projekts", "Project hero": "Projekt-Hauptvisual", "Project hero image": "Projekt-Hauptbild", "Hero image": "Titelbild", "Hero visual": "Titelvisual", "Service visual": "Service-Visual", "Gallery image": "Galeriebild", "Gallery": "Galerie", "Process image": "Prozessbild", "Sketchfab embed": "Eingebettetes Sketchfab-Modell" },
-    es: { "Project thumbnail": "Miniatura del proyecto", "Featured project visual": "Imagen del proyecto destacado", "Project hero": "Imagen principal del proyecto", "Project hero image": "Imagen principal del proyecto", "Hero image": "Imagen principal", "Hero visual": "Imagen principal", "Service visual": "Imagen del servicio", "Gallery image": "Imagen de la galería", "Gallery": "Galería", "Process image": "Imagen del proceso", "Sketchfab embed": "Modelo de Sketchfab integrado" },
-    pt: { "Project thumbnail": "Miniatura do projeto", "Featured project visual": "Imagem do projeto em destaque", "Project hero": "Imagem principal do projeto", "Project hero image": "Imagem principal do projeto", "Hero image": "Imagem principal", "Hero visual": "Imagem principal", "Service visual": "Imagem do serviço", "Gallery image": "Imagem da galeria", "Gallery": "Galeria", "Process image": "Imagem do processo", "Sketchfab embed": "Modelo Sketchfab incorporado" },
-    it: { "Project thumbnail": "Miniatura del progetto", "Featured project visual": "Visual del progetto in evidenza", "Project hero": "Visual principale del progetto", "Project hero image": "Immagine principale del progetto", "Hero image": "Immagine principale", "Hero visual": "Visual principale", "Service visual": "Visual del servizio", "Gallery image": "Immagine della galleria", "Gallery": "Galleria", "Process image": "Immagine del processo", "Sketchfab embed": "Modello Sketchfab incorporato" }
+    pl: { "Project thumbnail": "Miniatura projektu", "Featured project visual": "Wizualizacja wyróżnionego projektu", "Project hero": "Główna wizualizacja projektu", "Project hero image": "Główna wizualizacja projektu", "Hero image": "Grafika główna", "Hero visual": "Grafika główna", "Service visual": "Wizualizacja usługi", "Gallery image": "Zdjęcie w galerii", "Gallery": "Galeria", "Process image": "Grafika procesu" },
+    de: { "Project thumbnail": "Projektvorschaubild", "Featured project visual": "Visual des hervorgehobenen Projekts", "Project hero": "Projekt-Hauptvisual", "Project hero image": "Projekt-Hauptbild", "Hero image": "Titelbild", "Hero visual": "Titelvisual", "Service visual": "Service-Visual", "Gallery image": "Galeriebild", "Gallery": "Galerie", "Process image": "Prozessbild" },
+    es: { "Project thumbnail": "Miniatura del proyecto", "Featured project visual": "Imagen del proyecto destacado", "Project hero": "Imagen principal del proyecto", "Project hero image": "Imagen principal del proyecto", "Hero image": "Imagen principal", "Hero visual": "Imagen principal", "Service visual": "Imagen del servicio", "Gallery image": "Imagen de la galería", "Gallery": "Galería", "Process image": "Imagen del proceso" },
+    pt: { "Project thumbnail": "Miniatura do projeto", "Featured project visual": "Imagem do projeto em destaque", "Project hero": "Imagem principal do projeto", "Project hero image": "Imagem principal do projeto", "Hero image": "Imagem principal", "Hero visual": "Imagem principal", "Service visual": "Imagem do serviço", "Gallery image": "Imagem da galeria", "Gallery": "Galeria", "Process image": "Imagem do processo" },
+    it: { "Project thumbnail": "Miniatura del progetto", "Featured project visual": "Visual del progetto in evidenza", "Project hero": "Visual principale del progetto", "Project hero image": "Immagine principale del progetto", "Hero image": "Immagine principale", "Hero visual": "Visual principale", "Service visual": "Visual del servizio", "Gallery image": "Immagine della galleria", "Gallery": "Galleria", "Process image": "Immagine del processo" }
   };
   const placeholder = source.match(/^\[([^:]+):\s*(.+)]$/);
   if (placeholder) {
@@ -382,7 +382,6 @@ function projectMediaMarkup(project, index = 1, options = {}) {
 
 function projectCardMarkup(project, headingLevel = 3, options = {}) {
   const partner = project.partner || "Solverto project";
-  const tags = project.tags.slice(0, 4).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
   const projectGroup = options.groupId || project.groupId || "";
   return `
     <article class="project-card reveal" data-project-card data-project-category="${escapeHtml(project.filter || "")}" data-project-group="${escapeHtml(projectGroup)}" data-project-search="${escapeHtml(`${project.name} ${project.category} ${partner} ${project.role} ${project.country}`.toLowerCase())}">
@@ -393,7 +392,6 @@ function projectCardMarkup(project, headingLevel = 3, options = {}) {
         <p class="project-meta"><span>Client / Partner</span>${escapeHtml(partner)}${project.country ? ` · ${escapeHtml(project.country)}` : ""}</p>
         <p class="project-meta"><span>Role</span>${escapeHtml(project.role)}</p>
         <p>${escapeHtml(project.description || "Production support within a realtime 3D or interactive project workflow.")}</p>
-        <div class="tag-row">${tags}</div>
         <a class="button button-secondary button-small" href="${projectUrl(project)}">More</a>
       </div>
     </article>`;
@@ -428,18 +426,12 @@ function renderProjectPageHero(group) {
   const hero = document.querySelector("[data-project-page-hero]");
   if (!hero) return;
 
-  if (group?.heroImage) {
-    hero.classList.add("media-image-frame");
-    hero.dataset.noLightbox = "";
-    hero.removeAttribute("role");
-    hero.innerHTML = `<img src="${escapeHtml(group.heroImage)}" alt="${escapeHtml(group.title)}" loading="eager" decoding="async" />`;
-    return;
-  }
-
-  hero.classList.remove("media-image-frame");
-  delete hero.dataset.noLightbox;
-  hero.setAttribute("role", "img");
-  hero.textContent = "[Project catalogue: Solverto production areas and project data]";
+  const source = group?.heroImage || "assets/hero-offer-collage.png";
+  const alt = group?.title || "Solverto production areas and project data";
+  hero.classList.add("media-image-frame");
+  hero.dataset.noLightbox = "";
+  hero.removeAttribute("role");
+  hero.innerHTML = '<img src="' + escapeHtml(source) + '" alt="' + escapeHtml(alt) + '" loading="eager" decoding="async" />';
 }
 
 function renderFeaturedProjects() {
@@ -674,18 +666,13 @@ function renderProjectDetail() {
   setText("[data-detail-intro]", project.description);
   const detailHero = document.querySelector("[data-detail-hero]");
   if (detailHero) {
-    const source = projectImagePath(project);
-    if (source) {
-      detailHero.classList.add("media-image-frame");
-      detailHero.dataset.noLightbox = "";
-      detailHero.removeAttribute("role");
-      detailHero.innerHTML = `<img src="${escapeHtml(source)}" alt="${escapeHtml(`${project.name} — Solverto portfolio hero image`)}" loading="eager" decoding="async" />`;
-    } else {
-      detailHero.classList.remove("media-image-frame");
-      delete detailHero.dataset.noLightbox;
-      detailHero.setAttribute("role", "img");
-      detailHero.textContent = project.placeholder.replace("[Project thumbnail:", "[Project hero:").replace("[Featured project visual:", "[Project hero:");
-    }
+    const projectGroup = portfolioData.groups.find((group) => group.id === project.departmentId);
+    const source = projectImagePath(project) || projectGroup?.heroImage || "assets/hero-offer-collage.png";
+    const alt = project.name + " — Solverto portfolio hero image";
+    detailHero.classList.add("media-image-frame");
+    detailHero.dataset.noLightbox = "";
+    detailHero.removeAttribute("role");
+    detailHero.innerHTML = '<img src="' + escapeHtml(source) + '" alt="' + escapeHtml(alt) + '" loading="eager" decoding="async" />';
   }
   setText("[data-detail-partner]", project.partner || "Solverto project");
   setText("[data-detail-role]", project.role);
@@ -695,9 +682,6 @@ function renderProjectDetail() {
   setText("[data-detail-year]", project.year);
   setText("[data-detail-challenge]", copy.challenge);
   setText("[data-detail-contribution]", copy.contribution);
-
-  const tags = document.querySelector("[data-detail-tags]");
-  if (tags) tags.innerHTML = project.tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
 
   const extraFacts = document.querySelector("[data-detail-extra-facts]");
   if (extraFacts) {

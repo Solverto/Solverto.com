@@ -33,7 +33,6 @@ Then open `http://localhost:4173/`.
 - Change brand colors in the `:root` variables at the top of `styles.css`.
 - Replace every visible bracketed placeholder in the HTML files with the final
   image, screenshot, render or embed.
-- Replace Sketchfab placeholder URLs in the project detail pages.
 - Update contact details directly in the HTML files.
 - Shared interactions are in `script.js`.
 - The language selector and saved language preference are maintained in
