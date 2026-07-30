@@ -111,6 +111,7 @@
     ["Żeromskiego 13lt7", "Vinci", "Investment modelling and PTT support"],
     ["Bajeczna", "Atal", "Investment modelling and PZT support"],
     ["Parkowa", "Atal", "Investment modelling and PZT support"],
+    ["Zenit", "Archicom", "Investment modelling and PTT support"],
     ["Metro Zachód F", "Dom Development", "Investment modelling and PTT support"],
     ["Osiedle Beauforta", "Euro Styl", "Investment modelling and PZT support"],
     ["Urbino I (Italia)", "Dom Development", "Investment modelling and PZT support"],
@@ -119,6 +120,7 @@
     ["FIQUS Marcelin (Świerzawska)", "Nickel Development", "Investment modelling and PZT support"],
     ["Srebrzyńska Park II", "Peira", "Investment modelling and PZT support"],
     ["Nadgórników", "Noho Investment", "Investment modelling and PZT support"],
+    ["Jeziorna", "Murapol", "Investment modelling and PTT support"],
     ["Jeziorna IV", "Murapol", "Investment modelling and PZT support"],
     ["Fama Jeżyce III", "Monday", "Investment modelling and PZT support"],
     ["Srebrzyńska Park", "Peira", "Investment modelling and PZT support"],
@@ -339,7 +341,15 @@
       filter: "architecture",
       title: "Architecture / Realtime Real Estate",
       subtitle: "YSLAB/RESIMO cooperation",
-      intro: "Solverto has contributed to a wide range of architecture and realtime real estate projects, including residential investments, large estates, technical 3D modelling, PZT/PTT preparation support, optimization tasks and project corrections for partner studios and real estate clients.",
+      intro: "Over 50 projects completed in Poland and around the world.",
+      visibleAssetFolders: [
+        "architecture/archicom-kraków-29L-YSLAB",
+        "architecture/archicom-zenit-YSLAB",
+        "architecture/dom-demelovment-osiedle-przy-ryzowej-YSLAB",
+        "architecture/maxeti-sady-zoriborz-YSLAB",
+        "architecture/moden-bertone-YSLAB",
+        "architecture/murapol-siewierz-jeziorna-YSLAB"
+      ],
       projects: architectureProjects
     },
     {

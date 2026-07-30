@@ -37,7 +37,7 @@ const translations = {
     "Search by project, partner, category or production area.": "Szukaj według projektu, partnera, kategorii lub działu produkcji.",
     "Home": "Strona główna", "Game Production": "Produkcja gier", "Realtime 3D": "3D czasu rzeczywistego", "XR & Digital Twin": "XR i cyfrowy bliźniak", "AI & Pipeline": "AI i proces produkcyjny", "Contact": "Kontakt", "Start a project": "Rozpocznij projekt",
     "View portfolio": "Zobacz portfolio", "Explore projects": "Zobacz projekty", "View full portfolio": "Pełne portfolio", "More": "Więcej", "More projects": "Więcej projektów", "Show next 6": "Rozwiń kolejne 6", "Show all projects": "Rozwiń wszystkie", "View examples": "Zobacz przykłady", "Email us": "Napisz e-mail", "Start a conversation": "Rozpocznij rozmowę", "Back to portfolio": "Powrót do portfolio", "View model on Sketchfab": "Zobacz model w Sketchfab",
-    "All": "Wszystkie", "Architecture / Realtime Real Estate": "Architektura / nieruchomości realtime", "Game Development": "Tworzenie gier", "Animations / Cinematic / Wideo Editing": "Animacje / Cinematic / Wideo Editing", "Search portfolio": "Przeszukaj portfolio",
+    "All": "Wszystkie", "Architecture / Realtime Real Estate": "Architektura Realtime", "Game Development": "Poziomy i Elementy do gier", "Animations / Cinematic / Wideo Editing": "Animacje, Filmy i Trailery", "Search portfolio": "Przeszukaj portfolio",
     "Project facts": "Informacje o projekcie", "Client / Partner": "Klient / Partner", "Role": "Rola", "Scope": "Zakres", "Industry": "Branża", "Technologies": "Technologie", "Year": "Rok", "Challenge": "Wyzwanie", "Solverto contribution": "Wkład Solverto", "Gallery": "Galeria", "Interactive model": "Model interaktywny",
     "Realtime 3D, games, XR simulations and interactive product experiences for business.": "3D czasu rzeczywistego, gry, symulacje XR i interaktywne doświadczenia produktowe dla biznesu.",
     "Game Production & Demo Support": "Produkcja gier i wsparcie wersji demo", "Realtime 3D for Business": "3D czasu rzeczywistego dla biznesu", "XR Training, Simulations & Digital Twin": "Szkolenia XR, symulacje i cyfrowy bliźniak", "AI-Assisted Creative Pipeline & Realtime Production": "Proces kreatywny wspierany przez AI i produkcja realtime", "Portfolio of realtime 3D, architecture, games and metaverse production": "Portfolio produkcji 3D realtime, architektury, gier i metaverse", "Tell us what you want to build.": "Opowiedz nam, co chcesz stworzyć."
@@ -90,11 +90,12 @@ const translationCorrections = {
     "Selected work": "Realizacje",
     "Examples from every production area": "Przykłady realizacji z każdego działu",
     "Representative Solverto realizations across architecture, game development, Digital Twin, Metaverse, Solverto Games and production support.": "Reprezentatywne realizacje Solverto z obszaru architektury, tworzenia gier, Digital Twin, Metaverse, Solverto Games oraz wsparcia produkcji.",
-    "Digital Twin": "Cyfrowy bliźniak",
-    "Maze": "Labirynt",
-    "Music Room": "Pokój muzyczny",
-    "Pulse Guys": "Pulse Guys",
-    "Treasure Hunter": "Treasure Hunter",
+    "Digital Twin": "Wirtualny bliźniak",
+    "Maze": "Labirynty Metaverse",
+    "Music Room": "Pokoje Metaverse",
+    "Pulse Guys": "Poziomy do gry Pulse Guys",
+    "Treasure Hunter": "Poziomy do Treasure Hunter Metaverse",
+    "Solverto Games": "Elementy do gier Solverto Games",
     "Music Room / Metaverse": "Pokój muzyczny / Metaverse",
     "Treasure Hunter / Metaverse Game Area": "Treasure Hunter / obszar gry Metaverse",
     "Hotel Five": "Hotel Five",
@@ -103,28 +104,32 @@ const translationCorrections = {
     "Avatars - Optimization": "Avatary - Optymalizacja",
     "Solverto home": "Strona główna Solverto",
     "Copy email address": "Skopiuj adres e-mail",
-    "Email address copied.": "Adres e-mail został skopiowany."
+    "Email address copied.": "Adres e-mail został skopiowany.",
+    "Over 50 projects completed in Poland and around the world.": "Wykonano ponad 50 projektów z Polski i z całego świata."
   },
   es: {
     "Privacy policy": "Política de privacidad",
     "Creative technology for business and game studios": "Tecnología creativa para empresas y estudios de videojuegos",
     "Demo rescue": "Recuperación de demos",
     "Copy email address": "Copiar dirección de correo",
-    "Email address copied.": "Dirección de correo copiada."
+    "Email address copied.": "Dirección de correo copiada.",
+    "Over 50 projects completed in Poland and around the world.": "Se realizaron más de 50 proyectos en Polonia y en todo el mundo."
   },
   pt: {
     "Privacy policy": "Política de privacidade",
     "Creative technology for business and game studios": "Tecnologia criativa para empresas e estúdios de jogos",
     "Demo rescue": "Recuperação de demos",
     "Copy email address": "Copiar endereço de e-mail",
-    "Email address copied.": "Endereço de e-mail copiado."
+    "Email address copied.": "Endereço de e-mail copiado.",
+    "Over 50 projects completed in Poland and around the world.": "Foram concluídos mais de 50 projetos na Polónia e em todo o mundo."
   },
   it: {
     "Privacy policy": "Informativa sulla privacy",
     "Creative technology for business and game studios": "Tecnologia creativa per aziende e studi di videogiochi",
     "Demo rescue": "Recupero demo",
     "Copy email address": "Copia indirizzo e-mail",
-    "Email address copied.": "Indirizzo e-mail copiato."
+    "Email address copied.": "Indirizzo e-mail copiato.",
+    "Over 50 projects completed in Poland and around the world.": "Sono stati completati più di 50 progetti in Polonia e nel mondo."
   }
 };
 
@@ -132,6 +137,7 @@ translationCorrections.de ||= {};
 translationCorrections.de["Privacy policy"] = "Datenschutzerklärung";
 translationCorrections.de["Copy email address"] = "E-Mail-Adresse kopieren";
 translationCorrections.de["Email address copied."] = "E-Mail-Adresse kopiert.";
+translationCorrections.de["Over 50 projects completed in Poland and around the world."] = "In Polen und weltweit wurden mehr als 50 Projekte realisiert.";
 
 Object.entries(translationCorrections).forEach(([language, entries]) => {
   supplementalTranslations[language] ||= {};
@@ -379,11 +385,19 @@ function projectCardMarkup(project, headingLevel = 3, options = {}) {
     </article>`;
 }
 
+function displayProjectsForGroup(group) {
+  if (!group) return [];
+  if (group.visibleAssetFolders?.length) {
+    return group.projects.filter((project) => group.visibleAssetFolders.includes(project.assetFolder));
+  }
+  return group.showOnlyWithAssets ? group.projects.filter((project) => project.assetFolder) : group.projects;
+}
+
 function departmentCardMarkup(project, headingLevel = 3) {
   const title = project.departmentTitle || project.category;
   const departmentId = project.departmentId || project.filter || "all";
   const department = portfolioData.groups.find((group) => group.id === departmentId);
-  const projectCount = department?.projects.length || 0;
+  const projectCount = displayProjectsForGroup(department).length;
   const href = `projects.html?department=${encodeURIComponent(departmentId)}`;
   const placeholder = `[Project thumbnail: ${title}]`;
   return `
@@ -426,7 +440,7 @@ function renderPortfolio() {
         <h3>${escapeHtml(group.title)}</h3>
         ${group.intro ? `<p>${escapeHtml(group.intro)}</p>` : ""}
       </div>
-      <div class="portfolio-grid">${group.projects.map((project) => projectCardMarkup(project, 4, { groupId: group.id })).join("")}</div>
+      <div class="portfolio-grid">${displayProjectsForGroup(group).map((project) => projectCardMarkup(project, 4, { groupId: group.id })).join("")}</div>
     </section>
   `).join("");
 
