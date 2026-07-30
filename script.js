@@ -110,6 +110,8 @@ const translationCorrections = {
     "Choose the production area.": "Wybierz obszar produkcji.",
     "Click an image to see the areas Solverto can support.": "Kliknij obraz, aby zobaczyć obszary, w których Solverto może pomóc.",
     "Product prototypes": "Prototypy produktów",
+    "Images from selected realisations": "Obrazy wybranych realizacji",
+    "Examples from the portfolio that connect the offer to delivered work.": "Przykłady z portfolio łączące ofertę z wykonanymi realizacjami.",
     "Realtime architecture, residential investments and large-scale 3D modelling.": "Architektura realtime, inwestycje mieszkaniowe i wielkoskalowe modelowanie 3D.",
     "Game levels, environments and practical production support for playable content.": "Poziomy gier, środowiska i praktyczne wsparcie produkcji grywalnych treści.",
     "Interactive digital twins, realtime locations and operational visualizations.": "Interaktywne cyfrowe bliźniaki, lokalizacje realtime i wizualizacje operacyjne.",
@@ -476,6 +478,18 @@ function renderHomeOfferPanel() {
         </div>
       </article>`;
   }).join("");
+
+  const realizationGrid = document.querySelector("[data-home-realization-grid]");
+  if (!realizationGrid) return;
+  const realizationProjects = portfolioData.largeScale.filter((project) => project.assetFolder);
+  realizationGrid.innerHTML = realizationProjects.map((project) => `
+    <article class="offer-realization-card reveal">
+      ${projectMediaMarkup(project, 1, { altText: `${project.name} — selected realisation image` })}
+      <div class="offer-realization-card-body">
+        <h4>${escapeHtml(project.name)}</h4>
+        <p>${escapeHtml(project.departmentTitle || project.category)}</p>
+      </div>
+    </article>`).join("");
 }
 
 function renderPortfolio() {
