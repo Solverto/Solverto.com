@@ -345,7 +345,7 @@ function projectUrl(project) {
 
 function projectImagePath(project, index = 1) {
   if (!project?.assetFolder) return "";
-  return `${project.assetFolder}/gallery-${String(index).padStart(2, "0")}.webp`;
+  return `${project.assetFolder}/gallery-${String(index).padStart(2, "0")}.${project.assetExtension || "webp"}`;
 }
 
 function projectMediaMarkup(project, index = 1, options = {}) {

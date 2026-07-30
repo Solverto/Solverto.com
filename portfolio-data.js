@@ -50,6 +50,42 @@
     Dynamite: "metaverse/pulse-guys/dynamite"
   };
 
+  const gameAssetFolders = {
+    "Bamboo House": "game-development/bamboo-house-house-builder",
+    "Arabic House": "game-development/arabic-house-house-builder",
+    "Tree House": "game-development/tree-house-house-builder",
+    "African Metal House": "game-development/african-metal-house-house-builder",
+    "Underwater House": "game-development/underwater-house-house-builder",
+    "Aztec House": "game-development/aztec-house-house-builder",
+    "Underwater Ruin": "game-development/underwater-ruin-aquarist",
+    "Underwater Egyptian Ruin": "game-development/underwater-egyptian-ruin-aquarist",
+    "Japanese Garden": "game-development/japanese-garden-aquarist"
+  };
+
+  const architectureAssetFolders = {
+    "29L": "architecture/archicom-kraków-29L-YSLAB",
+    "Zenit": "architecture/archicom-zenit-YSLAB",
+    "Zenit Residential Estate": "architecture/archicom-zenit-YSLAB",
+    Parkowa: "architecture/atal-parkowa-YSLAB",
+    "Ryżowa": "architecture/dom-demelovment-osiedle-przy-ryzowej-YSLAB",
+    "Anny German / Sady Żoliborz": "architecture/maxeti-sady-zoriborz-YSLAB",
+    "Bertone Le Moden": "architecture/moden-bertone-YSLAB",
+    Jeziorna: "architecture/murapol-siewierz-jeziorna-YSLAB",
+    "Jeziorna Residential Masterplan": "architecture/murapol-siewierz-jeziorna-YSLAB"
+  };
+
+  const architectureAssetExtensions = {
+    "29L": "avif",
+    "Zenit": "avif",
+    "Zenit Residential Estate": "avif",
+    Parkowa: "avif",
+    "Ryżowa": "webp",
+    "Anny German / Sady Żoliborz": "avif",
+    "Bertone Le Moden": "jpg",
+    Jeziorna: "avif",
+    "Jeziorna Residential Masterplan": "avif"
+  };
+
   const makeProject = (name, category, role, partner = "", extra = {}) => ({
     name,
     category,
@@ -64,6 +100,7 @@
     placeholder: extra.placeholder || `[Project thumbnail: ${name}]`,
     tags: extra.tags || [],
     assetFolder: extra.assetFolder || "",
+    assetExtension: extra.assetExtension || "webp",
     scope: extra.scope || role,
     industry: extra.industry || category,
     technology: extra.technology || "Technology details available on request",
@@ -73,6 +110,7 @@
   const architectureProjects = [
     ["Żeromskiego 13lt7", "Vinci", "Investment modelling and PTT support"],
     ["Bajeczna", "Atal", "Investment modelling and PZT support"],
+    ["Parkowa", "Atal", "Investment modelling and PZT support"],
     ["Metro Zachód F", "Dom Development", "Investment modelling and PTT support"],
     ["Osiedle Beauforta", "Euro Styl", "Investment modelling and PZT support"],
     ["Urbino I (Italia)", "Dom Development", "Investment modelling and PZT support"],
@@ -192,6 +230,7 @@
     ["African Metal House", "House Builder", "Level creation", "Freemind"],
     ["Underwater House", "House Builder", "Level creation", "Freemind"],
     ["Aztec House", "House Builder", "Level creation", "Freemind"],
+    ["Underwater Ruin", "Aquarist", "Level creation", "Freemind"],
     ["Underwater Egyptian Ruin", "Aquarist", "Level creation", "Freemind"],
     ["Japanese Garden", "Aquarist", "Level creation", "Freemind"]
   ].map(([name, game, role, client]) => makeProject(
@@ -204,6 +243,7 @@
       description: `${role} support for ${game}.`,
       placeholder: `[Project thumbnail: ${name} level for ${game}]`,
       tags: ["Level Design", "3D Environment", game, role.includes("programming") ? "Programming Support" : "Production Support"],
+      assetExtension: "jpg",
       industry: "Commercial game development",
       technology: "Game engine / technology placeholder"
     }
@@ -349,7 +389,8 @@
       project.id = `${group.id}-${index + 1}`;
       project.filter = group.filter;
       project.group = group.title;
-      project.assetFolder ||= metaverseAssetFolders[project.name] || "";
+      project.assetFolder ||= architectureAssetFolders[project.name] || gameAssetFolders[project.name] || metaverseAssetFolders[project.name] || "";
+      project.assetExtension = architectureAssetExtensions[project.name] || project.assetExtension;
     });
   });
 
@@ -389,7 +430,8 @@
   ];
   featured.forEach((project, index) => {
     project.id = `featured-${index + 1}`;
-    project.assetFolder ||= metaverseAssetFolders[project.name] || "";
+    project.assetFolder ||= architectureAssetFolders[project.name] || gameAssetFolders[project.name] || metaverseAssetFolders[project.name] || "";
+    project.assetExtension = architectureAssetExtensions[project.name] || project.assetExtension;
   });
 
   const legacyLargeScale = [
