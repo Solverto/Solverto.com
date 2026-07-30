@@ -302,26 +302,6 @@
   gameProjects.push(...wildRush);
 
   const solvertoGames = [
-    makeProject("Kroc and Roll", "Game / Released or previous title", "Game production / original project", "Solverto Games", {
-      description: "A released or previous original Solverto Games project.",
-      placeholder: "[Project thumbnail: Kroc and Roll game]",
-      tags: ["Original IP", "Game Production", "Released Title"]
-    }),
-    ...["Arca Dance", "Arca Ball Jam", "Arca Archer", "Arca Plane", "Arca Crowd", "Arca Cross"].map((name) => makeProject(`OP Games - ${name}`, "Web3 Mini-Game", "Mini-game production", "OP Games", {
-      description: "Web3 mini-game production for OP Games.",
-      placeholder: `[Project thumbnail: OP Games ${name} mini-game]`,
-      tags: ["Web3", "Mini-Game", "Game Production", "OP Games"]
-    })),
-    makeProject("Painter Simulator", "Commercial Game", "Game development / production involvement", "Project involvement", {
-      description: "Commercial game development and production involvement.",
-      placeholder: "[Project thumbnail: Painter Simulator game]",
-      tags: ["Commercial Game", "Game Development", "Production"]
-    }),
-    makeProject("Medieval Machines Builder", "Commercial Game", "Game development / production involvement", "Project involvement", {
-      description: "Commercial game development and production involvement.",
-      placeholder: "[Project thumbnail: Medieval Machines Builder game]",
-      tags: ["Commercial Game", "Game Development", "Production"]
-    }),
     makeProject("Tarvos Desolation", "Original Game / Work in Progress", "Current Solverto Games project", "Solverto Games", {
       previousTitle: "Jupiter Survivor",
       status: "WIP before demo",
@@ -332,6 +312,26 @@
       scope: "Original game development toward a playable demo",
       industry: "Original game development",
       technology: "Game engine / technology placeholder"
+    }),
+    makeProject("Medieval Machines Builder", "Commercial Game", "Game development / production involvement", "Project involvement", {
+      description: "Commercial game development and production involvement.",
+      placeholder: "[Project thumbnail: Medieval Machines Builder game]",
+      tags: ["Commercial Game", "Game Development", "Production"]
+    }),
+    makeProject("Painter Simulator", "Commercial Game", "Game development / production involvement", "Project involvement", {
+      description: "Commercial game development and production involvement.",
+      placeholder: "[Project thumbnail: Painter Simulator game]",
+      tags: ["Commercial Game", "Game Development", "Production"]
+    }),
+    ...["Arca Plane", "Arca Cross", "Arca Dance", "Arca Crowd", "Arca Archer", "Arca Ball Jam"].map((name) => makeProject(`OP Games - ${name}`, "Web3 Mini-Game", "Mini-game production", "OP Games", {
+      description: "Web3 mini-game production for OP Games.",
+      placeholder: `[Project thumbnail: OP Games ${name} mini-game]`,
+      tags: ["Web3", "Mini-Game", "Game Production", "OP Games"]
+    })),
+    makeProject("Kroc and Roll", "Game / Released or previous title", "Game production / original project", "Solverto Games", {
+      description: "A released or previous original Solverto Games project.",
+      placeholder: "[Project thumbnail: Kroc and Roll game]",
+      tags: ["Original IP", "Game Production", "Released Title"]
     })
   ];
 
@@ -532,6 +532,7 @@
       filter: "metaverse",
       departmentId: "treasure-hunter",
       departmentTitle: "Treasure Hunter",
+      assetFolder: "metaverse/treasure-hunter/amusment-park",
       group: "Selected work"
     }),
     selectedProject("Medieval Machines Builder", {
