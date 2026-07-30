@@ -84,7 +84,7 @@ const translationCorrections = {
   pl: {
     "About": "O nas",
     "Privacy policy": "Polityka prywatności",
-    "Creative technology for business and game studios": "Technologie kreatywne dla biznesu i studiów gier",
+    "Creative technology for business and game studios": "Technologie Kreatywne dla Biznesu i studiów gier",
     "Demo rescue": "Wsparcie wersji demo",
     "Explore": "Poznaj",
     "Selected work": "Realizacje",
@@ -105,6 +105,18 @@ const translationCorrections = {
     "Solverto home": "Strona główna Solverto",
     "Copy email address": "Skopiuj adres e-mail",
     "Email address copied.": "Adres e-mail został skopiowany.",
+    "Open the offer": "Zobacz ofertę",
+    "Offer": "Oferta",
+    "Choose the production area.": "Wybierz obszar produkcji.",
+    "Click an image to see the areas Solverto can support.": "Kliknij obraz, aby zobaczyć obszary, w których Solverto może pomóc.",
+    "Product prototypes": "Prototypy produktów",
+    "Realtime architecture, residential investments and large-scale 3D modelling.": "Architektura realtime, inwestycje mieszkaniowe i wielkoskalowe modelowanie 3D.",
+    "Game levels, environments and practical production support for playable content.": "Poziomy gier, środowiska i praktyczne wsparcie produkcji grywalnych treści.",
+    "Interactive digital twins, realtime locations and operational visualizations.": "Interaktywne cyfrowe bliźniaki, lokalizacje realtime i wizualizacje operacyjne.",
+    "Metaverse environments, mazes and game-ready interactive spaces.": "Środowiska Metaverse, labirynty i interaktywne przestrzenie gotowe do wykorzystania w grach.",
+    "Animations, films, trailers and visual production support.": "Animacje, filmy, trailery i wsparcie produkcji wizualnej.",
+    "Interactive product configurators, realtime showrooms and prototype experiences.": "Interaktywne konfiguratory produktów, showroomy realtime i doświadczenia prototypowe.",
+    "Original games, mini-games and reusable game production assets.": "Autorskie gry, minigry i wielokrotnego użytku elementy produkcji gier.",
     "Over 50 projects completed in Poland and around the world.": "Wykonano ponad 50 projektów z Polski i z całego świata."
   },
   es: {
@@ -410,10 +422,60 @@ function departmentCardMarkup(project, headingLevel = 3) {
     </article>`;
 }
 
+function renderProjectPageHero(group) {
+  const hero = document.querySelector("[data-project-page-hero]");
+  if (!hero) return;
+
+  if (group?.heroImage) {
+    hero.classList.add("media-image-frame");
+    hero.dataset.noLightbox = "";
+    hero.removeAttribute("role");
+    hero.innerHTML = `<img src="${escapeHtml(group.heroImage)}" alt="${escapeHtml(group.title)}" loading="eager" decoding="async" />`;
+    return;
+  }
+
+  hero.classList.remove("media-image-frame");
+  delete hero.dataset.noLightbox;
+  hero.setAttribute("role", "img");
+  hero.textContent = "[Project catalogue: Solverto production areas and project data]";
+}
+
 function renderFeaturedProjects() {
   const container = document.querySelector("[data-featured-projects]");
   if (!container || !portfolioData) return;
   container.innerHTML = portfolioData.featured.map((project) => projectCardMarkup(project)).join("");
+}
+
+function renderHomeOfferPanel() {
+  const grid = document.querySelector("[data-home-offer-grid]");
+  if (!grid || !portfolioData) return;
+
+  const groups = new Map(portfolioData.groups.map((group) => [group.id, group]));
+  const offerCards = [
+    { groupId: "architecture", description: "Realtime architecture, residential investments and large-scale 3D modelling." },
+    { groupId: "game-development", description: "Game levels, environments and practical production support for playable content." },
+    { groupId: "digital-twin", description: "Interactive digital twins, realtime locations and operational visualizations." },
+    { groupId: "metaverse-mazes", description: "Metaverse environments, mazes and game-ready interactive spaces." },
+    { groupId: "support", description: "Animations, films, trailers and visual production support." },
+    { id: "product-prototypes", title: "Product prototypes", image: "assets/herovisual.png", href: "realtime-3d.html", description: "Interactive product configurators, realtime showrooms and prototype experiences." },
+    { groupId: "solverto-games", description: "Original games, mini-games and reusable game production assets." }
+  ];
+
+  grid.innerHTML = offerCards.map((card) => {
+    const group = card.groupId ? groups.get(card.groupId) : null;
+    const title = card.title || group?.title || "Offer";
+    const image = card.image || group?.heroImage || "assets/hero-offer-collage.png";
+    const href = card.href || `projects.html?department=${encodeURIComponent(card.groupId)}`;
+    return `
+      <article class="offer-card reveal">
+        <div class="offer-card-media"><img src="${escapeHtml(image)}" alt="${escapeHtml(title)}" loading="lazy" decoding="async" /></div>
+        <div class="offer-card-body">
+          <h3>${escapeHtml(title)}</h3>
+          <p>${escapeHtml(card.description)}</p>
+          <a class="button button-secondary button-small" href="${escapeHtml(href)}">View examples</a>
+        </div>
+      </article>`;
+  }).join("");
 }
 
 function renderPortfolio() {
@@ -432,6 +494,7 @@ function renderPortfolio() {
   let activeDepartment = queryParams.get("department") || "";
   const activeDepartmentGroup = portfolioData.groups.find((group) => group.id === activeDepartment);
   const groupsToRender = activeDepartmentGroup ? [activeDepartmentGroup] : portfolioData.groups;
+  renderProjectPageHero(activeDepartmentGroup);
 
   groupsContainer.innerHTML = groupsToRender.map((group) => `
     <section class="portfolio-group" id="${escapeHtml(group.id)}" data-portfolio-group data-group-category="${escapeHtml(group.filter)}">
@@ -817,6 +880,7 @@ function initializeContactHelpers() {
 renderFeaturedProjects();
 renderPortfolio();
 renderProjectDetail();
+renderHomeOfferPanel();
 normalizeContactLinks();
 addLanguageSelector();
 applyLanguage();

@@ -342,6 +342,7 @@
       title: "Architecture / Realtime Real Estate",
       subtitle: "YSLAB/RESIMO cooperation",
       intro: "Over 50 projects completed in Poland and around the world.",
+      heroImage: "architecture/hero-architektura-realtime.jpg",
       visibleAssetFolders: [
         "architecture/archicom-kraków-29L-YSLAB",
         "architecture/archicom-zenit-YSLAB",
@@ -357,6 +358,7 @@
       filter: "support",
       title: "Animations / Cinematic / Wideo Editing",
       intro: "Focused production support, model corrections, animation work and project analysis completed within partner-led architecture workflows.",
+      heroImage: "animation-trailer-movie/hero-animacje-filmy-trailery.jpg",
       projects: supportProjects
     },
     {
@@ -371,6 +373,7 @@
       filter: "games",
       title: "Game Development",
       intro: "Solverto has contributed to commercial game projects through level creation, 3D environment production, programming support, metaverse locations, game areas, avatars, animations and original game development.",
+      heroImage: "game-development/hero-poziomy-elementy-gier.jpg",
       projects: gameProjects
     },
     {
@@ -379,17 +382,19 @@
       title: "Digital Twin",
       subtitle: "Digital Twin environments",
       intro: "Digital Twin and realtime 3D environment production support for interactive locations.",
+      heroImage: "metaverse/digital-twin/hero-wirtualny-blizniak.jpg",
       projects: metaverseDigitalTwin
     },
-    { id: "metaverse-mazes", filter: "metaverse", title: "Maze", projects: metaverseMazes },
-    { id: "music-rooms", filter: "metaverse", title: "Music Room", projects: metaverseMusicRooms },
-    { id: "pulse-guys", filter: "metaverse", title: "Pulse Guys", projects: pulseGuysLevels },
-    { id: "treasure-hunter", filter: "metaverse", title: "Treasure Hunter", projects: treasureHunterLevels },
+    { id: "metaverse-mazes", filter: "metaverse", title: "Maze", heroImage: "metaverse/maze/hero-labirynty-metaverse.jpg", projects: metaverseMazes },
+    { id: "music-rooms", filter: "metaverse", title: "Music Room", heroImage: "metaverse/music-rooms/hero-pokoje-metaverse.jpg", projects: metaverseMusicRooms },
+    { id: "pulse-guys", filter: "metaverse", title: "Pulse Guys", heroImage: "metaverse/pulse-guys/hero-pulse-guys.jpg", projects: pulseGuysLevels },
+    { id: "treasure-hunter", filter: "metaverse", title: "Treasure Hunter", heroImage: "metaverse/treasure-hunter/hero-poziomy-treasure-hunter-metaverse.jpg", projects: treasureHunterLevels },
     {
       id: "solverto-games",
       filter: "solverto",
       title: "Solverto Games",
       intro: "Solverto Games currently operates under Solverto Studio and focuses on original games, experimental projects, web3 mini-games and commercial game development.",
+      heroImage: "games/hero-elementy-gier-solverto Games.jpg",
       projects: solvertoGames
     }
   ];
