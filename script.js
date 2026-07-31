@@ -2,7 +2,7 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const navMenu = document.querySelector("[data-nav-menu]");
-const portfolioData = window.SOLVERTO_PORTFOLIO;
+let portfolioData = window.SOLVERTO_PORTFOLIO;
 const supplementalTranslations = window.SOLVERTO_TRANSLATIONS || {};
 const textLanguageSources = new WeakMap();
 const attributeLanguageSources = new WeakMap();
@@ -264,8 +264,7 @@ function addLanguageSelector() {
     companyLink.dataset.companyLink = "";
     companyLink.textContent = "Company";
   }
-  const isHomePage = document.body?.classList.contains("home-page");
-  companyLink.href = isHomePage ? "#about" : "index.html?v=site-nav-20260728#about";
+  companyLink.href = "company.html";
   const homeLink = navMenu.querySelector('a[href="index.html"]');
   if (homeLink && homeLink.nextElementSibling !== companyLink) homeLink.after(companyLink);
   const portfolioLink = navMenu.querySelector('a[href="portfolio.html"], [data-home-panel-trigger="portfolio"]');
@@ -273,7 +272,7 @@ function addLanguageSelector() {
   else if (!companyLink.isConnected) navMenu.prepend(companyLink);
   if (portfolioLink) {
     portfolioLink.textContent = "Realizacje";
-    portfolioLink.href = isHomePage ? "#portfolio-preview" : "index.html?v=site-nav-20260728#portfolio-preview";
+    portfolioLink.href = "portfolio.html";
   }
   if (navMenu.querySelector("[data-language-select]")) return;
 
@@ -422,8 +421,8 @@ function departmentCardMarkup(project, headingLevel = 3) {
     </article>`;
 }
 
-function renderProjectPageHero(group) {
-  const hero = document.querySelector("[data-project-page-hero]");
+function renderProjectPageHero(group, root = document) {
+  const hero = root.querySelector("[data-project-page-hero]");
   if (!hero) return;
 
   const source = group?.heroImage || "assets/hero-offer-collage.png";
@@ -434,14 +433,14 @@ function renderProjectPageHero(group) {
   hero.innerHTML = '<img src="' + escapeHtml(source) + '" alt="' + escapeHtml(alt) + '" loading="eager" decoding="async" />';
 }
 
-function renderFeaturedProjects() {
-  const container = document.querySelector("[data-featured-projects]");
+function renderFeaturedProjects(root = document) {
+  const container = root.querySelector("[data-featured-projects]");
   if (!container || !portfolioData) return;
   container.innerHTML = portfolioData.featured.map((project) => projectCardMarkup(project)).join("");
 }
 
-function renderHomeOfferPanel() {
-  const grid = document.querySelector("[data-home-offer-grid]");
+function renderHomeOfferPanel(root = document) {
+  const grid = root.querySelector("[data-home-offer-grid]");
   if (!grid || !portfolioData) return;
 
   const groups = new Map(portfolioData.groups.map((group) => [group.id, group]));
@@ -471,7 +470,7 @@ function renderHomeOfferPanel() {
       </article>`;
   }).join("");
 
-  const realizationGrid = document.querySelector("[data-home-realization-grid]");
+  const realizationGrid = root.querySelector("[data-home-realization-grid]");
   if (!realizationGrid) return;
   const realizationProjects = portfolioData.largeScale.filter((project) => project.assetFolder);
   realizationGrid.innerHTML = realizationProjects.map((project) => `
@@ -484,23 +483,23 @@ function renderHomeOfferPanel() {
     </article>`).join("");
 }
 
-function renderPortfolio() {
+function renderPortfolio(root = document, pageUrl = window.location.href) {
   if (!portfolioData) return;
 
-  const largeScaleContainer = document.querySelector("[data-large-scale-projects]");
+  const largeScaleContainer = root.querySelector("[data-large-scale-projects]");
   if (largeScaleContainer) {
     largeScaleContainer.innerHTML = portfolioData.largeScale.map((project) => departmentCardMarkup(project)).join("");
   }
 
-  const groupsContainer = document.querySelector("[data-portfolio-groups]");
+  const groupsContainer = root.querySelector("[data-portfolio-groups]");
   if (!groupsContainer) return;
 
-  const queryParams = new URLSearchParams(window.location.search);
+  const queryParams = new URL(pageUrl, window.location.href).searchParams;
   let activeFilter = queryParams.get("category") || "all";
   let activeDepartment = queryParams.get("department") || "";
   const activeDepartmentGroup = portfolioData.groups.find((group) => group.id === activeDepartment);
   const groupsToRender = activeDepartmentGroup ? [activeDepartmentGroup] : portfolioData.groups;
-  renderProjectPageHero(activeDepartmentGroup);
+  renderProjectPageHero(activeDepartmentGroup, root);
 
   groupsContainer.innerHTML = groupsToRender.map((group) => `
     <section class="portfolio-group" id="${escapeHtml(group.id)}" data-portfolio-group data-group-category="${escapeHtml(group.filter)}">
@@ -513,19 +512,19 @@ function renderPortfolio() {
     </section>
   `).join("");
 
-  const searchInput = document.querySelector("[data-portfolio-search]");
-  const countOutput = document.querySelector("[data-portfolio-count]");
-  const filterButtons = [...document.querySelectorAll("[data-filter]")];
-  const pagination = document.querySelector("[data-portfolio-pagination]");
-  const moreButton = document.querySelector("[data-portfolio-more]");
-  const allButton = document.querySelector("[data-portfolio-all]");
+  const searchInput = root.querySelector("[data-portfolio-search]");
+  const countOutput = root.querySelector("[data-portfolio-count]");
+  const filterButtons = [...root.querySelectorAll("[data-filter]")];
+  const pagination = root.querySelector("[data-portfolio-pagination]");
+  const moreButton = root.querySelector("[data-portfolio-more]");
+  const allButton = root.querySelector("[data-portfolio-all]");
   let projectLimit = 6;
 
   const initialFilterButton = filterButtons.find((button) => button.dataset.filter === activeFilter);
   if (!initialFilterButton) activeFilter = "all";
   if (activeDepartment) {
-    const pageTitle = document.querySelector("[data-project-page-title]");
-    const pageIntro = document.querySelector("[data-project-page-intro]");
+    const pageTitle = root.querySelector("[data-project-page-title]");
+    const pageIntro = root.querySelector("[data-project-page-intro]");
     if (activeDepartmentGroup) {
       if (pageTitle) pageTitle.textContent = activeDepartmentGroup.title;
       if (pageIntro) pageIntro.textContent = activeDepartmentGroup.intro || `Project data from the ${activeDepartmentGroup.title} production area.`;
@@ -552,7 +551,7 @@ function renderPortfolio() {
       card.hidden = !shownCards.includes(card);
     });
 
-    document.querySelectorAll("[data-portfolio-group]").forEach((group) => {
+    root.querySelectorAll("[data-portfolio-group]").forEach((group) => {
       group.hidden = !group.querySelector("[data-project-card]:not([hidden])");
     });
 
@@ -647,24 +646,26 @@ function detailCopy(project) {
   };
 }
 
-function renderProjectDetail() {
-  const root = document.querySelector("[data-project-detail]");
-  if (!root || !portfolioData) return;
+function renderProjectDetail(root = document, pageUrl = window.location.href) {
+  const detailRoot = root === document ? document.querySelector("[data-project-detail]") : root;
+  if (!detailRoot || !portfolioData) return;
 
-  const projectId = new URLSearchParams(window.location.search).get("project");
+  const projectId = new URL(pageUrl, window.location.href).searchParams.get("project");
   const project = allPortfolioProjects().find((item) => item.id === projectId) || portfolioData.featured[0];
   const copy = detailCopy(project);
   const setText = (selector, value) => {
-    const element = document.querySelector(selector);
+    const element = detailRoot.querySelector(selector);
     if (element) element.textContent = value;
   };
 
-  document.title = `${project.name} — Solverto Portfolio`;
-  document.querySelector('meta[name="description"]')?.setAttribute("content", `${project.name}: ${project.description}`);
+  if (root === document) {
+    document.title = `${project.name} — Solverto Portfolio`;
+    document.querySelector('meta[name="description"]')?.setAttribute("content", `${project.name}: ${project.description}`);
+  }
   setText("[data-detail-category]", project.category);
   setText("[data-detail-name]", project.name);
   setText("[data-detail-intro]", project.description);
-  const detailHero = document.querySelector("[data-detail-hero]");
+  const detailHero = detailRoot.querySelector("[data-detail-hero]");
   if (detailHero) {
     const projectGroup = portfolioData.groups.find((group) => group.id === project.departmentId);
     const source = projectImagePath(project) || projectGroup?.heroImage || "assets/hero-offer-collage.png";
@@ -683,7 +684,7 @@ function renderProjectDetail() {
   setText("[data-detail-challenge]", copy.challenge);
   setText("[data-detail-contribution]", copy.contribution);
 
-  const extraFacts = document.querySelector("[data-detail-extra-facts]");
+  const extraFacts = detailRoot.querySelector("[data-detail-extra-facts]");
   if (extraFacts) {
     const facts = [
       project.game ? ["Game", project.game] : null,
@@ -696,7 +697,7 @@ function renderProjectDetail() {
     extraFacts.hidden = facts.length === 0;
   }
 
-  const gallery = document.querySelector("[data-detail-gallery]");
+  const gallery = detailRoot.querySelector("[data-detail-gallery]");
   if (gallery) {
     if (project.assetFolder) {
       gallery.innerHTML = [1, 2, 3, 4, 5, 6].map((index) => projectMediaMarkup(project, index, { className: "reveal" })).join("");
@@ -714,16 +715,8 @@ function renderProjectDetail() {
   }
 }
 
-function normalizeContactLinks() {
-  document.querySelectorAll('a[href="contact.html"]').forEach((link) => {
-    link.href = "index.html?v=contact-visible-20260728#contact";
-  });
-}
-
 function initializeHomePanels() {
   const sourceElements = [...document.querySelectorAll("[data-home-panel-source]")];
-  if (!sourceElements.length) return;
-
   const sources = new Map(sourceElements.map((source) => [source.dataset.homePanelSource, source]));
   const panel = document.createElement("div");
   panel.className = "home-panel";
@@ -742,31 +735,40 @@ function initializeHomePanels() {
   const closeButton = panel.querySelector(".home-panel-close");
   let previousFocus = null;
   let closeTimer = null;
+  let panelRequest = 0;
+  let panelAnimation = null;
+
+  const cancelPanelAnimation = () => {
+    if (panelAnimation) {
+      panelAnimation.cancel();
+      panelAnimation = null;
+    }
+    dialog.classList.remove("is-panel-animating");
+  };
 
   const finishClose = () => {
+    closeTimer = null;
+    cancelPanelAnimation();
     panel.hidden = true;
     panel.classList.remove("is-open", "is-closing");
     panel.setAttribute("aria-hidden", "true");
     document.body.classList.remove("home-panel-open");
     content.replaceChildren();
-    if (previousFocus instanceof HTMLElement) previousFocus.focus();
+    if (previousFocus instanceof HTMLElement && previousFocus.isConnected) previousFocus.focus();
   };
 
   const closePanel = () => {
     if (panel.hidden || panel.classList.contains("is-closing")) return;
+    panelRequest += 1;
+    cancelPanelAnimation();
     panel.classList.remove("is-open");
     panel.classList.add("is-closing");
     closeTimer = window.setTimeout(finishClose, reducedMotion.matches ? 0 : 430);
   };
 
-  const openPanel = (name, trigger) => {
-    const source = sources.get(name);
-    if (!source) return;
-
-    if (closeTimer) window.clearTimeout(closeTimer);
-
-    const sourceContent = source.querySelector(":scope > .container") || source;
-    const clone = sourceContent.cloneNode(true);
+  const prepareClone = (source) => {
+    const clone = source.cloneNode(true);
+    clone.removeAttribute("id");
     clone.querySelectorAll("[id]").forEach((element) => element.removeAttribute("id"));
     if (clone.classList.contains("reveal")) {
       clone.classList.remove("reveal");
@@ -777,6 +779,10 @@ function initializeHomePanels() {
       element.classList.add("is-visible");
     });
 
+    return clone;
+  };
+
+  const setPanelContent = (clone, name) => {
     const heading = clone.querySelector("h1, h2, h3");
     if (heading) {
       heading.id = "home-panel-title";
@@ -785,26 +791,138 @@ function initializeHomePanels() {
       dialog.removeAttribute("aria-labelledby");
       dialog.setAttribute("aria-label", name);
     }
-
-    previousFocus = trigger || document.activeElement;
     content.replaceChildren(clone);
+  };
+
+  const showPanel = (clone, name, trigger) => {
+    if (closeTimer) {
+      window.clearTimeout(closeTimer);
+      closeTimer = null;
+    }
+
+    if (!previousFocus || !panel.contains(trigger)) previousFocus = trigger || document.activeElement;
+    const wasOpen = !panel.hidden && panel.classList.contains("is-open");
+    setPanelContent(clone, name);
     panel.hidden = false;
-    panel.classList.remove("is-closing");
+    panel.classList.remove("is-closing", "is-reopening");
     panel.setAttribute("aria-hidden", "false");
     dialog.scrollTop = 0;
     document.body.classList.add("home-panel-open");
     closeButton.setAttribute("aria-label", (lightboxLabels[selectedLanguage] || lightboxLabels.en).close);
-    window.requestAnimationFrame(() => {
+
+    const startPanelAnimation = () => {
+      cancelPanelAnimation();
+      panel.classList.remove("is-reopening");
       panel.classList.add("is-open");
+      dialog.classList.add("is-panel-animating");
+      const animation = dialog.animate(
+        [{ transform: "translateX(100%)" }, { transform: "translateX(0)" }],
+        {
+          duration: reducedMotion.matches ? 0 : 430,
+          easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+          fill: "both"
+        }
+      );
+      panelAnimation = animation;
+      animation.addEventListener("finish", () => {
+        if (panelAnimation !== animation) return;
+        panelAnimation = null;
+        dialog.classList.remove("is-panel-animating");
+      }, { once: true });
       closeButton.focus();
-    });
+    };
+
+    if (wasOpen) {
+      startPanelAnimation();
+    } else {
+      panel.classList.add("is-reopening");
+      void panel.offsetWidth;
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(startPanelAnimation);
+      });
+    }
+  };
+
+  const openPanel = (name, trigger) => {
+    const source = sources.get(name);
+    if (!source) return;
+    panelRequest += 1;
+    const sourceContent = source.querySelector(":scope > .container") || source;
+    showPanel(prepareClone(sourceContent), name, trigger);
+  };
+
+  const openPagePanel = async (url, trigger) => {
+    if (window.location.protocol === "file:") {
+      window.location.href = url.href;
+      return;
+    }
+
+    const request = ++panelRequest;
+    const pageName = url.pathname.split("/").pop() || "page";
+    const loading = document.createElement("div");
+    loading.className = "container panel-loading";
+    loading.innerHTML = "<p class=\"eyebrow\">Loading page...</p><h1>Loading...</h1>";
+    showPanel(loading, pageName, trigger);
+
+    try {
+      const requestUrl = new URL(url.href);
+      const requestedHash = requestUrl.hash.slice(1);
+      requestUrl.hash = "";
+      const response = await fetch(requestUrl.href);
+      if (!response.ok) throw new Error(`Page request failed: ${response.status}`);
+      const markup = await response.text();
+      const parsed = new DOMParser().parseFromString(markup, "text/html");
+      const pageMain = requestedHash
+        ? parsed.getElementById(decodeURIComponent(requestedHash))
+        : parsed.querySelector("main");
+      if (!pageMain) throw new Error("Page content is missing");
+      if (request !== panelRequest || panel.hidden) return;
+
+      const clone = prepareClone(pageMain);
+      setPanelContent(clone, pageName);
+      renderFeaturedProjects(clone);
+      renderPortfolio(clone, requestUrl.href);
+      renderProjectDetail(clone, requestUrl.href);
+      renderHomeOfferPanel(clone);
+      applyLanguage();
+    } catch {
+      if (request !== panelRequest || panel.hidden) return;
+      const error = document.createElement("div");
+      error.className = "container panel-loading";
+      error.innerHTML = "<p class=\"eyebrow\">Page unavailable</p><h1>We could not load this page.</h1><p>Please try again.</p>";
+      setPanelContent(error, pageName);
+    }
+  };
+
+  const canonicalPageAliases = {
+    about: "company.html",
+    company: "company.html",
+    portfolio: "portfolio.html",
+    "portfolio-preview": "portfolio.html",
+    contact: "contact.html"
   };
 
   document.addEventListener("click", (event) => {
     const trigger = event.target.closest("[data-home-panel-trigger]");
-    if (!trigger) return;
+    if (trigger) {
+      event.preventDefault();
+      openPanel(trigger.dataset.homePanelTrigger, trigger);
+      return;
+    }
+
+    const link = event.target.closest("a[href]");
+    if (!link || link.target === "_blank") return;
+
+    const href = link.getAttribute("href") || "";
+    if (href.startsWith("#")) return;
+    let url = new URL(href, window.location.href);
+    const hashAlias = canonicalPageAliases[decodeURIComponent(url.hash.slice(1))];
+    if (hashAlias && url.pathname.endsWith("index.html")) url = new URL(hashAlias, window.location.href);
+    if (url.origin !== window.location.origin || !/\.html?$/i.test(url.pathname)) return;
+
     event.preventDefault();
-    openPanel(trigger.dataset.homePanelTrigger, trigger);
+    closeNavigation();
+    openPagePanel(url, link);
   });
 
   panel.addEventListener("click", (event) => {
@@ -833,18 +951,6 @@ function initializeHomePanels() {
     }
   });
 
-  const panelByHash = {
-    about: "company",
-    company: "company",
-    portfolio: "portfolio",
-    "portfolio-preview": "portfolio",
-    contact: "contact"
-  };
-  const initialPanelName = panelByHash[decodeURIComponent(window.location.hash.slice(1))];
-  if (initialPanelName) {
-    const trigger = document.querySelector(`[data-home-panel-trigger="${initialPanelName}"]`);
-    openPanel(initialPanelName, trigger);
-  }
 }
 
 function initializeContactHelpers() {
@@ -875,15 +981,29 @@ function initializeContactHelpers() {
   });
 }
 
-renderFeaturedProjects();
-renderPortfolio();
-renderProjectDetail();
-renderHomeOfferPanel();
-normalizeContactLinks();
-addLanguageSelector();
-applyLanguage();
-initializeHomePanels();
-initializeContactHelpers();
+function initializePortfolioFeatures() {
+  renderFeaturedProjects();
+  renderPortfolio();
+  renderProjectDetail();
+  renderHomeOfferPanel();
+  addLanguageSelector();
+  applyLanguage();
+  initializeHomePanels();
+  initializeContactHelpers();
+}
+
+if (portfolioData) {
+  initializePortfolioFeatures();
+} else {
+  const portfolioDataScript = document.createElement("script");
+  portfolioDataScript.src = "portfolio-data.js";
+  portfolioDataScript.onload = () => {
+    portfolioData = window.SOLVERTO_PORTFOLIO;
+    initializePortfolioFeatures();
+  };
+  portfolioDataScript.onerror = initializePortfolioFeatures;
+  document.head.append(portfolioDataScript);
+}
 
 function initializeLightbox() {
   const main = document.querySelector("main");
