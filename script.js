@@ -939,6 +939,10 @@ function initializeHomePanels() {
 
     const link = event.target.closest("a[href]");
     if (!link || link.target === "_blank") return;
+    if (link.classList.contains("brand")) {
+      closeNavigation();
+      return;
+    }
 
     const href = link.getAttribute("href") || "";
     if (href.startsWith("#")) return;

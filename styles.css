@@ -338,6 +338,14 @@ html:not([data-language-ready]) .nav-menu {
   gap: 20px;
 }
 
+.hero-layout.is-single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero-layout.is-single .page-hero-copy {
+  max-width: 900px;
+}
+
 .hero-copy h1 {
   width: min(100%, 900px);
   font-size: clamp(2.2rem, 5vw, 3.55rem);
