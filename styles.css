@@ -2551,10 +2551,10 @@ body.home-panel-open {
 }
 
 .home-panel-close {
-  position: fixed;
+  position: sticky;
   z-index: 3;
   top: 20px;
-  left: 50%;
+  left: auto;
   width: 52px;
   height: 52px;
   display: grid;
@@ -2568,7 +2568,8 @@ body.home-panel-open {
   line-height: 1;
   cursor: pointer;
   backdrop-filter: blur(12px);
-  transform: translateX(-50%);
+  margin: 20px auto -72px;
+  transform: none;
 }
 
 .home-panel-close:hover,
@@ -2617,9 +2618,10 @@ body.home-panel-open {
 
   .home-panel-close {
     top: 14px;
-    left: 50%;
+    left: auto;
     width: 46px;
     height: 46px;
+    margin: 14px auto -60px;
   }
 
   .home-panel-content {
