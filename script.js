@@ -6,6 +6,32 @@ let portfolioData = window.SOLVERTO_PORTFOLIO;
 const supplementalTranslations = window.SOLVERTO_TRANSLATIONS || {};
 const textLanguageSources = new WeakMap();
 const attributeLanguageSources = new WeakMap();
+let revealObserver = null;
+
+function registerRevealItems(root = document) {
+  const items = [];
+  if (root instanceof Element && root.matches(".reveal")) items.push(root);
+  items.push(...root.querySelectorAll(".reveal"));
+
+  if (reducedMotion.matches || !("IntersectionObserver" in window)) {
+    items.forEach((item) => item.classList.add("is-visible"));
+    return;
+  }
+
+  if (!revealObserver) {
+    revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -48px" });
+  }
+
+  items.forEach((item) => {
+    if (!item.classList.contains("is-visible")) revealObserver.observe(item);
+  });
+}
 
 const languageOptions = [
   ["en", "English"],
@@ -885,6 +911,7 @@ function initializeHomePanels() {
       renderProjectDetail(clone, requestUrl.href);
       renderHomeOfferPanel(clone);
       applyLanguage();
+      registerRevealItems(clone);
     } catch {
       if (request !== panelRequest || panel.hidden) return;
       const error = document.createElement("div");
@@ -1175,20 +1202,7 @@ function updateScrollEffects() {
 window.addEventListener("scroll", updateScrollEffects, { passive: true });
 updateScrollEffects();
 
-const revealItems = document.querySelectorAll(".reveal");
-if (reducedMotion.matches || !("IntersectionObserver" in window)) {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
-} else {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: "0px 0px -48px" });
-  revealItems.forEach((item) => observer.observe(item));
-}
+registerRevealItems();
 
 document.querySelectorAll("[data-static-form]").forEach((form) => {
   form.addEventListener("submit", (event) => {
