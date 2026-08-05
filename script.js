@@ -143,7 +143,106 @@ const translationCorrections = {
     "Animations, films, trailers and visual production support.": "Animacje, filmy, trailery i wsparcie produkcji wizualnej.",
     "Interactive product configurators, realtime showrooms and prototype experiences.": "Interaktywne konfiguratory produktów, showroomy realtime i doświadczenia prototypowe.",
     "Original games, mini-games and reusable game production assets.": "Autorskie gry, minigry i wielokrotnego użytku elementy produkcji gier.",
-    "Over 50 projects completed in Poland and around the world.": "Wykonano ponad 50 projektów z Polski i z całego świata."
+    "Over 50 projects completed in Poland and around the world.": "Wykonano ponad 50 projektów z Polski i z całego świata.",
+    "Choose your area": "Wybierz obszar",
+    "Creative Technologies for Business and Game Studios": "Technologie Kreatywne dla Biznesu i studiów gier",
+    "What do you want to build?": "Co chcesz stworzyć?",
+    "Select an area to see how we can help, how we work and relevant projects.": "Wybierz obszar, aby zobaczyć, jak możemy pomóc, jak działamy i jakie mamy realizacje.",
+    "Explore the area": "Zobacz obszar",
+    "Realtime Architecture | Digital Twins": "Architektura Realtime | Wirtualne Bliźniaki",
+    "Product Prototypes | 3D Models": "Prototypy Produktów | Modele 3D",
+    "Game Assets | Game Levels": "Elementy do gier | Poziomy do gier",
+    "Game Prototypes | Custom Games": "Prototypy Gier | Gry na zamówienie",
+    "Metaverse | Mazes": "Metaverse | Labirynty",
+    "Animations | Films | Trailers | Avatars": "Animacje | Filmy | Trailery | Avatary",
+    "Interactive architecture, property presentations and digital replicas that make spaces and data easier to understand.": "Interaktywna architektura, prezentacje nieruchomości i cyfrowe odwzorowania, które ułatwiają zrozumienie przestrzeni i danych.",
+    "Interactive architecture, property presentations and digital replicas that make spaces and data easier to understand. We contributed to more than 60 projects.": "Interaktywna architektura, prezentacje nieruchomości i cyfrowe odwzorowania, które ułatwiają zrozumienie przestrzeni i danych. Braliśmy udział w realizacji ponad 60 projektów.",
+    "Product models, interactive proofs of concept and reusable 3D content for development, sales and communication.": "Modele produktów, interaktywne proof of concept i wielokrotnego użytku treści 3D dla rozwoju produktu, sprzedaży i komunikacji.",
+    "Game-ready environments, levels and optimized assets that fit an existing production pipeline.": "Środowiska, poziomy i zoptymalizowane elementy gotowe do użycia w istniejącym procesie produkcji gry.",
+    "Playable prototypes, vertical slices, mini-games and complete custom game experiences.": "Grywalne prototypy, vertical slice’y, minigry i kompletne gry tworzone na zamówienie.",
+    "Themed metaverse locations, social spaces, mazes and gameplay areas designed for exploration.": "Tematyczne lokacje Metaverse, przestrzenie społecznościowe, labirynty i obszary rozgrywki stworzone do eksploracji.",
+    "Animation, film editing, trailers and optimized avatars for games, products and interactive experiences.": "Animacje, montaż filmów, trailery i zoptymalizowane avatary dla gier, produktów oraz interaktywnych doświadczeń.",
+    "Area of collaboration": "Obszar współpracy",
+    "Tell us about your project": "Opowiedz nam o projekcie",
+    "How we can help": "Jak możemy pomóc",
+    "How we work": "Jak działamy",
+    "A clear path from material to working result.": "Czytelna droga od materiałów do działającego rezultatu.",
+    "Goal and materials": "Cel i materiały",
+    "We define the business or production goal, review available files and choose the target platform.": "Określamy cel biznesowy lub produkcyjny, sprawdzamy dostępne materiały i wybieramy platformę docelową.",
+    "Scope and prototype": "Zakres i prototyp",
+    "We propose a focused scope and quickly validate the most important visual and technical assumptions.": "Proponujemy konkretny zakres i szybko weryfikujemy najważniejsze założenia wizualne oraz techniczne.",
+    "Production": "Produkcja",
+    "We build in clear stages, share progress and keep the solution aligned with its real use.": "Pracujemy etapami, pokazujemy postępy i pilnujemy, aby rozwiązanie odpowiadało jego rzeczywistemu zastosowaniu.",
+    "Delivery and support": "Wdrożenie i wsparcie",
+    "We prepare the agreed files or build, documentation and a practical next step for further development.": "Przekazujemy uzgodnione pliki lub build, dokumentację i konkretny następny krok dalszego rozwoju.",
+    "Relevant projects and production experience.": "Powiązane realizacje i doświadczenie produkcyjne.",
+    "Back": "Wstecz",
+    "We turn architectural documentation, BIM data and existing locations into clear realtime experiences for sales, planning, presentation and operation.": "Przekształcamy dokumentację architektoniczną, dane BIM i istniejące lokalizacje w czytelne doświadczenia realtime dla sprzedaży, planowania, prezentacji i obsługi.",
+    "Show a space before it exists — or understand it better once it does.": "Pokaż przestrzeń, zanim powstanie — albo lepiej ją zrozum, gdy już istnieje.",
+    "We help developers, architects and technology companies transform complex spatial information into an experience that clients and teams can explore. The result can support a sales meeting, stakeholder review, training scenario or an operational digital twin.": "Pomagamy deweloperom, architektom i firmom technologicznym zmieniać złożone informacje przestrzenne w doświadczenia, które klienci i zespoły mogą swobodnie poznawać. Efekt może wspierać sprzedaż, konsultacje, szkolenia lub działanie cyfrowego bliźniaka.",
+    "We turn a product idea, CAD file or reference material into a clear 3D model and an interactive prototype that can be tested before full production.": "Zmieniamy pomysł na produkt, plik CAD lub materiały referencyjne w czytelny model 3D i interaktywny prototyp, który można sprawdzić przed pełną produkcją.",
+    "Validate the product experience before investing in the complete solution.": "Sprawdź doświadczenie produktu, zanim zainwestujesz w kompletne rozwiązanie.",
+    "A focused prototype helps your team test form, interaction, presentation and technical feasibility early. The same prepared assets can later support configurators, AR, animation, marketing renders or realtime applications.": "Skoncentrowany prototyp pozwala wcześnie sprawdzić formę, interakcję, sposób prezentacji i wykonalność techniczną. Przygotowane materiały mogą później zasilić konfigurator, AR, animację, rendery marketingowe lub aplikację realtime.",
+    "We support game studios with level creation, environment production and technical preparation of assets — from a defined brief to content ready for implementation.": "Wspieramy studia gier w tworzeniu poziomów, środowisk i technicznym przygotowaniu elementów — od briefu po treści gotowe do wdrożenia.",
+    "Extend your production capacity without losing visual and technical consistency.": "Zwiększ możliwości produkcyjne bez utraty spójności wizualnej i technicznej.",
+    "We can take responsibility for a complete location or a clearly defined asset package. Work is aligned with the game's style, performance target, engine requirements and the way your team already reviews content.": "Możemy odpowiadać za kompletną lokację lub precyzyjnie określony pakiet elementów. Pracę dopasowujemy do stylu gry, wymagań wydajnościowych, silnika i procesu akceptacji w zespole.",
+    "We help turn a game idea, campaign concept or training goal into something playable — first as a focused prototype, then as a production-ready scope.": "Pomagamy zmienić pomysł na grę, kampanię lub szkolenie w grywalne doświadczenie — najpierw jako konkretny prototyp, a następnie zakres gotowy do produkcji.",
+    "Test the fun, technology and production risk with a working build.": "Sprawdź rozgrywkę, technologię i ryzyko produkcyjne na działającym buildzie.",
+    "A playable prototype makes decisions easier than a long document. We focus on the core loop, the feeling of interaction and the technical unknowns, then provide a clear basis for further development or full production.": "Grywalny prototyp ułatwia decyzje bardziej niż długi dokument. Skupiamy się na głównej pętli rozgrywki, odczuciu interakcji i ryzykach technicznych, tworząc podstawę dalszego rozwoju lub pełnej produkcji.",
+    "We build recognizable, efficient realtime worlds that combine a strong visual theme with navigation, interaction and gameplay requirements.": "Budujemy rozpoznawalne i wydajne światy realtime, łączące wyrazisty motyw wizualny z wymaganiami nawigacji, interakcji i rozgrywki.",
+    "Give users a place worth exploring — and a reason to return.": "Daj użytkownikom miejsce warte odkrywania — i powód, żeby wrócili.",
+    "We support platform owners, agencies and game teams with complete themed environments or defined location packages. The work can cover concept development, 3D production, level construction, optimization and implementation support.": "Wspieramy właścicieli platform, agencje i zespoły gier kompletnymi środowiskami tematycznymi lub określonymi pakietami lokacji. Zakres może obejmować rozwój koncepcji, produkcję 3D, budowę poziomu, optymalizację i wsparcie wdrożenia.",
+    "We prepare moving content and realtime characters that explain, present and strengthen a product, game or digital experience.": "Tworzymy ruchome treści i postacie realtime, które wyjaśniają, prezentują i wzmacniają produkt, grę lub cyfrowe doświadczenie.",
+    "Turn complex ideas and static assets into clear, engaging movement.": "Zmień złożone pomysły i statyczne materiały w czytelny, angażujący ruch.",
+    "Depending on the goal, we can support the complete process or a focused production stage: storyboard, 3D preparation, animation, avatar optimization, rendering, editing and final platform-specific outputs.": "W zależności od celu możemy przejąć cały proces lub wybrany etap: storyboard, przygotowanie 3D, animację, optymalizację avatarów, rendering, montaż i finalne formaty dla danej platformy.",
+    "Realtime property presentation": "Prezentacja nieruchomości realtime",
+    "Interactive estates, buildings and apartments that clients can explore before construction is complete.": "Interaktywne osiedla, budynki i mieszkania, które klienci mogą poznać jeszcze przed zakończeniem budowy.",
+    "Digital twin environment": "Środowisko wirtualnego bliźniaka",
+    "A navigable 3D representation prepared for data, controls, training or presentation layers.": "Interaktywne odwzorowanie 3D przygotowane pod dane, sterowanie, szkolenie lub prezentację.",
+    "BIM/CAD optimization": "Optymalizacja BIM/CAD",
+    "Technical models cleaned, structured and optimized for reliable realtime use.": "Modele techniczne oczyszczone, uporządkowane i zoptymalizowane do niezawodnego działania realtime.",
+    "Interactive sales tools": "Interaktywne narzędzia sprzedażowe",
+    "Views, variants, filters and guided journeys designed around customer decisions.": "Widoki, warianty, filtry i prowadzone prezentacje zaprojektowane wokół decyzji klienta.",
+    "Product prototype": "Prototyp produktu",
+    "A focused interactive proof of concept for internal validation, presentation or investor conversations.": "Interaktywny proof of concept do wewnętrznej weryfikacji, prezentacji lub rozmów z inwestorem.",
+    "Production-ready 3D model": "Model 3D gotowy do produkcji",
+    "Clean geometry, materials, hierarchy and variants prepared for the chosen platform.": "Czysta geometria, materiały, hierarchia i warianty przygotowane dla wybranej platformy.",
+    "Configurator and showroom": "Konfigurator i showroom",
+    "Interactive product choices, camera states and presentation flows for customers or sales teams.": "Interaktywne warianty produktu, ujęcia kamer i scenariusze prezentacji dla klientów lub zespołu sprzedaży.",
+    "Reusable content pipeline": "Treści wielokrotnego użytku",
+    "One organized 3D source prepared for stills, animation, realtime and future iterations.": "Jedno uporządkowane źródło 3D przygotowane do grafik, animacji, realtime i kolejnych iteracji.",
+    "Level production": "Produkcja poziomów",
+    "Blockout, environment building, set dressing, lighting and a final optimization pass.": "Blockout, budowa środowiska, set dressing, oświetlenie i końcowa optymalizacja.",
+    "Environment assets": "Elementy środowiska",
+    "Modular kits, props and location-specific elements prepared for practical reuse.": "Modułowe zestawy, rekwizyty i elementy lokacji przygotowane do praktycznego ponownego użycia.",
+    "Technical art support": "Wsparcie technical art",
+    "Materials, LODs, collisions, profiling and asset cleanup for the target engine.": "Materiały, LOD-y, kolizje, profilowanie i porządkowanie elementów dla docelowego silnika.",
+    "Production reinforcement": "Wzmocnienie produkcji",
+    "A focused external team for a milestone, vertical slice or content-heavy production stage.": "Skoncentrowany zespół zewnętrzny na milestone, vertical slice lub etap wymagający dużej ilości treści.",
+    "Playable prototype": "Grywalny prototyp",
+    "The smallest useful build that validates the core mechanic and player experience.": "Najmniejszy użyteczny build, który weryfikuje główną mechanikę i doświadczenie gracza.",
+    "Vertical slice": "Vertical slice",
+    "A presentation-ready fragment showing the intended quality, content and production direction.": "Gotowy do prezentacji fragment pokazujący docelową jakość, treść i kierunek produkcji.",
+    "Branded mini-game": "Minigra dla marki",
+    "A compact game experience for a campaign, event, community or web platform.": "Kompaktowe doświadczenie growe dla kampanii, wydarzenia, społeczności lub platformy internetowej.",
+    "Custom game production": "Produkcja gry na zamówienie",
+    "Design, development, 3D content and delivery organized around an agreed scope.": "Projektowanie, programowanie, treści 3D i wdrożenie zorganizowane wokół uzgodnionego zakresu.",
+    "Themed metaverse location": "Tematyczna lokacja Metaverse",
+    "A complete social, event or brand environment with a distinct visual identity.": "Kompletne środowisko społecznościowe, eventowe lub markowe z wyrazistą identyfikacją wizualną.",
+    "Maze experience": "Doświadczenie labiryntu",
+    "Readable routes, landmarks, challenge rhythm and a theme carried across the whole space.": "Czytelne trasy, punkty orientacyjne, rytm wyzwań i motyw prowadzony przez całą przestrzeń.",
+    "Gameplay area": "Obszar rozgrywki",
+    "Locations built around movement, collection, competition or another defined interaction loop.": "Lokacje budowane wokół ruchu, zbierania, rywalizacji lub innej określonej pętli interakcji.",
+    "Ongoing content production": "Stała produkcja treści",
+    "A repeatable pipeline for seasonal variants, new rooms and additional levels.": "Powtarzalny proces dla wariantów sezonowych, nowych pomieszczeń i kolejnych poziomów.",
+    "3D animation": "Animacja 3D",
+    "Product, architectural and technical animation focused on clarity and visual quality.": "Animacja produktowa, architektoniczna i techniczna nastawiona na czytelność oraz jakość wizualną.",
+    "Film and trailer": "Film i trailer",
+    "Editing, pacing, titles and final outputs for games, campaigns and presentations.": "Montaż, tempo, napisy i finalne formaty dla gier, kampanii oraz prezentacji.",
+    "Realtime avatars": "Avatary realtime",
+    "Character preparation, optimization, materials and animation for interactive platforms.": "Przygotowanie postaci, optymalizacja, materiały i animacja dla platform interaktywnych.",
+    "Production support": "Wsparcie produkcji",
+    "A defined animation, editing or asset task integrated with an existing team and pipeline.": "Określone zadanie animacyjne, montażowe lub assetowe zintegrowane z istniejącym zespołem i procesem."
   },
   es: {
     "Privacy policy": "Política de privacidad",
@@ -389,6 +488,7 @@ function projectUrl(project) {
 
 function projectImagePath(project, index = 1) {
   if (!project?.assetFolder) return "";
+  if (project.assetFiles?.[index - 1]) return `${project.assetFolder}/${project.assetFiles[index - 1]}`;
   return `${project.assetFolder}/gallery-${String(index).padStart(2, "0")}.${project.assetExtension || "webp"}`;
 }
 
@@ -429,6 +529,152 @@ function displayProjectsForGroup(group) {
   return group.showOnlyWithAssets ? group.projects.filter((project) => project.assetFolder) : group.projects;
 }
 
+const serviceCatalog = [
+  {
+    id: "architecture-digital-twins",
+    title: "Realtime Architecture | Digital Twins",
+    image: "architecture/hero-architektura-realtime.jpg",
+    description: "Interactive architecture, property presentations and digital replicas that make spaces and data easier to understand.",
+    workIntro: "Interactive architecture, property presentations and digital replicas that make spaces and data easier to understand. We contributed to more than 60 projects.",
+    lead: "We turn architectural documentation, BIM data and existing locations into clear realtime experiences for sales, planning, presentation and operation.",
+    valueTitle: "Show a space before it exists — or understand it better once it does.",
+    value: "We help developers, architects and technology companies transform complex spatial information into an experience that clients and teams can explore. The result can support a sales meeting, stakeholder review, training scenario or an operational digital twin.",
+    capabilities: [
+      ["Realtime property presentation", "Interactive estates, buildings and apartments that clients can explore before construction is complete."],
+      ["Digital twin environment", "A navigable 3D representation prepared for data, controls, training or presentation layers."],
+      ["BIM/CAD optimization", "Technical models cleaned, structured and optimized for reliable realtime use."],
+      ["Interactive sales tools", "Views, variants, filters and guided journeys designed around customer decisions."]
+    ],
+    projectRefs: [["architecture", "Jeziorna"], ["architecture", "Zenit"], ["architecture", "29L"], ["digital-twin", "HotelFive"], ["digital-twin", "Casino"], ["digital-twin", "Cove Beach"], ["architecture", "Bertone Le Moden"], ["architecture", "Ryżowa"], ["architecture", "Anny German / Sady Żoliborz"]]
+  },
+  {
+    id: "product-prototypes-3d-models",
+    title: "Product Prototypes | 3D Models",
+    image: "assets/herovisual.png",
+    description: "Product models, interactive proofs of concept and reusable 3D content for development, sales and communication.",
+    lead: "We turn a product idea, CAD file or reference material into a clear 3D model and an interactive prototype that can be tested before full production.",
+    valueTitle: "Validate the product experience before investing in the complete solution.",
+    value: "A focused prototype helps your team test form, interaction, presentation and technical feasibility early. The same prepared assets can later support configurators, AR, animation, marketing renders or realtime applications.",
+    capabilities: [
+      ["Product prototype", "A focused interactive proof of concept for internal validation, presentation or investor conversations."],
+      ["Production-ready 3D model", "Clean geometry, materials, hierarchy and variants prepared for the chosen platform."],
+      ["Configurator and showroom", "Interactive product choices, camera states and presentation flows for customers or sales teams."],
+      ["Reusable content pipeline", "One organized 3D source prepared for stills, animation, realtime and future iterations."]
+    ],
+    projectRefs: []
+  },
+  {
+    id: "game-assets-levels",
+    title: "Game Assets | Game Levels",
+    image: "game-development/hero-poziomy-elementy-gier.jpg",
+    description: "Game-ready environments, levels and optimized assets that fit an existing production pipeline.",
+    lead: "We support game studios with level creation, environment production and technical preparation of assets — from a defined brief to content ready for implementation.",
+    valueTitle: "Extend your production capacity without losing visual and technical consistency.",
+    value: "We can take responsibility for a complete location or a clearly defined asset package. Work is aligned with the game's style, performance target, engine requirements and the way your team already reviews content.",
+    capabilities: [
+      ["Level production", "Blockout, environment building, set dressing, lighting and a final optimization pass."],
+      ["Environment assets", "Modular kits, props and location-specific elements prepared for practical reuse."],
+      ["Technical art support", "Materials, LODs, collisions, profiling and asset cleanup for the target engine."],
+      ["Production reinforcement", "A focused external team for a milestone, vertical slice or content-heavy production stage."]
+    ],
+    projectRefs: [["game-development", "Bamboo House"], ["game-development", "Arabic House"], ["game-development", "Underwater House"], ["game-development", "Underwater Ruin"], ["game-development", "Underwater Egyptian Ruin"], ["game-development", "Japanese Garden"]]
+  },
+  {
+    id: "game-prototypes-custom-games",
+    title: "Game Prototypes | Custom Games",
+    image: "games/hero-elementy-gier-solverto Games.jpg",
+    description: "Playable prototypes, vertical slices, mini-games and complete custom game experiences.",
+    lead: "We help turn a game idea, campaign concept or training goal into something playable — first as a focused prototype, then as a production-ready scope.",
+    valueTitle: "Test the fun, technology and production risk with a working build.",
+    value: "A playable prototype makes decisions easier than a long document. We focus on the core loop, the feeling of interaction and the technical unknowns, then provide a clear basis for further development or full production.",
+    capabilities: [
+      ["Playable prototype", "The smallest useful build that validates the core mechanic and player experience."],
+      ["Vertical slice", "A presentation-ready fragment showing the intended quality, content and production direction."],
+      ["Branded mini-game", "A compact game experience for a campaign, event, community or web platform."],
+      ["Custom game production", "Design, development, 3D content and delivery organized around an agreed scope."]
+    ],
+    projectRefs: [["solverto-games", "Tarvos Desolation"], ["solverto-games", "Medieval Machines Builder"], ["solverto-games", "Painter Simulator"], ["solverto-games", "OP Games - Arca Plane"], ["solverto-games", "OP Games - Arca Archer"], ["solverto-games", "Kroc and Roll"]]
+  },
+  {
+    id: "metaverse-mazes",
+    title: "Metaverse | Mazes",
+    image: "metaverse/maze/hero-labirynty-metaverse.jpg",
+    description: "Themed metaverse locations, social spaces, mazes and gameplay areas designed for exploration.",
+    lead: "We build recognizable, efficient realtime worlds that combine a strong visual theme with navigation, interaction and gameplay requirements.",
+    valueTitle: "Give users a place worth exploring — and a reason to return.",
+    value: "We support platform owners, agencies and game teams with complete themed environments or defined location packages. The work can cover concept development, 3D production, level construction, optimization and implementation support.",
+    capabilities: [
+      ["Themed metaverse location", "A complete social, event or brand environment with a distinct visual identity."],
+      ["Maze experience", "Readable routes, landmarks, challenge rhythm and a theme carried across the whole space."],
+      ["Gameplay area", "Locations built around movement, collection, competition or another defined interaction loop."],
+      ["Ongoing content production", "A repeatable pipeline for seasonal variants, new rooms and additional levels."]
+    ],
+    projectRefs: [["metaverse-mazes", "OrangeMaze"], ["metaverse-mazes", "OoredooMaze"], ["music-rooms", "India"], ["pulse-guys", "ChocolateFactory"], ["pulse-guys", "Halloween"], ["treasure-hunter", "MafEventDeira"]]
+  },
+  {
+    id: "animation-film-trailers-avatars",
+    title: "Animations | Films | Trailers | Avatars",
+    image: "animation-trailer-movie/hero-animacje-filmy-trailery.jpg",
+    description: "Animation, film editing, trailers and optimized avatars for games, products and interactive experiences.",
+    lead: "We prepare moving content and realtime characters that explain, present and strengthen a product, game or digital experience.",
+    valueTitle: "Turn complex ideas and static assets into clear, engaging movement.",
+    value: "Depending on the goal, we can support the complete process or a focused production stage: storyboard, 3D preparation, animation, avatar optimization, rendering, editing and final platform-specific outputs.",
+    capabilities: [
+      ["3D animation", "Product, architectural and technical animation focused on clarity and visual quality."],
+      ["Film and trailer", "Editing, pacing, titles and final outputs for games, campaigns and presentations."],
+      ["Realtime avatars", "Character preparation, optimization, materials and animation for interactive platforms."],
+      ["Production support", "A defined animation, editing or asset task integrated with an existing team and pipeline."]
+    ],
+    projectRefs: [["support", "Avatars - Optimization"], ["support", "Animation work for investment projects"], ["support", "Urzecze"], ["support", "Solea"]]
+  }
+];
+
+function findPortfolioProject(groupId, projectName) {
+  return portfolioData?.groups.find((group) => group.id === groupId)?.projects.find((project) => project.name === projectName);
+}
+
+function renderServicePage(root = document, pageUrl = window.location.href) {
+  const serviceRoot = root === document ? document.querySelector("[data-service-page]") : root.querySelector?.("[data-service-page]") || (root.matches?.("[data-service-page]") ? root : null);
+  if (!serviceRoot || !portfolioData) return;
+
+  const serviceId = new URL(pageUrl, window.location.href).searchParams.get("service");
+  const service = serviceCatalog.find((item) => item.id === serviceId) || serviceCatalog[0];
+  const setText = (selector, value) => {
+    const element = serviceRoot.querySelector(selector);
+    if (element) element.textContent = value;
+  };
+
+  setText("[data-service-title]", service.title);
+  setText("[data-service-lead]", service.lead);
+  setText("[data-service-value-title]", service.valueTitle);
+  setText("[data-service-value]", service.value);
+  setText("[data-service-work-intro]", service.workIntro || service.description);
+
+  const valueSection = serviceRoot.querySelector(".service-value-section");
+  const valueHeading = valueSection?.querySelector(".section-heading");
+  const hideValueIntro = true;
+  valueSection?.classList.toggle("is-intro-hidden", hideValueIntro);
+  if (valueHeading) valueHeading.hidden = hideValueIntro;
+
+  const hero = serviceRoot.querySelector("[data-service-hero]");
+  if (hero) hero.innerHTML = `<img src="${escapeHtml(service.image)}" alt="${escapeHtml(`${service.title} — Solverto`)}" loading="eager" decoding="async" data-no-lightbox />`;
+
+  const capabilities = serviceRoot.querySelector("[data-service-capabilities]");
+  if (capabilities) capabilities.innerHTML = service.capabilities.map(([title, description], index) => `
+    <article class="service-capability reveal"><span>${String(index + 1).padStart(2, "0")}</span><h3>${escapeHtml(title)}</h3><p>${escapeHtml(description)}</p></article>`).join("");
+
+  const projects = service.projectRefs.map(([groupId, projectName]) => ({ project: findPortfolioProject(groupId, projectName), groupId })).filter((item) => item.project);
+  const workSection = serviceRoot.querySelector(".service-work-section");
+  if (workSection) workSection.style.display = projects.length ? "" : "none";
+  const projectGrid = serviceRoot.querySelector("[data-service-projects]");
+  if (projectGrid) projectGrid.innerHTML = projects.map(({ project, groupId }) => projectCardMarkup(project, 3, { groupId })).join("");
+
+  if (root === document) {
+    document.title = `${service.title} — Solverto`;
+    document.querySelector('meta[name="description"]')?.setAttribute("content", service.description);
+  }
+}
+
 function departmentCardMarkup(project, headingLevel = 3) {
   const title = project.departmentTitle || project.category;
   const departmentId = project.departmentId || project.filter || "all";
@@ -466,35 +712,17 @@ function renderFeaturedProjects(root = document) {
 
 function renderHomeOfferPanel(root = document) {
   const grid = root.querySelector("[data-home-offer-grid]");
-  if (!grid || !portfolioData) return;
+  if (!grid) return;
 
-  const groups = new Map(portfolioData.groups.map((group) => [group.id, group]));
-  const offerCards = [
-    { groupId: "architecture", description: "Realtime architecture, residential investments and large-scale 3D modelling." },
-    { groupId: "game-development", description: "Game levels, environments and practical production support for playable content." },
-    { groupId: "digital-twin", description: "Interactive digital twins, realtime locations and operational visualizations." },
-    { groupId: "metaverse-mazes", description: "Metaverse environments, mazes and game-ready interactive spaces." },
-    { groupId: "support", description: "Animations, films, trailers and visual production support." },
-    { id: "product-prototypes", title: "Product prototypes", image: "assets/herovisual.png", href: "realtime-3d.html", description: "Interactive product configurators, realtime showrooms and prototype experiences." },
-    { groupId: "solverto-games", description: "Original games, mini-games and reusable game production assets." }
-  ];
-
-  grid.innerHTML = offerCards.map((card) => {
-    const group = card.groupId ? groups.get(card.groupId) : null;
-    const title = card.title || group?.title || "Offer";
-    const image = card.image || group?.heroImage || "assets/hero-offer-collage.png";
-    const href = card.href || `projects.html?department=${encodeURIComponent(card.groupId)}`;
+  grid.innerHTML = serviceCatalog.map((service, index) => {
+    const href = `services.html?service=${encodeURIComponent(service.id)}`;
     return `
-      <article class="offer-card reveal">
-        <div class="offer-card-media"><img src="${escapeHtml(image)}" alt="${escapeHtml(title)}" loading="lazy" decoding="async" /></div>
-        <div class="offer-card-body">
-          <h3>${escapeHtml(title)}</h3>
-          <p>${escapeHtml(card.description)}</p>
-          <a class="button button-secondary button-small" href="${escapeHtml(href)}">View examples</a>
-        </div>
-      </article>`;
+      <a class="offer-card reveal" href="${escapeHtml(href)}" data-home-service="${escapeHtml(service.id)}" aria-label="${escapeHtml(`Explore ${service.title}`)}">
+        <div class="offer-card-media"><img src="${escapeHtml(service.image)}" alt="" loading="${index < 3 ? "eager" : "lazy"}" decoding="async" /></div>
+        <div class="offer-card-overlay" aria-hidden="true"></div>
+        <div class="offer-card-body"><span class="offer-card-number">0${index + 1}</span><h3>${escapeHtml(service.title)}</h3><p>${escapeHtml(service.description)}</p><span class="offer-card-link">Explore the area <b>↗</b></span></div>
+      </a>`;
   }).join("");
-
 }
 
 function renderPortfolio(root = document, pageUrl = window.location.href) {
@@ -714,7 +942,8 @@ function renderProjectDetail(root = document, pageUrl = window.location.href) {
   const gallery = detailRoot.querySelector("[data-detail-gallery]");
   if (gallery) {
     if (project.assetFolder) {
-      gallery.innerHTML = [1, 2, 3, 4, 5, 6].map((index) => projectMediaMarkup(project, index, { className: "reveal" })).join("");
+      const mediaCount = project.assetFiles?.length || 6;
+      gallery.innerHTML = Array.from({ length: mediaCount }, (_, index) => projectMediaMarkup(project, index + 1, { className: "reveal" })).join("");
     } else {
       const labels = [
         "[Gallery image: exterior realtime model view]",
@@ -739,7 +968,11 @@ function initializeHomePanels() {
   panel.innerHTML = `
     <div class="home-panel-backdrop" data-home-panel-close></div>
     <section class="home-panel-dialog" role="dialog" aria-modal="true">
-      <button class="home-panel-close" type="button" data-home-panel-close><span aria-hidden="true">×</span></button>
+      <div class="home-panel-toolbar">
+        <button class="home-panel-back" type="button" data-home-panel-back hidden><span aria-hidden="true">←</span><span>Back</span></button>
+        <span class="home-panel-toolbar-label">Solverto</span>
+        <button class="home-panel-close" type="button" data-home-panel-close><span aria-hidden="true">×</span></button>
+      </div>
       <div class="home-panel-content" data-home-panel-content></div>
     </section>`;
   document.body.append(panel);
@@ -747,10 +980,17 @@ function initializeHomePanels() {
   const dialog = panel.querySelector(".home-panel-dialog");
   const content = panel.querySelector("[data-home-panel-content]");
   const closeButton = panel.querySelector(".home-panel-close");
+  const backButton = panel.querySelector(".home-panel-back");
   let previousFocus = null;
   let closeTimer = null;
   let panelRequest = 0;
   let panelAnimation = null;
+  let panelStack = [];
+
+  const updatePanelToolbar = () => {
+    backButton.hidden = panelStack.length < 2;
+    backButton.setAttribute("aria-label", translatedText("Back"));
+  };
 
   const cancelPanelAnimation = () => {
     if (panelAnimation) {
@@ -768,6 +1008,8 @@ function initializeHomePanels() {
     panel.setAttribute("aria-hidden", "true");
     document.body.classList.remove("home-panel-open");
     content.replaceChildren();
+    panelStack = [];
+    updatePanelToolbar();
     if (previousFocus instanceof HTMLElement && previousFocus.isConnected) previousFocus.focus();
   };
 
@@ -777,13 +1019,15 @@ function initializeHomePanels() {
     cancelPanelAnimation();
     panel.classList.remove("is-open");
     panel.classList.add("is-closing");
-    closeTimer = window.setTimeout(finishClose, reducedMotion.matches ? 0 : 430);
+    closeTimer = window.setTimeout(finishClose, reducedMotion.matches ? 0 : 480);
   };
 
-  const prepareClone = (source) => {
+  const prepareClone = (source, preserveIds = false) => {
     const clone = source.cloneNode(true);
-    clone.removeAttribute("id");
-    clone.querySelectorAll("[id]").forEach((element) => element.removeAttribute("id"));
+    if (!preserveIds) {
+      clone.removeAttribute("id");
+      clone.querySelectorAll("[id]").forEach((element) => element.removeAttribute("id"));
+    }
     if (clone.classList.contains("reveal")) {
       clone.classList.remove("reveal");
       clone.classList.add("is-visible");
@@ -830,11 +1074,11 @@ function initializeHomePanels() {
       panel.classList.add("is-open");
       dialog.classList.add("is-panel-animating");
       const animation = dialog.animate(
-        [{ transform: "translateX(100%)" }, { transform: "translateX(0)" }],
+        [{ transform: "translateY(100%)", borderRadius: "32px 32px 0 0" }, { transform: "translateY(0)", borderRadius: "0" }],
         {
-          duration: reducedMotion.matches ? 0 : 430,
+          duration: reducedMotion.matches ? 0 : 480,
           easing: "cubic-bezier(0.22, 1, 0.36, 1)",
-          fill: "both"
+          fill: "none"
         }
       );
       panelAnimation = animation;
@@ -857,20 +1101,51 @@ function initializeHomePanels() {
     }
   };
 
-  const openPanel = (name, trigger) => {
+  const openPanel = (name, trigger, record = true) => {
     const source = sources.get(name);
     if (!source) return;
+    if (record) panelStack.push({ type: "source", name });
+    updatePanelToolbar();
     panelRequest += 1;
     const sourceContent = source.querySelector(":scope > .container") || source;
     showPanel(prepareClone(sourceContent), name, trigger);
   };
 
-  const openPagePanel = async (url, trigger) => {
+  const servicePanelMarkup = () => `
+    <section class="service-hero">
+      <div class="service-hero-glow" aria-hidden="true"></div>
+      <div class="container service-hero-grid">
+        <div class="page-hero-copy reveal"><p class="eyebrow">Area of collaboration</p><h1 data-service-title>Solverto services</h1><p class="hero-lead" data-service-lead>Focused creative technology support for your company.</p><div class="actions"><a class="button button-primary" href="#service-contact">Tell us about your project</a></div></div>
+        <div class="service-hero-media reveal" data-service-hero></div>
+      </div>
+    </section>
+    <section class="section service-value-section"><div class="container service-copy-grid"><div class="section-heading reveal"><p class="eyebrow">How we can help</p><h2 data-service-value-title>A practical solution around your goal.</h2><p data-service-value></p></div><div class="service-capability-grid" data-service-capabilities></div></div></section>
+    <section class="section service-work-section"><div class="container"><div class="section-heading reveal"><p class="eyebrow">Selected work</p><h2>Relevant projects and production experience.</h2><p data-service-work-intro></p></div><div class="portfolio-grid service-project-grid" data-service-projects></div></div></section>
+    <section class="section contact-section" id="service-contact"><div class="container minimal-contact company-contact-panel reveal"><p class="eyebrow">Start a conversation</p><h2>Tell us what needs to work next.</h2><p>Share the goal, available materials, target platform and deadline. We will suggest a practical first step.</p><div class="actions"><a class="button button-primary" href="mailto:contact@solverto.com">contact@solverto.com</a></div></div></section>`;
+
+  const openServicePanel = (serviceId, trigger, record = true) => {
+    const service = serviceCatalog.find((item) => item.id === serviceId);
+    if (!service) return;
+    if (record) panelStack.push({ type: "service", serviceId });
+    updatePanelToolbar();
+    panelRequest += 1;
+    const serviceRoot = document.createElement("main");
+    serviceRoot.dataset.servicePage = "";
+    serviceRoot.innerHTML = servicePanelMarkup();
+    renderServicePage(serviceRoot, new URL(`services.html?service=${encodeURIComponent(serviceId)}`, window.location.href).href);
+    showPanel(serviceRoot, service.title, trigger);
+    applyLanguage();
+    registerRevealItems(serviceRoot);
+  };
+
+  const openPagePanel = async (url, trigger, record = true) => {
     if (window.location.protocol === "file:") {
       window.location.href = url.href;
       return;
     }
 
+    if (record) panelStack.push({ type: "page", href: url.href });
+    updatePanelToolbar();
     const request = ++panelRequest;
     const pageName = url.pathname.split("/").pop() || "page";
     const loading = document.createElement("div");
@@ -892,11 +1167,12 @@ function initializeHomePanels() {
       if (!pageMain) throw new Error("Page content is missing");
       if (request !== panelRequest || panel.hidden) return;
 
-      const clone = prepareClone(pageMain);
+      const clone = prepareClone(pageMain, true);
       setPanelContent(clone, pageName);
       renderFeaturedProjects(clone);
       renderPortfolio(clone, requestUrl.href);
       renderProjectDetail(clone, requestUrl.href);
+      renderServicePage(clone, requestUrl.href);
       renderHomeOfferPanel(clone);
       applyLanguage();
       registerRevealItems(clone);
@@ -917,6 +1193,16 @@ function initializeHomePanels() {
     contact: "contact.html"
   };
 
+  const goBackInPanel = () => {
+    if (panelStack.length < 2) return;
+    panelStack.pop();
+    const previous = panelStack[panelStack.length - 1];
+    updatePanelToolbar();
+    if (previous.type === "source") openPanel(previous.name, backButton, false);
+    else if (previous.type === "service") openServicePanel(previous.serviceId, backButton, false);
+    else openPagePanel(new URL(previous.href), backButton, false);
+  };
+
   document.addEventListener("click", (event) => {
     const trigger = event.target.closest("[data-home-panel-trigger]");
     if (trigger) {
@@ -933,7 +1219,22 @@ function initializeHomePanels() {
     }
 
     const href = link.getAttribute("href") || "";
-    if (href.startsWith("#")) return;
+    if (link.dataset.homeService) {
+      event.preventDefault();
+      openServicePanel(link.dataset.homeService, link);
+      return;
+    }
+    if (href.startsWith("#")) {
+      if (panel.contains(link)) {
+        const targetId = decodeURIComponent(href.slice(1));
+        const target = [...content.querySelectorAll("[id]")].find((element) => element.id === targetId);
+        if (target) {
+          event.preventDefault();
+          target.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "start" });
+        }
+      }
+      return;
+    }
     let url = new URL(href, window.location.href);
     const hashAlias = canonicalPageAliases[decodeURIComponent(url.hash.slice(1))];
     if (hashAlias && url.pathname.endsWith("index.html")) url = new URL(hashAlias, window.location.href);
@@ -946,6 +1247,7 @@ function initializeHomePanels() {
 
   panel.addEventListener("click", (event) => {
     if (event.target.closest("[data-home-panel-close]")) closePanel();
+    else if (event.target.closest("[data-home-panel-back]")) goBackInPanel();
   });
 
   document.addEventListener("keydown", (event) => {
@@ -1004,6 +1306,7 @@ function initializePortfolioFeatures() {
   renderFeaturedProjects();
   renderPortfolio();
   renderProjectDetail();
+  renderServicePage();
   renderHomeOfferPanel();
   addLanguageSelector();
   applyLanguage();

@@ -9,7 +9,7 @@
     <meta property="og:type" content="website" />
     <title>Solverto — Realtime 3D, Games and XR</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=panel-close-sticky-20260731" />
+    <link rel="stylesheet" href="styles.css?v=service-hub-20260805p" />
   </head>
   <body class="home-page">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -20,7 +20,7 @@
         <div class="nav-menu" id="main-menu" data-nav-menu>
           <a data-company-link href="company.html">Company</a>
           <a href="portfolio.html">Realizacje</a>
-          <a href="contact.html">Contact</a>
+          <a href="#contact">Contact</a>
         </div>
       </nav>
     </header>
@@ -28,28 +28,19 @@
     <main id="main">
       <section class="hero">
         <div class="hero-gridlines" data-parallax aria-hidden="true"></div>
-        <div class="container hero-layout">
-          <div class="hero-copy reveal">
-            <p class="eyebrow">Creative technology for business and game studios</p>
-            <h1>Realtime 3D that is built to work.</h1>
+        <div class="container home-hero-shell">
+          <div class="hero-copy home-hero-copy reveal">
+            <p class="eyebrow">Solverto Studio</p>
+            <h1>Creative Technologies for Business and Game Studios</h1>
             <p class="hero-lead">Solverto turns products, technical data and game ideas into interactive experiences, playable prototypes, XR training, digital twins and production-ready 3D content.</p>
             <div class="actions">
-              <a class="button button-primary" href="contact.html">Start a project</a>
-              <a class="button button-secondary" href="portfolio.html">View selected work</a>
+              <a class="button button-primary" href="#contact">Start a project</a>
+              <button class="button button-secondary" type="button" data-home-panel-trigger="company">Company</button>
             </div>
           </div>
-          <button class="hero-visual hero-offer-trigger reveal" type="button" data-home-panel-trigger="offers" aria-label="Open the offer">
-            <img src="assets/hero-offer-collage.png" alt="Solverto offer across architecture, games, metaverse, product prototypes, animation and level design" width="1672" height="941" data-no-lightbox />
-            <span class="hero-offer-hover-label" aria-hidden="true">Open the offer</span>
-          </button>
-        </div>
-      </section>
-
-      <section class="section offer-panel-source" data-home-panel-source="offers">
-        <div class="container">
-          <div class="section-heading reveal">
-            <h2>Choose the production area.</h2>
-            <p>Click an image to see the areas Solverto can support.</p>
+          <div class="home-offer-heading reveal">
+            <p class="eyebrow">Choose your area</p>
+            <h2>What do you want to build?</h2>
           </div>
           <div class="offer-grid" data-home-offer-grid></div>
         </div>
@@ -64,18 +55,45 @@
               <p>Solverto is a creative technology and game production company from Poland. We combine realtime 3D, game development, technical art, XR, animation and production pipelines to build interactive experiences for games, business, training and product communication.</p>
               <p>Our work connects visual quality with practical production needs. We help companies and game studios create prototypes, vertical slices, realtime environments, interactive applications, optimization passes, 3D content and production-ready assets.</p>
             </div>
-            <div class="company-facts reveal" aria-label="Solverto experience snapshot">
-              <div class="company-fact"><strong>15+ years</strong><span>in 3D and interactive production</span></div>
-              <div class="company-fact"><strong>30+ projects</strong><span>in realtime architecture and visualization</span></div>
-              <div class="company-fact"><strong>Realtime pipelines</strong><span>Unreal Engine, Unity, AR and XR experience</span></div>
-              <div class="company-fact"><strong>Game production</strong><span>prototypes, demos and optimization support</span></div>
-              <div class="company-fact"><strong>Poland → worldwide</strong><span>based locally, working internationally</span></div>
-            </div>
+            <figure class="company-studio-visual reveal" data-no-lightbox>
+              <img src="assets/company-studio-visual.png" alt="Cyfrowy model architektury i świat gry połączone w środowisku realtime 3D." loading="lazy" decoding="async" />
+            </figure>
           </div>
 
-          <div class="company-cta reveal">
-            <div><p class="eyebrow">Work with Solverto</p><h2>Start with a focused production goal.</h2></div>
-            <div class="actions"><a class="button button-primary" href="portfolio.html">View selected work</a><a class="button button-secondary" href="contact.html">Contact Solverto</a></div>
+          <section class="company-subsection" aria-labelledby="company-audiences-title">
+            <div class="section-heading reveal">
+              <p class="eyebrow">Who we help</p>
+              <h2 id="company-audiences-title">Production support shaped around the people using it.</h2>
+              <p>Focused help for teams that need a useful first milestone, a stronger build or a production-ready interactive experience.</p>
+            </div>
+            <div class="audience-grid">
+              <article class="card audience-card reveal">
+                <span class="card-kicker">01 / Games</span>
+                <h3>Game Studios</h3>
+                <p>We help studios prepare demos, vertical slices and game environments, then strengthen them with optimization passes, trailer capture and production-ready assets.</p>
+              </article>
+              <article class="card audience-card reveal">
+                <span class="card-kicker">02 / Products</span>
+                <h3>Product &amp; Real Estate Companies</h3>
+                <p>We build realtime configurators, interactive showrooms, architectural visualization and 3D marketing content, including CAD/BIM-to-realtime experiences.</p>
+              </article>
+              <article class="card audience-card reveal">
+                <span class="card-kicker">03 / Simulation</span>
+                <h3>Training, XR &amp; Simulation Teams</h3>
+                <p>We create VR/AR prototypes, safety training tools, process simulations, Digital Twin Lite experiences and interactive learning environments.</p>
+              </article>
+            </div>
+          </section>
+
+          <figure class="company-process-visual reveal" data-no-lightbox>
+            <img src="assets/company-process-flow.png" alt="Proces współpracy Solverto: przegląd projektu, zakres i plan etapów, prototyp lub sprint produkcyjny oraz dostarczenie i kolejny krok." loading="lazy" decoding="async" />
+          </figure>
+
+          <div class="minimal-contact company-contact-panel reveal">
+            <p class="eyebrow">Start a conversation</p>
+            <h2>Tell us what needs to work next.</h2>
+            <p>Share the goal, available materials, target platform and deadline. We will suggest a practical first step.</p>
+            <div class="actions"><a class="button button-primary" href="mailto:contact@solverto.com">contact@solverto.com</a></div>
           </div>
         </div>
       </section>
@@ -87,7 +105,7 @@
         </div>
       </section>
 
-      <section class="section contact-section" id="contact" data-home-panel-source="contact">
+      <section class="section contact-section home-contact" id="contact">
         <div class="container minimal-contact reveal">
           <p class="eyebrow">Start a conversation</p>
           <h2>Tell us what needs to work next.</h2>
@@ -111,7 +129,7 @@
       <div class="container copyright">© <span data-year></span> Solverto.</div>
     </footer>
     <script src="portfolio-data.js"></script>
-    <script src="translations.js?v=solverto-refresh-20260727"></script>
-    <script src="script.js?v=logo-direct-index-20260731"></script>
+    <script src="translations.js?v=service-hub-20260805f"></script>
+    <script src="script.js?v=service-hub-20260805i"></script>
   </body>
 </html>

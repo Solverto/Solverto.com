@@ -100,6 +100,7 @@
     placeholder: extra.placeholder || `[Project thumbnail: ${name}]`,
     assetFolder: extra.assetFolder || "",
     assetExtension: extra.assetExtension || "webp",
+    assetFiles: extra.assetFiles || [],
     scope: extra.scope || role,
     industry: extra.industry || category,
     technology: extra.technology || "Technology details available on request",
@@ -201,6 +202,14 @@
       technology: "3D production workflow / technology placeholder"
     }
   ));
+
+  supportProjects.unshift(makeProject("Avatars - Optimization", "Avatars / Animation", "Avatar creation, optimization and animation support", "Solverto production support", {
+    description: "Creation, optimization and animation support for avatars prepared for realtime interactive experiences.",
+    industry: "Interactive content production",
+    technology: "Realtime character and animation workflow",
+    assetFolder: "animation-trailer-movie/avatars",
+    assetFiles: ["gallery-01.jpg", "gallery-02.png", "gallery-03.png", "gallery-04.png"]
+  }));
 
   const squarebytesProjects = [
     ["Living Point 21. Housing", "Investment modelling and PZT support"],
