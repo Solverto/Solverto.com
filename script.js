@@ -136,8 +136,6 @@ const translationCorrections = {
     "Choose the production area.": "Wybierz obszar produkcji.",
     "Click an image to see the areas Solverto can support.": "Kliknij obraz, aby zobaczyć obszary, w których Solverto może pomóc.",
     "Product prototypes": "Prototypy produktów",
-    "Images from selected realisations": "Obrazy wybranych realizacji",
-    "Examples from the portfolio that connect the offer to delivered work.": "Przykłady z portfolio łączące ofertę z wykonanymi realizacjami.",
     "Realtime architecture, residential investments and large-scale 3D modelling.": "Architektura realtime, inwestycje mieszkaniowe i wielkoskalowe modelowanie 3D.",
     "Game levels, environments and practical production support for playable content.": "Poziomy gier, środowiska i praktyczne wsparcie produkcji grywalnych treści.",
     "Interactive digital twins, realtime locations and operational visualizations.": "Interaktywne cyfrowe bliźniaki, lokalizacje realtime i wizualizacje operacyjne.",
@@ -373,6 +371,7 @@ function applyLanguage() {
     button.textContent = `${translatedText("See more")} (${button.dataset.projectCount || 0})`;
   });
   document.documentElement.dataset.languageReady = "";
+  applyTrustAndContactUpdates();
 }
 
 function escapeHtml(value = "") {
@@ -397,7 +396,7 @@ function projectMediaMarkup(project, index = 1, options = {}) {
   const source = projectImagePath(project, index);
   const extraClass = options.className ? ` ${escapeHtml(options.className)}` : "";
   if (!source) {
-    return `<div class="media-placeholder${extraClass}" role="img">${escapeHtml(options.placeholder || project.placeholder)}</div>`;
+    return `<div class="media-placeholder${extraClass}" role="img">${escapeHtml(selectedLanguage === "pl" ? "Materiały w przygotowaniu" : "Production materials in preparation")}</div>`;
   }
 
   const loading = options.loading || "lazy";
@@ -496,17 +495,6 @@ function renderHomeOfferPanel(root = document) {
       </article>`;
   }).join("");
 
-  const realizationGrid = root.querySelector("[data-home-realization-grid]");
-  if (!realizationGrid) return;
-  const realizationProjects = portfolioData.largeScale.filter((project) => project.assetFolder);
-  realizationGrid.innerHTML = realizationProjects.map((project) => `
-    <article class="offer-realization-card reveal">
-      ${projectMediaMarkup(project, 1, { altText: `${project.name} — selected realisation image` })}
-      <div class="offer-realization-card-body">
-        <h4>${escapeHtml(project.name)}</h4>
-        <p>${escapeHtml(project.departmentTitle || project.category)}</p>
-      </div>
-    </article>`).join("");
 }
 
 function renderPortfolio(root = document, pageUrl = window.location.href) {
@@ -1238,3 +1226,62 @@ document.querySelectorAll("[data-static-form]").forEach((form) => {
 document.querySelectorAll("[data-year]").forEach((element) => {
   element.textContent = String(new Date().getFullYear());
 });
+
+function applyTrustAndContactUpdates() {
+  const isPolish = selectedLanguage === "pl";
+  const portfolioIntro = isPolish
+    ? "Wszystkie prezentowane projekty są realnymi realizacjami Solverto. Rozszerzone opisy, materiały wizualne i case studies wybranych projektów będą sukcesywnie uzupełniane."
+    : "All presented projects are real Solverto productions. Extended descriptions, visual materials, and selected case studies will be added progressively.";
+  const replacements = new Map([
+    ["Media placeholders", isPolish ? "Materiały produkcyjne" : "Production materials"],
+    ["Elementy zastępcze multimediów", "Materiały produkcyjne"],
+    ["Project media placeholders.", isPolish ? "Materiały produkcyjne w przygotowaniu." : "Production materials in preparation."],
+    ["Elementy zastępcze multimediów projektu.", "Materiały produkcyjne w przygotowaniu."],
+    ["Reserved for product and business examples.", isPolish ? "Materiały w przygotowaniu." : "Materials in preparation."],
+    ["Reserved for training and simulation material.", isPolish ? "Materiały w przygotowaniu." : "Materials in preparation."],
+    ["Reserved for workflow and audit examples.", isPolish ? "Materiały w przygotowaniu." : "Materials in preparation."],
+    ["Add real production material here later.", isPolish ? "Materiały w przygotowaniu." : "Materials in preparation."],
+    ["Otwórz czat zastępczy", "Napisz na WhatsApp"],
+    ["A sample interactive property experience designed to make an unbuilt development easier to explore and understand.", isPolish ? "Interaktywna prezentacja nieruchomości ułatwiająca poznanie planowanej inwestycji." : "An interactive property experience that makes an unbuilt development easier to explore and understand."],
+    ["A sample environment art and lighting pass designed to make a playable demo easier to read and present.", isPolish ? "Realizacja środowiska gry i oświetlenia wspierająca czytelność oraz prezentację rozgrywki." : "An environment art and lighting production focused on clear, presentation-ready gameplay."],
+    ["VR Safety Training Demo", isPolish ? "Szkolenie VR z bezpieczeństwa" : "VR Safety Training"],
+    ["A sample immersive prototype for practicing a safety procedure in a controlled virtual environment.", isPolish ? "Immersyjna realizacja wspierająca ćwiczenie procedury bezpieczeństwa w kontrolowanym środowisku wirtualnym." : "An immersive production for practicing a safety procedure in a controlled virtual environment."],
+    ["Sample Solverto case study", isPolish ? "Realizacja Solverto" : "Solverto case study"],
+    ["Game Demo Environment", isPolish ? "Produkcja środowiska gry" : "Game Environment Production"]
+  ]);
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach((node) => {
+    let value = node.nodeValue;
+    replacements.forEach((replacement, source) => { value = value.replaceAll(source, replacement); });
+    node.nodeValue = value;
+  });
+  document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+    link.href = "tel:+48784573516";
+    link.textContent = "784-573-516";
+  });
+  document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+    link.href = "https://wa.me/48784573516";
+    link.textContent = isPolish ? "Napisz na WhatsApp" : "Contact us on WhatsApp";
+  });
+  const portfolioHeading = document.querySelector("[data-large-scale-projects], [data-portfolio-groups]")?.closest("section")?.querySelector(".section-heading");
+  if (portfolioHeading) {
+    let note = portfolioHeading.querySelector("[data-portfolio-trust-note]");
+    if (!note) {
+      note = document.createElement("p");
+      note.className = "portfolio-note";
+      note.dataset.portfolioTrustNote = "";
+      portfolioHeading.append(note);
+    }
+    note.textContent = portfolioIntro;
+  }
+  document.querySelectorAll('title, meta[name="description"], meta[property="og:title"], meta[property="og:description"]').forEach((element) => {
+    const attribute = element.tagName === "META" ? "content" : "textContent";
+    let value = element[attribute];
+    replacements.forEach((replacement, source) => { value = value.replaceAll(source, replacement); });
+    element[attribute] = value;
+  });
+}
+
+applyTrustAndContactUpdates();
