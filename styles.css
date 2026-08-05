@@ -1727,13 +1727,10 @@ textarea:focus {
 .project-overview-panel {
   display: grid;
   gap: clamp(34px, 5vw, 54px);
-  border: 1px solid rgba(105, 217, 232, 0.28);
-  border-radius: 22px;
-  padding: clamp(26px, 5vw, 52px);
-  background:
-    radial-gradient(circle at 92% 10%, rgba(105, 217, 232, 0.1), transparent 24rem),
-    linear-gradient(135deg, rgba(23, 43, 66, 0.92), rgba(8, 19, 34, 0.96));
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+  padding: 0 0 clamp(24px, 3vw, 36px);
+  background: transparent;
+  border-bottom: 1px solid var(--brand-line);
+  box-shadow: none;
 }
 
 .project-overview-panel .section-heading,
@@ -1742,14 +1739,22 @@ textarea:focus {
   max-width: none;
 }
 
+.section[data-detail-facts-section] {
+  padding-bottom: clamp(24px, 3vw, 36px);
+}
+
+.section.project-gallery-section {
+  padding-top: clamp(13px, 1.5vw, 20px);
+}
+
 .project-extra-facts {
   margin-top: 16px;
 }
 
 .project-story-grid .detail-block {
   padding: 24px;
-  border: 1px solid var(--brand-line);
-  background: var(--brand-surface);
+  border: 0;
+  background: transparent;
 }
 
 .project-story-text {
