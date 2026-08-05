@@ -3245,6 +3245,10 @@ textarea {
   display: none;
 }
 
+.home-panel-back {
+  display: none !important;
+}
+
 .home-panel-close {
   width: 44px;
   justify-self: end;

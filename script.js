@@ -1063,6 +1063,10 @@ function initializeHomePanels() {
 
   const closePanel = () => {
     if (panel.hidden || panel.classList.contains("is-closing")) return;
+    if (panelStack.length > 1) {
+      goBackInPanel();
+      return;
+    }
     panelRequest += 1;
     cancelPanelAnimation();
     panel.classList.remove("is-open");
@@ -1186,6 +1190,31 @@ function initializeHomePanels() {
     registerRevealItems(serviceRoot);
   };
 
+  const projectPanelMarkup = () => `
+    <section class="page-hero">
+      <div class="hero-gridlines" data-parallax aria-hidden="true"></div>
+      <div class="container project-hero-layout">
+        <div class="page-hero-copy reveal"><p class="eyebrow" data-detail-category>Project category</p><h1 data-detail-name>Project name</h1><p class="hero-lead" data-detail-intro>Project description.</p></div>
+        <div class="media-placeholder media-image-frame is-wide reveal" data-no-lightbox data-detail-hero><img src="assets/hero-offer-collage.png" alt="Solverto project hero visual" loading="eager" decoding="async" /></div>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="facts-title" data-detail-facts-section><div class="container"><div class="project-overview-panel"><div class="project-overview-facts"><div class="section-heading reveal"><p class="eyebrow">Project facts</p><h2 id="facts-title" data-detail-facts-title>Scope and contribution.</h2></div><div class="project-info-text reveal" data-detail-project-info hidden></div><div class="project-facts-grid project-facts-text reveal" data-detail-facts-grid><div class="project-fact"><span data-detail-partner-label>Client / Partner</span><p data-detail-partner></p></div><div class="project-fact"><span data-detail-role-label>Role</span><p data-detail-role></p></div><div class="project-fact"><span data-detail-scope-label>Scope</span><p data-detail-scope></p></div><div class="project-fact"><span>Industry</span><p data-detail-industry></p></div><div class="project-fact"><span>Technologies</span><p data-detail-technology></p></div><div class="project-fact"><span>Year</span><p data-detail-year></p></div></div><div class="project-facts-grid project-facts-text project-extra-facts" data-detail-extra-facts></div></div><div class="project-story-grid project-story-text"><article class="detail-block reveal"><p class="eyebrow">Challenge</p><h2>Production context</h2><p data-detail-challenge></p></article><article class="detail-block reveal"><p class="eyebrow">Solverto contribution</p><h2>Documented involvement</h2><p data-detail-contribution></p></article></div></div></div></section>
+    <section class="section project-gallery-section" aria-labelledby="gallery-title"><div class="container"><div class="section-heading reveal"><p class="eyebrow">Gallery</p><h2 id="gallery-title">Project media.</h2><p>Approved project graphics are shown here when available.</p></div><div class="gallery-grid" data-detail-gallery></div></div></section>
+    <section class="consultation"><div class="container consultation-inner reveal"><h2>Need similar realtime 3D, game production or digital twin support? Contact Solverto.</h2><div class="actions"><a class="button button-primary" href="contact.html">Start a project</a><a class="button button-secondary" href="portfolio.html">Back to portfolio</a></div></div></section>`;
+
+  const openProjectPanel = (url, trigger, record = true) => {
+    if (record) panelStack.push({ type: "project", href: url.href });
+    updatePanelToolbar();
+    panelRequest += 1;
+    const projectRoot = document.createElement("main");
+    projectRoot.dataset.projectDetail = "";
+    projectRoot.innerHTML = projectPanelMarkup();
+    renderProjectDetail(projectRoot, url.href);
+    showPanel(projectRoot, "Project", trigger);
+    applyLanguage();
+    registerRevealItems(projectRoot);
+  };
+
   const openPagePanel = async (url, trigger, record = true) => {
     if (window.location.protocol === "file:") {
       window.location.href = url.href;
@@ -1248,6 +1277,7 @@ function initializeHomePanels() {
     updatePanelToolbar();
     if (previous.type === "source") openPanel(previous.name, backButton, false);
     else if (previous.type === "service") openServicePanel(previous.serviceId, backButton, false);
+    else if (previous.type === "project") openProjectPanel(new URL(previous.href), backButton, false);
     else openPagePanel(new URL(previous.href), backButton, false);
   };
 
@@ -1287,6 +1317,13 @@ function initializeHomePanels() {
     const hashAlias = canonicalPageAliases[decodeURIComponent(url.hash.slice(1))];
     if (hashAlias && url.pathname.endsWith("index.html")) url = new URL(hashAlias, window.location.href);
     if (url.origin !== window.location.origin || !/\.html?$/i.test(url.pathname)) return;
+
+    if (/project-template\.html$/i.test(url.pathname)) {
+      event.preventDefault();
+      closeNavigation();
+      openProjectPanel(url, link);
+      return;
+    }
 
     event.preventDefault();
     closeNavigation();
