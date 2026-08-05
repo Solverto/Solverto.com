@@ -65,6 +65,7 @@ const translations = {
     "View portfolio": "Zobacz portfolio", "Explore projects": "Zobacz projekty", "View full portfolio": "Pełne portfolio", "More": "Więcej", "More projects": "Więcej projektów", "Show next 6": "Rozwiń kolejne 6", "Show all projects": "Rozwiń wszystkie", "View examples": "Zobacz przykłady", "Email us": "Napisz e-mail", "Start a conversation": "Rozpocznij rozmowę", "Back to portfolio": "Powrót do portfolio",
     "All": "Wszystkie", "Architecture / Realtime Real Estate": "Architektura Realtime", "Game Development": "Poziomy i Elementy do gier", "Animations / Cinematic / Wideo Editing": "Animacje, Filmy i Trailery", "Search portfolio": "Przeszukaj portfolio",
     "Project facts": "Informacje o projekcie", "Client / Partner": "Klient / Partner", "Role": "Rola", "Scope": "Zakres", "Industry": "Branża", "Technologies": "Technologie", "Year": "Rok", "Challenge": "Wyzwanie", "Solverto contribution": "Wkład Solverto", "Gallery": "Galeria", "Interactive model": "Model interaktywny",
+    "Final client": "Klient końcowy", "Delivered for": "Realizacja dla", "Scope of work": "Zakres prac", "Residential investment modelling and support for preparing the project for realtime real estate presentation.": "Modelowanie inwestycji mieszkaniowej oraz wsparcie procesu przygotowania projektu do prezentacji nieruchomości w czasie rzeczywistym.",
     "Realtime 3D, games, XR simulations and interactive product experiences for business.": "3D czasu rzeczywistego, gry, symulacje XR i interaktywne doświadczenia produktowe dla biznesu.",
     "Game Production & Demo Support": "Produkcja gier i wsparcie wersji demo", "Realtime 3D for Business": "3D czasu rzeczywistego dla biznesu", "XR Training, Simulations & Digital Twin": "Szkolenia XR, symulacje i cyfrowy bliźniak", "AI-Assisted Creative Pipeline & Realtime Production": "Proces kreatywny wspierany przez AI i produkcja realtime", "Portfolio of realtime 3D, architecture, games and metaverse production": "Portfolio produkcji 3D realtime, architektury, gier i metaverse", "Tell us what you want to build.": "Opowiedz nam, co chcesz stworzyć."
   },
@@ -507,15 +508,21 @@ function projectMediaMarkup(project, index = 1, options = {}) {
 function projectCardMarkup(project, headingLevel = 3, options = {}) {
   const partner = project.partner || "Solverto project";
   const projectGroup = options.groupId || project.groupId || "";
+  const isArchitectureProject = project.category === "Architecture / Realtime Real Estate";
+  const projectDetails = isArchitectureProject
+    ? `<p class="project-meta"><span>${escapeHtml(translatedText("Final client"))}</span>${escapeHtml(project.finalClient || partner)}${project.country ? ` · ${escapeHtml(project.country)}` : ""}</p>
+        <p class="project-meta"><span>${escapeHtml(translatedText("Delivered for"))}</span>${escapeHtml(project.deliveredFor || "YSLAB / RESIMO")}</p>
+        <p class="project-meta"><span>${escapeHtml(translatedText("Scope of work"))}</span>${escapeHtml(translatedText(project.scope))}</p>`
+    : `<p class="project-meta"><span>Client / Partner</span>${escapeHtml(partner)}${project.country ? ` · ${escapeHtml(project.country)}` : ""}</p>
+        <p class="project-meta"><span>Role</span>${escapeHtml(project.role)}</p>`;
   return `
     <article class="project-card reveal" data-project-card data-project-category="${escapeHtml(project.filter || "")}" data-project-group="${escapeHtml(projectGroup)}" data-project-search="${escapeHtml(`${project.name} ${project.category} ${partner} ${project.role} ${project.country}`.toLowerCase())}">
       ${projectMediaMarkup(project)}
       <div class="project-card-body">
         <p class="project-badge">${escapeHtml(project.category)}</p>
         <h${headingLevel}>${escapeHtml(project.name)}</h${headingLevel}>
-        <p class="project-meta"><span>Client / Partner</span>${escapeHtml(partner)}${project.country ? ` · ${escapeHtml(project.country)}` : ""}</p>
-        <p class="project-meta"><span>Role</span>${escapeHtml(project.role)}</p>
-        <p>${escapeHtml(project.description || "Production support within a realtime 3D or interactive project workflow.")}</p>
+        ${projectDetails}
+        ${isArchitectureProject ? "" : `<p>${escapeHtml(project.description || "Production support within a realtime 3D or interactive project workflow.")}</p>`}
         <a class="button button-secondary button-small" href="${projectUrl(project)}">More</a>
       </div>
     </article>`;
@@ -859,9 +866,10 @@ function allPortfolioProjects() {
 function detailCopy(project) {
   const category = project.category.toLowerCase();
   if (category.includes("architecture") || category.includes("real estate")) {
+    const contributionScope = (project.scope || project.role).replace(/[.]+$/, "").toLowerCase();
     return {
       challenge: "Realtime architecture production requires technically consistent 3D assets, careful preparation and clear coordination with the source documentation. The exact confidential requirements of this project are not disclosed.",
-      contribution: `Solverto's documented contribution covered ${project.role.toLowerCase()}. The work was delivered as realtime architecture or 3D modelling support within the stated partner workflow.`
+      contribution: `Solverto's documented contribution covered ${contributionScope}. The work was delivered as realtime architecture or 3D modelling support within the stated partner workflow.`
     };
   }
   if (category.includes("digital twin")) {
@@ -888,6 +896,33 @@ function detailCopy(project) {
   };
 }
 
+function projectInfoCopy(project) {
+  if (project.projectInfo) return project.projectInfo;
+
+  const isArchitectureProject = project.category === "Architecture / Realtime Real Estate";
+  const scope = translatedText(project.scope || project.role || "");
+  const industry = translatedText(project.industry || project.category || "");
+  const technology = translatedText(project.technology || "");
+  const country = project.country ? translatedText(project.country) : "";
+  const year = translatedText(project.year || "Not specified");
+
+  if (selectedLanguage === "pl") {
+    const collaboration = isArchitectureProject
+      ? `Projekt zrealizowano dla klienta końcowego ${project.finalClient || project.partner} w ramach współpracy z ${project.deliveredFor || "YSLAB / RESIMO"}.`
+      : `Projekt zrealizowano dla ${translatedText(project.partner || "Solverto")}.`;
+    const location = country ? ` w ${country}` : "";
+    const yearSentence = year === "Nie określono" ? "Rok realizacji nie został określony." : `Rok realizacji: ${year}.`;
+    return `${collaboration} Zakres prac obejmował ${scope.charAt(0).toLocaleLowerCase("pl-PL") + scope.slice(1)}. Realizacja dotyczyła branży ${industry.toLocaleLowerCase("pl-PL")}${location} i została przygotowana w procesie ${technology.toLocaleLowerCase("pl-PL")}. ${yearSentence}`;
+  }
+
+  const recipient = isArchitectureProject
+    ? `the final client ${project.finalClient || project.partner} in collaboration with ${project.deliveredFor || "YSLAB / RESIMO"}`
+    : project.partner || "Solverto";
+  const location = country ? ` in ${country}` : "";
+  const yearSentence = year === "Not specified" ? "The year of completion was not specified." : `The project was completed in ${year}.`;
+  return `The project was delivered for ${recipient}. The scope covered ${scope}. It concerned the ${industry} sector${location} and was prepared using ${technology}. ${yearSentence}`;
+}
+
 function renderProjectDetail(root = document, pageUrl = window.location.href) {
   const detailRoot = root === document ? document.querySelector("[data-project-detail]") : root;
   if (!detailRoot || !portfolioData) return;
@@ -907,6 +942,15 @@ function renderProjectDetail(root = document, pageUrl = window.location.href) {
   setText("[data-detail-category]", project.category);
   setText("[data-detail-name]", project.name);
   setText("[data-detail-intro]", project.description);
+  const projectInfoText = projectInfoCopy(project);
+  setText("[data-detail-facts-title]", "Cooperation and scope.");
+  setText("[data-detail-project-info]", projectInfoText);
+  const projectInfo = detailRoot.querySelector("[data-detail-project-info]");
+  const factsGrid = detailRoot.querySelector("[data-detail-facts-grid]");
+  const factsSection = detailRoot.querySelector("[data-detail-facts-section]");
+  if (projectInfo) projectInfo.hidden = false;
+  if (factsGrid) factsGrid.hidden = true;
+  if (factsSection) factsSection.hidden = Boolean(project.hideProjectFacts);
   const detailHero = detailRoot.querySelector("[data-detail-hero]");
   if (detailHero) {
     const projectGroup = portfolioData.groups.find((group) => group.id === project.departmentId);
@@ -917,8 +961,12 @@ function renderProjectDetail(root = document, pageUrl = window.location.href) {
     detailHero.removeAttribute("role");
     detailHero.innerHTML = '<img src="' + escapeHtml(source) + '" alt="' + escapeHtml(alt) + '" loading="eager" decoding="async" />';
   }
-  setText("[data-detail-partner]", project.partner || "Solverto project");
-  setText("[data-detail-role]", project.role);
+  const isArchitectureProject = project.category === "Architecture / Realtime Real Estate";
+  setText("[data-detail-partner-label]", isArchitectureProject ? "Final client" : "Client / Partner");
+  setText("[data-detail-role-label]", isArchitectureProject ? "Delivered for" : "Role");
+  setText("[data-detail-scope-label]", isArchitectureProject ? "Scope of work" : "Scope");
+  setText("[data-detail-partner]", isArchitectureProject ? (project.finalClient || project.partner || "Solverto project") : (project.partner || "Solverto project"));
+  setText("[data-detail-role]", isArchitectureProject ? (project.deliveredFor || "YSLAB / RESIMO") : project.role);
   setText("[data-detail-scope]", project.scope);
   setText("[data-detail-industry]", project.industry);
   setText("[data-detail-technology]", project.technology);
@@ -936,7 +984,7 @@ function renderProjectDetail(root = document, pageUrl = window.location.href) {
       project.note ? ["Portfolio note", project.note] : null
     ].filter(Boolean);
     extraFacts.innerHTML = facts.map(([label, value]) => `<div class="project-fact"><span>${escapeHtml(label)}</span><p>${escapeHtml(value)}</p></div>`).join("");
-    extraFacts.hidden = facts.length === 0;
+    extraFacts.hidden = true;
   }
 
   const gallery = detailRoot.querySelector("[data-detail-gallery]");
@@ -1318,7 +1366,7 @@ if (portfolioData) {
   initializePortfolioFeatures();
 } else {
   const portfolioDataScript = document.createElement("script");
-  portfolioDataScript.src = "portfolio-data.js";
+  portfolioDataScript.src = "portfolio-data.js?v=architecture-copy-20260805a";
   portfolioDataScript.onload = () => {
     portfolioData = window.SOLVERTO_PORTFOLIO;
     initializePortfolioFeatures();

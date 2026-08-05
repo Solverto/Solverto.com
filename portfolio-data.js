@@ -97,6 +97,10 @@
     previousTitle: extra.previousTitle || "",
     note: extra.note || "",
     description: extra.description || "",
+    projectInfo: extra.projectInfo || "",
+    hideProjectFacts: extra.hideProjectFacts || false,
+    finalClient: extra.finalClient || "",
+    deliveredFor: extra.deliveredFor || "",
     placeholder: extra.placeholder || `[Project thumbnail: ${name}]`,
     assetFolder: extra.assetFolder || "",
     assetExtension: extra.assetExtension || "webp",
@@ -165,7 +169,11 @@
     `${client} / YSLAB/RESIMO cooperation`,
     {
       country,
+      finalClient: client,
+      deliveredFor: "YSLAB / RESIMO",
+      scope: "Residential investment modelling and support for preparing the project for realtime real estate presentation.",
       description: "Residential investment modelling support prepared for realtime real estate presentation workflows.",
+      projectInfo: name === "Bertone Le Moden" ? "The project was completed for the final client SIXcom in cooperation with YSLAB / RESIMO. The scope included residential investment modelling and support for preparing the project for realtime real estate presentation. The work concerned the residential real estate sector in Canada and was prepared in a realtime 3D production workflow. The year of completion was not specified." : "",
       industry: "Residential real estate",
       technology: "Realtime 3D workflow / technology placeholder"
     }
