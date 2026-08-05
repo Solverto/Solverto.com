@@ -609,7 +609,7 @@ const serviceCatalog = [
       ["Gameplay area", "Locations built around movement, collection, competition or another defined interaction loop."],
       ["Ongoing content production", "A repeatable pipeline for seasonal variants, new rooms and additional levels."]
     ],
-    projectRefs: [["metaverse-mazes", "OrangeMaze"], ["metaverse-mazes", "OoredooMaze"], ["music-rooms", "India"], ["pulse-guys", "ChocolateFactory"], ["pulse-guys", "Halloween"], ["treasure-hunter", "MafEventDeira"]]
+    projectRefs: [["metaverse-mazes", "OrangeMaze"], ["metaverse-mazes", "OoredooMaze"], ["music-rooms", "India"], ["pulse-guys", "ChocolateFactory"], ["pulse-guys", "Halloween"], ["treasure-hunter", "MafEventDeira"], ["metaverse-mazes", "CardsMaze"], ["metaverse-mazes", "GrassMaze"], ["metaverse-mazes", "CheeseMaze"], ["metaverse-mazes", "CandyMaze"], ["metaverse-mazes", "BackToSchoolMaze"], ["treasure-hunter", "AmusementPark"]]
   },
   {
     id: "animation-film-trailers-avatars",
