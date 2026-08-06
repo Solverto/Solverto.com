@@ -386,7 +386,7 @@
       heroImage: "metaverse/digital-twin/hero-wirtualny-blizniak.jpg",
       projects: metaverseDigitalTwin
     },
-    { id: "metaverse-mazes", filter: "metaverse", title: "Maze", heroImage: "metaverse/maze/hero-labirynty-metaverse.jpg", projects: metaverseMazes },
+    { id: "metaverse-mazes", filter: "metaverse", title: "Maze", heroImage: "metaverse/music-rooms/hero-pokoje-metaverse.jpg", projects: metaverseMazes },
     { id: "music-rooms", filter: "metaverse", title: "Music Room", heroImage: "metaverse/music-rooms/hero-pokoje-metaverse.jpg", projects: metaverseMusicRooms },
     { id: "pulse-guys", filter: "metaverse", title: "Pulse Guys", heroImage: "metaverse/pulse-guys/hero-pulse-guys.jpg", projects: pulseGuysLevels },
     { id: "treasure-hunter", filter: "metaverse", title: "Treasure Hunter", heroImage: "metaverse/treasure-hunter/hero-poziomy-treasure-hunter-metaverse.jpg", projects: treasureHunterLevels },

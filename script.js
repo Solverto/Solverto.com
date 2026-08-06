@@ -540,7 +540,7 @@ const serviceCatalog = [
   {
     id: "architecture-digital-twins",
     title: "Realtime Architecture | Digital Twins",
-    image: "architecture/hero-architektura-realtime.jpg",
+    image: "metaverse/digital-twin/hero-wirtualny-blizniak.jpg",
     description: "Interactive architecture, property presentations and digital replicas that make spaces and data easier to understand.",
     workIntro: "Interactive architecture, property presentations and digital replicas that make spaces and data easier to understand. We contributed to more than 60 projects.",
     lead: "We turn architectural documentation, BIM data and existing locations into clear realtime experiences for sales, planning, presentation and operation.",
@@ -557,7 +557,7 @@ const serviceCatalog = [
   {
     id: "product-prototypes-3d-models",
     title: "Product Prototypes | 3D Models",
-    image: "assets/herovisual.png",
+    image: "games/hero-elementy-gier-solverto Games.jpg",
     description: "Product models, interactive proofs of concept and reusable 3D content for development, sales and communication.",
     lead: "We turn a product idea, CAD file or reference material into a clear 3D model and an interactive prototype that can be tested before full production.",
     valueTitle: "Validate the product experience before investing in the complete solution.",
@@ -573,7 +573,7 @@ const serviceCatalog = [
   {
     id: "game-assets-levels",
     title: "Game Assets | Game Levels",
-    image: "game-development/hero-poziomy-elementy-gier.jpg",
+    image: "metaverse/treasure-hunter/hero-poziomy-treasure-hunter-metaverse.jpg",
     description: "Game-ready environments, levels and optimized assets that fit an existing production pipeline.",
     lead: "We support game studios with level creation, environment production and technical preparation of assets — from a defined brief to content ready for implementation.",
     valueTitle: "Extend your production capacity without losing visual and technical consistency.",
@@ -589,7 +589,7 @@ const serviceCatalog = [
   {
     id: "game-prototypes-custom-games",
     title: "Game Prototypes | Custom Games",
-    image: "games/hero-elementy-gier-solverto Games.jpg",
+    image: "metaverse/pulse-guys/hero-pulse-guys.jpg",
     description: "Playable prototypes, vertical slices, mini-games and complete custom game experiences.",
     lead: "We help turn a game idea, campaign concept or training goal into something playable — first as a focused prototype, then as a production-ready scope.",
     valueTitle: "Test the fun, technology and production risk with a working build.",
@@ -605,7 +605,7 @@ const serviceCatalog = [
   {
     id: "metaverse-mazes",
     title: "Metaverse | Mazes",
-    image: "metaverse/maze/hero-labirynty-metaverse.jpg",
+    image: "metaverse/music-rooms/hero-pokoje-metaverse.jpg",
     description: "Themed metaverse locations, social spaces, mazes and gameplay areas designed for exploration.",
     lead: "We build recognizable, efficient realtime worlds that combine a strong visual theme with navigation, interaction and gameplay requirements.",
     valueTitle: "Give users a place worth exploring — and a reason to return.",
@@ -1454,8 +1454,9 @@ function initializeLightbox() {
   };
 
   const groupItems = (item) => {
-    const projectPage = main.hasAttribute("data-project-detail") || document.body.querySelector(".project-hero-layout");
-    if (projectPage) return [...main.querySelectorAll(selector)];
+    const projectRoot = item.closest("[data-project-detail]");
+    const projectPage = projectRoot || (document.body.hasAttribute("data-project-detail") ? main : null);
+    if (projectPage) return [...projectPage.querySelectorAll(selector)];
     const group = item.closest("[data-lightbox-group], .gallery-grid, .project-card, .card") || item.parentElement;
     return [...group.querySelectorAll(selector)];
   };
@@ -1516,20 +1517,33 @@ function initializeLightbox() {
     renderItem();
   };
 
-  main.querySelectorAll(selector).forEach((item) => {
+  const makeLightboxTrigger = (item) => {
+    if (item.closest("[data-lightbox]")) return;
     item.classList.add("is-lightbox-trigger");
     if (!item.hasAttribute("tabindex")) item.tabIndex = 0;
     if (!item.hasAttribute("role") || item.tagName === "IMG") item.setAttribute("role", "button");
+  };
+
+  const prepareLightboxTriggers = (root) => {
+    if (!(root instanceof Element || root instanceof Document || root instanceof DocumentFragment)) return;
+    if (root instanceof Element && root.matches(selector)) makeLightboxTrigger(root);
+    root.querySelectorAll?.(selector).forEach(makeLightboxTrigger);
+  };
+
+  prepareLightboxTriggers(main);
+  const lightboxObserver = new MutationObserver((records) => {
+    records.forEach((record) => record.addedNodes.forEach(prepareLightboxTriggers));
+  });
+  lightboxObserver.observe(document.body, { childList: true, subtree: true });
+
+  document.addEventListener("click", (event) => {
+    const item = event.target.closest(selector);
+    if (item && !item.closest("[data-lightbox]")) open(item);
   });
 
-  main.addEventListener("click", (event) => {
+  document.addEventListener("keydown", (event) => {
     const item = event.target.closest(selector);
-    if (item && main.contains(item)) open(item);
-  });
-
-  main.addEventListener("keydown", (event) => {
-    const item = event.target.closest(selector);
-    if (item && (event.key === "Enter" || event.key === " ")) {
+    if (item && !item.closest("[data-lightbox]") && (event.key === "Enter" || event.key === " ")) {
       event.preventDefault();
       open(item);
     }
