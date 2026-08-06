@@ -1,33 +1,33 @@
 (() => {
   const metaverseAssetFolders = {
     OmegaPro: "metaverse/digital-twin/omega-pro",
-    HotelFive: "metaverse/digital-twin/hotel-five",
+    "Hotel Five": "metaverse/digital-twin/hotel-five",
     Casino: "metaverse/digital-twin/casino",
     Passionpreneur: "metaverse/digital-twin/passionpreneur",
     "Cove Beach": "metaverse/digital-twin/cove-beach",
     "Metaverse Music Rooms": "metaverse/music-rooms/main-stage-room",
-    Rock: "metaverse/music-rooms/rock-room",
+    "Rock Pub": "metaverse/music-rooms/rock-room",
     HipHop: "metaverse/music-rooms/hip-hop-room",
     EDM: "metaverse/music-rooms/edm-room",
     RnB: "metaverse/music-rooms/rnb-room",
     Metal: "metaverse/music-rooms/metal-room",
     Classic: "metaverse/music-rooms/classical-room",
     PulsePop: "metaverse/music-rooms/pulse-pop-room",
-    Zouglou: "metaverse/music-rooms/zouglou-room",
+    "Ivory Coast": "metaverse/music-rooms/zouglou-room",
     Country: "metaverse/music-rooms/country-room",
-    Latino: "metaverse/music-rooms/latino-room",
+    "Latino Party": "metaverse/music-rooms/latino-room",
     Kpop: "metaverse/music-rooms/kpop-room",
     MainStage: "metaverse/music-rooms/main-stage-room",
     Tunisia: "metaverse/music-rooms/tunisia-room",
     India: "metaverse/music-rooms/india-room",
     Entoto: "metaverse/music-rooms/entoto-room",
     CardsMaze: "metaverse/maze/cards-maze",
-    GrassMaze: "metaverse/maze/garden-maze",
+    "Secret Garden": "metaverse/maze/garden-maze",
     CheeseMaze: "metaverse/maze/cheese-maze",
-    CandyMaze: "metaverse/maze/sugar-city-maze",
-    OrangeMaze: "metaverse/maze/orange-maze",
+    "Candy Land": "metaverse/maze/sugar-city-maze",
+    Orange: "metaverse/maze/orange-maze",
     BackToSchoolMaze: "metaverse/maze/back-to-school-maze",
-    OoredooMaze: "metaverse/maze/ooredoo-maze",
+    Ooreedoo: "metaverse/maze/ooredoo-maze",
     AmusementPark: "metaverse/treasure-hunter/amusment-park",
     TunisiaRamadan: "metaverse/treasure-hunter/tunisia-ramadan",
     Fantasy: "metaverse/treasure-hunter/fantasy-islands",
@@ -59,7 +59,31 @@
     "Aztec House": "game-development/aztec-house-house-builder",
     "Underwater Ruin": "game-development/underwater-ruin-aquarist",
     "Underwater Egyptian Ruin": "game-development/underwater-egyptian-ruin-aquarist",
-    "Japanese Garden": "game-development/japanese-garden-aquarist"
+    "Japanese Garden": "game-development/japanese-garden-aquarist",
+    "OP Games": "game-development/OP-Games",
+    SOGA: "game-development/SOGA",
+    "Wild Rush": "game-development/wild-rush",
+    "Wild Rush Turbo": "game-development/Wild-Rush-Turbo",
+    "Naval Battle | Zombie Outbreak | Mech Mayhem": "game-development/NavalBattle-ZombieOutbreak-MechMayhem",
+    "TrafficCashout | BeatEmUp | MetalSquad": "game-development/TrafficCashout-BeatEmUp-MetalSquad",
+    "Medieval Machines Builder": "game-development/Medieval-Machines-Builder",
+    "Painter Simulator": "game-development/Painter-Simulator",
+    "Pulse Guys": "game-development/PulseGuys",
+    "Treasure Hunter": "game-development/Treasure-Hunter",
+    "House Builder": "game-development/House-Builder",
+    Aquarist: "game-development/Aquarist"
+  };
+
+  const gameAssetExtensions = {
+    "Medieval Machines Builder": "jpg",
+    "Painter Simulator": "jpg",
+    "Pulse Guys": "webp",
+    "House Builder": "jpg",
+    Aquarist: "jpg"
+  };
+
+  const gameAssetFiles = {
+    "Treasure Hunter": ["gallery-01.webp", "gallery-02.webp", "gallery-03.webp", "gallery-04.jpg", "gallery-05.jpg", "gallery-06.jpg"]
   };
 
   const architectureAssetFolders = {
@@ -84,6 +108,14 @@
     "Bertone Le Moden": "jpg",
     Jeziorna: "avif",
     "Jeziorna Residential Masterplan": "avif"
+  };
+
+  const architectureAssetFiles = {
+    Zenit: ["gallery-01.avif", "gallery-02.avif", "gallery-03.avif", "gallery-04.avif", "gallery-05.jpg", "gallery-06.jpg"],
+    "Zenit Residential Estate": ["gallery-01.avif", "gallery-02.avif", "gallery-03.avif", "gallery-04.avif", "gallery-05.jpg", "gallery-06.jpg"],
+    Jeziorna: ["gallery-01.avif", "gallery-02.avif", "gallery-03.avif", "gallery-04.avif", "gallery-05.jpg", "gallery-06.jpg"],
+    "Jeziorna Residential Masterplan": ["gallery-01.avif", "gallery-02.avif", "gallery-03.avif", "gallery-04.avif", "gallery-05.jpg", "gallery-06.jpg"],
+    "Ryżowa": ["gallery-01.webp", "gallery-02.webp", "gallery-03.webp", "gallery-04.webp", "gallery-05.jpg", "gallery-06.jpg"]
   };
 
   const makeProject = (name, category, role, partner = "", extra = {}) => ({
@@ -263,7 +295,7 @@
     }
   ));
 
-  const metaverseDigitalTwin = ["OmegaPro", "HotelFive", "Casino", "Passionpreneur", "Cove Beach"]
+  const metaverseDigitalTwin = ["OmegaPro", "Hotel Five", "Casino", "Passionpreneur", "Cove Beach"]
     .map((name) => makeProject(name, "Digital Twin", "Digital Twin environment production support", "Partner studio cooperation", {
       description: "Digital Twin environment and realtime 3D location production support.",
       placeholder: `[Project thumbnail: metaverse environment for ${name}]`,
@@ -271,14 +303,14 @@
       technology: "Realtime engine / technology placeholder"
     }));
 
-  const metaverseMusicRooms = ["Metaverse Music Rooms", "Rock", "HipHop", "EDM", "RnB", "Metal", "Classic", "PulsePop", "Zouglou", "Country", "Latino", "Kpop", "MainStage", "Tunisia", "India", "Entoto"]
+  const metaverseMusicRooms = ["Metaverse Music Rooms", "Rock Pub", "HipHop", "EDM", "RnB", "Metal", "Classic", "PulsePop", "Ivory Coast", "Country", "Latino Party", "Kpop", "MainStage", "Tunisia", "India", "Entoto"]
     .map((name) => makeProject(name, "Music Room / Metaverse", "Music room environment production support", "Partner studio cooperation", {
       description: "3D environment and location production support for a themed metaverse music room.",
       placeholder: `[Project thumbnail: metaverse music room for ${name}]`,
       technology: "Realtime engine / technology placeholder"
     }));
 
-  const metaverseMazes = ["CardsMaze", "GrassMaze", "CheeseMaze", "CandyMaze", "OrangeMaze", "BackToSchoolMaze", "OoredooMaze"]
+  const metaverseMazes = ["CardsMaze", "Secret Garden", "CheeseMaze", "Candy Land", "Orange", "BackToSchoolMaze", "Ooreedoo"]
     .map((name) => makeProject(name, "Metaverse Maze", "Maze environment and 3D production support", "Partner studio cooperation", {
       description: "Maze environment and realtime 3D production support for a metaverse experience.",
       placeholder: `[Project thumbnail: metaverse maze environment for ${name}]`,
@@ -299,13 +331,65 @@
       technology: "Realtime engine / technology placeholder"
     }));
 
-  const wildRush = [makeProject("Wild Rush", "Game Development", "Avatars and animations", "Partner studio cooperation", {
-    description: "Avatar and animation production support for a metaverse game project.",
-    placeholder: "[Project thumbnail: Wild Rush avatars and animations]",
-    technology: "Character and animation workflow / technology placeholder"
-  })];
+  const customGameProjects = [
+    "OP Games",
+    "SOGA",
+    "Wild Rush",
+    "Wild Rush Turbo",
+    "Naval Battle | Zombie Outbreak | Mech Mayhem",
+    "TrafficCashout | BeatEmUp | MetalSquad"
+  ].map((name) => makeProject(name, "Game Development", "Game prototype and production support", "Project involvement", {
+    description: "Game prototype and production support.",
+    placeholder: `[Project thumbnail: ${name}]`,
+    assetExtension: "jpg",
+    industry: "Game development",
+    technology: "Game engine / technology placeholder"
+  }));
 
-  gameProjects.push(...wildRush);
+  gameProjects.push(...customGameProjects);
+
+  const gameShowcaseProjects = ["Pulse Guys", "Treasure Hunter", "House Builder", "Aquarist"]
+    .map((name) => makeProject(name, "Game Development", "Game development and production support", "Project involvement", {
+      description: "Game development and production support.",
+      placeholder: `[Project thumbnail: ${name}]`,
+      assetExtension: gameAssetExtensions[name] || "jpg",
+      assetFiles: gameAssetFiles[name] || [],
+      industry: "Game development",
+      technology: "Game engine / technology placeholder"
+    }));
+
+  gameProjects.push(...gameShowcaseProjects);
+
+  const productPrototypeProjects = [
+    makeProject("Oferta AR", "Product Prototypes / 3D Models", "Oferta rzeczywistości rozszerzonej", "Solverto", {
+      description: "Doświadczenia AR umieszczają produkt lub koncepcję bezpośrednio w otoczeniu użytkownika. Ułatwiają zrozumienie skali, materiałów i kluczowych funkcji przed zakupem lub wdrożeniem. Przygotowujemy zoptymalizowane modele 3D oraz sposób interakcji dla urządzeń mobilnych i prezentacji.",
+      assetFolder: "assets",
+      assetFiles: ["Site-01.jpg"],
+      industry: "Augmented reality",
+      technology: "Realtime 3D / AR"
+    }),
+    makeProject("Oferta optymalizacji", "Product Prototypes / 3D Models", "Oferta optymalizacji 3D", "Solverto", {
+      description: "Optymalizujemy modele 3D do płynnego działania w aplikacjach czasu rzeczywistego. Geometria, tekstury i materiały są dostosowywane do urządzenia docelowego oraz budżetu wydajnościowego. Efektem jest szybsze ładowanie i spójna jakość wizualna.",
+      assetFolder: "assets",
+      assetFiles: ["Site-02.jpg"],
+      industry: "3D optimization",
+      technology: "Realtime 3D optimization"
+    }),
+    makeProject("Oferta architektury", "Product Prototypes / 3D Models", "Oferta architektury", "Solverto", {
+      description: "Przekształcamy modele architektoniczne w czytelne, interaktywne prezentacje. Doświadczenie wspiera przeglądy projektowe, rozmowy sprzedażowe i decyzje interesariuszy. Może łączyć kontekst budynku, materiały, warianty oraz nawigację.",
+      assetFolder: "assets",
+      assetFiles: ["Site-03.jpg"],
+      industry: "Architecture and real estate",
+      technology: "Realtime 3D visualization"
+    }),
+    makeProject("Oferta VR", "Product Prototypes / 3D Models", "Oferta rzeczywistości wirtualnej", "Solverto", {
+      description: "Tworzymy immersyjne doświadczenia VR do szkoleń, prezentacji i eksploracji. Użytkownicy mogą zrozumieć przestrzeń, procesy oraz interakcje z produktem w praktycznej skali. Rozwiązanie projektujemy pod konkretne urządzenie, odbiorców i cel wdrożenia.",
+      assetFolder: "assets",
+      assetFiles: ["site-04.jpg"],
+      industry: "Virtual reality",
+      technology: "Realtime 3D / VR"
+    })
+  ];
 
   const solvertoGames = [
     makeProject("Tarvos Desolation", "Original Game / Work in Progress", "Current Solverto Games project", "Solverto Games", {
@@ -370,6 +454,14 @@
       projects: squarebytesProjects
     },
     {
+      id: "product-prototypes",
+      filter: "product",
+      title: "Product Prototypes / 3D Models",
+      intro: "Interactive product, architecture, AR and VR offers supported by optimized realtime 3D content.",
+      heroImage: "assets/Site-01.jpg",
+      projects: productPrototypeProjects
+    },
+    {
       id: "game-development",
       filter: "games",
       title: "Game Development",
@@ -406,7 +498,8 @@
       project.filter = group.filter;
       project.group = group.title;
       project.assetFolder ||= architectureAssetFolders[project.name] || gameAssetFolders[project.name] || metaverseAssetFolders[project.name] || "";
-      project.assetExtension = architectureAssetExtensions[project.name] || project.assetExtension;
+      project.assetExtension = architectureAssetExtensions[project.name] || gameAssetExtensions[project.name] || project.assetExtension;
+      project.assetFiles = architectureAssetFiles[project.name] || gameAssetFiles[project.name] || project.assetFiles;
     });
   });
 
@@ -441,7 +534,8 @@
   featured.forEach((project, index) => {
     project.id = `featured-${index + 1}`;
     project.assetFolder ||= architectureAssetFolders[project.name] || gameAssetFolders[project.name] || metaverseAssetFolders[project.name] || "";
-    project.assetExtension = architectureAssetExtensions[project.name] || project.assetExtension;
+    project.assetExtension = architectureAssetExtensions[project.name] || gameAssetExtensions[project.name] || project.assetExtension;
+    project.assetFiles = architectureAssetFiles[project.name] || gameAssetFiles[project.name] || project.assetFiles;
   });
 
   const legacyLargeScale = [
@@ -488,7 +582,7 @@
       departmentTitle: "Game Development",
       group: "Selected work"
     }),
-    selectedProject("HotelFive", {
+    selectedProject("Hotel Five", {
       id: "selected-work-3",
       name: "Hotel Five",
       category: "Digital Twin",
@@ -497,9 +591,9 @@
       departmentTitle: "Digital Twin",
       group: "Selected work"
     }),
-    selectedProject("OrangeMaze", {
+    selectedProject("Orange", {
       id: "selected-work-4",
-      name: "Orange Maze",
+      name: "Orange",
       category: "Metaverse Maze",
       filter: "metaverse",
       departmentId: "metaverse-mazes",

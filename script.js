@@ -120,8 +120,8 @@ const translationCorrections = {
     "Digital Twin": "Wirtualny bliźniak",
     "Maze": "Labirynty Metaverse",
     "Music Room": "Pokoje Metaverse",
-    "Pulse Guys": "Poziomy do gry Pulse Guys",
-    "Treasure Hunter": "Poziomy do Treasure Hunter Metaverse",
+    "Pulse Guys": "Pulse Guys",
+    "Treasure Hunter": "Treasure Hunter",
     "Solverto Games": "Elementy do gier Solverto Games",
     "Music Room / Metaverse": "Pokój muzyczny / Metaverse",
     "Treasure Hunter / Metaverse Game Area": "Treasure Hunter / obszar gry Metaverse",
@@ -160,8 +160,8 @@ const translationCorrections = {
     "Interactive architecture, property presentations and digital replicas that make spaces and data easier to understand. We contributed to more than 60 projects.": "Interaktywna architektura, prezentacje nieruchomości i cyfrowe odwzorowania, które ułatwiają zrozumienie przestrzeni i danych. Braliśmy udział w realizacji ponad 60 projektów.",
     "Product models, interactive proofs of concept and reusable 3D content for development, sales and communication.": "Modele produktów, interaktywne proof of concept i wielokrotnego użytku treści 3D dla rozwoju produktu, sprzedaży i komunikacji.",
     "Game-ready environments, levels and optimized assets that fit an existing production pipeline.": "Środowiska, poziomy i zoptymalizowane elementy gotowe do użycia w istniejącym procesie produkcji gry.",
-    "Playable prototypes, vertical slices, mini-games and complete custom game experiences.": "Grywalne prototypy, vertical slice’y, minigry i kompletne gry tworzone na zamówienie.",
-    "Themed metaverse locations, social spaces, mazes and gameplay areas designed for exploration.": "Tematyczne lokacje Metaverse, przestrzenie społecznościowe, labirynty i obszary rozgrywki stworzone do eksploracji.",
+    "We delivered and collaborated on the implementation of more than 130 playable prototypes, vertical slices, mini-games and complete custom games.": "Wykonaliśmy i współpracowaliśmy przy wdrożeniu ponad 130 grywalnych prototypów, vertical slice’ów, minigier oraz kompletnych gier tworzonych na zamówienie.",
+    "We delivered and collaborated on the implementation of more than 25 themed metaverse locations, social spaces, mazes and gameplay areas designed for exploration.": "Wykonaliśmy i współpracowaliśmy przy wdrożeniu ponad 25 tematycznych lokacjach Metaverse, przestrzeniach społecznościowych, labirynty i obszary rozgrywki stworzone do eksploracji.",
     "Animation, film editing, trailers and optimized avatars for games, products and interactive experiences.": "Animacje, montaż filmów, trailery i zoptymalizowane avatary dla gier, produktów oraz interaktywnych doświadczeń.",
     "Area of collaboration": "Obszar współpracy",
     "Tell us about your project": "Opowiedz nam o projekcie",
@@ -508,6 +508,7 @@ function projectMediaMarkup(project, index = 1, options = {}) {
 function projectCardMarkup(project, headingLevel = 3, options = {}) {
   const partner = project.partner || "Solverto project";
   const projectGroup = options.groupId || project.groupId || "";
+  const showMore = options.showMore !== false;
   const isArchitectureProject = project.category === "Architecture / Realtime Real Estate";
   const projectDetails = isArchitectureProject
     ? `<p class="project-meta"><span>${escapeHtml(translatedText("Final client"))}</span>${escapeHtml(project.finalClient || partner)}${project.country ? ` · ${escapeHtml(project.country)}` : ""}</p>
@@ -523,7 +524,7 @@ function projectCardMarkup(project, headingLevel = 3, options = {}) {
         <h${headingLevel}>${escapeHtml(project.name)}</h${headingLevel}>
         ${projectDetails}
         ${isArchitectureProject ? "" : `<p>${escapeHtml(project.description || "Production support within a realtime 3D or interactive project workflow.")}</p>`}
-        <a class="button button-secondary button-small" href="${projectUrl(project)}">More</a>
+        ${showMore ? `<a class="button button-secondary button-small" href="${projectUrl(project)}">More</a>` : ""}
       </div>
     </article>`;
 }
@@ -552,7 +553,7 @@ const serviceCatalog = [
       ["BIM/CAD optimization", "Technical models cleaned, structured and optimized for reliable realtime use."],
       ["Interactive sales tools", "Views, variants, filters and guided journeys designed around customer decisions."]
     ],
-    projectRefs: [["architecture", "Zenit"], ["architecture", "Jeziorna"], ["architecture", "Ryżowa"], ["architecture", "Bertone Le Moden"], ["music-rooms", "India"], ["digital-twin", "HotelFive"], ["music-rooms", "Tunisia"], ["digital-twin", "Casino"], ["digital-twin", "Cove Beach"]]
+    projectRefs: [["architecture", "Zenit"], ["architecture", "Jeziorna"], ["architecture", "Ryżowa"], ["architecture", "Bertone Le Moden"], ["music-rooms", "India"], ["digital-twin", "Hotel Five"], ["music-rooms", "Tunisia"], ["digital-twin", "Casino"], ["digital-twin", "Cove Beach"]]
   },
   {
     id: "product-prototypes-3d-models",
@@ -568,7 +569,7 @@ const serviceCatalog = [
       ["Configurator and showroom", "Interactive product choices, camera states and presentation flows for customers or sales teams."],
       ["Reusable content pipeline", "One organized 3D source prepared for stills, animation, realtime and future iterations."]
     ],
-    projectRefs: []
+    projectRefs: [["product-prototypes", "Oferta AR"], ["product-prototypes", "Oferta optymalizacji"], ["product-prototypes", "Oferta architektury"], ["product-prototypes", "Oferta VR"]]
   },
   {
     id: "game-assets-levels",
@@ -584,13 +585,13 @@ const serviceCatalog = [
       ["Technical art support", "Materials, LODs, collisions, profiling and asset cleanup for the target engine."],
       ["Production reinforcement", "A focused external team for a milestone, vertical slice or content-heavy production stage."]
     ],
-    projectRefs: [["game-development", "Bamboo House"], ["game-development", "Arabic House"], ["game-development", "Underwater House"], ["game-development", "Underwater Ruin"], ["game-development", "Underwater Egyptian Ruin"], ["game-development", "Japanese Garden"]]
+    projectRefs: [["solverto-games", "Medieval Machines Builder"], ["solverto-games", "Painter Simulator"], ["game-development", "Pulse Guys"], ["game-development", "Treasure Hunter"], ["game-development", "House Builder"], ["game-development", "Aquarist"]]
   },
   {
     id: "game-prototypes-custom-games",
     title: "Game Prototypes | Custom Games",
     image: "metaverse/pulse-guys/hero-pulse-guys.jpg",
-    description: "Playable prototypes, vertical slices, mini-games and complete custom game experiences.",
+    description: "We delivered and collaborated on the implementation of more than 130 playable prototypes, vertical slices, mini-games and complete custom games.",
     lead: "We help turn a game idea, campaign concept or training goal into something playable — first as a focused prototype, then as a production-ready scope.",
     valueTitle: "Test the fun, technology and production risk with a working build.",
     value: "A playable prototype makes decisions easier than a long document. We focus on the core loop, the feeling of interaction and the technical unknowns, then provide a clear basis for further development or full production.",
@@ -600,13 +601,13 @@ const serviceCatalog = [
       ["Branded mini-game", "A compact game experience for a campaign, event, community or web platform."],
       ["Custom game production", "Design, development, 3D content and delivery organized around an agreed scope."]
     ],
-    projectRefs: [["solverto-games", "Tarvos Desolation"], ["solverto-games", "Medieval Machines Builder"], ["solverto-games", "Painter Simulator"], ["solverto-games", "OP Games - Arca Plane"], ["solverto-games", "OP Games - Arca Archer"], ["solverto-games", "Kroc and Roll"]]
+    projectRefs: [["game-development", "OP Games"], ["game-development", "SOGA"], ["game-development", "Wild Rush"], ["game-development", "Wild Rush Turbo"], ["game-development", "Naval Battle | Zombie Outbreak | Mech Mayhem"], ["game-development", "TrafficCashout | BeatEmUp | MetalSquad"]]
   },
   {
     id: "metaverse-mazes",
     title: "Metaverse | Mazes",
     image: "metaverse/music-rooms/hero-pokoje-metaverse.jpg",
-    description: "Themed metaverse locations, social spaces, mazes and gameplay areas designed for exploration.",
+    description: "We delivered and collaborated on the implementation of more than 25 themed metaverse locations, social spaces, mazes and gameplay areas designed for exploration.",
     lead: "We build recognizable, efficient realtime worlds that combine a strong visual theme with navigation, interaction and gameplay requirements.",
     valueTitle: "Give users a place worth exploring — and a reason to return.",
     value: "We support platform owners, agencies and game teams with complete themed environments or defined location packages. The work can cover concept development, 3D production, level construction, optimization and implementation support.",
@@ -616,7 +617,7 @@ const serviceCatalog = [
       ["Gameplay area", "Locations built around movement, collection, competition or another defined interaction loop."],
       ["Ongoing content production", "A repeatable pipeline for seasonal variants, new rooms and additional levels."]
     ],
-    projectRefs: [["metaverse-mazes", "OrangeMaze"], ["metaverse-mazes", "OoredooMaze"], ["music-rooms", "India"], ["pulse-guys", "ChocolateFactory"], ["pulse-guys", "Halloween"], ["treasure-hunter", "MafEventDeira"], ["metaverse-mazes", "CardsMaze"], ["metaverse-mazes", "GrassMaze"], ["metaverse-mazes", "CheeseMaze"], ["metaverse-mazes", "CandyMaze"], ["metaverse-mazes", "BackToSchoolMaze"], ["treasure-hunter", "AmusementPark"]]
+    projectRefs: [["metaverse-mazes", "Ooreedoo"], ["metaverse-mazes", "Orange"], ["music-rooms", "Entoto"], ["music-rooms", "Ivory Coast"], ["metaverse-mazes", "Secret Garden"], ["metaverse-mazes", "Candy Land"], ["music-rooms", "Latino Party"], ["music-rooms", "Rock Pub"], ["music-rooms", "Country"]]
   },
   {
     id: "animation-film-trailers-avatars",
@@ -632,12 +633,41 @@ const serviceCatalog = [
       ["Realtime avatars", "Character preparation, optimization, materials and animation for interactive platforms."],
       ["Production support", "A defined animation, editing or asset task integrated with an existing team and pipeline."]
     ],
-    projectRefs: [["support", "Avatars - Optimization"], ["support", "Animation work for investment projects"], ["support", "Urzecze"], ["support", "Solea"]]
+    projectRefs: [["support", "Avatars - Optimization"]],
+    videosFirst: true,
+    youtubeVideos: [
+      {
+        id: "44LEhVFH5JY",
+        title: "Painter Simulator — Release Trailer",
+        description: "Trailer prezentujący wersję demonstracyjną Painter Simulator na platformie Steam. Materiał pokazuje charakter gry, jej oprawę oraz najważniejsze elementy rozgrywki. To przykład przygotowania komunikacji wideo wspierającej premierę projektu."
+      },
+      {
+        id: "caXv4VZl-jM",
+        title: "Painter Simulator — Steam Next Fest",
+        description: "Gameplay trailer przygotowany na potrzeby wydarzenia Steam Next Fest. Film przedstawia mechaniki malowania, interakcję z otoczeniem i różnorodność dostępnych zadań. Dynamiczny montaż pozwala szybko zrozumieć główne założenia gry."
+      },
+      {
+        id: "bxeDKo2AGZc",
+        title: "Proster",
+        description: "Materiał wideo prezentujący projekt Proster. Film łączy czytelną prezentację projektu z dopasowanym tempem montażu i oprawą wizualną. Pokazuje nasze doświadczenie w przygotowywaniu materiałów promocyjnych i prezentacyjnych."
+      },
+      {
+        id: "O4t9RtPKd3A",
+        title: "Tarvos Desolation — Official Demo Trailer",
+        description: "Oficjalny trailer wersji demonstracyjnej Tarvos Desolation. Materiał buduje klimat science-fiction i horroru, prezentując świat, zagrożenia oraz fragmenty rozgrywki. Montaż i narracja wizualna podkreślają atmosferę oraz najważniejsze cechy projektu."
+      }
+    ]
   }
 ];
 
 function findPortfolioProject(groupId, projectName) {
   return portfolioData?.groups.find((group) => group.id === groupId)?.projects.find((project) => project.name === projectName);
+}
+
+function youtubeVideoPanelMarkup(video) {
+  const safeVideoId = escapeHtml(video.id);
+  const label = selectedLanguage === "pl" ? "Odtwórz film" : "Play video";
+  return `<article class="youtube-video-panel reveal"><button class="youtube-video-link" type="button" data-youtube-video="${safeVideoId}" data-youtube-title="${escapeHtml(video.title)}" aria-label="${escapeHtml(`${label}: ${video.title}`)}"><img src="https://i.ytimg.com/vi/${safeVideoId}/hqdefault.jpg" alt="" loading="lazy" decoding="async" data-no-lightbox /><span class="youtube-video-play" aria-hidden="true">▶</span><span class="youtube-video-label">${escapeHtml(label)}</span></button><div class="youtube-video-copy"><h3>${escapeHtml(video.title)}</h3><p>${escapeHtml(video.description)}</p></div></article>`;
 }
 
 function renderServicePage(root = document, pageUrl = window.location.href) {
@@ -671,10 +701,17 @@ function renderServicePage(root = document, pageUrl = window.location.href) {
     <article class="service-capability reveal"><span>${String(index + 1).padStart(2, "0")}</span><h3>${escapeHtml(title)}</h3><p>${escapeHtml(description)}</p></article>`).join("");
 
   const projects = service.projectRefs.map(([groupId, projectName]) => ({ project: findPortfolioProject(groupId, projectName), groupId })).filter((item) => item.project);
+  const youtubeVideos = service.youtubeVideos || [];
   const workSection = serviceRoot.querySelector(".service-work-section");
-  if (workSection) workSection.style.display = projects.length ? "" : "none";
+  if (workSection) workSection.style.display = projects.length || youtubeVideos.length ? "" : "none";
   const projectGrid = serviceRoot.querySelector("[data-service-projects]");
-  if (projectGrid) projectGrid.innerHTML = projects.map(({ project, groupId }) => projectCardMarkup(project, 3, { groupId })).join("");
+  if (projectGrid) {
+    const productOffers = service.id === "product-prototypes-3d-models";
+    projectGrid.classList.toggle("product-offer-grid", productOffers);
+    const projectMarkup = projects.map(({ project, groupId }) => projectCardMarkup(project, 3, { groupId, showMore: !productOffers })).join("");
+    const videoMarkup = youtubeVideos.map(youtubeVideoPanelMarkup).join("");
+    projectGrid.innerHTML = service.videosFirst ? videoMarkup + projectMarkup : projectMarkup + videoMarkup;
+  }
 
   if (root === document) {
     document.title = `${service.title} — Solverto`;
@@ -990,7 +1027,7 @@ function renderProjectDetail(root = document, pageUrl = window.location.href) {
   const gallery = detailRoot.querySelector("[data-detail-gallery]");
   if (gallery) {
     if (project.assetFolder) {
-      const mediaCount = project.assetFiles?.length || 6;
+      const mediaCount = Math.min(project.assetFiles?.length || 6, 6);
       gallery.innerHTML = Array.from({ length: mediaCount }, (_, index) => projectMediaMarkup(project, index + 1, { className: "reveal" })).join("");
     } else {
       const labels = [
@@ -1564,6 +1601,81 @@ function initializeLightbox() {
 }
 
 initializeLightbox();
+
+function initializeYoutubeVideoModal() {
+  const modal = document.createElement("div");
+  modal.className = "lightbox youtube-player-modal";
+  modal.hidden = true;
+  modal.innerHTML = `
+    <div class="lightbox-backdrop" data-youtube-close></div>
+    <div class="youtube-player-dialog" role="dialog" aria-modal="true" aria-label="YouTube video player">
+      <button class="lightbox-close" type="button" data-youtube-close><span aria-hidden="true">×</span></button>
+      <iframe title="" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div class="youtube-player-fallback" data-youtube-fallback hidden>
+        <p>Odtwarzanie filmu w oknie wymaga uruchomienia strony przez adres HTTP lub HTTPS.</p>
+        <a class="button button-primary" data-youtube-fallback-link target="_blank" rel="noopener">Obejrzyj film na YouTube</a>
+      </div>
+    </div>`;
+  document.body.append(modal);
+
+  const iframe = modal.querySelector("iframe");
+  const closeButton = modal.querySelector(".lightbox-close");
+  const fallback = modal.querySelector("[data-youtube-fallback]");
+  const fallbackLink = modal.querySelector("[data-youtube-fallback-link]");
+  let previousFocus = null;
+
+  const close = () => {
+    if (modal.hidden) return;
+    modal.hidden = true;
+    iframe.src = "about:blank";
+    iframe.hidden = false;
+    fallback.hidden = true;
+    document.body.classList.remove("lightbox-open");
+    if (previousFocus instanceof HTMLElement && previousFocus.isConnected) previousFocus.focus();
+  };
+
+  const open = (trigger) => {
+    const videoId = trigger.dataset.youtubeVideo;
+    if (!videoId) return;
+    const title = trigger.dataset.youtubeTitle || "YouTube video";
+    iframe.title = title;
+    if (/^https?:$/.test(window.location.protocol)) {
+      const origin = encodeURIComponent(window.location.origin);
+      iframe.hidden = false;
+      fallback.hidden = true;
+      iframe.src = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?autoplay=1&rel=0&origin=${origin}&widget_referrer=${origin}`;
+    } else {
+      iframe.hidden = true;
+      iframe.src = "about:blank";
+      fallback.hidden = false;
+      fallbackLink.href = `https://www.youtube.com/watch?v=${encodeURIComponent(videoId)}`;
+    }
+    previousFocus = trigger;
+    closeButton.setAttribute("aria-label", selectedLanguage === "pl" ? "Zamknij film" : "Close video");
+    modal.hidden = false;
+    document.body.classList.add("lightbox-open");
+    closeButton.focus();
+  };
+
+  document.addEventListener("click", (event) => {
+    const trigger = event.target.closest("[data-youtube-video]");
+    if (trigger) open(trigger);
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target.closest("[data-youtube-close]")) close();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (!modal.hidden && event.key === "Escape") {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      close();
+    }
+  }, true);
+}
+
+initializeYoutubeVideoModal();
 
 function closeNavigation() {
   document.body.classList.remove("nav-open");

@@ -3176,6 +3176,147 @@ textarea {
   aspect-ratio: 16 / 10;
 }
 
+.youtube-video-panel {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--brand-border);
+  border-radius: 20px;
+  background: var(--brand-surface-2);
+  box-shadow: var(--shadow-soft);
+}
+
+.youtube-video-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  color: var(--brand-light);
+  background: transparent;
+  cursor: pointer;
+  text-align: inherit;
+}
+
+.youtube-video-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 220ms ease, filter 220ms ease;
+}
+
+.youtube-video-link:hover img,
+.youtube-video-link:focus-visible img {
+  transform: scale(1.025);
+  filter: brightness(0.72);
+}
+
+.youtube-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 64px;
+  height: 46px;
+  place-items: center;
+  border-radius: 12px;
+  background: #ff0033;
+  color: #fff;
+  font-size: 1.35rem;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.youtube-video-label {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  left: 14px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.youtube-video-copy {
+  padding: 20px;
+}
+
+.youtube-video-copy h3 {
+  margin-bottom: 10px;
+}
+
+.youtube-video-copy p {
+  margin: 0;
+  color: var(--brand-muted);
+}
+
+.youtube-player-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, calc(100vw - 36px));
+  border: 1px solid rgba(45, 191, 232, 0.42);
+  border-radius: var(--radius);
+  padding: 64px 18px 18px;
+  background: #080b0f;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.72);
+}
+
+.youtube-player-dialog iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 12px;
+  background: #000;
+}
+
+.youtube-player-fallback {
+  display: grid;
+  min-height: min(62vh, 620px);
+  place-content: center;
+  justify-items: center;
+  gap: 22px;
+  padding: 32px;
+  text-align: center;
+}
+
+.youtube-player-fallback[hidden] {
+  display: none;
+}
+
+.youtube-player-fallback p {
+  max-width: 560px;
+  margin: 0;
+  color: var(--brand-light);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+@media (max-width: 679px) {
+  .youtube-player-modal {
+    padding: 8px;
+  }
+
+  .youtube-player-dialog {
+    width: calc(100vw - 16px);
+    padding: 58px 8px 8px;
+  }
+}
+
+.service-project-grid.product-offer-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 679px) {
+  .service-project-grid.product-offer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Full-screen bottom sheet navigation */
 
 .home-panel-dialog {
