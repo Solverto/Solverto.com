@@ -552,7 +552,7 @@ const serviceCatalog = [
       ["BIM/CAD optimization", "Technical models cleaned, structured and optimized for reliable realtime use."],
       ["Interactive sales tools", "Views, variants, filters and guided journeys designed around customer decisions."]
     ],
-    projectRefs: [["architecture", "Jeziorna"], ["architecture", "Zenit"], ["architecture", "29L"], ["digital-twin", "HotelFive"], ["digital-twin", "Casino"], ["digital-twin", "Cove Beach"], ["architecture", "Bertone Le Moden"], ["architecture", "Ryżowa"], ["architecture", "Anny German / Sady Żoliborz"]]
+    projectRefs: [["architecture", "Zenit"], ["architecture", "Jeziorna"], ["architecture", "Ryżowa"], ["architecture", "Bertone Le Moden"], ["music-rooms", "India"], ["digital-twin", "HotelFive"], ["music-rooms", "Tunisia"], ["digital-twin", "Casino"], ["digital-twin", "Cove Beach"]]
   },
   {
     id: "product-prototypes-3d-models",
