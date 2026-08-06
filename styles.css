@@ -3255,6 +3255,19 @@ textarea {
   color: var(--brand-muted);
 }
 
+.youtube-video-copy .project-badge {
+  margin-bottom: 10px;
+  color: var(--brand-primary);
+}
+
+.youtube-video-copy .project-meta {
+  margin-bottom: 10px;
+}
+
+.youtube-video-copy .youtube-video-description {
+  margin-top: 16px;
+}
+
 .youtube-player-dialog {
   position: relative;
   z-index: 1;

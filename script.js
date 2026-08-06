@@ -639,21 +639,33 @@ const serviceCatalog = [
       {
         id: "44LEhVFH5JY",
         title: "Painter Simulator — Release Trailer",
+        category: "Game Trailer / Video",
+        partner: "Solverto Studio",
+        role: "Trailer editing and promotional video production",
         description: "Trailer prezentujący wersję demonstracyjną Painter Simulator na platformie Steam. Materiał pokazuje charakter gry, jej oprawę oraz najważniejsze elementy rozgrywki. To przykład przygotowania komunikacji wideo wspierającej premierę projektu."
       },
       {
         id: "caXv4VZl-jM",
         title: "Painter Simulator — Steam Next Fest",
+        category: "Game Trailer / Video",
+        partner: "FreeMind",
+        role: "Gameplay trailer editing and promotional support",
         description: "Gameplay trailer przygotowany na potrzeby wydarzenia Steam Next Fest. Film przedstawia mechaniki malowania, interakcję z otoczeniem i różnorodność dostępnych zadań. Dynamiczny montaż pozwala szybko zrozumieć główne założenia gry."
       },
       {
         id: "bxeDKo2AGZc",
         title: "Proster",
+        category: "Animation / Presentation",
+        partner: "Solverto production support",
+        role: "Animation, presentation and video editing support",
         description: "Materiał wideo prezentujący projekt Proster. Film łączy czytelną prezentację projektu z dopasowanym tempem montażu i oprawą wizualną. Pokazuje nasze doświadczenie w przygotowywaniu materiałów promocyjnych i prezentacyjnych."
       },
       {
         id: "O4t9RtPKd3A",
         title: "Tarvos Desolation — Official Demo Trailer",
+        category: "Game Trailer / Video",
+        partner: "Tarvos Desolation",
+        role: "Official demo trailer production and editing",
         description: "Oficjalny trailer wersji demonstracyjnej Tarvos Desolation. Materiał buduje klimat science-fiction i horroru, prezentując świat, zagrożenia oraz fragmenty rozgrywki. Montaż i narracja wizualna podkreślają atmosferę oraz najważniejsze cechy projektu."
       }
     ]
@@ -667,7 +679,7 @@ function findPortfolioProject(groupId, projectName) {
 function youtubeVideoPanelMarkup(video) {
   const safeVideoId = escapeHtml(video.id);
   const label = selectedLanguage === "pl" ? "Odtwórz film" : "Play video";
-  return `<article class="youtube-video-panel reveal"><button class="youtube-video-link" type="button" data-youtube-video="${safeVideoId}" data-youtube-title="${escapeHtml(video.title)}" aria-label="${escapeHtml(`${label}: ${video.title}`)}"><img src="https://i.ytimg.com/vi/${safeVideoId}/hqdefault.jpg" alt="" loading="lazy" decoding="async" data-no-lightbox /><span class="youtube-video-play" aria-hidden="true">▶</span><span class="youtube-video-label">${escapeHtml(label)}</span></button><div class="youtube-video-copy"><h3>${escapeHtml(video.title)}</h3><p>${escapeHtml(video.description)}</p></div></article>`;
+  return `<article class="youtube-video-panel reveal"><button class="youtube-video-link" type="button" data-youtube-video="${safeVideoId}" data-youtube-title="${escapeHtml(video.title)}" aria-label="${escapeHtml(`${label}: ${video.title}`)}"><img src="https://i.ytimg.com/vi/${safeVideoId}/hqdefault.jpg" alt="" loading="lazy" decoding="async" data-no-lightbox /><span class="youtube-video-play" aria-hidden="true">▶</span><span class="youtube-video-label">${escapeHtml(label)}</span></button><div class="youtube-video-copy"><p class="project-badge">${escapeHtml(video.category)}</p><h3>${escapeHtml(video.title)}</h3><p class="project-meta"><span>${escapeHtml(translatedText("Client / Partner"))}</span>${escapeHtml(video.partner)}</p><p class="project-meta"><span>${escapeHtml(translatedText("Role"))}</span>${escapeHtml(video.role)}</p><p class="youtube-video-description">${escapeHtml(video.description)}</p></div></article>`;
 }
 
 function renderServicePage(root = document, pageUrl = window.location.href) {
