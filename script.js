@@ -569,7 +569,7 @@ const serviceCatalog = [
       ["Configurator and showroom", "Interactive product choices, camera states and presentation flows for customers or sales teams."],
       ["Reusable content pipeline", "One organized 3D source prepared for stills, animation, realtime and future iterations."]
     ],
-    projectRefs: [["product-prototypes", "Oferta AR"], ["product-prototypes", "Oferta optymalizacji"], ["product-prototypes", "Oferta architektury"], ["product-prototypes", "Oferta VR"]]
+    projectRefs: [["product-prototypes", "AR"], ["product-prototypes", "Optymalizacja"], ["product-prototypes", "Architektura"], ["product-prototypes", "VR"]]
   },
   {
     id: "game-assets-levels",
@@ -651,14 +651,6 @@ const serviceCatalog = [
         partner: "FreeMind",
         role: "Gameplay trailer editing and promotional support",
         description: "Gameplay trailer przygotowany na potrzeby wydarzenia Steam Next Fest. Film przedstawia mechaniki malowania, interakcję z otoczeniem i różnorodność dostępnych zadań. Dynamiczny montaż pozwala szybko zrozumieć główne założenia gry."
-      },
-      {
-        id: "bxeDKo2AGZc",
-        title: "Proster",
-        category: "Animation / Presentation",
-        partner: "Solverto production support",
-        role: "Animation, presentation and video editing support",
-        description: "Materiał wideo prezentujący projekt Proster. Film łączy czytelną prezentację projektu z dopasowanym tempem montażu i oprawą wizualną. Pokazuje nasze doświadczenie w przygotowywaniu materiałów promocyjnych i prezentacyjnych."
       },
       {
         id: "O4t9RtPKd3A",

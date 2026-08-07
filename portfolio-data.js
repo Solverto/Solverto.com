@@ -361,28 +361,28 @@
   gameProjects.push(...gameShowcaseProjects);
 
   const productPrototypeProjects = [
-    makeProject("Oferta AR", "Product Prototypes / 3D Models", "Oferta rzeczywistości rozszerzonej", "Solverto", {
+    makeProject("AR", "Product Prototypes / 3D Models", "Oferta rzeczywistości rozszerzonej", "Solverto", {
       description: "Doświadczenia AR umieszczają produkt lub koncepcję bezpośrednio w otoczeniu użytkownika. Ułatwiają zrozumienie skali, materiałów i kluczowych funkcji przed zakupem lub wdrożeniem. Przygotowujemy zoptymalizowane modele 3D oraz sposób interakcji dla urządzeń mobilnych i prezentacji.",
       assetFolder: "assets",
       assetFiles: ["Site-01.jpg"],
       industry: "Augmented reality",
       technology: "Realtime 3D / AR"
     }),
-    makeProject("Oferta optymalizacji", "Product Prototypes / 3D Models", "Oferta optymalizacji 3D", "Solverto", {
+    makeProject("Optymalizacja", "Product Prototypes / 3D Models", "Oferta optymalizacji 3D", "Solverto", {
       description: "Optymalizujemy modele 3D do płynnego działania w aplikacjach czasu rzeczywistego. Geometria, tekstury i materiały są dostosowywane do urządzenia docelowego oraz budżetu wydajnościowego. Efektem jest szybsze ładowanie i spójna jakość wizualna.",
       assetFolder: "assets",
       assetFiles: ["Site-02.jpg"],
       industry: "3D optimization",
       technology: "Realtime 3D optimization"
     }),
-    makeProject("Oferta architektury", "Product Prototypes / 3D Models", "Oferta architektury", "Solverto", {
+    makeProject("Architektura", "Product Prototypes / 3D Models", "Oferta architektury", "Solverto", {
       description: "Przekształcamy modele architektoniczne w czytelne, interaktywne prezentacje. Doświadczenie wspiera przeglądy projektowe, rozmowy sprzedażowe i decyzje interesariuszy. Może łączyć kontekst budynku, materiały, warianty oraz nawigację.",
       assetFolder: "assets",
       assetFiles: ["Site-03.jpg"],
       industry: "Architecture and real estate",
       technology: "Realtime 3D visualization"
     }),
-    makeProject("Oferta VR", "Product Prototypes / 3D Models", "Oferta rzeczywistości wirtualnej", "Solverto", {
+    makeProject("VR", "Product Prototypes / 3D Models", "Oferta rzeczywistości wirtualnej", "Solverto", {
       description: "Tworzymy immersyjne doświadczenia VR do szkoleń, prezentacji i eksploracji. Użytkownicy mogą zrozumieć przestrzeń, procesy oraz interakcje z produktem w praktycznej skali. Rozwiązanie projektujemy pod konkretne urządzenie, odbiorców i cel wdrożenia.",
       assetFolder: "assets",
       assetFiles: ["site-04.jpg"],
