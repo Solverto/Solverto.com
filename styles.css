@@ -2947,7 +2947,7 @@ textarea {
 
 .offer-card-media {
   position: absolute;
-  z-index: -2;
+  z-index: 0;
   inset: 0;
   aspect-ratio: auto;
   border: 0;
@@ -2960,7 +2960,7 @@ textarea {
 
 .offer-card-overlay {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   inset: 0;
   background:
     linear-gradient(180deg, rgba(7, 17, 31, 0.04) 14%, rgba(7, 17, 31, 0.45) 48%, rgba(7, 17, 31, 0.98) 92%),
@@ -2968,6 +2968,8 @@ textarea {
 }
 
 .offer-card-body {
+  position: relative;
+  z-index: 2;
   width: 100%;
   display: grid;
   gap: 11px;
