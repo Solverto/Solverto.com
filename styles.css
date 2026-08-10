@@ -3398,6 +3398,13 @@ textarea {
   text-transform: uppercase;
 }
 
+.home-panel-toolbar-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-self: end;
+  gap: 8px;
+}
+
 .home-panel-back,
 .home-panel-close {
   position: static;
@@ -3452,6 +3459,14 @@ textarea {
 
 .home-panel-content > main {
   min-height: 100%;
+}
+
+.home-panel-content > .privacy-panel-frame {
+  display: block;
+  width: 100%;
+  min-height: calc(100svh - 72px);
+  border: 0;
+  background: var(--brand-dark);
 }
 
 .home-panel-content > .container {

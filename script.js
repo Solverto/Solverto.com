@@ -7,6 +7,7 @@ const supplementalTranslations = window.SOLVERTO_TRANSLATIONS || {};
 const textLanguageSources = new WeakMap();
 const attributeLanguageSources = new WeakMap();
 let revealObserver = null;
+let homePanelsInitialized = false;
 
 function registerRevealItems(root = document) {
   const items = [];
@@ -760,7 +761,12 @@ function addLanguageSelector() {
       window.location.href = privacyPageForLanguage();
       return;
     }
-    window.location.reload();
+    const languageChange = new CustomEvent("solverto-language-changed", {
+      cancelable: true,
+      detail: { language: selectedLanguage }
+    });
+    document.dispatchEvent(languageChange);
+    if (!languageChange.defaultPrevented) window.location.reload();
   });
 }
 
@@ -1511,6 +1517,8 @@ function renderProjectDetail(root = document, pageUrl = window.location.href) {
 }
 
 function initializeHomePanels() {
+  if (homePanelsInitialized) return;
+  homePanelsInitialized = true;
   const sourceElements = [...document.querySelectorAll("[data-home-panel-source]")];
   const sources = new Map(sourceElements.map((source) => [source.dataset.homePanelSource, source]));
   const panel = document.createElement("div");
@@ -1523,7 +1531,7 @@ function initializeHomePanels() {
       <div class="home-panel-toolbar">
         <button class="home-panel-back" type="button" data-home-panel-back hidden><span aria-hidden="true">←</span><span>Back</span></button>
         <span class="home-panel-toolbar-label">Solverto</span>
-        <button class="home-panel-close" type="button" data-home-panel-close><span aria-hidden="true">×</span></button>
+        <div class="home-panel-toolbar-actions"><button class="home-panel-close" type="button" data-home-panel-close><span aria-hidden="true">×</span></button></div>
       </div>
       <div class="home-panel-content" data-home-panel-content></div>
     </section>`;
@@ -1542,6 +1550,10 @@ function initializeHomePanels() {
   const updatePanelToolbar = () => {
     backButton.hidden = panelStack.length < 2;
     backButton.setAttribute("aria-label", translatedText("Back"));
+  };
+
+  const updatePanelCloseLabel = () => {
+    closeButton.setAttribute("aria-label", (lightboxLabels[selectedLanguage] || lightboxLabels.en).close);
   };
 
   const cancelPanelAnimation = () => {
@@ -1622,7 +1634,7 @@ function initializeHomePanels() {
     panel.setAttribute("aria-hidden", "false");
     dialog.scrollTop = 0;
     document.body.classList.add("home-panel-open");
-    closeButton.setAttribute("aria-label", (lightboxLabels[selectedLanguage] || lightboxLabels.en).close);
+    updatePanelCloseLabel();
 
     const startPanelAnimation = () => {
       cancelPanelAnimation();
@@ -1757,6 +1769,7 @@ function initializeHomePanels() {
       renderServicePage(clone, requestUrl.href);
       renderHomeOfferPanel(clone);
       applyLanguage();
+      updatePanelCloseLabel();
       registerRevealItems(clone);
     } catch {
       if (request !== panelRequest || panel.hidden) return;
@@ -1766,6 +1779,29 @@ function initializeHomePanels() {
       setPanelContent(error, pageName);
     }
   };
+
+  const openPrivacyPanel = (trigger, record = true) => {
+    const privacyUrl = new URL(privacyPageForLanguage(), window.location.href);
+    if (record) panelStack.push({ type: "privacy", href: privacyUrl.href });
+    updatePanelToolbar();
+    if (window.location.protocol === "file:") {
+      panelRequest += 1;
+      const frame = document.createElement("iframe");
+      frame.className = "privacy-panel-frame";
+      frame.title = translatedText("Privacy policy");
+      frame.src = privacyUrl.href;
+      showPanel(frame, translatedText("Privacy policy"), trigger);
+      return;
+    }
+    openPagePanel(privacyUrl, trigger, false);
+  };
+
+  document.addEventListener("solverto-language-changed", (event) => {
+    if (panelStack[panelStack.length - 1]?.type !== "privacy") return;
+    event.preventDefault();
+    applyLanguage();
+    openPrivacyPanel(document.querySelector("[data-language-select]") || closeButton, false);
+  });
 
   const canonicalPageAliases = {
     about: "company.html",
@@ -1783,13 +1819,28 @@ function initializeHomePanels() {
     if (previous.type === "source") openPanel(previous.name, backButton, false);
     else if (previous.type === "service") openServicePanel(previous.serviceId, backButton, false);
     else if (previous.type === "project") openProjectPanel(new URL(previous.href), backButton, false);
+    else if (previous.type === "privacy") openPrivacyPanel(backButton, false);
     else openPagePanel(new URL(previous.href), backButton, false);
   };
 
   document.addEventListener("click", (event) => {
+    const privacyTrigger = event.target.closest("[data-privacy-panel-trigger], a[href='privacy.html'], a[href='privacy-en.html'], a[href='privacy-de.html']");
+    if (privacyTrigger) {
+      event.preventDefault();
+      closeNavigation();
+      openPrivacyPanel(privacyTrigger);
+      return;
+    }
+
     const trigger = event.target.closest("[data-home-panel-trigger]");
     if (trigger) {
-      if (openPanel(trigger.dataset.homePanelTrigger, trigger)) event.preventDefault();
+      if (openPanel(trigger.dataset.homePanelTrigger, trigger)) {
+        event.preventDefault();
+      } else if (trigger.href) {
+        event.preventDefault();
+        closeNavigation();
+        openPagePanel(new URL(trigger.href, window.location.href), trigger);
+      }
       return;
     }
 
@@ -1909,7 +1960,7 @@ function renderSiteFooter() {
       </div>
       <div class="footer-column">
         <h2>Explore</h2>
-        <a href="privacy.html" data-privacy-link>Privacy policy</a>
+        <button class="button button-secondary footer-company-trigger" type="button" data-privacy-panel-trigger>Privacy policy</button>
       </div>
       <div class="footer-column">
         <h2>Contact</h2>
@@ -1930,7 +1981,6 @@ function initializePortfolioFeatures() {
   renderSiteFooter();
   addLanguageSelector();
   applyLanguage();
-  initializeHomePanels();
   initializeContactHelpers();
 
   if (window.location.pathname.endsWith("ai-pipeline.html")) {
@@ -1938,6 +1988,8 @@ function initializePortfolioFeatures() {
     document.querySelectorAll('a[href="ai-pipeline.html"]').forEach((link) => link.textContent = "Technical Art & Production Pipelines");
   }
 }
+
+initializeHomePanels();
 
 if (portfolioData) {
   initializePortfolioFeatures();
