@@ -254,8 +254,8 @@
   const squarebytesProjects = [
     ["Living Point 21. Housing", "Investment modelling and PZT support"],
     ["Leopold Quartier Office", "Project support"],
-    ["Village im Dritten – 11A", "Project support"],
-    ["Village im Dritten – 9B", "Project support"],
+    ["Village im Dritten - 11A", "Project support"],
+    ["Village im Dritten - 9B", "Project support"],
     ["Gmunden", "Investment modelling and PZT support"]
   ].map(([name, role]) => makeProject(
     name,
@@ -361,29 +361,29 @@
   gameProjects.push(...gameShowcaseProjects);
 
   const productPrototypeProjects = [
-    makeProject("AR", "Product Prototypes / 3D Models", "Oferta rzeczywistości rozszerzonej", "Solverto", {
-      description: "Doświadczenia AR umieszczają produkt lub koncepcję bezpośrednio w otoczeniu użytkownika. Ułatwiają zrozumienie skali, materiałów i kluczowych funkcji przed zakupem lub wdrożeniem. Przygotowujemy zoptymalizowane modele 3D oraz sposób interakcji dla urządzeń mobilnych i prezentacji.",
+    makeProject("AR", "Product Prototypes / 3D Models", "Augmented reality offer", "Solverto", {
+      description: "AR experiences place a product or concept directly in the user's surroundings. They make it easier to understand scale, materials and key functions before purchase or implementation. We prepare optimized 3D models and interactions for mobile devices and presentations.",
       assetFolder: "assets",
       assetFiles: ["Site-01.jpg"],
       industry: "Augmented reality",
       technology: "Realtime 3D / AR"
     }),
-    makeProject("Optymalizacja", "Product Prototypes / 3D Models", "Oferta optymalizacji 3D", "Solverto", {
-      description: "Optymalizujemy modele 3D do płynnego działania w aplikacjach czasu rzeczywistego. Geometria, tekstury i materiały są dostosowywane do urządzenia docelowego oraz budżetu wydajnościowego. Efektem jest szybsze ładowanie i spójna jakość wizualna.",
+    makeProject("Optimization", "Product Prototypes / 3D Models", "3D optimization offer", "Solverto", {
+      description: "We optimize 3D models for smooth operation in realtime applications. Geometry, textures and materials are adapted to the target device and performance budget. The result is faster loading and consistent visual quality.",
       assetFolder: "assets",
       assetFiles: ["Site-02.jpg"],
       industry: "3D optimization",
       technology: "Realtime 3D optimization"
     }),
-    makeProject("Architektura", "Product Prototypes / 3D Models", "Oferta architektury", "Solverto", {
-      description: "Przekształcamy modele architektoniczne w czytelne, interaktywne prezentacje. Doświadczenie wspiera przeglądy projektowe, rozmowy sprzedażowe i decyzje interesariuszy. Może łączyć kontekst budynku, materiały, warianty oraz nawigację.",
+    makeProject("Architecture", "Product Prototypes / 3D Models", "Architecture offer", "Solverto", {
+      description: "We transform architectural models into clear interactive presentations. The experience supports design reviews, sales conversations and stakeholder decisions. It can combine building context, materials, variants and navigation.",
       assetFolder: "assets",
       assetFiles: ["Site-03.jpg"],
       industry: "Architecture and real estate",
       technology: "Realtime 3D visualization"
     }),
-    makeProject("VR", "Product Prototypes / 3D Models", "Oferta rzeczywistości wirtualnej", "Solverto", {
-      description: "Tworzymy immersyjne doświadczenia VR do szkoleń, prezentacji i eksploracji. Użytkownicy mogą zrozumieć przestrzeń, procesy oraz interakcje z produktem w praktycznej skali. Rozwiązanie projektujemy pod konkretne urządzenie, odbiorców i cel wdrożenia.",
+    makeProject("VR", "Product Prototypes / 3D Models", "Virtual reality offer", "Solverto", {
+      description: "We create immersive VR experiences for training, presentation and exploration. Users can understand spaces, processes and product interactions at a practical scale. We design the solution for a specific device, audience and implementation goal.",
       assetFolder: "assets",
       assetFiles: ["site-04.jpg"],
       industry: "Virtual reality",

@@ -51,11 +51,11 @@ const lightboxLabels = {
 const translations = {
   pl: {
     "We help companies present products, test ideas and build interactive solutions.": "Pomagamy firmom lepiej prezentować produkty, testować pomysły i rozwijać interaktywne rozwiązania.",
-    "Realtime 3D, playable prototypes, XR experiences and game production — from source materials or concept to a working result.": "Tworzymy modele i doświadczenia realtime 3D, grywalne prototypy, rozwiązania XR oraz wspieramy produkcję gier — od materiałów wejściowych do działającego rezultatu.",
+    "Realtime 3D, playable prototypes, XR experiences and game production - from source materials or concept to a working result.": "Tworzymy modele i doświadczenia realtime 3D, grywalne prototypy, rozwiązania XR oraz wspieramy produkcję gier - od materiałów wejściowych do działającego rezultatu.",
     "Discuss your project": "Omów swój projekt",
     "View our work": "Zobacz nasze realizacje",
     "What do you need help with?": "W czym możemy pomóc?",
-    "One production partner from idea to interactive result.": "Jeden partner produkcyjny — od pomysłu do interaktywnego rezultatu.",
+    "One production partner from idea to interactive result.": "Jeden partner produkcyjny - od pomysłu do interaktywnego rezultatu.",
     "Tell us what you are working on.": "Opowiedz nam, nad czym pracujesz.",
     "Send us your goal, available materials, target platform and deadline. We will review them and suggest a practical first step.": "Prześlij nam cel, dostępne materiały, platformę docelową i termin. Przeanalizujemy je i zaproponujemy praktyczny pierwszy krok.",
     "Game Environments | 3D Assets": "Środowiska Gier | Elementy 3D",
@@ -135,7 +135,7 @@ const translationCorrections = {
     "Music Room / Metaverse": "Pokój muzyczny / Metaverse",
     "Treasure Hunter / Metaverse Game Area": "Treasure Hunter / obszar gry Metaverse",
     "Hotel Five": "Hotel Five",
-    "India Music Room": "India — pokój muzyczny",
+    "India Music Room": "India - pokój muzyczny",
     "Maf Event Deira": "Maf Event Deira",
     "Avatars - Optimization": "Avatary - Optymalizacja",
     "Solverto home": "Strona główna Solverto",
@@ -188,19 +188,19 @@ const translationCorrections = {
     "Relevant projects and production experience.": "Powiązane realizacje i doświadczenie produkcyjne.",
     "Back": "Wstecz",
     "We turn architectural documentation, BIM data and existing locations into clear realtime experiences for sales, planning, presentation and operation.": "Przekształcamy dokumentację architektoniczną, dane BIM i istniejące lokalizacje w czytelne doświadczenia realtime dla sprzedaży, planowania, prezentacji i obsługi.",
-    "Show a space before it exists — or understand it better once it does.": "Pokaż przestrzeń, zanim powstanie — albo lepiej ją zrozum, gdy już istnieje.",
+    "Show a space before it exists - or understand it better once it does.": "Pokaż przestrzeń, zanim powstanie - albo lepiej ją zrozum, gdy już istnieje.",
     "We help developers, architects and technology companies transform complex spatial information into an experience that clients and teams can explore. The result can support a sales meeting, stakeholder review, training scenario or an operational digital twin.": "Pomagamy deweloperom, architektom i firmom technologicznym zmieniać złożone informacje przestrzenne w doświadczenia, które klienci i zespoły mogą swobodnie poznawać. Efekt może wspierać sprzedaż, konsultacje, szkolenia lub działanie cyfrowego bliźniaka.",
     "We turn a product idea, CAD file or reference material into a clear 3D model and an interactive prototype that can be tested before full production.": "Zmieniamy pomysł na produkt, plik CAD lub materiały referencyjne w czytelny model 3D i interaktywny prototyp, który można sprawdzić przed pełną produkcją.",
     "Validate the product experience before investing in the complete solution.": "Sprawdź doświadczenie produktu, zanim zainwestujesz w kompletne rozwiązanie.",
     "A focused prototype helps your team test form, interaction, presentation and technical feasibility early. The same prepared assets can later support configurators, AR, animation, marketing renders or realtime applications.": "Skoncentrowany prototyp pozwala wcześnie sprawdzić formę, interakcję, sposób prezentacji i wykonalność techniczną. Przygotowane materiały mogą później zasilić konfigurator, AR, animację, rendery marketingowe lub aplikację realtime.",
-    "We support game studios with level creation, environment production and technical preparation of assets — from a defined brief to content ready for implementation.": "Wspieramy studia gier w tworzeniu poziomów, środowisk i technicznym przygotowaniu elementów — od briefu po treści gotowe do wdrożenia.",
+    "We support game studios with level creation, environment production and technical preparation of assets - from a defined brief to content ready for implementation.": "Wspieramy studia gier w tworzeniu poziomów, środowisk i technicznym przygotowaniu elementów - od briefu po treści gotowe do wdrożenia.",
     "Extend your production capacity without losing visual and technical consistency.": "Zwiększ możliwości produkcyjne bez utraty spójności wizualnej i technicznej.",
     "We can take responsibility for a complete location or a clearly defined asset package. Work is aligned with the game's style, performance target, engine requirements and the way your team already reviews content.": "Możemy odpowiadać za kompletną lokację lub precyzyjnie określony pakiet elementów. Pracę dopasowujemy do stylu gry, wymagań wydajnościowych, silnika i procesu akceptacji w zespole.",
-    "We help turn a game idea, campaign concept or training goal into something playable — first as a focused prototype, then as a production-ready scope.": "Pomagamy zmienić pomysł na grę, kampanię lub szkolenie w grywalne doświadczenie — najpierw jako konkretny prototyp, a następnie zakres gotowy do produkcji.",
+    "We help turn a game idea, campaign concept or training goal into something playable - first as a focused prototype, then as a production-ready scope.": "Pomagamy zmienić pomysł na grę, kampanię lub szkolenie w grywalne doświadczenie - najpierw jako konkretny prototyp, a następnie zakres gotowy do produkcji.",
     "Test the fun, technology and production risk with a working build.": "Sprawdź rozgrywkę, technologię i ryzyko produkcyjne na działającym buildzie.",
     "A playable prototype makes decisions easier than a long document. We focus on the core loop, the feeling of interaction and the technical unknowns, then provide a clear basis for further development or full production.": "Grywalny prototyp ułatwia decyzje bardziej niż długi dokument. Skupiamy się na głównej pętli rozgrywki, odczuciu interakcji i ryzykach technicznych, tworząc podstawę dalszego rozwoju lub pełnej produkcji.",
     "We build recognizable, efficient realtime worlds that combine a strong visual theme with navigation, interaction and gameplay requirements.": "Budujemy rozpoznawalne i wydajne światy realtime, łączące wyrazisty motyw wizualny z wymaganiami nawigacji, interakcji i rozgrywki.",
-    "Give users a place worth exploring — and a reason to return.": "Daj użytkownikom miejsce warte odkrywania — i powód, żeby wrócili.",
+    "Give users a place worth exploring - and a reason to return.": "Daj użytkownikom miejsce warte odkrywania - i powód, żeby wrócili.",
     "We support platform owners, agencies and game teams with complete themed environments or defined location packages. The work can cover concept development, 3D production, level construction, optimization and implementation support.": "Wspieramy właścicieli platform, agencje i zespoły gier kompletnymi środowiskami tematycznymi lub określonymi pakietami lokacji. Zakres może obejmować rozwój koncepcji, produkcję 3D, budowę poziomu, optymalizację i wsparcie wdrożenia.",
     "We prepare moving content and realtime characters that explain, present and strengthen a product, game or digital experience.": "Tworzymy ruchome treści i postacie realtime, które wyjaśniają, prezentują i wzmacniają produkt, grę lub cyfrowe doświadczenie.",
     "Turn complex ideas and static assets into clear, engaging movement.": "Zmień złożone pomysły i statyczne materiały w czytelny, angażujący ruch.",
@@ -286,12 +286,318 @@ translationCorrections.de["Copy email address"] = "E-Mail-Adresse kopieren";
 translationCorrections.de["Email address copied."] = "E-Mail-Adresse kopiert.";
 translationCorrections.de["Over 50 projects completed in Poland and around the world."] = "In Polen und weltweit wurden mehr als 50 Projekte realisiert.";
 
+Object.assign(translationCorrections.pl, {
+  "Play video": "Odtwórz film",
+  "A digital architecture model and game world connected in a realtime 3D environment.": "Cyfrowy model architektury i świat gry połączone w środowisku 3D realtime.",
+  "Solverto cooperation process: project review, scope and milestone plan, prototype or production sprint, delivery and next step.": "Proces współpracy Solverto: przegląd projektu, zakres i plan etapów, prototyp lub sprint produkcyjny, dostarczenie i kolejny krok.",
+  "VR and AR prototypes, training scenarios and interactive simulations that help teams validate a solution before a larger rollout.": "Prototypy VR i AR, scenariusze szkoleniowe oraz interaktywne symulacje, które pomagają zespołom sprawdzić rozwiązanie przed szerszym wdrożeniem.",
+  "Product Prototypes / 3D Models": "Prototypy produktów / Modele 3D",
+  "Optimization": "Optymalizacja",
+  "Architecture": "Architektura",
+  "Augmented reality offer": "Oferta rzeczywistości rozszerzonej",
+  "3D optimization offer": "Oferta optymalizacji 3D",
+  "Architecture offer": "Oferta architektury",
+  "Virtual reality offer": "Oferta rzeczywistości wirtualnej",
+  "AR experiences place a product or concept directly in the user's surroundings. They make it easier to understand scale, materials and key functions before purchase or implementation. We prepare optimized 3D models and interactions for mobile devices and presentations.": "Doświadczenia AR umieszczają produkt lub koncepcję bezpośrednio w otoczeniu użytkownika. Ułatwiają zrozumienie skali, materiałów i kluczowych funkcji przed zakupem lub wdrożeniem. Przygotowujemy zoptymalizowane modele 3D oraz interakcje dla urządzeń mobilnych i prezentacji.",
+  "We optimize 3D models for smooth operation in realtime applications. Geometry, textures and materials are adapted to the target device and performance budget. The result is faster loading and consistent visual quality.": "Optymalizujemy modele 3D do płynnego działania w aplikacjach realtime. Geometrię, tekstury i materiały dostosowujemy do urządzenia docelowego oraz budżetu wydajnościowego. Efektem jest szybsze ładowanie i spójna jakość wizualna.",
+  "We transform architectural models into clear interactive presentations. The experience supports design reviews, sales conversations and stakeholder decisions. It can combine building context, materials, variants and navigation.": "Przekształcamy modele architektoniczne w czytelne, interaktywne prezentacje. Rozwiązanie wspiera przeglądy projektowe, rozmowy sprzedażowe i decyzje interesariuszy. Może łączyć kontekst budynku, materiały, warianty oraz nawigację.",
+  "We create immersive VR experiences for training, presentation and exploration. Users can understand spaces, processes and product interactions at a practical scale. We design the solution for a specific device, audience and implementation goal.": "Tworzymy immersyjne doświadczenia VR do szkoleń, prezentacji i eksploracji. Użytkownicy mogą zrozumieć przestrzeń, procesy oraz interakcje z produktem w praktycznej skali. Projektujemy rozwiązanie dla konkretnego urządzenia, odbiorców i celu wdrożenia.",
+  "Interactive product, architecture, AR and VR offers supported by optimized realtime 3D content.": "Interaktywne rozwiązania produktowe, architektoniczne, AR i VR wspierane przez zoptymalizowane treści 3D realtime.",
+  "Selected work across realtime 3D, games and interactive production": "Wybrane realizacje z obszaru 3D realtime, gier i produkcji interaktywnej",
+  "Explore selected projects delivered directly by Solverto and in collaboration with partner studios - from realtime architecture and game environments to interactive experiences and original games.": "Poznaj wybrane projekty zrealizowane bezpośrednio przez Solverto oraz we współpracy ze studiami partnerskimi, od architektury realtime i środowisk gier po interaktywne doświadczenia i autorskie gry.",
+  "Projects with a clear production contribution": "Projekty z jasno określonym wkładem produkcyjnym",
+  "Selected work across architecture, game development, interactive experiences and production support.": "Wybrane realizacje z obszaru architektury, tworzenia gier, interaktywnych doświadczeń i wsparcia produkcyjnego.",
+  "Solverto realtime 3D, architecture, games and metaverse projects": "Projekty Solverto z obszaru 3D realtime, architektury, gier i Metaverse",
+  "Projects": "Projekty",
+  "Browse by production area.": "Przeglądaj według obszaru produkcji.",
+  "Focused production support, model corrections, animation work and project analysis completed within partner-led architecture workflows.": "Ukierunkowane wsparcie produkcyjne, poprawki modeli, animacje i analizy projektów realizowane w partnerskich procesach architektonicznych.",
+  "Solverto also contributed to selected architecture and realtime real estate projects in cooperation with SQUAREBYTES GmbH.": "Solverto uczestniczyło również w wybranych projektach architektury i nieruchomości realtime we współpracy z SQUAREBYTES GmbH.",
+  "Solverto has contributed to commercial game projects through level creation, 3D environment production, programming support, metaverse locations, game areas, avatars, animations and original game development.": "Solverto wspierało komercyjne projekty gier poprzez tworzenie poziomów i środowisk 3D, wsparcie programistyczne, lokacje Metaverse, obszary rozgrywki, avatary, animacje oraz rozwój autorskich gier.",
+  "Digital Twin and realtime 3D environment production support for interactive locations.": "Wsparcie produkcji środowisk Digital Twin i 3D realtime dla interaktywnych lokalizacji.",
+  "Solverto Games currently operates under Solverto Studio and focuses on original games, experimental projects, web3 mini-games and commercial game development.": "Solverto Games działa obecnie w ramach Solverto Studio i koncentruje się na autorskich grach, projektach eksperymentalnych, minigrach web3 oraz komercyjnej produkcji gier.",
+  "Music room environment production support": "Wsparcie produkcji środowiska pokoju muzycznego",
+  "3D environment and location production support for a themed metaverse music room.": "Wsparcie produkcji środowiska 3D i lokacji dla tematycznego pokoju muzycznego Metaverse.",
+  "XR | Training | Simulation": "XR | Szkolenia | Symulacje",
+  "Test processes and train people without interrupting real operations.": "Testuj procesy i prowadź szkolenia bez przerywania rzeczywistych operacji.",
+  "XR training prototype": "Prototyp szkolenia XR",
+  "A focused training scenario that can be reviewed before a wider implementation.": "Konkretny scenariusz szkoleniowy, który można sprawdzić przed szerszym wdrożeniem.",
+  "Interactive simulation": "Interaktywna symulacja",
+  "A controllable process or environment with clear interactions and feedback.": "Sterowalny proces lub środowisko z czytelnymi interakcjami i informacją zwrotną.",
+  "Product visualization": "Wizualizacja produktu",
+  "A practical way to present scale, features and use in AR or VR.": "Praktyczny sposób prezentacji skali, funkcji i zastosowania produktu w AR lub VR.",
+  "Proof of concept": "Proof of concept",
+  "A working build that validates the experience, device fit and next production step.": "Działający build, który sprawdza doświadczenie, dopasowanie urządzenia i kolejny etap produkcji.",
+  "Operational digital twin": "Operacyjny cyfrowy bliźniak",
+  "A navigable 3D representation with data, controls or operational states where they are needed.": "Interaktywne odwzorowanie 3D z danymi, sterowaniem lub stanami operacyjnymi tam, gdzie są potrzebne.",
+  "Digital product prototype": "Cyfrowy prototyp produktu",
+  "Flexible production support": "Elastyczne wsparcie produkcji",
+  "Focused support for a milestone, vertical slice or content-heavy production stage.": "Skoncentrowane wsparcie na potrzeby kamienia milowego, vertical slice lub etapu wymagającego dużej ilości treści.",
+  "3D product animation": "Animacja produktowa 3D",
+  "Game trailers and video editing": "Trailery gier i montaż wideo",
+  "Realtime characters and avatars": "Postacie i avatary realtime",
+  "Tell us what you are working on.": "Opowiedz nam, nad czym pracujesz.",
+  "Send us your goal, available materials, target platform and deadline. We will review them and suggest a practical first step.": "Prześlij nam cel, dostępne materiały, platformę docelową i termin. Przeanalizujemy je i zaproponujemy praktyczny pierwszy krok.",
+  "One production partner from idea to interactive result.": "Jeden partner produkcyjny od pomysłu do interaktywnego rezultatu.",
+  "We combine 3D production, realtime technology, game development and XR so projects can move from source materials or an early idea to something that can be reviewed, tested and used.": "Łączymy produkcję 3D, technologię realtime, tworzenie gier i XR, aby przeprowadzać projekty od materiałów źródłowych lub wczesnego pomysłu do rezultatu, który można ocenić, przetestować i wykorzystać.",
+  "Discuss your project": "Omów swój projekt"
+});
+
+Object.assign(translationCorrections.de, {
+  "A digital architecture model and game world connected in a realtime 3D environment.": "Ein digitales Architekturmodell und eine Spielwelt, verbunden in einer Echtzeit-3D-Umgebung.",
+  "Solverto cooperation process: project review, scope and milestone plan, prototype or production sprint, delivery and next step.": "Zusammenarbeitsprozess mit Solverto: Projektprüfung, Umfang und Meilensteinplan, Prototyp oder Produktionssprint, Auslieferung und nächster Schritt.",
+  "Choose your area": "Wählen Sie einen Bereich",
+  "What do you need help with?": "Wobei können wir helfen?",
+  "Explore the area": "Bereich ansehen",
+  "Realtime Architecture | Digital Twins": "Echtzeit-Architektur | Digitale Zwillinge",
+  "Product Prototypes | 3D Models": "Produktprototypen | 3D-Modelle",
+  "Game Environments | 3D Assets": "Spielumgebungen | 3D-Assets",
+  "Game Prototypes | Custom Games": "Spielprototypen | Individuelle Spiele",
+  "XR | Training | Simulation": "XR | Schulung | Simulation",
+  "3D Animation | Trailers | Realtime Characters": "3D-Animation | Trailer | Echtzeit-Charaktere",
+  "Interactive architecture, property presentations and digital replicas that make spaces and data easier to understand.": "Interaktive Architektur, Immobilienpräsentationen und digitale Abbilder, die Räume und Daten leichter verständlich machen.",
+  "Product models, interactive proofs of concept and reusable 3D content for development, sales and communication.": "Produktmodelle, interaktive Machbarkeitsnachweise und wiederverwendbare 3D-Inhalte für Entwicklung, Vertrieb und Kommunikation.",
+  "Game-ready environments, levels and optimized assets that fit an existing production pipeline.": "Spielfertige Umgebungen, Level und optimierte Assets, die sich in eine bestehende Produktionspipeline einfügen.",
+  "We delivered and collaborated on the implementation of more than 130 playable prototypes, vertical slices, mini-games and complete custom games.": "Wir haben an der Umsetzung von mehr als 130 spielbaren Prototypen, Vertical Slices, Minispielen und vollständigen individuellen Spielen mitgewirkt.",
+  "VR and AR prototypes, training scenarios and interactive simulations that help teams validate a solution before a larger rollout.": "VR- und AR-Prototypen, Schulungsszenarien und interaktive Simulationen, mit denen Teams eine Lösung vor einer breiteren Einführung prüfen können.",
+  "Animation, film editing, trailers and optimized avatars for games, products and interactive experiences.": "Animation, Filmschnitt, Trailer und optimierte Avatare für Spiele, Produkte und interaktive Erlebnisse.",
+  "Start a conversation": "Gespräch beginnen",
+  "Tell us what you are working on.": "Erzählen Sie uns, woran Sie arbeiten.",
+  "Send us your goal, available materials, target platform and deadline. We will review them and suggest a practical first step.": "Senden Sie uns Ihr Ziel, die verfügbaren Materialien, die Zielplattform und den Termin. Wir prüfen alles und schlagen einen praktischen ersten Schritt vor.",
+  "One production partner from idea to interactive result.": "Ein Produktionspartner von der Idee bis zum interaktiven Ergebnis.",
+  "We combine 3D production, realtime technology, game development and XR so projects can move from source materials or an early idea to something that can be reviewed, tested and used.": "Wir verbinden 3D-Produktion, Echtzeit-Technologie, Spieleentwicklung und XR, damit Projekte von Ausgangsmaterialien oder einer frühen Idee zu einem Ergebnis gelangen, das geprüft, getestet und eingesetzt werden kann.",
+  "Discuss your project": "Projekt besprechen",
+  "Area of collaboration": "Bereich der Zusammenarbeit",
+  "Tell us about your project": "Erzählen Sie uns von Ihrem Projekt",
+  "Selected work": "Ausgewählte Arbeiten",
+  "Relevant projects and production experience.": "Relevante Projekte und Produktionserfahrung.",
+  "Product Prototypes / 3D Models": "Produktprototypen / 3D-Modelle",
+  "Optimization": "Optimierung",
+  "Architecture": "Architektur",
+  "Augmented reality offer": "Augmented-Reality-Angebot",
+  "3D optimization offer": "Angebot zur 3D-Optimierung",
+  "Architecture offer": "Architekturangebot",
+  "Virtual reality offer": "Virtual-Reality-Angebot",
+  "AR experiences place a product or concept directly in the user's surroundings. They make it easier to understand scale, materials and key functions before purchase or implementation. We prepare optimized 3D models and interactions for mobile devices and presentations.": "AR-Erlebnisse platzieren ein Produkt oder Konzept direkt in der Umgebung des Nutzers. So lassen sich Maßstab, Materialien und wichtige Funktionen vor dem Kauf oder der Einführung leichter verstehen. Wir erstellen optimierte 3D-Modelle und Interaktionen für Mobilgeräte und Präsentationen.",
+  "We optimize 3D models for smooth operation in realtime applications. Geometry, textures and materials are adapted to the target device and performance budget. The result is faster loading and consistent visual quality.": "Wir optimieren 3D-Modelle für den flüssigen Einsatz in Echtzeit-Anwendungen. Geometrie, Texturen und Materialien werden an das Zielgerät und das Leistungsbudget angepasst. Das Ergebnis sind kürzere Ladezeiten und eine einheitliche visuelle Qualität.",
+  "We transform architectural models into clear interactive presentations. The experience supports design reviews, sales conversations and stakeholder decisions. It can combine building context, materials, variants and navigation.": "Wir verwandeln Architekturmodelle in klare interaktive Präsentationen. Das Erlebnis unterstützt Entwurfsprüfungen, Verkaufsgespräche und Entscheidungen von Projektbeteiligten. Es kann Gebäudekontext, Materialien, Varianten und Navigation verbinden.",
+  "We create immersive VR experiences for training, presentation and exploration. Users can understand spaces, processes and product interactions at a practical scale. We design the solution for a specific device, audience and implementation goal.": "Wir entwickeln immersive VR-Erlebnisse für Schulung, Präsentation und Erkundung. Nutzer können Räume, Prozesse und Produktinteraktionen in einem praktischen Maßstab verstehen. Wir gestalten die Lösung für ein bestimmtes Gerät, eine Zielgruppe und ein Einführungsziel.",
+  "Interactive product, architecture, AR and VR offers supported by optimized realtime 3D content.": "Interaktive Produkt-, Architektur-, AR- und VR-Lösungen auf Basis optimierter Echtzeit-3D-Inhalte.",
+  "Selected work across realtime 3D, games and interactive production": "Ausgewählte Arbeiten aus Echtzeit-3D, Spielen und interaktiver Produktion",
+  "Explore selected projects delivered directly by Solverto and in collaboration with partner studios - from realtime architecture and game environments to interactive experiences and original games.": "Entdecken Sie ausgewählte Projekte, die Solverto direkt oder gemeinsam mit Partnerstudios umgesetzt hat, von Echtzeit-Architektur und Spielumgebungen bis zu interaktiven Erlebnissen und eigenen Spielen.",
+  "Projects with a clear production contribution": "Projekte mit klar dokumentiertem Produktionsbeitrag",
+  "Selected work across architecture, game development, interactive experiences and production support.": "Ausgewählte Arbeiten aus Architektur, Spieleentwicklung, interaktiven Erlebnissen und Produktionsunterstützung.",
+  "Solverto realtime 3D, architecture, games and metaverse projects": "Solverto-Projekte aus Echtzeit-3D, Architektur, Spielen und Metaverse",
+  "Projects": "Projekte",
+  "Browse by production area.": "Nach Produktionsbereich durchsuchen.",
+  "Focused production support, model corrections, animation work and project analysis completed within partner-led architecture workflows.": "Gezielte Produktionsunterstützung, Modellkorrekturen, Animationen und Projektanalysen in partnergeführten Architekturabläufen.",
+  "Solverto also contributed to selected architecture and realtime real estate projects in cooperation with SQUAREBYTES GmbH.": "Solverto wirkte außerdem gemeinsam mit SQUAREBYTES GmbH an ausgewählten Architektur- und Echtzeit-Immobilienprojekten mit.",
+  "Solverto has contributed to commercial game projects through level creation, 3D environment production, programming support, metaverse locations, game areas, avatars, animations and original game development.": "Solverto unterstützte kommerzielle Spieleprojekte durch Levelerstellung, 3D-Umgebungsproduktion, Programmierunterstützung, Metaverse-Orte, Spielbereiche, Avatare, Animationen und die Entwicklung eigener Spiele.",
+  "Digital Twin and realtime 3D environment production support for interactive locations.": "Produktionsunterstützung für digitale Zwillinge und Echtzeit-3D-Umgebungen interaktiver Orte.",
+  "Solverto Games currently operates under Solverto Studio and focuses on original games, experimental projects, web3 mini-games and commercial game development.": "Solverto Games ist derzeit Teil von Solverto Studio und konzentriert sich auf eigene Spiele, experimentelle Projekte, Web3-Minispiele und kommerzielle Spieleentwicklung.",
+  "Music Room / Metaverse": "Musikraum / Metaverse",
+  "Music room environment production support": "Produktionsunterstützung für Musikraum-Umgebungen",
+  "3D environment and location production support for a themed metaverse music room.": "Unterstützung bei der Produktion von 3D-Umgebungen und Orten für einen thematischen Metaverse-Musikraum.",
+  "Metaverse Maze": "Metaverse-Labyrinth",
+  "Pulse Guys / Metaverse Game Level": "Pulse Guys / Metaverse-Spiellevel",
+  "Metaverse Game Area": "Metaverse-Spielbereich",
+  "Test processes and train people without interrupting real operations.": "Testen Sie Prozesse und schulen Sie Menschen, ohne den realen Betrieb zu unterbrechen.",
+  "XR training prototype": "XR-Schulungsprototyp",
+  "A focused training scenario that can be reviewed before a wider implementation.": "Ein fokussiertes Schulungsszenario, das vor einer breiteren Einführung geprüft werden kann.",
+  "Interactive simulation": "Interaktive Simulation",
+  "A controllable process or environment with clear interactions and feedback.": "Ein steuerbarer Prozess oder eine steuerbare Umgebung mit klaren Interaktionen und Rückmeldungen.",
+  "Product visualization": "Produktvisualisierung",
+  "A practical way to present scale, features and use in AR or VR.": "Eine praktische Möglichkeit, Maßstab, Funktionen und Nutzung in AR oder VR zu zeigen.",
+  "Proof of concept": "Machbarkeitsnachweis",
+  "A working build that validates the experience, device fit and next production step.": "Ein funktionierender Build, der das Erlebnis, die Eignung des Geräts und den nächsten Produktionsschritt prüft.",
+  "Operational digital twin": "Operativer digitaler Zwilling",
+  "A navigable 3D representation with data, controls or operational states where they are needed.": "Eine navigierbare 3D-Darstellung mit Daten, Steuerungen oder Betriebszuständen an den benötigten Stellen.",
+  "Digital product prototype": "Digitaler Produktprototyp",
+  "A focused interactive proof of concept for internal validation, presentation or investor conversations.": "Ein fokussierter interaktiver Machbarkeitsnachweis für interne Prüfung, Präsentation oder Investorengespräche.",
+  "Production-ready 3D model": "Produktionsreifes 3D-Modell",
+  "Clean geometry, materials, hierarchy and variants prepared for the chosen platform.": "Saubere Geometrie, Materialien, Hierarchie und Varianten für die gewählte Plattform.",
+  "Configurator and showroom": "Konfigurator und Showroom",
+  "Interactive product choices, camera states and presentation flows for customers or sales teams.": "Interaktive Produktoptionen, Kamerazustände und Präsentationsabläufe für Kunden oder Vertriebsteams.",
+  "Reusable content pipeline": "Wiederverwendbare Content-Pipeline",
+  "One organized 3D source prepared for stills, animation, realtime and future iterations.": "Eine organisierte 3D-Quelle für Standbilder, Animation, Echtzeit und spätere Iterationen.",
+  "Level production": "Levelproduktion",
+  "Blockout, environment building, set dressing, lighting and a final optimization pass.": "Blockout, Umgebungsaufbau, Set Dressing, Beleuchtung und abschließende Optimierung.",
+  "Environment assets": "Umgebungs-Assets",
+  "Modular kits, props and location-specific elements prepared for practical reuse.": "Modulare Kits, Requisiten und ortsspezifische Elemente für die praktische Wiederverwendung.",
+  "Technical art support": "Technical-Art-Unterstützung",
+  "Materials, LODs, collisions, profiling and asset cleanup for the target engine.": "Materialien, LODs, Kollisionen, Profiling und Asset-Bereinigung für die Ziel-Engine.",
+  "Flexible production support": "Flexible Produktionsunterstützung",
+  "Focused support for a milestone, vertical slice or content-heavy production stage.": "Gezielte Unterstützung für einen Meilenstein, Vertical Slice oder eine inhaltsintensive Produktionsphase.",
+  "Playable prototype": "Spielbarer Prototyp",
+  "The smallest useful build that validates the core mechanic and player experience.": "Der kleinste sinnvolle Build zur Prüfung der Kernmechanik und Spielerfahrung.",
+  "Vertical slice": "Vertical Slice",
+  "A presentation-ready fragment showing the intended quality, content and production direction.": "Ein präsentationsfertiger Ausschnitt, der die angestrebte Qualität, Inhalte und Produktionsrichtung zeigt.",
+  "Branded mini-game": "Marken-Minispiel",
+  "A compact game experience for a campaign, event, community or web platform.": "Ein kompaktes Spielerlebnis für eine Kampagne, Veranstaltung, Community oder Webplattform.",
+  "Custom game production": "Individuelle Spieleproduktion",
+  "Design, development, 3D content and delivery organized around an agreed scope.": "Design, Entwicklung, 3D-Inhalte und Auslieferung auf Basis eines vereinbarten Umfangs.",
+  "3D product animation": "3D-Produktanimation",
+  "Product, architectural and technical animation focused on clarity and visual quality.": "Produkt-, Architektur- und technische Animation mit Fokus auf Klarheit und visuelle Qualität.",
+  "Game trailers and video editing": "Spieltrailer und Videoschnitt",
+  "Editing, pacing, titles and final outputs for games, campaigns and presentations.": "Schnitt, Tempo, Titel und finale Ausgaben für Spiele, Kampagnen und Präsentationen.",
+  "Realtime characters and avatars": "Echtzeit-Charaktere und Avatare",
+  "Character preparation, optimization, materials and animation for interactive platforms.": "Charaktervorbereitung, Optimierung, Materialien und Animation für interaktive Plattformen.",
+  "Production support": "Produktionsunterstützung",
+  "A defined animation, editing or asset task integrated with an existing team and pipeline.": "Eine klar definierte Animations-, Schnitt- oder Asset-Aufgabe, integriert in ein bestehendes Team und eine bestehende Pipeline."
+});
+
+Object.assign(translationCorrections.de, {
+  "Show a space before it exists - or understand it better once it does. We turn architectural documentation, BIM data and existing locations into clear realtime experiences for sales, planning and presentation.": "Zeigen Sie einen Raum, bevor er existiert, oder verstehen Sie ihn besser, sobald er vorhanden ist. Wir verwandeln Architekturdokumentation, BIM-Daten und bestehende Orte in klare Echtzeit-Erlebnisse für Vertrieb, Planung und Präsentation.",
+  "Show a space before it exists - or understand it better once it does.": "Zeigen Sie einen Raum, bevor er existiert, oder verstehen Sie ihn besser, sobald er vorhanden ist.",
+  "We help developers, architects and technology companies transform complex spatial information into an experience that clients and teams can explore. The result can support a sales meeting, stakeholder review, training scenario or an operational digital twin.": "Wir helfen Entwicklern, Architekten und Technologieunternehmen, komplexe räumliche Informationen in ein Erlebnis zu verwandeln, das Kunden und Teams erkunden können. Das Ergebnis kann Verkaufsgespräche, Projektprüfungen, Schulungsszenarien oder einen operativen digitalen Zwilling unterstützen.",
+  "Realtime property presentation": "Echtzeit-Immobilienpräsentation",
+  "Interactive estates, buildings and apartments that clients can explore before construction is complete.": "Interaktive Wohnanlagen, Gebäude und Wohnungen, die Kunden bereits vor Abschluss der Bauarbeiten erkunden können.",
+  "BIM/CAD optimization": "BIM/CAD-Optimierung",
+  "Technical models cleaned, structured and optimized for reliable realtime use.": "Technische Modelle, bereinigt, strukturiert und für eine zuverlässige Echtzeit-Nutzung optimiert.",
+  "Interactive sales tools": "Interaktive Vertriebswerkzeuge",
+  "Views, variants, filters and guided journeys designed around customer decisions.": "Ansichten, Varianten, Filter und geführte Abläufe, die auf Kundenentscheidungen ausgerichtet sind.",
+  "We turn a product idea, sketch, CAD file or existing model into a digital product prototype that can be reviewed and tested before a larger investment.": "Wir verwandeln eine Produktidee, Skizze, CAD-Datei oder ein bestehendes Modell in einen digitalen Produktprototyp, der vor einer größeren Investition geprüft und getestet werden kann.",
+  "Validate the product experience before investing in the complete solution.": "Prüfen Sie das Produkterlebnis, bevor Sie in die vollständige Lösung investieren.",
+  "A focused prototype helps your team test form, interaction, presentation and technical feasibility early. The same prepared assets can later support configurators, AR, animation, marketing renders or realtime applications.": "Ein fokussierter Prototyp hilft Ihrem Team, Form, Interaktion, Präsentation und technische Machbarkeit frühzeitig zu prüfen. Dieselben vorbereiteten Assets können später Konfiguratoren, AR, Animationen, Marketing-Renderings oder Echtzeit-Anwendungen unterstützen.",
+  "We support game studios with level creation, environment production and technical preparation of assets - from a defined brief to content ready for implementation.": "Wir unterstützen Spielestudios bei Levelerstellung, Umgebungsproduktion und technischer Vorbereitung von Assets, vom klaren Briefing bis zu implementierungsbereiten Inhalten.",
+  "Extend your production capacity without losing visual and technical consistency.": "Erweitern Sie Ihre Produktionskapazität, ohne visuelle und technische Konsistenz zu verlieren.",
+  "We can take responsibility for a complete location or a clearly defined asset package. Work is aligned with the game's style, performance target, engine requirements and the way your team already reviews content.": "Wir können die Verantwortung für einen vollständigen Ort oder ein klar definiertes Asset-Paket übernehmen. Die Arbeit wird an Stil, Leistungsziel, Engine-Anforderungen und den bestehenden Prüfprozess Ihres Teams angepasst.",
+  "We help turn a game idea, campaign concept or training goal into something playable - first as a focused prototype, then as a production-ready scope.": "Wir machen aus einer Spielidee, einem Kampagnenkonzept oder einem Schulungsziel etwas Spielbares, zunächst als fokussierten Prototyp und anschließend als produktionsreifen Umfang.",
+  "Test the fun, technology and production risk with a working build.": "Prüfen Sie Spielspaß, Technologie und Produktionsrisiko mit einem funktionierenden Build.",
+  "A playable prototype makes decisions easier than a long document. We focus on the core loop, the feeling of interaction and the technical unknowns, then provide a clear basis for further development or full production.": "Ein spielbarer Prototyp erleichtert Entscheidungen stärker als ein langes Dokument. Wir konzentrieren uns auf die Kernschleife, das Interaktionsgefühl und technische Unbekannte und schaffen eine klare Grundlage für weitere Entwicklung oder vollständige Produktion.",
+  "We prepare moving content and realtime characters that explain, present and strengthen a product, game or digital experience.": "Wir erstellen bewegte Inhalte und Echtzeit-Charaktere, die ein Produkt, Spiel oder digitales Erlebnis erklären, präsentieren und stärken.",
+  "Turn complex ideas and static assets into clear, engaging movement.": "Verwandeln Sie komplexe Ideen und statische Assets in klare, ansprechende Bewegung.",
+  "Depending on the goal, we can support the complete process or a focused production stage: storyboard, 3D preparation, animation, avatar optimization, rendering, editing and final platform-specific outputs.": "Je nach Ziel unterstützen wir den gesamten Prozess oder eine fokussierte Produktionsphase: Storyboard, 3D-Vorbereitung, Animation, Avatar-Optimierung, Rendering, Schnitt und finale plattformspezifische Ausgaben.",
+  "Validate a practical XR scenario before scaling it.": "Prüfen Sie ein praktisches XR-Szenario, bevor Sie es skalieren.",
+  "We create focused VR and AR prototypes for training, process simulation, product visualization and proof of concept. Each solution is shaped around the users, target device and decision it needs to support.": "Wir entwickeln fokussierte VR- und AR-Prototypen für Schulungen, Prozesssimulationen, Produktvisualisierung und Machbarkeitsnachweise. Jede Lösung wird auf Nutzer, Zielgerät und die zu unterstützende Entscheidung zugeschnitten."
+});
+
+Object.assign(translationCorrections.pl, {
+  "A trailer presenting the Painter Simulator demo on Steam. The video shows the character of the game, its visual style and key gameplay elements. It is an example of video communication supporting a project launch.": "Trailer prezentujący wersję demonstracyjną Painter Simulator na Steam. Materiał pokazuje charakter gry, jej oprawę oraz najważniejsze elementy rozgrywki. To przykład komunikacji wideo wspierającej premierę projektu.",
+  "A gameplay trailer prepared for Steam Next Fest. The video presents painting mechanics, interaction with the environment and the range of available tasks. Dynamic editing communicates the main idea of the game quickly.": "Gameplay trailer przygotowany na Steam Next Fest. Film przedstawia mechaniki malowania, interakcję z otoczeniem i różnorodność dostępnych zadań. Dynamiczny montaż szybko przekazuje główne założenia gry.",
+  "The official trailer for the Tarvos Desolation demo. The video builds a science-fiction horror atmosphere while presenting the world, threats and gameplay. Editing and visual storytelling emphasize the mood and key features of the project.": "Oficjalny trailer wersji demonstracyjnej Tarvos Desolation. Materiał buduje klimat science fiction i horroru, prezentując świat, zagrożenia oraz fragmenty rozgrywki. Montaż i narracja wizualna podkreślają atmosferę oraz najważniejsze cechy projektu.",
+  "Game Trailer / Video": "Trailer gry / Wideo",
+  "Trailer editing and promotional video production": "Montaż trailera i produkcja materiału promocyjnego",
+  "Gameplay trailer editing and promotional support": "Montaż trailera gameplay i wsparcie promocyjne",
+  "Official demo trailer production and editing": "Produkcja i montaż oficjalnego trailera demo"
+});
+
+Object.assign(translationCorrections.de, {
+  "A trailer presenting the Painter Simulator demo on Steam. The video shows the character of the game, its visual style and key gameplay elements. It is an example of video communication supporting a project launch.": "Ein Trailer zur Demo von Painter Simulator auf Steam. Das Video zeigt den Charakter des Spiels, seinen visuellen Stil und wichtige Gameplay-Elemente. Es ist ein Beispiel für Videokommunikation zur Unterstützung eines Projektstarts.",
+  "A gameplay trailer prepared for Steam Next Fest. The video presents painting mechanics, interaction with the environment and the range of available tasks. Dynamic editing communicates the main idea of the game quickly.": "Ein Gameplay-Trailer für das Steam Next Fest. Das Video zeigt Malmechaniken, Interaktionen mit der Umgebung und die Bandbreite der Aufgaben. Der dynamische Schnitt vermittelt die Grundidee des Spiels schnell.",
+  "The official trailer for the Tarvos Desolation demo. The video builds a science-fiction horror atmosphere while presenting the world, threats and gameplay. Editing and visual storytelling emphasize the mood and key features of the project.": "Der offizielle Trailer zur Demo von Tarvos Desolation. Das Video erzeugt eine Science-Fiction-Horror-Atmosphäre und zeigt Welt, Gefahren und Gameplay. Schnitt und visuelles Storytelling betonen Stimmung und Hauptmerkmale des Projekts.",
+  "Game Trailer / Video": "Spieltrailer / Video",
+  "Trailer editing and promotional video production": "Trailerschnitt und Produktion von Werbevideos",
+  "Gameplay trailer editing and promotional support": "Gameplay-Trailerschnitt und Werbeunterstützung",
+  "Official demo trailer production and editing": "Produktion und Schnitt des offiziellen Demo-Trailers",
+  "Play video": "Video abspielen"
+});
+
+Object.assign(translationCorrections.pl, {
+  "Partner studio cooperation": "Współpraca ze studiem partnerskim",
+  "Project involvement": "Udział w projekcie",
+  "Solverto production support": "Wsparcie produkcyjne Solverto",
+  "YSLAB/RESIMO cooperation": "Współpraca z YSLAB/RESIMO",
+  "SQUAREBYTES GmbH / partner cooperation": "SQUAREBYTES GmbH / współpraca partnerska",
+  "Production materials in preparation": "Materiały produkcyjne w przygotowaniu",
+  "What we can deliver": "Co możemy dostarczyć",
+  "Final client": "Klient końcowy",
+  "Delivered for": "Realizacja dla",
+  "Scope of work": "Zakres prac",
+  "Interactive architecture, property presentations and digital replicas that make spaces and data easier to understand. We contributed to more than 60 projects.": "Interaktywna architektura, prezentacje nieruchomości i cyfrowe odwzorowania, które ułatwiają zrozumienie przestrzeni i danych. Wnieśliśmy wkład w ponad 60 projektów.",
+  "Residential investment modelling and support for preparing the project for realtime real estate presentation.": "Modelowanie inwestycji mieszkaniowej oraz wsparcie w przygotowaniu projektu do prezentacji nieruchomości w czasie rzeczywistym.",
+  "Game prototype and production support": "Prototyp gry i wsparcie produkcyjne",
+  "Game prototype and production support.": "Prototyp gry i wsparcie produkcyjne.",
+  "Game development and production support": "Tworzenie gry i wsparcie produkcyjne",
+  "Game development and production support.": "Tworzenie gry i wsparcie produkcyjne.",
+  "Avatars / Animation": "Avatary / Animacja",
+  "Avatars - Optimization": "Avatary - optymalizacja",
+  "Avatar creation, optimization and animation support": "Tworzenie i optymalizacja avatarów oraz wsparcie animacji",
+  "Creation, optimization and animation support for avatars prepared for realtime interactive experiences.": "Tworzenie, optymalizacja i wsparcie animacji avatarów przygotowanych do interaktywnych doświadczeń realtime.",
+  "Digital Twin environment production support": "Wsparcie produkcji środowiska Digital Twin",
+  "Digital Twin environment and realtime 3D location production support.": "Wsparcie produkcji środowiska Digital Twin i lokacji 3D realtime.",
+  "Projects by production area": "Projekty według obszaru produkcji",
+  "Browse projects across realtime architecture, games, interactive experiences and production support.": "Przeglądaj projekty z obszaru architektury realtime, gier, interaktywnych doświadczeń i wsparcia produkcyjnego.",
+  "Show a space before it exists - or understand it better once it does. We turn architectural documentation, BIM data and existing locations into clear realtime experiences for sales, planning and presentation.": "Pokaż przestrzeń, zanim powstanie, albo lepiej ją zrozum, gdy już istnieje. Przekształcamy dokumentację architektoniczną, dane BIM i istniejące lokalizacje w czytelne doświadczenia realtime wspierające sprzedaż, planowanie i prezentację.",
+  "We turn a product idea, sketch, CAD file or existing model into a digital product prototype that can be reviewed and tested before a larger investment.": "Przekształcamy pomysł na produkt, szkic, plik CAD lub istniejący model w cyfrowy prototyp produktu, który można ocenić i przetestować przed większą inwestycją.",
+  "Solverto production areas and project data": "Obszary produkcji i dane projektów Solverto",
+  "Maze": "Labirynty",
+  "Music Room": "Pokoje muzyczne",
+  "Solverto Games": "Solverto Games",
+  "Production with purpose": "Produkcja z konkretnym celem",
+  "Solverto combines realtime 3D, game development and XR to help teams turn source materials or early ideas into results they can review, test and use.": "Solverto łączy 3D realtime, tworzenie gier i XR, aby pomagać zespołom przekształcać materiały źródłowe lub wczesne pomysły w rezultaty, które można ocenić, przetestować i wykorzystać.",
+  "A clear production core for interactive work.": "Jasny rdzeń produkcyjny dla projektów interaktywnych.",
+  "We bring together 3D production, realtime technology, game development and XR around a practical production goal.": "Łączymy produkcję 3D, technologię realtime, tworzenie gier i XR wokół konkretnego celu produkcyjnego.",
+  "From the first useful prototype to a working interactive experience, each stage is planned so it can be reviewed and used in the next decision.": "Od pierwszego użytecznego prototypu do działającego doświadczenia interaktywnego każdy etap planujemy tak, aby można go było ocenić i wykorzystać przy kolejnej decyzji.",
+  "Current production": "Obecna produkcja",
+  "Two focused production teams.": "Dwa wyspecjalizowane zespoły produkcyjne.",
+  "Solverto is being developed as a broader creative technology ecosystem, while current production is focused on Solverto Studio and Solverto Games.": "Solverto rozwija się jako szerszy ekosystem technologii kreatywnych, a obecna produkcja skupia się na Solverto Studio i Solverto Games.",
+  "We will review the goal, available materials and constraints and suggest a practical first step.": "Przeanalizujemy cel, dostępne materiały i ograniczenia oraz zaproponujemy praktyczny pierwszy krok.",
+  "Tell us what you are working on. We will review the goal, available materials and constraints and suggest a practical first step.": "Opowiedz nam, nad czym pracujesz. Przeanalizujemy cel, dostępne materiały i ograniczenia oraz zaproponujemy praktyczny pierwszy krok.",
+  "Cooperation and scope.": "Współpraca i zakres.",
+  "Project media.": "Materiały projektowe.",
+  "Approved project graphics are shown here when available.": "W tym miejscu prezentujemy zatwierdzone materiały graficzne projektu, jeśli są dostępne.",
+  "3D optimization": "Optymalizacja 3D",
+  "Augmented reality": "Rzeczywistość rozszerzona",
+  "Virtual reality": "Rzeczywistość wirtualna"
+});
+
+Object.assign(translationCorrections.de, {
+  "Partner studio cooperation": "Zusammenarbeit mit Partnerstudio",
+  "Project involvement": "Projektbeteiligung",
+  "Solverto production support": "Produktionsunterstützung durch Solverto",
+  "YSLAB/RESIMO cooperation": "Zusammenarbeit mit YSLAB/RESIMO",
+  "SQUAREBYTES GmbH / partner cooperation": "SQUAREBYTES GmbH / Partnerkooperation",
+  "Production materials in preparation": "Produktionsmaterialien in Vorbereitung",
+  "What we can deliver": "Was wir liefern können",
+  "Final client": "Endkunde",
+  "Delivered for": "Realisiert für",
+  "Scope of work": "Arbeitsumfang",
+  "Interactive architecture, property presentations and digital replicas that make spaces and data easier to understand. We contributed to more than 60 projects.": "Interaktive Architektur, Immobilienpräsentationen und digitale Abbilder, die Räume und Daten leichter verständlich machen. Wir haben an mehr als 60 Projekten mitgewirkt.",
+  "Residential investment modelling and support for preparing the project for realtime real estate presentation.": "Modellierung von Wohninvestitionen und Unterstützung bei der Vorbereitung des Projekts für eine Echtzeit-Immobilienpräsentation.",
+  "Game prototype and production support": "Spielprototyp und Produktionsunterstützung",
+  "Game prototype and production support.": "Spielprototyp und Produktionsunterstützung.",
+  "Game development and production support": "Spieleentwicklung und Produktionsunterstützung",
+  "Game development and production support.": "Spieleentwicklung und Produktionsunterstützung.",
+  "Avatars / Animation": "Avatare / Animation",
+  "Avatars - Optimization": "Avatare - Optimierung",
+  "Avatar creation, optimization and animation support": "Erstellung und Optimierung von Avataren sowie Animationsunterstützung",
+  "Creation, optimization and animation support for avatars prepared for realtime interactive experiences.": "Erstellung, Optimierung und Animationsunterstützung für Avatare in interaktiven Echtzeit-Erlebnissen.",
+  "Digital Twin environment production support": "Produktionsunterstützung für eine Digital-Twin-Umgebung",
+  "Digital Twin environment and realtime 3D location production support.": "Produktionsunterstützung für eine Digital-Twin-Umgebung und einen Echtzeit-3D-Ort.",
+  "Projects by production area": "Projekte nach Produktionsbereich",
+  "Browse projects across realtime architecture, games, interactive experiences and production support.": "Durchsuchen Sie Projekte aus Echtzeit-Architektur, Spielen, interaktiven Erlebnissen und Produktionsunterstützung.",
+  "All presented projects are real Solverto productions. Extended descriptions, visual materials, and selected case studies will be added progressively.": "Alle gezeigten Projekte sind reale Produktionen von Solverto. Erweiterte Beschreibungen, Bildmaterial und ausgewählte Fallstudien werden schrittweise ergänzt.",
+  "Solverto production areas and project data": "Produktionsbereiche und Projektdaten von Solverto",
+  "Maze": "Labyrinthe",
+  "Music Room": "Musikräume",
+  "Production with purpose": "Produktion mit klarem Ziel",
+  "Solverto combines realtime 3D, game development and XR to help teams turn source materials or early ideas into results they can review, test and use.": "Solverto verbindet Echtzeit-3D, Spieleentwicklung und XR, damit Teams Ausgangsmaterialien oder frühe Ideen in Ergebnisse verwandeln können, die sich prüfen, testen und einsetzen lassen.",
+  "A clear production core for interactive work.": "Ein klarer Produktionskern für interaktive Projekte.",
+  "We bring together 3D production, realtime technology, game development and XR around a practical production goal.": "Wir verbinden 3D-Produktion, Echtzeit-Technologie, Spieleentwicklung und XR rund um ein konkretes Produktionsziel.",
+  "From the first useful prototype to a working interactive experience, each stage is planned so it can be reviewed and used in the next decision.": "Vom ersten nützlichen Prototyp bis zum funktionierenden interaktiven Erlebnis wird jede Phase so geplant, dass sie geprüft und für die nächste Entscheidung genutzt werden kann.",
+  "Current production": "Aktuelle Produktion",
+  "Two focused production teams.": "Zwei spezialisierte Produktionsteams.",
+  "Solverto is being developed as a broader creative technology ecosystem, while current production is focused on Solverto Studio and Solverto Games.": "Solverto wird als breiteres Ökosystem für Kreativtechnologie entwickelt, während sich die aktuelle Produktion auf Solverto Studio und Solverto Games konzentriert.",
+  "We will review the goal, available materials and constraints and suggest a practical first step.": "Wir prüfen Ziel, verfügbare Materialien und Einschränkungen und schlagen einen praktischen ersten Schritt vor.",
+  "Tell us what you are working on. We will review the goal, available materials and constraints and suggest a practical first step.": "Erzählen Sie uns, woran Sie arbeiten. Wir prüfen Ziel, verfügbare Materialien und Einschränkungen und schlagen einen praktischen ersten Schritt vor.",
+  "Cooperation and scope.": "Zusammenarbeit und Umfang.",
+  "Project media.": "Projektmaterialien.",
+  "Approved project graphics are shown here when available.": "Hier werden freigegebene Projektgrafiken gezeigt, sofern sie verfügbar sind.",
+  "3D optimization": "3D-Optimierung",
+  "Augmented reality": "Augmented Reality",
+  "Virtual reality": "Virtual Reality"
+});
+
 Object.entries(translationCorrections).forEach(([language, entries]) => {
   supplementalTranslations[language] ||= {};
   Object.assign(supplementalTranslations[language], entries);
 });
 
 function storedLanguage() {
+  const pageLanguage = document.documentElement.dataset.pageLanguage;
+  if (document.documentElement.dataset.privacyPage && languageOptions.some(([code]) => code === pageLanguage)) {
+    return pageLanguage;
+  }
   try {
     const value = localStorage.getItem("solverto-language");
     return languageOptions.some(([code]) => code === value) ? value : "en";
@@ -300,40 +606,46 @@ function storedLanguage() {
   }
 }
 
-let selectedLanguage = storedLanguage();
+let selectedLanguage = document.documentElement.dataset.pageLanguage || storedLanguage();
+
+function privacyPageForLanguage(language = selectedLanguage) {
+  if (language === "de") return "privacy-de.html";
+  if (language === "en") return "privacy-en.html";
+  return "privacy.html";
+}
 
 function translatedText(source, language = selectedLanguage) {
   return language === "en"
     ? source
-    : translations[language]?.[source] || supplementalTranslations[language]?.[source] || translateDynamicText(source, language);
+    : translationCorrections[language]?.[source] || translations[language]?.[source] || supplementalTranslations[language]?.[source] || translateDynamicText(source, language);
 }
 
 function translateDynamicText(source, language) {
   const phraseReplacements = {
     pl: {
       " / YSLAB/RESIMO cooperation": " / współpraca z YSLAB/RESIMO", " / partner cooperation": " / współpraca partnerska", " / project involvement": " / udział w projekcie", "Partner studio cooperation": "Współpraca ze studiem partnerskim", "Project involvement": "Udział w projekcie",
-      "metaverse maze environment for ": "środowisko labiryntu metaverse: ", "metaverse game area for ": "obszar gry metaverse: ", "metaverse environment for ": "środowisko metaverse: ", "Pulse Guys level for ": "poziom Pulse Guys: ", " level for ": " — poziom dla ", " mini-game collection": " — kolekcja minigier", " mini-game": " — minigra", " game": " — gra",
-      " avatars and animations": " — awatary i animacje", " sci-fi horror environment": " — środowisko horroru science fiction", " sci-fi horror scene": " — scena horroru science fiction", " residential estate realtime 3D model": " — model 3D osiedla w czasie rzeczywistym", " large residential masterplan": " — rozległy plan osiedla", " level environment": " — środowisko poziomu", "metaverse music room environment": "środowisko pokoju muzycznego metaverse", " arcade mini-game collection": " — kolekcja minigier zręcznościowych", " residential masterplan": " — plan osiedla", " estate model": " — model osiedla", " residential buildings": " — budynki mieszkalne", " architecture model": " — model architektoniczny", " residential towers": " — wieże mieszkalne"
+      "metaverse maze environment for ": "środowisko labiryntu metaverse: ", "metaverse game area for ": "obszar gry metaverse: ", "metaverse environment for ": "środowisko metaverse: ", "Pulse Guys level for ": "poziom Pulse Guys: ", " level for ": " - poziom dla ", " mini-game collection": " - kolekcja minigier", " mini-game": " - minigra", " game": " - gra",
+      " avatars and animations": " - awatary i animacje", " sci-fi horror environment": " - środowisko horroru science fiction", " sci-fi horror scene": " - scena horroru science fiction", " residential estate realtime 3D model": " - model 3D osiedla w czasie rzeczywistym", " large residential masterplan": " - rozległy plan osiedla", " level environment": " - środowisko poziomu", "metaverse music room environment": "środowisko pokoju muzycznego metaverse", " arcade mini-game collection": " - kolekcja minigier zręcznościowych", " residential masterplan": " - plan osiedla", " estate model": " - model osiedla", " residential buildings": " - budynki mieszkalne", " architecture model": " - model architektoniczny", " residential towers": " - wieże mieszkalne"
     },
     de: {
       " / YSLAB/RESIMO cooperation": " / Zusammenarbeit mit YSLAB/RESIMO", " / partner cooperation": " / Partnerkooperation", " / project involvement": " / Projektbeteiligung", "Partner studio cooperation": "Zusammenarbeit mit Partnerstudio", "Project involvement": "Projektbeteiligung",
-      "metaverse maze environment for ": "Metaverse-Labyrinthumgebung: ", "metaverse game area for ": "Metaverse-Spielbereich: ", "metaverse environment for ": "Metaverse-Umgebung: ", "Pulse Guys level for ": "Pulse-Guys-Level: ", " level for ": " – Level für ", " mini-game collection": " – Minispielsammlung", " mini-game": " – Minispiel", " game": " – Spiel",
-      " avatars and animations": " – Avatare und Animationen", " sci-fi horror environment": " – Sci-Fi-Horror-Umgebung", " sci-fi horror scene": " – Sci-Fi-Horror-Szene", " residential estate realtime 3D model": " – Echtzeit-3D-Modell der Wohnanlage", " large residential masterplan": " – großer Wohn-Masterplan", " level environment": " – Level-Umgebung", "metaverse music room environment": "Metaverse-Musikraumumgebung", " arcade mini-game collection": " – Arcade-Minispielsammlung", " residential masterplan": " – Wohn-Masterplan", " estate model": " – Wohnanlagenmodell", " residential buildings": " – Wohngebäude", " architecture model": " – Architekturmodell", " residential towers": " – Wohntürme"
+      "metaverse maze environment for ": "Metaverse-Labyrinthumgebung: ", "metaverse game area for ": "Metaverse-Spielbereich: ", "metaverse environment for ": "Metaverse-Umgebung: ", "Pulse Guys level for ": "Pulse-Guys-Level: ", " level for ": " - Level für ", " mini-game collection": " - Minispielsammlung", " mini-game": " - Minispiel", " game": " - Spiel",
+      " avatars and animations": " - Avatare und Animationen", " sci-fi horror environment": " - Sci-Fi-Horror-Umgebung", " sci-fi horror scene": " - Sci-Fi-Horror-Szene", " residential estate realtime 3D model": " - Echtzeit-3D-Modell der Wohnanlage", " large residential masterplan": " - großer Wohn-Masterplan", " level environment": " - Level-Umgebung", "metaverse music room environment": "Metaverse-Musikraumumgebung", " arcade mini-game collection": " - Arcade-Minispielsammlung", " residential masterplan": " - Wohn-Masterplan", " estate model": " - Wohnanlagenmodell", " residential buildings": " - Wohngebäude", " architecture model": " - Architekturmodell", " residential towers": " - Wohntürme"
     },
     es: {
       " / YSLAB/RESIMO cooperation": " / colaboración con YSLAB/RESIMO", " / partner cooperation": " / colaboración con socios", " / project involvement": " / participación en el proyecto", "Partner studio cooperation": "Colaboración con un estudio asociado", "Project involvement": "Participación en el proyecto",
-      "metaverse maze environment for ": "entorno de laberinto del metaverso: ", "metaverse game area for ": "zona de juego del metaverso: ", "metaverse environment for ": "entorno del metaverso: ", "Pulse Guys level for ": "nivel de Pulse Guys: ", " level for ": " — nivel para ", " mini-game collection": " — colección de minijuegos", " mini-game": " — minijuego", " game": " — juego",
-      " avatars and animations": " — avatares y animaciones", " sci-fi horror environment": " — entorno de terror y ciencia ficción", " sci-fi horror scene": " — escena de terror y ciencia ficción", " residential estate realtime 3D model": " — modelo 3D en tiempo real del complejo residencial", " large residential masterplan": " — gran plan maestro residencial", " level environment": " — entorno de nivel", "metaverse music room environment": "entorno de sala musical del metaverso", " arcade mini-game collection": " — colección de minijuegos arcade", " residential masterplan": " — plan maestro residencial", " estate model": " — modelo del complejo", " residential buildings": " — edificios residenciales", " architecture model": " — modelo arquitectónico", " residential towers": " — torres residenciales"
+      "metaverse maze environment for ": "entorno de laberinto del metaverso: ", "metaverse game area for ": "zona de juego del metaverso: ", "metaverse environment for ": "entorno del metaverso: ", "Pulse Guys level for ": "nivel de Pulse Guys: ", " level for ": " - nivel para ", " mini-game collection": " - colección de minijuegos", " mini-game": " - minijuego", " game": " - juego",
+      " avatars and animations": " - avatares y animaciones", " sci-fi horror environment": " - entorno de terror y ciencia ficción", " sci-fi horror scene": " - escena de terror y ciencia ficción", " residential estate realtime 3D model": " - modelo 3D en tiempo real del complejo residencial", " large residential masterplan": " - gran plan maestro residencial", " level environment": " - entorno de nivel", "metaverse music room environment": "entorno de sala musical del metaverso", " arcade mini-game collection": " - colección de minijuegos arcade", " residential masterplan": " - plan maestro residencial", " estate model": " - modelo del complejo", " residential buildings": " - edificios residenciales", " architecture model": " - modelo arquitectónico", " residential towers": " - torres residenciales"
     },
     pt: {
       " / YSLAB/RESIMO cooperation": " / colaboração com YSLAB/RESIMO", " / partner cooperation": " / colaboração com parceiros", " / project involvement": " / participação no projeto", "Partner studio cooperation": "Colaboração com estúdio parceiro", "Project involvement": "Participação no projeto",
-      "metaverse maze environment for ": "ambiente de labirinto do metaverso: ", "metaverse game area for ": "área de jogo do metaverso: ", "metaverse environment for ": "ambiente do metaverso: ", "Pulse Guys level for ": "nível Pulse Guys: ", " level for ": " — nível para ", " mini-game collection": " — coleção de minijogos", " mini-game": " — minijogo", " game": " — jogo",
-      " avatars and animations": " — avatares e animações", " sci-fi horror environment": " — ambiente de terror e ficção científica", " sci-fi horror scene": " — cena de terror e ficção científica", " residential estate realtime 3D model": " — modelo 3D em tempo real do empreendimento residencial", " large residential masterplan": " — grande plano diretor residencial", " level environment": " — ambiente de nível", "metaverse music room environment": "ambiente de sala de música do metaverso", " arcade mini-game collection": " — coleção de minijogos arcade", " residential masterplan": " — plano diretor residencial", " estate model": " — modelo do empreendimento", " residential buildings": " — edifícios residenciais", " architecture model": " — modelo arquitetónico", " residential towers": " — torres residenciais"
+      "metaverse maze environment for ": "ambiente de labirinto do metaverso: ", "metaverse game area for ": "área de jogo do metaverso: ", "metaverse environment for ": "ambiente do metaverso: ", "Pulse Guys level for ": "nível Pulse Guys: ", " level for ": " - nível para ", " mini-game collection": " - coleção de minijogos", " mini-game": " - minijogo", " game": " - jogo",
+      " avatars and animations": " - avatares e animações", " sci-fi horror environment": " - ambiente de terror e ficção científica", " sci-fi horror scene": " - cena de terror e ficção científica", " residential estate realtime 3D model": " - modelo 3D em tempo real do empreendimento residencial", " large residential masterplan": " - grande plano diretor residencial", " level environment": " - ambiente de nível", "metaverse music room environment": "ambiente de sala de música do metaverso", " arcade mini-game collection": " - coleção de minijogos arcade", " residential masterplan": " - plano diretor residencial", " estate model": " - modelo do empreendimento", " residential buildings": " - edifícios residenciais", " architecture model": " - modelo arquitetónico", " residential towers": " - torres residenciais"
     },
     it: {
       " / YSLAB/RESIMO cooperation": " / collaborazione con YSLAB/RESIMO", " / partner cooperation": " / collaborazione con partner", " / project involvement": " / partecipazione al progetto", "Partner studio cooperation": "Collaborazione con studio partner", "Project involvement": "Partecipazione al progetto",
-      "metaverse maze environment for ": "ambiente labirinto metaverso: ", "metaverse game area for ": "area di gioco metaverso: ", "metaverse environment for ": "ambiente metaverso: ", "Pulse Guys level for ": "livello Pulse Guys: ", " level for ": " — livello per ", " mini-game collection": " — raccolta di minigiochi", " mini-game": " — minigioco", " game": " — gioco",
-      " avatars and animations": " — avatar e animazioni", " sci-fi horror environment": " — ambiente horror fantascientifico", " sci-fi horror scene": " — scena horror fantascientifica", " residential estate realtime 3D model": " — modello 3D in tempo reale del complesso residenziale", " large residential masterplan": " — grande masterplan residenziale", " level environment": " — ambiente del livello", "metaverse music room environment": "ambiente della sala musicale del metaverso", " arcade mini-game collection": " — raccolta di minigiochi arcade", " residential masterplan": " — masterplan residenziale", " estate model": " — modello del complesso", " residential buildings": " — edifici residenziali", " architecture model": " — modello architettonico", " residential towers": " — torri residenziali"
+      "metaverse maze environment for ": "ambiente labirinto metaverso: ", "metaverse game area for ": "area di gioco metaverso: ", "metaverse environment for ": "ambiente metaverso: ", "Pulse Guys level for ": "livello Pulse Guys: ", " level for ": " - livello per ", " mini-game collection": " - raccolta di minigiochi", " mini-game": " - minigioco", " game": " - gioco",
+      " avatars and animations": " - avatar e animazioni", " sci-fi horror environment": " - ambiente horror fantascientifico", " sci-fi horror scene": " - scena horror fantascientifica", " residential estate realtime 3D model": " - modello 3D in tempo reale del complesso residenziale", " large residential masterplan": " - grande masterplan residenziale", " level environment": " - ambiente del livello", "metaverse music room environment": "ambiente della sala musicale del metaverso", " arcade mini-game collection": " - raccolta di minigiochi arcade", " residential masterplan": " - masterplan residenziale", " estate model": " - modello del complesso", " residential buildings": " - edifici residenziali", " architecture model": " - modello architettonico", " residential towers": " - torri residenziali"
     }
   };
   const replacePhrases = (value) => Object.entries(phraseReplacements[language] || {})
@@ -351,14 +663,38 @@ function translateDynamicText(source, language) {
     const prefix = placeholderPrefixes[language]?.[placeholder[1]];
     if (prefix) return `[${prefix}: ${replacePhrases(translatedText(placeholder[2], language))}]`;
   }
-  const portfolioTitle = source.match(/^(.+) — Solverto Portfolio$/);
+  const portfolioTitle = source.match(/^(.+) - Solverto Portfolio$/);
   if (portfolioTitle) {
     const suffixes = { pl: "Portfolio Solverto", de: "Solverto-Portfolio", es: "Portafolio de Solverto", pt: "Portfólio da Solverto", it: "Portfolio Solverto" };
-    return `${portfolioTitle[1]} — ${suffixes[language] || "Solverto Portfolio"}`;
+    return `${portfolioTitle[1]} - ${suffixes[language] || "Solverto Portfolio"}`;
+  }
+  const exploreLabel = source.match(/^Explore (.+)$/);
+  if (exploreLabel) return `${translatedText("Explore the area", language)}: ${translatedText(exploreLabel[1], language)}`;
+  const portfolioImage = source.match(/^(.+) - Solverto portfolio image (\d+)$/);
+  if (portfolioImage) {
+    const labels = { pl: "obraz portfolio Solverto", de: "Solverto-Portfolio-Bild", es: "imagen del portafolio de Solverto", pt: "imagem do portfólio da Solverto", it: "immagine del portfolio Solverto" };
+    const projectName = ["Optimization", "Architecture"].includes(portfolioImage[1]) ? translatedText(portfolioImage[1], language) : portfolioImage[1];
+    return `${projectName} - ${labels[language] || "Solverto portfolio image"} ${portfolioImage[2]}`;
+  }
+  const projectImage = source.match(/^(.+) - Solverto project image$/);
+  if (projectImage) {
+    const labels = { pl: "obraz projektu Solverto", de: "Solverto-Projektbild", es: "imagen del proyecto Solverto", pt: "imagem do projeto Solverto", it: "immagine del progetto Solverto" };
+    const projectName = ["Optimization", "Architecture"].includes(projectImage[1]) ? translatedText(projectImage[1], language) : projectImage[1];
+    return `${projectName} - ${labels[language] || "Solverto project image"}`;
+  }
+  const portfolioHeroImage = source.match(/^(.+) - Solverto portfolio hero image$/);
+  if (portfolioHeroImage) {
+    const labels = { pl: "główny obraz portfolio Solverto", de: "Solverto-Portfolio-Titelbild", es: "imagen principal del portafolio de Solverto", pt: "imagem principal do portfólio da Solverto", it: "immagine principale del portfolio Solverto" };
+    return `${portfolioHeroImage[1]} - ${labels[language] || "Solverto portfolio hero image"}`;
+  }
+  const productionAreaIntro = source.match(/^Projects from the (.+) production area\.$/);
+  if (productionAreaIntro) {
+    const prefixes = { pl: "Projekty z obszaru", de: "Projekte aus dem Produktionsbereich", es: "Proyectos del área", pt: "Projetos da área", it: "Progetti dell'area" };
+    return `${prefixes[language] || "Projects from the"} ${translatedText(productionAreaIntro[1], language)}.`;
   }
   const describedProject = source.match(/^([^:]+): (.+)$/);
   if (describedProject) return `${describedProject[1]}: ${translatedText(describedProject[2], language)}`;
-  return replacePhrases(source);
+  return source;
 }
 
 function translatedTemplate(source, values) {
@@ -397,7 +733,8 @@ function addLanguageSelector() {
     companyLink.dataset.companyLink = "";
     companyLink.textContent = "Company";
   }
-  companyLink.href = "company.html";
+  companyLink.href = "index.html?panel=company";
+  companyLink.dataset.homePanelTrigger = "company";
   const homeLink = navMenu.querySelector('a[href="index.html"]');
   if (homeLink && homeLink.nextElementSibling !== companyLink) homeLink.after(companyLink);
   const portfolioLink = navMenu.querySelector('a[href="portfolio.html"], [data-home-panel-trigger="portfolio"]');
@@ -419,7 +756,11 @@ function addLanguageSelector() {
   select.addEventListener("change", () => {
     selectedLanguage = select.value;
     try { localStorage.setItem("solverto-language", selectedLanguage); } catch { /* Storage may be unavailable in private contexts. */ }
-    applyLanguage();
+    if (document.documentElement.dataset.privacyPage) {
+      window.location.href = privacyPageForLanguage();
+      return;
+    }
+    window.location.reload();
   });
 }
 
@@ -479,6 +820,22 @@ function applyLanguage() {
   document.querySelectorAll("[data-department-more]").forEach((button) => {
     button.textContent = `${translatedText("See more")} (${button.dataset.projectCount || 0})`;
   });
+  document.querySelectorAll("[data-project-name]").forEach((element) => {
+    const source = element.dataset.projectName || element.textContent.trim();
+    element.textContent = element.dataset.projectId?.startsWith("product-prototypes-") ? translatedText(source) : source;
+  });
+  document.querySelectorAll("[data-privacy-link]").forEach((link) => {
+    link.setAttribute("href", privacyPageForLanguage());
+  });
+  const processFlowImage = selectedLanguage === "pl"
+    ? "assets/company-process-flow_PL.png"
+    : selectedLanguage === "de"
+      ? "assets/company-process-flow_DE.png"
+      : "assets/company-process-flow_ENG.png";
+  document.querySelectorAll("[data-company-process-flow]").forEach((image) => {
+    image.setAttribute("src", processFlowImage);
+  });
+  if (document.querySelector("[data-project-detail]")) renderProjectDetail();
   document.documentElement.dataset.languageReady = "";
   applyTrustAndContactUpdates();
 }
@@ -496,6 +853,10 @@ function projectUrl(project) {
   return `project-template.html?project=${encodeURIComponent(project.id)}`;
 }
 
+function projectDisplayName(project) {
+  return project?.id?.startsWith("product-prototypes-") ? translatedText(project.name) : project.name;
+}
+
 function projectImagePath(project, index = 1) {
   if (!project?.assetFolder) return "";
   if (project.assetFiles?.[index - 1]) return `${project.assetFolder}/${project.assetFiles[index - 1]}`;
@@ -506,11 +867,11 @@ function projectMediaMarkup(project, index = 1, options = {}) {
   const source = projectImagePath(project, index);
   const extraClass = options.className ? ` ${escapeHtml(options.className)}` : "";
   if (!source) {
-    return `<div class="media-placeholder${extraClass}" role="img">${escapeHtml(selectedLanguage === "pl" ? "Materiały w przygotowaniu" : "Production materials in preparation")}</div>`;
+    return `<div class="media-placeholder${extraClass}" role="img">${escapeHtml(translatedText("Production materials in preparation"))}</div>`;
   }
 
   const loading = options.loading || "lazy";
-  const alt = options.altText || `${project.name} — Solverto portfolio image ${index}`;
+  const alt = translatedText(options.altText || `${project.name} - Solverto portfolio image ${index}`);
   return `<div class="media-placeholder media-image-frame${extraClass}" data-no-lightbox><img src="${escapeHtml(source)}" alt="${escapeHtml(alt)}" loading="${escapeHtml(loading)}" decoding="async" /></div>`;
 }
 
@@ -530,7 +891,7 @@ function projectCardMarkup(project, headingLevel = 3, options = {}) {
       ${projectMediaMarkup(project)}
       <div class="project-card-body">
         <p class="project-badge">${escapeHtml(project.category)}</p>
-        <h${headingLevel}>${escapeHtml(project.name)}</h${headingLevel}>
+        <h${headingLevel} data-project-name="${escapeHtml(project.name)}" data-project-id="${escapeHtml(project.id)}">${escapeHtml(projectDisplayName(project))}</h${headingLevel}>
         ${projectDetails}
         ${isArchitectureProject ? "" : `<p>${escapeHtml(project.description || "Production support within a realtime 3D or interactive project workflow.")}</p>`}
         ${showMore ? `<a class="button button-secondary button-small" href="${projectUrl(project)}">More</a>` : ""}
@@ -553,8 +914,8 @@ const serviceCatalog = [
     image: "metaverse/digital-twin/hero-wirtualny-blizniak.jpg",
     description: "Interactive architecture, property presentations and digital replicas that make spaces and data easier to understand.",
     workIntro: "Interactive architecture, property presentations and digital replicas that make spaces and data easier to understand. We contributed to more than 60 projects.",
-    lead: "Show a space before it exists — or understand it better once it does. We turn architectural documentation, BIM data and existing locations into clear realtime experiences for sales, planning and presentation.",
-    valueTitle: "Show a space before it exists — or understand it better once it does.",
+    lead: "Show a space before it exists - or understand it better once it does. We turn architectural documentation, BIM data and existing locations into clear realtime experiences for sales, planning and presentation.",
+    valueTitle: "Show a space before it exists - or understand it better once it does.",
     value: "We help developers, architects and technology companies transform complex spatial information into an experience that clients and teams can explore. The result can support a sales meeting, stakeholder review, training scenario or an operational digital twin.",
     capabilities: [
       ["Realtime property presentation", "Interactive estates, buildings and apartments that clients can explore before construction is complete."],
@@ -578,14 +939,14 @@ const serviceCatalog = [
       ["Configurator and showroom", "Interactive product choices, camera states and presentation flows for customers or sales teams."],
       ["Reusable content pipeline", "One organized 3D source prepared for stills, animation, realtime and future iterations."]
     ],
-    projectRefs: [["product-prototypes", "AR"], ["product-prototypes", "Optymalizacja"], ["product-prototypes", "Architektura"], ["product-prototypes", "VR"]]
+    projectRefs: [["product-prototypes", "AR"], ["product-prototypes", "Optimization"], ["product-prototypes", "Architecture"], ["product-prototypes", "VR"]]
   },
   {
     id: "game-assets-levels",
     title: "Game Environments | 3D Assets",
     image: "metaverse/treasure-hunter/hero-poziomy-treasure-hunter-metaverse.jpg",
     description: "Game-ready environments, levels and optimized assets that fit an existing production pipeline.",
-    lead: "We support game studios with level creation, environment production and technical preparation of assets — from a defined brief to content ready for implementation.",
+    lead: "We support game studios with level creation, environment production and technical preparation of assets - from a defined brief to content ready for implementation.",
     valueTitle: "Extend your production capacity without losing visual and technical consistency.",
     value: "We can take responsibility for a complete location or a clearly defined asset package. Work is aligned with the game's style, performance target, engine requirements and the way your team already reviews content.",
     capabilities: [
@@ -601,7 +962,7 @@ const serviceCatalog = [
     title: "Game Prototypes | Custom Games",
     image: "metaverse/pulse-guys/hero-pulse-guys.jpg",
     description: "We delivered and collaborated on the implementation of more than 130 playable prototypes, vertical slices, mini-games and complete custom games.",
-    lead: "We help turn a game idea, campaign concept or training goal into something playable — first as a focused prototype, then as a production-ready scope.",
+    lead: "We help turn a game idea, campaign concept or training goal into something playable - first as a focused prototype, then as a production-ready scope.",
     valueTitle: "Test the fun, technology and production risk with a working build.",
     value: "A playable prototype makes decisions easier than a long document. We focus on the core loop, the feeling of interaction and the technical unknowns, then provide a clear basis for further development or full production.",
     capabilities: [
@@ -647,27 +1008,27 @@ const serviceCatalog = [
     youtubeVideos: [
       {
         id: "44LEhVFH5JY",
-        title: "Painter Simulator — Release Trailer",
+        title: "Painter Simulator - Release Trailer",
         category: "Game Trailer / Video",
         partner: "Solverto Studio",
         role: "Trailer editing and promotional video production",
-        description: "Trailer prezentujący wersję demonstracyjną Painter Simulator na platformie Steam. Materiał pokazuje charakter gry, jej oprawę oraz najważniejsze elementy rozgrywki. To przykład przygotowania komunikacji wideo wspierającej premierę projektu."
+        description: "A trailer presenting the Painter Simulator demo on Steam. The video shows the character of the game, its visual style and key gameplay elements. It is an example of video communication supporting a project launch."
       },
       {
         id: "caXv4VZl-jM",
-        title: "Painter Simulator — Steam Next Fest",
+        title: "Painter Simulator - Steam Next Fest",
         category: "Game Trailer / Video",
         partner: "FreeMind",
         role: "Gameplay trailer editing and promotional support",
-        description: "Gameplay trailer przygotowany na potrzeby wydarzenia Steam Next Fest. Film przedstawia mechaniki malowania, interakcję z otoczeniem i różnorodność dostępnych zadań. Dynamiczny montaż pozwala szybko zrozumieć główne założenia gry."
+        description: "A gameplay trailer prepared for Steam Next Fest. The video presents painting mechanics, interaction with the environment and the range of available tasks. Dynamic editing communicates the main idea of the game quickly."
       },
       {
         id: "O4t9RtPKd3A",
-        title: "Tarvos Desolation — Official Demo Trailer",
+        title: "Tarvos Desolation - Official Demo Trailer",
         category: "Game Trailer / Video",
         partner: "Tarvos Desolation",
         role: "Official demo trailer production and editing",
-        description: "Oficjalny trailer wersji demonstracyjnej Tarvos Desolation. Materiał buduje klimat science-fiction i horroru, prezentując świat, zagrożenia oraz fragmenty rozgrywki. Montaż i narracja wizualna podkreślają atmosferę oraz najważniejsze cechy projektu."
+        description: "The official trailer for the Tarvos Desolation demo. The video builds a science-fiction horror atmosphere while presenting the world, threats and gameplay. Editing and visual storytelling emphasize the mood and key features of the project."
       }
     ]
   }
@@ -679,7 +1040,7 @@ function findPortfolioProject(groupId, projectName) {
 
 function youtubeVideoPanelMarkup(video) {
   const safeVideoId = escapeHtml(video.id);
-  const label = selectedLanguage === "pl" ? "Odtwórz film" : "Play video";
+  const label = translatedText("Play video");
   return `<article class="youtube-video-panel reveal"><button class="youtube-video-link" type="button" data-youtube-video="${safeVideoId}" data-youtube-title="${escapeHtml(video.title)}" aria-label="${escapeHtml(`${label}: ${video.title}`)}"><img src="https://i.ytimg.com/vi/${safeVideoId}/hqdefault.jpg" alt="" loading="lazy" decoding="async" data-no-lightbox /><span class="youtube-video-play" aria-hidden="true">▶</span><span class="youtube-video-label">${escapeHtml(label)}</span></button><div class="youtube-video-copy"><p class="project-badge">${escapeHtml(video.category)}</p><h3>${escapeHtml(video.title)}</h3><p class="project-meta"><span>${escapeHtml(translatedText("Client / Partner"))}</span>${escapeHtml(video.partner)}</p><p class="project-meta"><span>${escapeHtml(translatedText("Role"))}</span>${escapeHtml(video.role)}</p><p class="youtube-video-description">${escapeHtml(video.description)}</p></div></article>`;
 }
 
@@ -707,7 +1068,7 @@ function renderServicePage(root = document, pageUrl = window.location.href) {
   if (valueHeading) valueHeading.hidden = hideValueIntro;
 
   const hero = serviceRoot.querySelector("[data-service-hero]");
-  if (hero) hero.innerHTML = `<img src="${escapeHtml(service.image)}" alt="${escapeHtml(`${service.title} — Solverto`)}" loading="eager" decoding="async" data-no-lightbox />`;
+  if (hero) hero.innerHTML = `<img src="${escapeHtml(service.image)}" alt="${escapeHtml(`${translatedText(service.title)} - Solverto`)}" loading="eager" decoding="async" data-no-lightbox />`;
 
   const capabilities = serviceRoot.querySelector("[data-service-capabilities]");
   if (capabilities) capabilities.innerHTML = service.capabilities.map(([title, description], index) => `
@@ -725,11 +1086,11 @@ function renderServicePage(root = document, pageUrl = window.location.href) {
     const videoMarkup = youtubeVideos.map(youtubeVideoPanelMarkup).join("");
     projectGrid.innerHTML = service.videosFirst ? videoMarkup + projectMarkup : projectMarkup + videoMarkup;
     const workHeading = workSection?.querySelector(".section-heading .eyebrow");
-    if (workHeading && productOffers) workHeading.textContent = "What we can deliver";
+    if (workHeading && productOffers) workHeading.textContent = translatedText("What we can deliver");
   }
 
   if (root === document) {
-    document.title = `${service.title} — Solverto`;
+    document.title = `${service.title} - Solverto`;
     document.querySelector('meta[name="description"]')?.setAttribute("content", service.description);
   }
 }
@@ -743,7 +1104,7 @@ function departmentCardMarkup(project, headingLevel = 3) {
   const placeholder = `[Project thumbnail: ${title}]`;
   return `
     <article class="project-card department-card reveal">
-      ${projectMediaMarkup(project, 1, { altText: `${title} — Solverto project image`, placeholder })}
+      ${projectMediaMarkup(project, 1, { altText: `${title} - Solverto project image`, placeholder })}
       <div class="project-card-body">
         <h${headingLevel}>${escapeHtml(title)}</h${headingLevel}>
         <a class="button button-secondary button-small" data-department-more data-project-count="${projectCount}" href="${href}">${escapeHtml(`${translatedText("See more")} (${projectCount})`)}</a>
@@ -917,6 +1278,68 @@ function allPortfolioProjects() {
 
 function detailCopy(project) {
   const category = project.category.toLowerCase();
+  const localizedRoleText = translatedText(project.role || "").replace(/[.]+$/, "");
+  const localizedRole = selectedLanguage === "de" ? localizedRoleText : localizedRoleText.toLowerCase().replaceAll("3d", "3D");
+  if (selectedLanguage === "pl") {
+    if (category.includes("architecture") || category.includes("real estate")) {
+      return {
+        challenge: "Produkcja architektury realtime wymaga technicznie spójnych modeli 3D, starannego przygotowania i czytelnej koordynacji z dokumentacją źródłową. Poufne wymagania tego projektu nie są ujawniane.",
+        contribution: `Udokumentowany wkład Solverto: ${localizedRole}. Prace zrealizowano jako wsparcie architektury realtime lub modelowania 3D w ramach wskazanego procesu partnerskiego.`
+      };
+    }
+    if (category.includes("digital twin")) {
+      return {
+        challenge: "Środowiska Digital Twin wymagają czytelnej struktury przestrzennej, wydajnych modeli realtime oraz języka wizualnego wspierającego interaktywną eksplorację. Poufne ograniczenia projektu nie są ujawniane.",
+        contribution: `Udokumentowany wkład Solverto obejmował zakres: ${localizedRole}, w tym wsparcie produkcji środowiska realtime dla tego projektu Digital Twin.`
+      };
+    }
+    if (category.includes("metaverse")) {
+      return {
+        challenge: "Przestrzenie Metaverse wymagają rozpoznawalnych motywów wizualnych, wydajnej geometrii realtime oraz środowisk wspierających nawigację lub rozgrywkę. Poufne ograniczenia projektu nie są ujawniane.",
+        contribution: `Udokumentowany wkład Solverto obejmował zakres: ${localizedRole}, w tym wsparcie produkcji 3D odpowiednie dla tego typu interaktywnego środowiska.`
+      };
+    }
+    if (category.includes("game")) {
+      return {
+        challenge: "Produkcja gry łączy jakość wizualną, czytelność poziomu i wydajność techniczną z planowanym doświadczeniem gracza. Strona nie ujawnia poufnych szczegółów produkcji.",
+        contribution: `Udokumentowany wkład Solverto obejmował zakres: ${localizedRole}, wyłącznie na podstawie dostępnych informacji o projekcie.`
+      };
+    }
+    return {
+      challenge: "Zadanie wymagało ukierunkowanego wsparcia produkcyjnego w istniejącym procesie 3D. Poufne szczegóły projektu i niezatwierdzone materiały nie są tutaj prezentowane.",
+      contribution: `Udokumentowany wkład Solverto obejmował zakres: ${localizedRole}, wyłącznie na podstawie dostępnych informacji o projekcie.`
+    };
+  }
+  if (selectedLanguage === "de") {
+    if (category.includes("architecture") || category.includes("real estate")) {
+      return {
+        challenge: "Echtzeit-Architekturproduktion erfordert technisch konsistente 3D-Assets, sorgfältige Vorbereitung und klare Abstimmung mit der Quelldokumentation. Vertrauliche Anforderungen dieses Projekts werden nicht offengelegt.",
+        contribution: `Der dokumentierte Beitrag von Solverto: ${localizedRole}. Die Arbeit wurde als Unterstützung für Echtzeit-Architektur oder 3D-Modellierung innerhalb des angegebenen Partnerprozesses geliefert.`
+      };
+    }
+    if (category.includes("digital twin")) {
+      return {
+        challenge: "Umgebungen für digitale Zwillinge benötigen eine klare räumliche Struktur, effiziente Echtzeit-Assets und eine visuelle Sprache für interaktive Erkundung. Vertrauliche Projektanforderungen werden nicht offengelegt.",
+        contribution: `Der dokumentierte Beitrag von Solverto umfasste folgenden Bereich: ${localizedRole}, einschließlich der Unterstützung bei der Echtzeit-Umgebungsproduktion für dieses Projekt.`
+      };
+    }
+    if (category.includes("metaverse")) {
+      return {
+        challenge: "Metaverse-Räume benötigen erkennbare visuelle Themen, effiziente Echtzeit-Geometrie und Umgebungen, die Navigation oder Gameplay unterstützen. Vertrauliche Projektanforderungen werden nicht offengelegt.",
+        contribution: `Der dokumentierte Beitrag von Solverto umfasste folgenden Bereich: ${localizedRole}, einschließlich passender 3D-Produktionsunterstützung für diese Art interaktiver Umgebung.`
+      };
+    }
+    if (category.includes("game")) {
+      return {
+        challenge: "Spieleproduktion verbindet visuelle Qualität, Lesbarkeit der Level und technische Leistung mit dem geplanten Spielerlebnis. Vertrauliche Produktionsdetails werden auf dieser Seite nicht offengelegt.",
+        contribution: `Der dokumentierte Beitrag von Solverto umfasste folgenden Bereich: ${localizedRole}, ausschließlich auf Grundlage der verfügbaren Projektinformationen.`
+      };
+    }
+    return {
+      challenge: "Die Aufgabe erforderte gezielte Produktionsunterstützung innerhalb eines bestehenden 3D-Workflows. Vertrauliche Projektdetails und nicht freigegebene Materialien werden hier nicht präsentiert.",
+      contribution: `Der dokumentierte Beitrag von Solverto umfasste folgenden Bereich: ${localizedRole}, ausschließlich auf Grundlage der verfügbaren Projektinformationen.`
+    };
+  }
   if (category.includes("architecture") || category.includes("real estate")) {
     const contributionScope = (project.scope || project.role).replace(/[.]+$/, "").toLowerCase();
     return {
@@ -949,7 +1372,7 @@ function detailCopy(project) {
 }
 
 function projectInfoCopy(project) {
-  if (project.projectInfo) return project.projectInfo;
+  if (project.projectInfo) return translatedText(project.projectInfo);
 
   const isArchitectureProject = project.category === "Architecture / Realtime Real Estate";
   const scope = translatedText(project.scope || project.role || "");
@@ -957,20 +1380,51 @@ function projectInfoCopy(project) {
   const technology = translatedText(project.technology || "");
   const country = project.country ? translatedText(project.country) : "";
   const year = translatedText(project.year || "");
+  const partner = project.partner || "Solverto";
+
+  const genericCollaboration = (language) => {
+    if (partner === "Partner studio cooperation") {
+      if (language === "pl") return "Projekt zrealizowano we współpracy ze studiem partnerskim.";
+      if (language === "de") return "Das Projekt wurde in Zusammenarbeit mit einem Partnerstudio umgesetzt.";
+      return "The project was delivered in cooperation with a partner studio.";
+    }
+    if (partner === "Project involvement") {
+      if (language === "pl") return "Solverto uczestniczyło w realizacji projektu.";
+      if (language === "de") return "Solverto war an der Umsetzung des Projekts beteiligt.";
+      return "Solverto contributed to the project.";
+    }
+    if (partner === "Solverto production support") {
+      if (language === "pl") return "Solverto zapewniło wsparcie produkcyjne projektu.";
+      if (language === "de") return "Solverto unterstützte die Produktion des Projekts.";
+      return "Solverto provided production support for the project.";
+    }
+    if (language === "pl") return `Projekt zrealizowano dla ${translatedText(partner)}.`;
+    if (language === "de") return `Das Projekt wurde für ${translatedText(partner)} umgesetzt.`;
+    return `The project was delivered for ${partner}.`;
+  };
 
   if (selectedLanguage === "pl") {
     const collaboration = isArchitectureProject
       ? `Projekt zrealizowano dla klienta końcowego ${project.finalClient || project.partner} w ramach współpracy z ${project.deliveredFor || "YSLAB / RESIMO"}.`
-      : `Projekt zrealizowano dla ${translatedText(project.partner || "Solverto")}.`;
+      : genericCollaboration("pl");
     const location = country ? ` w ${country}` : "";
-    return `${collaboration} Zakres prac obejmował ${scope.charAt(0).toLocaleLowerCase("pl-PL") + scope.slice(1)}. Realizacja dotyczyła branży ${industry.toLocaleLowerCase("pl-PL")}${location}.`;
+    return `${collaboration} Zakres prac: ${scope}. Branża: ${industry}${location}.`;
+  }
+
+  if (selectedLanguage === "de") {
+    const collaboration = isArchitectureProject
+      ? `Das Projekt wurde für den Endkunden ${project.finalClient || project.partner} in Zusammenarbeit mit ${project.deliveredFor || "YSLAB / RESIMO"} umgesetzt.`
+      : genericCollaboration("de");
+    const location = country ? ` in ${country}` : "";
+    return `${collaboration} Arbeitsumfang: ${scope}. Bereich: ${industry}${location}.`;
   }
 
   const recipient = isArchitectureProject
     ? `the final client ${project.finalClient || project.partner} in collaboration with ${project.deliveredFor || "YSLAB / RESIMO"}`
-    : project.partner || "Solverto";
+    : null;
   const location = country ? ` in ${country}` : "";
-  return `The project was delivered for ${recipient}. The scope covered ${scope}. It concerned the ${industry} sector${location}.`;
+  const collaboration = isArchitectureProject ? `The project was delivered for ${recipient}.` : genericCollaboration("en");
+  return `${collaboration} Scope: ${scope}. Sector: ${industry}${location}.`;
 }
 
 function renderProjectDetail(root = document, pageUrl = window.location.href) {
@@ -986,14 +1440,14 @@ function renderProjectDetail(root = document, pageUrl = window.location.href) {
   };
 
   if (root === document) {
-    document.title = `${project.name} — Solverto Portfolio`;
-    document.querySelector('meta[name="description"]')?.setAttribute("content", `${project.name}: ${project.description}`);
+    document.title = `${projectDisplayName(project)} - Solverto Portfolio`;
+    document.querySelector('meta[name="description"]')?.setAttribute("content", `${projectDisplayName(project)}: ${translatedText(project.description)}`);
   }
-  setText("[data-detail-category]", project.category);
-  setText("[data-detail-name]", project.name);
-  setText("[data-detail-intro]", project.description);
+  setText("[data-detail-category]", translatedText(project.category));
+  setText("[data-detail-name]", projectDisplayName(project));
+  setText("[data-detail-intro]", translatedText(project.description));
   const projectInfoText = projectInfoCopy(project);
-  setText("[data-detail-facts-title]", "Cooperation and scope.");
+  setText("[data-detail-facts-title]", translatedText("Cooperation and scope."));
   setText("[data-detail-project-info]", projectInfoText);
   const projectInfo = detailRoot.querySelector("[data-detail-project-info]");
   const factsGrid = detailRoot.querySelector("[data-detail-facts-grid]");
@@ -1005,22 +1459,22 @@ function renderProjectDetail(root = document, pageUrl = window.location.href) {
   if (detailHero) {
     const projectGroup = portfolioData.groups.find((group) => group.id === project.departmentId);
     const source = projectImagePath(project) || projectGroup?.heroImage || "assets/hero-offer-collage.png";
-    const alt = project.name + " — Solverto portfolio hero image";
+    const alt = translatedText(projectDisplayName(project) + " - Solverto portfolio hero image");
     detailHero.classList.add("media-image-frame");
     detailHero.dataset.noLightbox = "";
     detailHero.removeAttribute("role");
     detailHero.innerHTML = '<img src="' + escapeHtml(source) + '" alt="' + escapeHtml(alt) + '" loading="eager" decoding="async" />';
   }
   const isArchitectureProject = project.category === "Architecture / Realtime Real Estate";
-  setText("[data-detail-partner-label]", isArchitectureProject ? "Final client" : "Client / Partner");
-  setText("[data-detail-role-label]", isArchitectureProject ? "Delivered for" : "Role");
-  setText("[data-detail-scope-label]", isArchitectureProject ? "Scope of work" : "Scope");
-  setText("[data-detail-partner]", isArchitectureProject ? (project.finalClient || project.partner || "Solverto project") : (project.partner || "Solverto project"));
-  setText("[data-detail-role]", isArchitectureProject ? (project.deliveredFor || "YSLAB / RESIMO") : project.role);
-  setText("[data-detail-scope]", project.scope);
-  setText("[data-detail-industry]", project.industry);
-  setText("[data-detail-technology]", project.technology);
-  setText("[data-detail-year]", project.year);
+  setText("[data-detail-partner-label]", translatedText(isArchitectureProject ? "Final client" : "Client / Partner"));
+  setText("[data-detail-role-label]", translatedText(isArchitectureProject ? "Delivered for" : "Role"));
+  setText("[data-detail-scope-label]", translatedText(isArchitectureProject ? "Scope of work" : "Scope"));
+  setText("[data-detail-partner]", translatedText(isArchitectureProject ? (project.finalClient || project.partner || "Solverto project") : (project.partner || "Solverto project")));
+  setText("[data-detail-role]", translatedText(isArchitectureProject ? (project.deliveredFor || "YSLAB / RESIMO") : project.role));
+  setText("[data-detail-scope]", translatedText(project.scope));
+  setText("[data-detail-industry]", translatedText(project.industry));
+  setText("[data-detail-technology]", translatedText(project.technology));
+  setText("[data-detail-year]", translatedText(project.year));
   setText("[data-detail-challenge]", copy.challenge);
   setText("[data-detail-contribution]", copy.contribution);
 
@@ -1205,12 +1659,13 @@ function initializeHomePanels() {
 
   const openPanel = (name, trigger, record = true) => {
     const source = sources.get(name);
-    if (!source) return;
+    if (!source) return false;
     if (record) panelStack.push({ type: "source", name });
     updatePanelToolbar();
     panelRequest += 1;
     const sourceContent = source.querySelector(":scope > .container") || source;
     showPanel(prepareClone(sourceContent), name, trigger);
+    return true;
   };
 
   const servicePanelMarkup = () => `
@@ -1334,8 +1789,7 @@ function initializeHomePanels() {
   document.addEventListener("click", (event) => {
     const trigger = event.target.closest("[data-home-panel-trigger]");
     if (trigger) {
-      event.preventDefault();
-      openPanel(trigger.dataset.homePanelTrigger, trigger);
+      if (openPanel(trigger.dataset.homePanelTrigger, trigger)) event.preventDefault();
       return;
     }
 
@@ -1407,6 +1861,9 @@ function initializeHomePanels() {
     }
   });
 
+  if (new URLSearchParams(window.location.search).get("panel") === "company" && sources.has("company")) {
+    window.requestAnimationFrame(() => openPanel("company", document.querySelector("[data-company-link]"), false));
+  }
 }
 
 function initializeContactHelpers() {
@@ -1444,7 +1901,7 @@ function renderSiteFooter() {
 
     grid.innerHTML = `
       <div class="footer-logo">
-        <a href="index.html" aria-label="Solverto"><img class="footer-brand" src="images/SolvertoLogo.gif" alt="Solverto" width="256" height="256" /></a>
+        <a href="index.html" aria-label="Solverto"><img class="footer-brand" src="public/graphics/Solverto_Logo%202024_blue.png" alt="Solverto" width="256" height="256" /></a>
       </div>
       <div class="footer-column">
         <h2>Company</h2>
@@ -1452,7 +1909,7 @@ function renderSiteFooter() {
       </div>
       <div class="footer-column">
         <h2>Explore</h2>
-        <a href="privacy.html">Privacy policy</a>
+        <a href="privacy.html" data-privacy-link>Privacy policy</a>
       </div>
       <div class="footer-column">
         <h2>Contact</h2>
@@ -1788,26 +2245,28 @@ document.querySelectorAll("[data-year]").forEach((element) => {
 });
 
 function applyTrustAndContactUpdates() {
-  const isPolish = selectedLanguage === "pl";
-  const portfolioIntro = isPolish
-    ? "Wszystkie prezentowane projekty są realnymi realizacjami Solverto. Rozszerzone opisy, materiały wizualne i case studies wybranych projektów będą sukcesywnie uzupełniane."
-    : "All presented projects are real Solverto productions. Extended descriptions, visual materials, and selected case studies will be added progressively.";
+  const localized = (english, polish, german) => selectedLanguage === "pl" ? polish : selectedLanguage === "de" ? german : english;
+  const portfolioIntro = localized(
+    "All presented projects are real Solverto productions. Extended descriptions, visual materials, and selected case studies will be added progressively.",
+    "Wszystkie prezentowane projekty są realnymi realizacjami Solverto. Rozszerzone opisy, materiały wizualne i case studies wybranych projektów będą sukcesywnie uzupełniane.",
+    "Alle gezeigten Projekte sind reale Produktionen von Solverto. Erweiterte Beschreibungen, Bildmaterial und ausgewählte Fallstudien werden schrittweise ergänzt."
+  );
   const replacements = new Map([
-    ["Media placeholders", isPolish ? "Materiały produkcyjne" : "Production materials"],
-    ["Elementy zastępcze multimediów", "Materiały produkcyjne"],
-    ["Project media placeholders.", isPolish ? "Materiały produkcyjne w przygotowaniu." : "Production materials in preparation."],
-    ["Elementy zastępcze multimediów projektu.", "Materiały produkcyjne w przygotowaniu."],
-    ["Reserved for product and business examples.", isPolish ? "Materiały w przygotowaniu." : "Materials in preparation."],
-    ["Reserved for training and simulation material.", isPolish ? "Materiały w przygotowaniu." : "Materials in preparation."],
-    ["Reserved for workflow and audit examples.", isPolish ? "Materiały w przygotowaniu." : "Materials in preparation."],
-    ["Add real production material here later.", isPolish ? "Materiały w przygotowaniu." : "Materials in preparation."],
-    ["Otwórz czat zastępczy", "Napisz na WhatsApp"],
-    ["A sample interactive property experience designed to make an unbuilt development easier to explore and understand.", isPolish ? "Interaktywna prezentacja nieruchomości ułatwiająca poznanie planowanej inwestycji." : "An interactive property experience that makes an unbuilt development easier to explore and understand."],
-    ["A sample environment art and lighting pass designed to make a playable demo easier to read and present.", isPolish ? "Realizacja środowiska gry i oświetlenia wspierająca czytelność oraz prezentację rozgrywki." : "An environment art and lighting production focused on clear, presentation-ready gameplay."],
-    ["VR Safety Training Demo", isPolish ? "Szkolenie VR z bezpieczeństwa" : "VR Safety Training"],
-    ["A sample immersive prototype for practicing a safety procedure in a controlled virtual environment.", isPolish ? "Immersyjna realizacja wspierająca ćwiczenie procedury bezpieczeństwa w kontrolowanym środowisku wirtualnym." : "An immersive production for practicing a safety procedure in a controlled virtual environment."],
-    ["Sample Solverto case study", isPolish ? "Realizacja Solverto" : "Solverto case study"],
-    ["Game Demo Environment", isPolish ? "Produkcja środowiska gry" : "Game Environment Production"]
+    ["Media placeholders", localized("Production materials", "Materiały produkcyjne", "Produktionsmaterialien")],
+    ["Elementy zastępcze multimediów", localized("Production materials", "Materiały produkcyjne", "Produktionsmaterialien")],
+    ["Project media placeholders.", localized("Production materials in preparation.", "Materiały produkcyjne w przygotowaniu.", "Produktionsmaterialien in Vorbereitung.")],
+    ["Elementy zastępcze multimediów projektu.", localized("Production materials in preparation.", "Materiały produkcyjne w przygotowaniu.", "Produktionsmaterialien in Vorbereitung.")],
+    ["Reserved for product and business examples.", localized("Materials in preparation.", "Materiały w przygotowaniu.", "Materialien in Vorbereitung.")],
+    ["Reserved for training and simulation material.", localized("Materials in preparation.", "Materiały w przygotowaniu.", "Materialien in Vorbereitung.")],
+    ["Reserved for workflow and audit examples.", localized("Materials in preparation.", "Materiały w przygotowaniu.", "Materialien in Vorbereitung.")],
+    ["Add real production material here later.", localized("Materials in preparation.", "Materiały w przygotowaniu.", "Materialien in Vorbereitung.")],
+    ["Otwórz czat zastępczy", localized("Contact us on WhatsApp", "Napisz na WhatsApp", "Kontaktieren Sie uns über WhatsApp")],
+    ["A sample interactive property experience designed to make an unbuilt development easier to explore and understand.", localized("An interactive property experience that makes an unbuilt development easier to explore and understand.", "Interaktywna prezentacja nieruchomości ułatwiająca poznanie planowanej inwestycji.", "Ein interaktives Immobilienerlebnis, das eine noch nicht gebaute Anlage leichter erlebbar und verständlich macht.")],
+    ["A sample environment art and lighting pass designed to make a playable demo easier to read and present.", localized("An environment art and lighting production focused on clear, presentation-ready gameplay.", "Realizacja środowiska gry i oświetlenia wspierająca czytelność oraz prezentację rozgrywki.", "Eine Produktion von Spielumgebung und Beleuchtung mit Fokus auf klares, präsentationsreifes Gameplay.")],
+    ["VR Safety Training Demo", localized("VR Safety Training", "Szkolenie VR z bezpieczeństwa", "VR-Sicherheitsschulung")],
+    ["A sample immersive prototype for practicing a safety procedure in a controlled virtual environment.", localized("An immersive production for practicing a safety procedure in a controlled virtual environment.", "Immersyjna realizacja wspierająca ćwiczenie procedury bezpieczeństwa w kontrolowanym środowisku wirtualnym.", "Eine immersive Produktion zum Üben eines Sicherheitsablaufs in einer kontrollierten virtuellen Umgebung.")],
+    ["Sample Solverto case study", localized("Solverto case study", "Realizacja Solverto", "Solverto-Fallstudie")],
+    ["Game Demo Environment", localized("Game Environment Production", "Produkcja środowiska gry", "Produktion einer Spielumgebung")]
   ]);
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
   const nodes = [];
@@ -1823,7 +2282,7 @@ function applyTrustAndContactUpdates() {
   });
   document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
     link.href = "https://wa.me/48784573516";
-    link.textContent = isPolish ? "Napisz na WhatsApp" : "Contact us on WhatsApp";
+    link.textContent = localized("Contact us on WhatsApp", "Napisz na WhatsApp", "Kontaktieren Sie uns über WhatsApp");
   });
   const portfolioHeading = document.querySelector("[data-large-scale-projects], [data-portfolio-groups]")?.closest("section")?.querySelector(".section-heading");
   if (portfolioHeading) {

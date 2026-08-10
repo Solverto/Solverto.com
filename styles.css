@@ -169,7 +169,7 @@ textarea {
 }
 
 .nav-shell {
-  min-height: var(--header-height);
+  height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2077,7 +2077,7 @@ textarea:focus {
   --brand-line: rgba(255, 255, 255, 0.13);
   --shadow-soft: none;
   --radius: 12px;
-  --header-height: 72px;
+  --header-height: 96px;
 }
 
 body {
@@ -2123,7 +2123,7 @@ h2 {
 }
 
 .brand {
-  width: 56px;
+  width: 112px;
 }
 
 .nav-menu,
@@ -2457,7 +2457,7 @@ textarea {
 }
 
 .site-footer {
-  padding-block: 58px 34px;
+  padding-block: 32px 20px;
   background: #050505;
 }
 
@@ -3558,7 +3558,6 @@ section.section-band:has(.media-placeholder[role="img"]) {
 
 /* Contact block inside the Company panel */
 
-.nav-menu [data-company-link],
 .nav-menu a[href="portfolio.html"],
 .nav-menu a[href="contact.html"],
 .nav-menu a[href="#contact"] {
