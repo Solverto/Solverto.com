@@ -2523,9 +2523,32 @@ textarea {
 
 /* Home page panels */
 
-.home-page [data-home-panel-source],
-.home-page .site-footer {
+.home-page [data-home-panel-source] {
   display: none;
+}
+
+@media (min-width: 960px) {
+  .site-footer .footer-grid {
+    grid-template-columns: 0.7fr repeat(3, minmax(0, 1fr));
+  }
+}
+
+.footer-logo {
+  align-self: start;
+}
+
+.footer-company-trigger {
+  width: fit-content;
+  min-height: auto;
+  padding: 8px 14px;
+  font-size: 0.78rem;
+  border-color: transparent;
+  background: transparent;
+}
+
+.site-footer .footer-company-trigger:hover {
+  border-color: transparent;
+  background: transparent;
 }
 
 .home-page main {
@@ -3491,6 +3514,17 @@ textarea {
   .service-process-step {
     min-height: 230px;
   }
+}
+
+/* Public contact details are limited to verified channels. */
+a[href="tel:+48000000000"],
+a[href="https://wa.me/48000000000"] {
+  display: none;
+}
+
+/* Hide unapproved sample-media sections until production materials are available. */
+section.section-band:has(.media-placeholder[role="img"]) {
+  display: none;
 }
 
 @media (max-width: 479px) {

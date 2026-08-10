@@ -136,7 +136,7 @@ window.SOLVERTO_TRANSLATIONS = {
     "Example deliverables": "Przykładowe produkty",
     "Experience overview": "Przegląd doświadczeń",
     "Explain form, operation, assembly or benefits with clear technical product animation.": "Wyjaśnij formę, działanie, montaż lub zalety za pomocą przejrzystej animacji technicznej produktu.",
-    "Explore": "Odkrywaj",
+    "Explore": "Poznaj",
     "Explore AI & Pipeline": "Odkrywaj sztuczną inteligencję i potoki",
     "Explore Game Production": "Odkrywaj produkcję gier",
     "Explore Realtime 3D": "Odkrywaj 3D w czasie rzeczywistym",
