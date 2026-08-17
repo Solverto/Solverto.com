@@ -1,3 +1,22 @@
+const GTM_ID = "GTM-K24VMJ6H";
+
+function initializeGoogleTagManager() {
+  if (document.getElementById("solverto-gtm")) return;
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+
+  const script = document.createElement("script");
+  script.id = "solverto-gtm";
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
+  document.head.append(script);
+}
+
+window.addEventListener("solverto-cookie-consent", (event) => {
+  if (event.detail?.analytics === true) initializeGoogleTagManager();
+});
+
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector("[data-nav-toggle]");
@@ -841,7 +860,7 @@ function applyLanguage() {
   document.querySelectorAll("[data-company-process-flow]").forEach((image) => {
     image.setAttribute("src", processFlowImage);
   });
-  if (document.querySelector("[data-project-detail]")) renderProjectDetail();
+  if (document.body.hasAttribute("data-project-detail")) renderProjectDetail();
   document.documentElement.dataset.languageReady = "";
   applyTrustAndContactUpdates();
 }
@@ -917,7 +936,7 @@ const serviceCatalog = [
   {
     id: "architecture-digital-twins",
     title: "Realtime Architecture | Digital Twins",
-    image: "metaverse/digital-twin/hero-wirtualny-blizniak.jpg",
+    image: "metaverse/digital-twin/hotel-five/gallery-01.webp",
     description: "Interactive architecture, property presentations and digital replicas that make spaces and data easier to understand.",
     workIntro: "Interactive architecture, property presentations and digital replicas that make spaces and data easier to understand. We contributed to more than 60 projects.",
     lead: "Show a space before it exists - or understand it better once it does. We turn architectural documentation, BIM data and existing locations into clear realtime experiences for sales, planning and presentation.",
@@ -934,7 +953,7 @@ const serviceCatalog = [
   {
     id: "product-prototypes-3d-models",
     title: "Product Prototypes | 3D Models",
-    image: "games/hero-elementy-gier-solverto Games.jpg",
+    image: "assets/hero-3dmodels.png",
     description: "Product models, interactive proofs of concept and reusable 3D content for development, sales and communication.",
     lead: "We turn a product idea, sketch, CAD file or existing model into a digital product prototype that can be reviewed and tested before a larger investment.",
     valueTitle: "Validate the product experience before investing in the complete solution.",
@@ -950,7 +969,7 @@ const serviceCatalog = [
   {
     id: "game-assets-levels",
     title: "Game Environments | 3D Assets",
-    image: "metaverse/treasure-hunter/hero-poziomy-treasure-hunter-metaverse.jpg",
+    image: "metaverse/pulse-guys/tutti-frutti/gallery-01.webp",
     description: "Game-ready environments, levels and optimized assets that fit an existing production pipeline.",
     lead: "We support game studios with level creation, environment production and technical preparation of assets - from a defined brief to content ready for implementation.",
     valueTitle: "Extend your production capacity without losing visual and technical consistency.",
@@ -966,7 +985,7 @@ const serviceCatalog = [
   {
     id: "game-prototypes-custom-games",
     title: "Game Prototypes | Custom Games",
-    image: "metaverse/pulse-guys/hero-pulse-guys.jpg",
+    image: "game-development/SOGA/gallery-05.jpg",
     description: "We delivered and collaborated on the implementation of more than 130 playable prototypes, vertical slices, mini-games and complete custom games.",
     lead: "We help turn a game idea, campaign concept or training goal into something playable - first as a focused prototype, then as a production-ready scope.",
     valueTitle: "Test the fun, technology and production risk with a working build.",
@@ -981,8 +1000,8 @@ const serviceCatalog = [
   },
   {
     id: "xr-training-simulation",
-    title: "XR | Training | Simulation",
-    image: "metaverse/digital-twin/hero-wirtualny-blizniak.jpg",
+    title: "Metaverse",
+    image: "metaverse/music-rooms/entoto-room/gallery-04.webp",
     description: "VR and AR prototypes, training scenarios and interactive simulations that help teams validate a solution before a larger rollout.",
     lead: "Test processes and train people without interrupting real operations.",
     valueTitle: "Validate a practical XR scenario before scaling it.",
@@ -998,7 +1017,7 @@ const serviceCatalog = [
   {
     id: "animation-film-trailers-avatars",
     title: "3D Animation | Trailers | Realtime Characters",
-    image: "animation-trailer-movie/hero-animacje-filmy-trailery.jpg",
+    image: "animation-trailer-movie/hero-trailers.png",
     description: "Animation, film editing, trailers and optimized avatars for games, products and interactive experiences.",
     lead: "We prepare moving content and realtime characters that explain, present and strengthen a product, game or digital experience.",
     valueTitle: "Turn complex ideas and static assets into clear, engaging movement.",
@@ -1013,12 +1032,12 @@ const serviceCatalog = [
     videosFirst: true,
     youtubeVideos: [
       {
-        id: "44LEhVFH5JY",
-        title: "Painter Simulator - Release Trailer",
+        id: "O4t9RtPKd3A",
+        title: "Tarvos Desolation - Official Demo Trailer",
         category: "Game Trailer / Video",
-        partner: "Solverto Studio",
-        role: "Trailer editing and promotional video production",
-        description: "A trailer presenting the Painter Simulator demo on Steam. The video shows the character of the game, its visual style and key gameplay elements. It is an example of video communication supporting a project launch."
+        partner: "Tarvos Desolation",
+        role: "Official demo trailer production and editing",
+        description: "The official trailer for the Tarvos Desolation demo. The video builds a science-fiction horror atmosphere while presenting the world, threats and gameplay. Editing and visual storytelling emphasize the mood and key features of the project."
       },
       {
         id: "caXv4VZl-jM",
@@ -1029,12 +1048,12 @@ const serviceCatalog = [
         description: "A gameplay trailer prepared for Steam Next Fest. The video presents painting mechanics, interaction with the environment and the range of available tasks. Dynamic editing communicates the main idea of the game quickly."
       },
       {
-        id: "O4t9RtPKd3A",
-        title: "Tarvos Desolation - Official Demo Trailer",
+        id: "44LEhVFH5JY",
+        title: "Painter Simulator - Release Trailer",
         category: "Game Trailer / Video",
-        partner: "Tarvos Desolation",
-        role: "Official demo trailer production and editing",
-        description: "The official trailer for the Tarvos Desolation demo. The video builds a science-fiction horror atmosphere while presenting the world, threats and gameplay. Editing and visual storytelling emphasize the mood and key features of the project."
+        partner: "Solverto Studio",
+        role: "Trailer editing and promotional video production",
+        description: "A trailer presenting the Painter Simulator demo on Steam. The video shows the character of the game, its visual style and key gameplay elements. It is an example of video communication supporting a project launch."
       }
     ]
   }
@@ -2356,3 +2375,156 @@ function applyTrustAndContactUpdates() {
 }
 
 applyTrustAndContactUpdates();
+
+function initializeCookieConsent() {
+  const storageKey = "solverto-cookie-consent";
+  const copy = {
+    en: {
+      label: "Cookie consent",
+      message: "We use necessary cookies to keep this website working and, with your consent, analytics cookies to understand how it is used. You can accept all cookies or manage your preferences.",
+      accept: "Accept all",
+      settings: "Settings",
+      decline: "Decline",
+      settingsTitle: "Cookie settings",
+      analytics: "Allow analytics cookies",
+      save: "Save preferences",
+      footer: "Cookie settings"
+    },
+    pl: {
+      label: "Zgoda na pliki cookie",
+      message: "Używamy niezbędnych plików cookie, aby strona działała prawidłowo, oraz — za Twoją zgodą — plików analitycznych, aby lepiej rozumieć sposób korzystania z serwisu. Możesz zaakceptować wszystkie pliki cookie lub zarządzać preferencjami.",
+      accept: "Zgadzam się",
+      settings: "Ustawienia",
+      decline: "Odmawiam",
+      settingsTitle: "Ustawienia plików cookie",
+      analytics: "Zezwól na pliki cookie analityczne",
+      save: "Zapisz preferencje",
+      footer: "Ustawienia plików cookie"
+    },
+    de: {
+      label: "Cookie-Einwilligung",
+      message: "Wir verwenden notwendige Cookies für die korrekte Funktion der Website und mit Ihrer Einwilligung Analyse-Cookies, um ihre Nutzung besser zu verstehen. Sie können alle Cookies akzeptieren oder Ihre Einstellungen verwalten.",
+      accept: "Alle akzeptieren",
+      settings: "Einstellungen",
+      decline: "Ablehnen",
+      settingsTitle: "Cookie-Einstellungen",
+      analytics: "Analyse-Cookies erlauben",
+      save: "Einstellungen speichern",
+      footer: "Cookie-Einstellungen"
+    }
+  };
+
+  const getCopy = () => copy[selectedLanguage] || copy.en;
+  const getStoredConsent = () => {
+    try {
+      const stored = JSON.parse(localStorage.getItem(storageKey));
+      return stored?.version === 1 && typeof stored.analytics === "boolean" ? stored : null;
+    } catch {
+      return null;
+    }
+  };
+  const saveConsent = (analytics) => {
+    const consent = { version: 1, analytics, updatedAt: new Date().toISOString() };
+    try { localStorage.setItem(storageKey, JSON.stringify(consent)); } catch { /* Storage may be unavailable in private contexts. */ }
+    window.dispatchEvent(new CustomEvent("solverto-cookie-consent", { detail: consent }));
+    return consent;
+  };
+
+  const banner = document.createElement("aside");
+  banner.className = "cookie-consent";
+  banner.dataset.cookieConsent = "";
+  banner.setAttribute("role", "region");
+  banner.setAttribute("aria-live", "polite");
+  document.body.append(banner);
+
+  const render = () => {
+    const text = getCopy();
+    const stored = getStoredConsent();
+    banner.setAttribute("aria-label", text.label);
+    banner.innerHTML = `
+      <div class="cookie-consent-copy">
+        <p data-cookie-message></p>
+        <a href="${privacyPageForLanguage()}" data-privacy-panel-trigger data-cookie-privacy-link></a>
+      </div>
+      <div class="cookie-consent-actions">
+        <button class="cookie-consent-button cookie-consent-button-primary" type="button" data-cookie-accept></button>
+        <button class="cookie-consent-button" type="button" data-cookie-settings aria-expanded="false"></button>
+        <button class="cookie-consent-button" type="button" data-cookie-decline></button>
+      </div>
+      <div class="cookie-consent-settings" data-cookie-settings-panel hidden>
+        <strong data-cookie-settings-title></strong>
+        <label><input type="checkbox" data-cookie-analytics> <span data-cookie-analytics-label></span></label>
+        <button class="cookie-consent-button cookie-consent-button-primary" type="button" data-cookie-save></button>
+      </div>`;
+    banner.querySelector("[data-cookie-message]").textContent = text.message;
+    const privacyLink = banner.querySelector("[data-cookie-privacy-link]");
+    privacyLink.textContent = translatedText("Privacy policy");
+    privacyLink.href = privacyPageForLanguage();
+    banner.querySelector("[data-cookie-accept]").textContent = text.accept;
+    banner.querySelector("[data-cookie-settings]").textContent = text.settings;
+    banner.querySelector("[data-cookie-decline]").textContent = text.decline;
+    banner.querySelector("[data-cookie-settings-title]").textContent = text.settingsTitle;
+    banner.querySelector("[data-cookie-analytics-label]").textContent = text.analytics;
+    banner.querySelector("[data-cookie-save]").textContent = text.save;
+    banner.querySelector("[data-cookie-analytics]").checked = stored?.analytics || false;
+  };
+
+  const show = (showSettings = false) => {
+    render();
+    banner.hidden = false;
+    const panel = banner.querySelector("[data-cookie-settings-panel]");
+    const trigger = banner.querySelector("[data-cookie-settings]");
+    panel.hidden = !showSettings;
+    trigger.setAttribute("aria-expanded", String(showSettings));
+    if (showSettings) banner.querySelector("[data-cookie-analytics]").focus();
+  };
+  const hide = () => { banner.hidden = true; };
+
+  banner.addEventListener("click", (event) => {
+    if (event.target.closest("[data-cookie-accept]")) {
+      saveConsent(true);
+      hide();
+    } else if (event.target.closest("[data-cookie-decline]")) {
+      saveConsent(false);
+      hide();
+    } else if (event.target.closest("[data-cookie-settings]")) {
+      const panel = banner.querySelector("[data-cookie-settings-panel]");
+      const isHidden = panel.hidden;
+      panel.hidden = !isHidden;
+      banner.querySelector("[data-cookie-settings]").setAttribute("aria-expanded", String(isHidden));
+      if (isHidden) banner.querySelector("[data-cookie-analytics]").focus();
+    } else if (event.target.closest("[data-cookie-save]")) {
+      saveConsent(banner.querySelector("[data-cookie-analytics]").checked);
+      hide();
+    }
+  });
+
+  const footerColumn = [...document.querySelectorAll(".footer-column")].find((column) =>
+    /privacy|prywatno|datenschutz/i.test(column.textContent)
+  );
+  if (footerColumn) {
+    const footerButton = document.createElement("button");
+    footerButton.className = "footer-cookie-settings";
+    footerButton.type = "button";
+    footerButton.dataset.cookieSettingsTrigger = "";
+    footerColumn.append(footerButton);
+    footerButton.addEventListener("click", () => show(true));
+    document.addEventListener("solverto-language-changed", () => {
+      footerButton.textContent = getCopy().footer;
+    });
+    footerButton.textContent = getCopy().footer;
+  }
+
+  document.addEventListener("solverto-language-changed", () => {
+    if (!banner.hidden) show(!banner.querySelector("[data-cookie-settings-panel]").hidden);
+  });
+
+  if (getStoredConsent()) {
+    banner.hidden = true;
+    window.dispatchEvent(new CustomEvent("solverto-cookie-consent", { detail: getStoredConsent() }));
+  } else {
+    show();
+  }
+}
+
+initializeCookieConsent();
